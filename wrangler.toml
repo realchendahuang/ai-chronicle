@@ -1,0 +1,7 @@
+name = "ai-chronicle-proxy"
+main = "worker/index.js"
+compatibility_date = "2025-07-09"
+
+[[routes]]
+pattern = "chendahuang.com/ai-chronicle/*"
+zone_name = "chendahuang.com"

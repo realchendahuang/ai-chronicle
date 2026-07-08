@@ -1,0 +1,32 @@
+{
+  "name": "ai-chronicle",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev --port 3000",
+    "build": "velite && vite build",
+    "build:content": "velite",
+    "serve": "vite preview",
+    "deploy": "pnpm build && wrangler pages deploy dist/client --project-name ai-chronicle --branch main"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "^1.114.27",
+    "@tanstack/react-start": "^1.114.27",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.4.0",
+    "nitropack": "^2.13.4",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.7.0",
+    "velite": "^0.2.4",
+    "vite": "^8.1.3",
+    "vite-tsconfig-paths": "^5.1.4",
+    "wrangler": "^4.10.0"
+  }
+}
