@@ -4,7 +4,7 @@ import {
   HeadContent,
   Scripts,
 } from '@tanstack/react-router'
-import appCss from '~/styles/app.css?url'
+import '~/styles/app.css'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -15,7 +15,6 @@ export const Route = createRootRoute({
       { name: 'description', content: '以关键事件为主线，理解 AI 行业的发展脉络。' },
     ],
     links: [
-      { rel: 'stylesheet', href: appCss },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap' },

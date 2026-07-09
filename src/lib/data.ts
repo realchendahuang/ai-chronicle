@@ -1,34 +1,35 @@
-import { events as rawEvents, concepts as rawConcepts, companies as rawCompanies } from '../.velite'
 import type { Event, Concept, Company } from '../.velite/types'
+import eventsData from '../.velite/events.json'
+import conceptsData from '../.velite/concepts.json'
+import companiesData from '../.velite/companies.json'
 
-// Cast from velite types to our types
-const _events: Event[] = rawEvents as unknown as Event[]
-const _concepts: Concept[] = rawConcepts as unknown as Concept[]
-const _companies: Company[] = rawCompanies as unknown as Company[]
+const _events: Event[] = eventsData as unknown as Event[]
+const _concepts: Concept[] = conceptsData as unknown as Concept[]
+const _companies: Company[] = companiesData as unknown as Company[]
 
 export type { Event, Concept, Company }
 
-export async function getEvents(): Promise<Event[]> {
+export function getEvents(): Event[] {
   return _events
 }
 
-export async function getEventBySlug(slug: string): Promise<Event | undefined> {
+export function getEventBySlug(slug: string): Event | undefined {
   return _events.find((e) => e.slug === slug)
 }
 
-export async function getConcepts(): Promise<Concept[]> {
+export function getConcepts(): Concept[] {
   return _concepts
 }
 
-export async function getConceptBySlug(slug: string): Promise<Concept | undefined> {
+export function getConceptBySlug(slug: string): Concept | undefined {
   return _concepts.find((c) => c.slug === slug)
 }
 
-export async function getCompanies(): Promise<Company[]> {
+export function getCompanies(): Company[] {
   return _companies
 }
 
-export async function getCompanyBySlug(slug: string): Promise<Company | undefined> {
+export function getCompanyBySlug(slug: string): Company | undefined {
   return _companies.find((c) => c.slug === slug)
 }
 

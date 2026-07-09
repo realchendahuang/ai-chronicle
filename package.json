@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev --port 3000",
-    "build": "velite && vite build",
+    "build": "velite && node scripts/ssg.mjs",
     "build:content": "velite",
     "serve": "vite preview",
     "deploy": "pnpm build && wrangler pages deploy dist/client --project-name ai-chronicle --branch main"
