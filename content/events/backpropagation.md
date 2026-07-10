@@ -19,9 +19,14 @@ people:
   - geoffrey-hinton
   - david-rumelhart
   - ronald-williams
-summary: Rumelhart、Hinton 和 Williams 发表了反向传播算法论文，解决了训练多层神经网络的难题，为深度学习奠定了数学基础。
-whatHappened: 虽然反向传播的数学原理早在 1970 年代就被提出，但 1986 年这篇论文系统阐述了如何用反向传播训练多层神经网络，并展示了实际效果，引发了连接主义研究的复兴。
-whyImportant: 没有反向传播，就没有深度学习。它是神经网络从单层走向多层的技术桥梁，至今仍是所有深度学习框架的核心算法。
+summary: Rumelhart、Hinton 与 Williams 展示如何用误差反向传播训练多层网络，使隐藏层能够从样本中形成内部表示。
+summaryEn: David Rumelhart, Geoffrey Hinton, and Ronald Williams showed how error backpropagation could train multilayer networks and let hidden layers form internal representations from examples.
+background: 链式法则和反向求导思想此前已有多次独立发现，难点在于如何把它变成训练多层连接主义模型的清晰方法，并用实验说明隐藏单元学到了什么。
+backgroundEn: The chain rule and reverse differentiation had been discovered independently before. The challenge was to present them as a clear training method for multilayer connectionist models and show what hidden units learned.
+whatHappened: 前向计算得到输出和误差，误差信号再按链式法则逐层传回，每个权重沿降低误差的方向更新。论文用对称性、亲属关系等任务展示隐藏表示。
+whatHappenedEn: A forward pass produced outputs and errors, then the chain rule propagated error signals backward so each weight could move in a loss-reducing direction. Experiments showed hidden representations for symmetry and family relationships.
+whyImportant: 多层网络终于有了通用、可复用的训练办法。现代自动微分框架仍执行同一基本过程，不过实际能力还依赖激活函数、初始化、数据、算力和优化方法。
+whyImportantEn: Multilayer networks gained a general reusable training method. Modern automatic-differentiation frameworks still perform the same basic process, though practical capability also depends on activations, initialization, data, compute, and optimization.
 beforeAfter:
   before: 感知机只能解决线性可分问题，多层网络缺乏有效的训练方法。
   after: 反向传播让训练深层网络成为可能，开启了连接主义时代。

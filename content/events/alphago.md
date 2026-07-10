@@ -1,7 +1,8 @@
 ---
 id: alphago
 title: AlphaGo 击败李世石
-subtitle: AI 攻破围棋——人类最复杂的棋盘游戏
+subtitle: 策略网络、价值网络与树搜索赢下五局制比赛
+subtitleEn: Policy networks, value networks, and tree search win a five-game match
 date: '2016-03-15'
 datePrecision: day
 importance: A
@@ -23,9 +24,12 @@ concepts:
   - monte-carlo-tree-search
   - policy-network
   - value-network
-summary: DeepMind 的 AlphaGo 以 4:1 击败围棋世界冠军李世石，标志着 AI 在人类最复杂的棋盘游戏中超越了人类顶级水平。
-whatHappened: AlphaGo 结合了深度学习（策略网络和价值网络）和蒙特卡洛树搜索。在五局比赛中，AlphaGo 展示了超越人类直觉的棋艺，包括第 37 手（"神之一手"）在内的创造性走法震惊了围棋界。
-whyImportant: 围棋的搜索空间远大于国际象棋，传统暴力搜索无法胜任。AlphaGo 的胜利证明了深度强化学习在极复杂决策问题上的潜力，引发了全球对深度强化的研究热潮。
+summary: AlphaGo 在首尔五局赛中以 4 比 1 战胜李世石。系统把人类棋谱学习、自我对弈和蒙特卡洛树搜索组合在一起。
+summaryEn: AlphaGo defeated Lee Sedol 4–1 in a five-game match in Seoul by combining learning from human games, self-play, and Monte Carlo tree search.
+whatHappened: 策略网络缩小候选落子范围，价值网络估计局面胜率，搜索在两者引导下分配计算。第二局第 37 手因与职业棋手经验相悖而出名；第四局李世石第 78 手则暴露了系统也会在罕见局面中失误。
+whatHappenedEn: A policy network narrowed candidate moves, a value network estimated winning chances, and search allocated computation using both. Move 37 in game two became famous for defying professional intuition, while Lee’s move 78 in game four exposed failures in unusual positions.
+whyImportant: 围棋无法靠穷举解决，胜利来自学习与搜索的分工。这个架构影响了后来的 AlphaZero，也让自我生成训练数据成为处理复杂决策任务的重要方法。
+whyImportantEn: Go cannot be solved by brute force. The victory came from dividing work between learning and search. The architecture led to AlphaZero and made self-generated training experience an important method for complex decisions.
 impact:
   industry: 全球 AI 投资热潮加速，DeepMind 成为 AI 标杆。
   developer: 深度强化学习成为热门研究方向。

@@ -22,7 +22,8 @@ concepts:
 summary: OpenAI 发布 GPT-5，把即时回答、深度推理、代码与工具使用整合进同一模型家族，模型开始根据任务自动分配计算。
 background: GPT-4 系列与 o1 系列分别承担通用对话和深度推理，用户和开发者需要在不同模型、速度和成本之间手动选择。
 whatHappened: GPT-5 家族统一快速与推理模式，并强化代码、工具调用和专业任务。产品路由开始根据问题难度自动决定是否投入更多推理计算。
-whyImportant: 它标志着“聊天模型”和“推理模型”的边界开始消失，旗舰模型从单次生成器演变为会分配计算和使用工具的任务系统。
+whyImportant: 用户不必在聊天模型与推理模型之间反复选择，系统可以按任务分配计算并决定是否调用工具。模型产品的重点因此从一次回答转向完整任务的成本与可靠性。
+whyImportantEn: Users no longer had to switch repeatedly between chat and reasoning models. The system could allocate compute and decide when to use tools, shifting product focus from one response to the cost and reliability of a complete task.
 impact:
   user: 用户不再需要理解复杂的模型选择才能获得不同深度的回答。
   developer: 单一模型家族可以覆盖即时交互、复杂推理和 Agent 工作流。

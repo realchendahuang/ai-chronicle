@@ -1,7 +1,9 @@
 ---
 id: perceptron
-title: 感知机（Perceptron）诞生
-subtitle: 第一个可学习的神经网络模型
+title: Rosenblatt 提出感知机
+titleEn: Rosenblatt introduces the perceptron
+subtitle: 线性分类器可以从样本中自动更新权重
+subtitleEn: A linear classifier learns its weights from examples
 date: '1957'
 datePrecision: year
 importance: A
@@ -20,13 +22,19 @@ concepts:
   - binary-classifier
 people:
   - frank-rosenblatt
-summary: 弗兰克·罗森布拉特发明了感知机——第一个可以学习的神经网络模型，奠定了深度学习的基础思想。
+summary: Frank Rosenblatt 提出感知机学习规则，并在 Cornell Aeronautical Laboratory 制作 Mark I 硬件，用样本训练二元图像分类。
+summaryEn: Frank Rosenblatt introduced the perceptron learning rule and built the Mark I hardware at Cornell Aeronautical Laboratory to learn binary image classifications from examples.
 background: 达特茅斯会议之后，研究者开始探索如何让机器从经验中学习。罗森布拉特受到生物神经元的启发，设计了一个简单的数学模型。
-whatHappened: 罗森布拉特在康奈尔航空实验室实现了感知机。它是一个由可调节权重的"神经元"组成的网络，可以通过训练样本来学习分类。
-whyImportant: 感知机是第一个真正"可学习"的 AI 模型。它证明了机器可以通过调整内部参数来从数据中学习，这个概念是现代深度学习的基础。
+whatHappened: 输入经过可调权重求和，再由阈值函数给出类别。预测错误时，学习规则按样本方向修改权重；对线性可分数据，这个过程可以证明收敛。它无法表示 XOR 等非线性边界。
+whatHappenedEn: Inputs were multiplied by adjustable weights and passed through a threshold. On an error, the learning rule updated weights toward the example; convergence could be proved for linearly separable data. It could not represent nonlinear boundaries such as XOR.
+whyImportant: 感知机把“学习”落实为根据误差更新参数的算法，并提供了可运行硬件。它的严格边界同样重要，后来多层网络与反向传播正是为跨过这些边界发展起来。
+whyImportantEn: The perceptron made learning an algorithm that updated parameters from error and implemented it in working hardware. Its strict limits mattered too; multilayer networks and backpropagation later developed to move beyond them.
 impact:
-  developer: 确立了监督学习和训练的概念，影响至今。
-  industry: 引发了第一波神经网络研究热潮。
+  developer: 监督样本可以直接驱动参数更新，而不必手写全部分类规则。
+  industry: 神经网络获得第一轮集中研究和公共资金支持。
+impactEn:
+  developer: Supervised examples could update parameters directly instead of requiring every classification rule to be written.
+  industry: Neural networks received their first concentrated wave of research and public funding.
 beforeAfter:
   before: AI 主要依赖手工编码的规则和符号推理。
   after: 机器开始具备从数据中"学习"的能力。

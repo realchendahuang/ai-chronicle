@@ -1,0 +1,42 @@
+---
+id: tool-use
+title: Claude Tool Use 正式可用
+titleEn: Claude tool use becomes generally available
+subtitle: 并行工具、图像输入和结构化调用进入 Claude API
+subtitleEn: Parallel tools, image input, and structured calls enter the Claude API
+date: '2024-05-30'
+datePrecision: day
+importance: B
+eventType: [api, product]
+topics: [ai-agent, developer-tools]
+companies: [anthropic]
+concepts: [tool-calling, agent]
+summary: Anthropic 宣布 Claude Tool Use 正式可用，开发者可以用 JSON Schema 定义客户端工具，由模型返回结构化调用请求。
+summaryEn: Anthropic made Claude tool use generally available, allowing developers to define client tools with JSON Schema and receive structured calls from the model.
+background: 函数调用已经成为大模型接入实时数据和业务系统的基本模式，但各家 API 的并行调用、错误处理和提示约定仍在快速演化。
+backgroundEn: Function calling had become the basic way to connect models with live data and business systems, while parallel calls, error handling, and prompting conventions were still evolving across providers.
+whatHappened: Claude 可以根据工具描述选择一个或多个工具，并把参数交给应用执行。Anthropic 同时提供了面向客服和图像任务的工具使用示例。
+whatHappenedEn: Claude could select one or more tools from their descriptions and return arguments for the application to execute. Anthropic also demonstrated customer-service and image-related tool workflows.
+whyImportant: 工具调用从单家 API 特性变成前沿模型的共同能力，Agent 框架可以在不同模型之间迁移，也为后来的 MCP 标准化需求提供现实基础。
+whyImportantEn: Tool calling became a shared frontier-model capability rather than one provider’s feature, allowing agent frameworks to move across models and creating demand for later MCP standardization.
+impact:
+  developer: Claude 应用可以使用数据库、API 和私有操作，不必把所有信息塞进提示。
+  industry: 工具描述与调用协议开始成为模型平台竞争和兼容性的关键层。
+impactEn:
+  developer: Claude applications could use databases, APIs, and private operations without placing everything in prompts.
+  industry: Tool descriptions and invocation protocols became a critical layer for model-platform competition and compatibility.
+beforeAfter:
+  before: Claude 主要通过文本上下文接收信息并生成回答。
+  after: Claude 可以在应用控制下选择结构化工具并参与执行循环。
+beforeAfterEn:
+  before: Claude mainly consumed text context and generated responses.
+  after: Claude could select structured tools inside an application-controlled execution loop.
+relatedEvents: [function-calling, mcp, claude-code]
+sources:
+  - title: Tool use is now generally available
+    url: https://www.anthropic.com/news/tool-use-ga
+    publisher: Anthropic
+    type: official
+status: verified
+slug: tool-use
+---

@@ -100,6 +100,13 @@
     if (languageLabel) languageLabel.textContent = normalized === 'en' ? '中' : 'EN'
     languageToggle?.setAttribute('aria-label', normalized === 'en' ? '切换到中文' : 'Switch to English')
     languageToggle?.setAttribute('title', normalized === 'en' ? '中文' : 'English')
+    const timelineResultCount = document.querySelector('[data-result-count]')
+    if (timelineResultCount) {
+      const visibleEvents = [...document.querySelectorAll('[data-event-card]')].filter((card) => !card.hidden).length
+      timelineResultCount.textContent = normalized === 'en'
+        ? `${visibleEvents} ${visibleEvents === 1 ? 'event' : 'events'}`
+        : `${visibleEvents} 个事件`
+    }
     setTheme(root.dataset.theme === 'light' ? 'light' : 'dark', false)
   }
 
@@ -270,7 +277,9 @@
     const hasFilters = Boolean(query) || topic !== 'all' || activeLevel !== 'all'
     resetButtons.forEach((button) => { button.hidden = !hasFilters })
     timelineRoot?.classList.toggle('is-filtered', hasFilters)
-    if (resultCount) resultCount.textContent = `${visible} 个事件`
+    if (resultCount) resultCount.textContent = root.dataset.lang === 'en'
+      ? `${visible} ${visible === 1 ? 'event' : 'events'}`
+      : `${visible} 个事件`
     if (emptyState) emptyState.hidden = visible > 0
     scheduleTimelineProgress()
   }

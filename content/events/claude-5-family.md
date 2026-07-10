@@ -29,7 +29,9 @@ impact:
   industry: 模型代际评价从单轮智能进一步转向长期执行可靠性。
 beforeAfter:
   before: Claude 4.x 通过高频小版本持续推进 Agent 能力。
-  after: Claude 5 系列开始以长期 Agent 能力重新定义旗舰和主力档。
+  after: Claude 5 系列按长期 Agent 与主力工作负载重新划分模型档位。
+beforeAfterEn:
+  after: Claude 5 reorganized model tiers around long-running agents and mainstream workloads.
 relatedEvents:
   - claude-3-5-sonnet
   - claude-code

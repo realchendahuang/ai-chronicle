@@ -1,7 +1,9 @@
 ---
 id: llama
-title: Llama 系列发布
-subtitle: Meta 开源大模型打破闭源垄断
+title: Meta 发布 LLaMA
+titleEn: Meta releases LLaMA
+subtitle: 高性能权重离开 API，开放模型社区迅速成形
+subtitleEn: Capable weights move beyond APIs and an open-model community forms
 date: '2023-02-24'
 datePrecision: day
 importance: A
@@ -19,9 +21,14 @@ concepts:
   - open-weight
   - model-distillation
   - quantization
-summary: Meta 发布了 Llama 系列大语言模型，虽然最初以研究为目的非公开泄露，但迅速催生了全球开源大模型生态，改变了 AI 行业的权力结构。
-whatHappened: Meta 发布了多个尺寸的 Llama 模型，虽然最初未完全开源，但权重泄露后，社区迅速衍生出 Alpaca、Vicuna 等微调版本。后续 Meta 正式开放了 Llama 2、Llama 3、Llama 3.1 等版本，逐步确立了开源大模型的标杆地位。
-whyImportant: Llama 打破了 OpenAI 和 Google 对大语言模型的垄断，让全球开发者都可以在本地部署和定制强大的语言模型。它催生了 Mistral、Qwen、DeepSeek 等开源模型的繁荣生态。
+summary: Meta 发布 7B、13B、33B 和 65B 参数的 LLaMA 论文与研究许可权重。权重随后外泄，社区很快完成量化、微调和本地运行工具。
+summaryEn: Meta released the LLaMA paper and research-licensed weights at 7B, 13B, 33B, and 65B parameters. After the weights leaked, the community quickly built quantization, fine-tuning, and local-running tools.
+background: GPT-3.5 与 PaLM 等高能力模型主要通过封闭 API 提供。研究者难以检查权重、修改训练流程，或在自己的硬件和数据边界内运行模型。
+backgroundEn: Capable models such as GPT-3.5 and PaLM were mainly available through closed APIs. Researchers could not inspect weights, modify training, or run them within their own hardware and data boundaries.
+whatHappened: LLaMA 强调用更多 token 训练相对较小模型，在多项基准上以较少参数达到竞争表现。初版不是开源软件许可；Llama 2 之后才提供更广商业使用条款，仍带有额外限制。
+whatHappenedEn: LLaMA emphasized training smaller models on more tokens and achieved competitive benchmarks with fewer parameters. The first release was not under an open-source software license; Llama 2 later allowed broader commercial use while retaining restrictions.
+whyImportant: 可获得权重让社区能量化、微调和研究模型内部，形成独立于托管 API 的部署路线。它也迫使行业更准确地区分开放权重、开放代码和开源许可。
+whyImportantEn: Available weights let the community quantize, fine-tune, and study models internally, creating a deployment path independent of hosted APIs. It also forced clearer distinctions among open weights, open code, and open-source licensing.
 impact:
   developer: 开源模型让开发者可以在本地运行和定制大模型。
   industry: 改变了 AI 行业由少数闭源公司主导的格局。

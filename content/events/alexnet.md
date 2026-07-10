@@ -1,7 +1,8 @@
 ---
 id: alexnet
 title: AlexNet 赢得 ImageNet 竞赛
-subtitle: 深度学习在计算机视觉领域的突破性胜利
+subtitle: 两块 GPU、120 万张训练图像和 10.9 个百分点的领先
+subtitleEn: Two GPUs, 1.2 million training images, and a 10.9-point lead
 date: '2012-09-30'
 datePrecision: day
 importance: S
@@ -20,9 +21,14 @@ concepts:
   - gpu
   - dropout
   - relu
-summary: Alex Krizhevsky、Ilya Sutskever 和 Geoffrey Hinton 设计的 AlexNet 在 ILSVRC 2012 中以压倒性优势夺冠，错误率远低于传统方法，标志着深度学习时代的正式开启。
-whatHappened: AlexNet 是一个深度卷积神经网络，利用 GPU 进行训练，采用了 ReLU 激活函数和 Dropout 正则化等技术。在 ImageNet 竞赛中，它的 top-5 错误率为 15.3%，而第二名的方法错误率高达 26.2%。
-whyImportant: 这是深度学习从学术边缘走向主流的转折点。它证明了 GPU 加速+大数据+深度网络的组合可以远超传统计算机视觉方法。
+summary: AlexNet 在 ILSVRC 2012 将 top-5 错误率降到 15.3%，第二名为 26.2%。这个差距让深度卷积网络成为计算机视觉的新基线。
+summaryEn: AlexNet reduced top-5 error in ILSVRC 2012 to 15.3%, compared with 26.2% for the runner-up. The gap made deep convolutional networks the new baseline for computer vision.
+background: ImageNet 已提供超过百万张带标签训练图像，GPU 也具备适合矩阵计算的并行能力，但主流视觉系统仍依赖人工设计的 SIFT、HOG 等特征。
+backgroundEn: ImageNet supplied more than a million labeled training images and GPUs offered suitable parallel computation, while mainstream vision systems still relied on hand-engineered features such as SIFT and HOG.
+whatHappened: 八层 AlexNet 在两块 GTX 580 GPU 上训练，使用 ReLU 加快优化，以数据增强和 Dropout 抑制过拟合。模型直接从像素学习特征，不再把特征提取与分类拆成两个独立系统。
+whatHappenedEn: The eight-layer AlexNet trained across two GTX 580 GPUs, used ReLU for faster optimization, and controlled overfitting with augmentation and dropout. It learned features directly from pixels instead of separating feature engineering from classification.
+whyImportant: 结果同时验证了数据、GPU 和深层网络的组合。此后视觉研究迅速放弃大量手工特征，算力和训练数据开始与算法一起决定模型能力。
+whyImportantEn: The result validated the combination of data, GPUs, and deep networks. Vision research rapidly moved away from hand-engineered features, and compute and training data became as decisive as algorithms.
 impact:
   industry: 引发全球科技公司对深度学习的大规模投入。
   developer: 改变了计算机视觉的研究范式。

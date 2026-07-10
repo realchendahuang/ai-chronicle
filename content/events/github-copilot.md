@@ -1,7 +1,8 @@
 ---
 id: github-copilot
 title: GitHub Copilot 发布
-subtitle: AI 编程助手的开端
+subtitle: Codex 生成的代码建议进入日常编辑器
+subtitleEn: Codex-generated suggestions enter the everyday code editor
 date: '2021-06-29'
 datePrecision: day
 importance: A
@@ -21,9 +22,14 @@ concepts:
   - code-generation
   - ai-pair-programmer
   - ide-agent
-summary: GitHub 与 OpenAI 合作发布了 Copilot，一个基于 Codex 模型的 AI 编程助手，直接集成在 IDE 中，彻底改变了开发者的编程体验。
-whatHappened: Copilot 可以理解代码上下文和自然语言注释，自动生成代码建议。它基于 OpenAI 的 Codex 模型（GPT-3 的代码特化版本），在大量开源代码上训练。开发者只需写注释或函数名，Copilot 就能生成完整代码。
-whyImportant: Copilot 是 AI Coding 的第一个标志性产品。它证明了 AI 可以实质性地提升开发效率，也引发了关于代码版权、AI 与开发者关系的广泛讨论。
+summary: GitHub 发布 Copilot 技术预览，把 OpenAI Codex 生成的单行或整段代码建议放进 Visual Studio Code。
+summaryEn: GitHub launched a technical preview of Copilot, placing single-line and whole-function suggestions from OpenAI Codex inside Visual Studio Code.
+background: 传统补全依赖语言服务器、符号和局部模式，能列出 API 或变量，却很难根据注释与周围代码生成完整实现。
+backgroundEn: Traditional completion relied on language servers, symbols, and local patterns. It could list APIs or variables but rarely generated a full implementation from comments and surrounding code.
+whatHappened: 插件把当前文件和相关上下文发送给模型，生成可接受、拒绝或继续编辑的建议。它可以根据函数名、注释和已有代码完成测试、样板与常见算法，但输出仍需开发者审查。
+whatHappenedEn: The extension sent the current file and nearby context to the model and returned suggestions that developers could accept, reject, or edit. It generated tests, boilerplate, and common algorithms from names, comments, and code, but still required review.
+whyImportant: Copilot 让生成模型进入高频开发动作，而不是停在演示和网页聊天中。它也把生产率、训练代码许可、相似代码输出和责任归属变成长期产品问题。
+whyImportantEn: Copilot moved generative models into a high-frequency development action rather than a demo or web chat. It also made productivity, training-code licensing, similar-code output, and responsibility persistent product issues.
 impact:
   developer: 改变了开发者的工作方式，代码生成成为日常工具。
   industry: 开启了 AI Coding 产品竞争，影响了 IDE 生态和开发者工具市场。

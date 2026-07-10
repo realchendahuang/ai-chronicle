@@ -1,7 +1,8 @@
 ---
 id: transformer
 title: Transformer 架构论文发表
-subtitle: 改变一切的那篇论文——Attention Is All You Need
+subtitle: 自注意力取代循环结构，序列训练可以大规模并行
+subtitleEn: Self-attention replaces recurrence and makes sequence training highly parallel
 date: '2017-06-12'
 datePrecision: day
 importance: S
@@ -22,12 +23,20 @@ concepts:
   - attention
   - self-attention
   - encoder-decoder
-summary: Google 团队发表了 "Attention Is All You Need" 论文，提出了 Transformer 架构，彻底改变了自然语言处理，并为大语言模型时代奠定了基础。
-whatHappened: 论文提出了一种全新的神经网络架构，完全基于注意力机制，不依赖 RNN 或 CNN。Transformer 通过自注意力机制并行处理序列中的所有位置，极大提升了训练效率和长距离依赖建模能力。
-whyImportant: Transformer 是现代 AI 最重要的架构创新。它直接催生了 BERT、GPT 系列、T5、Llama、Claude 等几乎所有主流大语言模型。ChatGPT 的底层架构就是 Transformer 的 decoder。
+summary: Google 研究者在机器翻译论文中提出 Transformer，用自注意力、前馈网络和位置编码构成编码器—解码器，去掉循环和卷积。
+summaryEn: Google researchers introduced the Transformer for machine translation, building an encoder-decoder from self-attention, feed-forward layers, and positional encoding without recurrence or convolution.
+background: RNN 和 LSTM 必须按时间顺序处理 token，长序列难以并行训练，信息也要经过很长路径才能连接。注意力此前通常只是循环网络上的辅助模块。
+backgroundEn: RNNs and LSTMs processed tokens sequentially, limiting parallel training and forcing information through long paths. Attention had usually been an auxiliary module on top of recurrent networks.
+whatHappened: 多头自注意力让每个位置直接读取序列中的其他位置，位置编码补回顺序信息。论文在 WMT 翻译任务上以更少训练成本取得当时最佳结果。
+whatHappenedEn: Multi-head self-attention let every position read other positions directly, while positional encoding restored order information. The model achieved state-of-the-art WMT translation results with lower training cost.
+whyImportant: 架构能在并行硬件上有效扩展，并能拆成仅编码器或仅解码器，随后分别形成 BERT 与 GPT 等路线。注意力的二次复杂度也带来长上下文成本，推动稀疏和线性注意力研究。
+whyImportantEn: The architecture scaled efficiently on parallel hardware and could be split into encoder-only or decoder-only forms, leading to families such as BERT and GPT. Quadratic attention cost also created the long-context problem and drove sparse and linear alternatives.
 impact:
-  developer: 彻底改变了 NLP 的研究和实践范式。
-  industry: 成为所有主流大语言模型的基础架构。
+  developer: 序列模型可以高效并行训练，并复用统一的注意力模块。
+  industry: 编码器、解码器和多模态变体成为基础模型常用架构。
+impactEn:
+  developer: Sequence models could train efficiently in parallel and reuse a shared attention module.
+  industry: Encoder, decoder, and multimodal variants became common base-model architectures.
 beforeAfter:
   before: NLP 依赖 RNN/LSTM 进行序列建模，训练慢、难并行化、长序列效果差。
   after: Transformer 成为 NLP 和后续多模态 AI 的统一基础架构。

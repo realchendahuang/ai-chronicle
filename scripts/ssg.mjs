@@ -66,6 +66,35 @@ const topicLabels = {
   'enterprise-ai': '企业 AI',
 }
 
+const topicLabelsEn = {
+  'ai-foundations': 'AI Foundations',
+  'ai-winter': 'AI Winters',
+  'deep-learning': 'Deep Learning',
+  'computer-vision': 'Computer Vision',
+  'natural-language-processing': 'Natural Language Processing',
+  nlp: 'Natural Language Processing',
+  'large-language-models': 'Large Language Models',
+  'consumer-ai': 'Consumer AI',
+  'ai-applications': 'AI Applications',
+  'ai-coding': 'AI Coding',
+  'ai-agent': 'AI Agents',
+  'open-source-models': 'Open Models',
+  'multimodal-ai': 'Multimodal AI',
+  'ai-for-science': 'AI for Science',
+  'reinforcement-learning': 'Reinforcement Learning',
+  'representation-learning': 'Representation Learning',
+  'ai-infrastructure': 'AI Infrastructure',
+  'model-efficiency': 'Model Efficiency',
+  'developer-tools': 'Developer Tools',
+  'model-context-protocol': 'MCP Ecosystem',
+  'ai-history': 'AI History',
+  'game-ai': 'Game AI',
+  'neural-networks': 'Neural Networks',
+  'ai-safety': 'AI Safety',
+  'china-ai': 'AI in China',
+  'enterprise-ai': 'Enterprise AI',
+}
+
 const topicAliases = {
   nlp: 'natural-language-processing',
 }
@@ -107,6 +136,24 @@ const formatDate = (value, precision = 'day') => {
   return `${year} 年 ${Number(month)} 月 ${Number(day)} 日`
 }
 
+const monthNamesEn = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+const formatDateEn = (value, precision = 'day') => {
+  const [year, month, day] = String(value).split('-')
+  if (precision === 'year' || !month) return year
+  const monthName = monthNamesEn[Number(month) - 1]
+  if (precision === 'month' || !day) return `${monthName} ${year}`
+  return `${monthName} ${Number(day)}, ${year}`
+}
+
+const timelineDateEn = (value, precision = 'day') => {
+  const [, month, day] = String(value).split('-')
+  if (precision === 'year' || !month) return ''
+  const monthName = monthNamesEn[Number(month) - 1]
+  if (precision === 'month' || !day) return monthName
+  return `${monthName} ${Number(day)}`
+}
+
 const formatShortDate = (value) => String(value).replaceAll('-', '.')
 
 const topicName = (topic) => topicLabels[topic] || topic
@@ -114,12 +161,29 @@ const topicName = (topic) => topicLabels[topic] || topic
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join(' ')
 
+const topicNameEn = (topic) => topicLabelsEn[topic] || topicName(topic)
+
 const canonicalTopic = (topic) => topicAliases[topic] || topic
 
 const bilingual = (zh, en, tag = 'span', className = '') => `<${tag}${className ? ` class="${escapeHtml(className)}"` : ''} data-localized data-zh="${escapeHtml(zh)}" data-en="${escapeHtml(en)}">${escapeHtml(zh)}</${tag}>`
 
 const sortedEvents = [...events].sort((a, b) => a.date.localeCompare(b.date))
 const recentEvents = [...events].sort((a, b) => b.date.localeCompare(a.date))
+
+const eventTranslations = Object.fromEntries(events.flatMap((event) => {
+  const pairs = [
+    [event.title, event.titleEn],
+    [event.subtitle, event.subtitleEn],
+    [event.summary, event.summaryEn],
+    [event.background, event.backgroundEn],
+    [event.whatHappened, event.whatHappenedEn],
+    [event.whyImportant, event.whyImportantEn],
+    [event.beforeAfter?.before, event.beforeAfterEn?.before],
+    [event.beforeAfter?.after, event.beforeAfterEn?.after],
+    ...Object.keys(event.impact || {}).map((key) => [event.impact?.[key], event.impactEn?.[key]]),
+  ]
+  return pairs.filter(([zh, en]) => zh && en)
+}))
 
 const topicIndex = [...new Set([
   ...events.flatMap((event) => event.topics.map(canonicalTopic)),
@@ -131,6 +195,22 @@ const topicIndex = [...new Set([
     events: sortedEvents.filter((event) => event.topics.some((topic) => canonicalTopic(topic) === id)),
   }))
   .sort((a, b) => b.events.length - a.events.length || a.label.localeCompare(b.label, 'zh-CN'))
+
+const generatedInterfaceTranslations = Object.fromEntries([
+  [`${events.length} 个事件`, `${events.length} events`],
+  ...events.flatMap((event) => [
+    [formatDate(event.date, event.datePrecision), formatDateEn(event.date, event.datePrecision)],
+    [timelineDate(event), timelineDateEn(event.date, event.datePrecision)],
+  ]),
+  ...topicIndex.flatMap((topic) => [
+    [`${topic.label} · ${topic.events.length}`, `${topicNameEn(topic.id)} · ${topic.events.length}`],
+    [`${topic.events.length} 个节点`, `${topic.events.length} ${topic.events.length === 1 ? 'node' : 'nodes'}`],
+    [
+      `${topic.events.length} 个节点 · ${topic.events[0]?.date.slice(0, 4)}—${topic.events.at(-1)?.date.slice(0, 4)}`,
+      `${topic.events.length} ${topic.events.length === 1 ? 'node' : 'nodes'} · ${topic.events[0]?.date.slice(0, 4)}—${topic.events.at(-1)?.date.slice(0, 4)}`,
+    ],
+  ]),
+].filter(([zh, en]) => zh && en))
 
 const arrowIcon = `
   <svg aria-hidden="true" viewBox="0 0 20 20" fill="none">
@@ -227,7 +307,7 @@ function footer() {
       <div class="footer-main">
         <div>
           <a class="footer-brand" href="${urlFor('/')}">AI Chronicle</a>
-          <p>沿时间，看清 AI 如何走到今天。</p>
+          <p>按时间查事件，顺着来源读下去。</p>
         </div>
         <div class="footer-links">
           <a href="${urlFor('/')}">时间轴</a>
@@ -239,7 +319,7 @@ function footer() {
         </div>
       </div>
       <div class="footer-meta">
-        <span>AI 行业公共知识档案</span>
+        <span>AI 行业事件档案</span>
         <span>内容版本 · 2026.07</span>
       </div>
     </footer>`
@@ -420,7 +500,7 @@ function renderHome() {
 
   writePage('', {
     title: 'AI 行业编年史',
-    description: '用关键事件理解 AI 的发展脉络。沿时间轴翻阅行业转折，并学习背后的核心概念。',
+    description: '按时间浏览改变 AI 技术、产品与行业路线的关键事件。',
     path: '/',
     active: 'timeline',
     body,
@@ -532,7 +612,7 @@ function renderConceptPages() {
   const body = `
     <section class="page-intro">
       <div><h1>概念词典</h1></div>
-      <p>把概念放回发生过的历史里。先用人话理解，再继续往技术深处走。</p>
+      <p>先看它解决了什么问题，再读技术原理和相关事件。</p>
     </section>
     <section class="index-toolbar">
       <div class="inline-search">${searchIcon}<input type="search" placeholder="搜索概念" data-index-search></div>
@@ -557,7 +637,7 @@ function renderConceptPages() {
 
   writePage('concepts', {
     title: '概念词典',
-    description: '把 AI 核心概念放回历史脉络，用人话理解它们为什么重要。',
+    description: '沿事件理解 AI 概念：它是什么、何时出现，又解决了什么问题。',
     path: '/concepts/',
     active: 'concepts',
     body,
@@ -605,7 +685,7 @@ function renderModelFamilyPages() {
   const body = `
     <section class="page-intro model-intro">
       <div><h1>模型谱系</h1></div>
-      <p>主时间轴只保留改变方向的节点。这里展开每个厂商的完整代际、发布时间与能力变化。</p>
+      <p>查看各家模型的发布时间、定位和能力变化。</p>
     </section>
     <section class="model-family-index">
       ${modelFamilies.map((family, index) => {
@@ -648,7 +728,7 @@ function renderModelFamilyPages() {
           </div>
         </header>
         <section class="model-release-list">
-          <header><span>${String(family.releases.length).padStart(2, '0')} 代</span><h2>从第一代到今天</h2></header>
+          <header><span>${String(family.releases.length).padStart(2, '0')} 代</span><h2>历代模型</h2></header>
           ${[...family.releases].reverse().map((release, index) => `
             <article class="model-release" data-status="${escapeHtml(release.status)}">
               <span>${String(family.releases.length - index).padStart(2, '0')}</span>
@@ -675,7 +755,7 @@ function renderCompanyPages() {
   const body = `
     <section class="page-intro">
       <div><h1>行业玩家</h1></div>
-      <p>看它在什么时候发布了什么，又把行业推向了哪里。</p>
+      <p>按组织查看模型、产品和关键事件。</p>
     </section>
     <section class="company-index">
       ${companies.map((company, index) => `
@@ -729,7 +809,7 @@ function renderTopicPages() {
   const body = `
     <section class="page-intro">
       <div><h1>主题路线</h1></div>
-      <p>时间解释先后，主题解释一条路线如何形成。</p>
+      <p>把同一技术路线上的事件放在一起读。</p>
     </section>
     <section class="topic-directory">
       ${topicIndex.map((topic, index) => `
@@ -755,7 +835,7 @@ function renderTopicPages() {
       <section class="topic-hero">
         <div class="breadcrumbs"><a href="${urlFor('/topics/')}">主题路线</a><span>/</span><span>${topic.events.length} 个节点</span></div>
         <h1>${escapeHtml(topic.label)}</h1>
-        <p>沿时间顺序查看这条路线里的关键转折，理解它如何从一个研究方向变成今天的技术与产品。</p>
+        <p>按时间查看这条路线的关键转折。</p>
       </section>
       <section class="topic-timeline${topic.events.length ? '' : ' is-empty'}">
         ${topic.events.length ? topic.events.map((event, index) => `
@@ -781,8 +861,8 @@ function renderTopicPages() {
 function renderAbout() {
   const body = `
     <article class="about-page-content">
-      <header><h1>不追逐每条新闻。<br>只保留后来仍值得理解的节点。</h1></header>
-      <section><span class="section-number">01</span><h2>这个项目是什么</h2><p>AI Chronicle 是一个以关键事件为主线，以概念、公司和技术路线为连接的 AI 行业知识地图。它希望让刚入行的人不靠追逐碎片信息，也能建立一张稳定、可继续生长的认知地图。</p></section>
+      <header><h1>不追新闻。<br>记录改变路线的事件。</h1></header>
+      <section><span class="section-number">01</span><h2>这个项目是什么</h2><p>AI Chronicle 按时间整理 AI 行业事件，并把事件连接到概念、公司、模型和原始来源。它服务于两种阅读：从头梳理一条路线，或在需要时查清某个节点。</p></section>
       <section><span class="section-number">02</span><h2>什么事件会被收录</h2><ul><li>它改变了技术范式或产品入口。</li><li>它影响了后续开发者行为与生态结构。</li><li>多年以后回看，仍然有解释和学习价值。</li><li>能够找到可公开核验的原始资料。</li></ul></section>
       <section><span class="section-number">03</span><h2>重要程度怎么判断</h2><div class="editorial-levels"><p><b>S</b><span>范式级</span>极少数改变行业方向的节点。</p><p><b>A</b><span>行业级</span>对多个方向产生持续影响。</p><p><b>B</b><span>领域级</span>在特定技术或产品路线中重要。</p><p><b>C</b><span>补充</span>帮助理解前后关系的背景节点。</p></div></section>
       <section><span class="section-number">04</span><h2>编辑原则</h2><p>事实与判断分开；重要判断给出依据；“已核验”必须附有可访问来源；短期热度不自动等于历史地位；争议和局限不因为影响叙事而被删除。</p></section>
@@ -808,6 +888,12 @@ function writeSupportFiles() {
   ]
 
   writeFileSync(join(siteDir, 'assets/search-index.json'), JSON.stringify(searchIndex), 'utf8')
+  const staticTranslations = JSON.parse(readFileSync(join(rootDir, 'public/assets/i18n-en.json'), 'utf8'))
+  writeFileSync(
+    join(siteDir, 'assets/i18n-en.json'),
+    JSON.stringify({ ...staticTranslations, ...eventTranslations, ...generatedInterfaceTranslations }, null, 2),
+    'utf8',
+  )
 
   const routes = [
     '/', '/timeline/', '/concepts/', '/models/', '/companies/', '/topics/', '/about/',

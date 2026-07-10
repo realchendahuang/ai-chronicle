@@ -1,7 +1,8 @@
 ---
 id: gpt-4-release
 title: GPT-4 发布
-subtitle: 多模态大模型的里程碑
+subtitle: 图像输入、更稳的复杂任务表现与一次刻意收缩的技术披露
+subtitleEn: Image input, stronger complex-task performance, and deliberately limited technical disclosure
 date: '2023-03-14'
 datePrecision: day
 importance: A
@@ -20,9 +21,14 @@ concepts:
   - multimodal
   - llm
   - reasoning
-summary: OpenAI 发布 GPT-4，首个在视觉和语言能力上都达到顶级水平的大模型，能理解图像输入并生成高质量文本，在多个人类考试中超越大多数人类考生。
-whatHappened: GPT-4 在逻辑推理、编程、写作、考试等方面的能力远超前代模型。它能理解图像内容并基于图像进行对话。在美国律师资格考试、医学执照考试等标准化测试中取得前 10% 的成绩。
-whyImportant: GPT-4 证明了多模态大模型的可行性，并将 AI 的推理能力推到了新高度。它也为后续的 AI Agent、多模态应用打开了大门。
+summary: OpenAI 发布 GPT-4。模型接受文本和图像输入，在模拟律师资格考试中达到约前 10%，并提高代码、专业问答与复杂指令表现。
+summaryEn: OpenAI released GPT-4 with text and image input, performance around the top ten percent on a simulated bar exam, and stronger results in coding, professional questions, and complex instructions.
+background: ChatGPT 已形成大规模使用，但 GPT-3.5 在长推理、事实可靠性和复杂约束上经常失败。多模态产品还需要把视觉模型与语言模型分开串联。
+backgroundEn: ChatGPT had reached mass use, but GPT-3.5 often failed on long reasoning, factual reliability, and complex constraints. Multimodal products still chained separate vision and language models.
+whatHappened: 技术报告公布评测、风险和安全训练结果，却没有披露模型规模、训练计算量、数据集构成或具体架构。图像输入先以有限形式开放，文本 API 成为主要生产入口。
+whatHappenedEn: The technical report presented evaluations, risks, and safety work but did not disclose model size, training compute, dataset composition, or architecture. Image input began with limited access, while the text API became the main production entry.
+whyImportant: GPT-4 把前沿模型从通用文本生成推向专业工作和视觉理解，同时确立更封闭的技术披露方式。能力提高没有消除幻觉、提示注入和不可解释失败。
+whyImportantEn: GPT-4 moved frontier models from general text generation toward professional work and visual understanding while establishing a more closed disclosure pattern. Better capability did not remove hallucinations, prompt injection, or opaque failures.
 impact:
   industry: 进一步巩固了 OpenAI 的领先地位，推动多模态 AI 成为行业方向。
   developer: 催生了大量基于 GPT-4 的 Agent 和多模态应用。

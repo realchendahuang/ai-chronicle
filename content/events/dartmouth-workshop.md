@@ -1,7 +1,9 @@
 ---
 id: dartmouth-workshop
-title: 达特茅斯会议 — AI 诞生
-subtitle: 人工智能作为一个学科正式诞生
+title: 达特茅斯暑期研究项目
+titleEn: The Dartmouth Summer Research Project
+subtitle: “Artificial Intelligence”成为一项共同研究议程
+subtitleEn: Artificial Intelligence becomes a shared research agenda
 date: '1956-08'
 datePrecision: month
 importance: S
@@ -21,10 +23,13 @@ people:
   - claude-shannon
   - nathaniel-rochester
 papers: []
-summary: 1956 年夏天，约翰·麦卡锡、马文·明斯基、克劳德·香农等人在达特茅斯学院组织了一场为期两个月的研讨会，正式提出了"人工智能"这一术语，标志着 AI 作为一门独立学科的诞生。
+summary: 1956 年夏天，研究者在达特茅斯学院讨论学习、语言、抽象和自我改进机器。项目提案首次用“Artificial Intelligence”命名这组问题。
+summaryEn: In the summer of 1956, researchers at Dartmouth discussed learning, language, abstraction, and self-improving machines. The proposal named this cluster of problems “Artificial Intelligence.”
 background: 在此之前，图灵已经提出了"机器能思考吗"的问题，麦卡洛克和皮茨提出了人工神经元模型，但 AI 还不是一个有名称、有组织的学科。
-whatHappened: 1956 年夏天，约翰·麦卡锡在达特茅斯学院组织了一场暑期研讨会，邀请了当时最顶尖的计算机科学家、数学家和心理学家参加。会议的主题是"用机器模拟人类智能的每个方面"。麦卡锡在提案中首次使用了"Artificial Intelligence"这个术语。
-whyImportant: 这是人类第一次正式把"让机器拥有智能"作为一个学科来研究。会议虽然未产出具体成果，但确立了 AI 研究的方向和社群。参会的许多人后来成为 AI 领域的奠基者。
+whatHappened: McCarthy、Minsky、Rochester 与 Shannon 在 1955 年提案中预计，十名研究者用一个夏天即可推进机器学习和智能模拟。实际参与者分批到访，并非所有人连续开会两个月，项目也没有立刻产生统一理论。
+whatHappenedEn: McCarthy, Minsky, Rochester, and Shannon proposed in 1955 that ten researchers working for one summer could advance machine learning and simulations of intelligence. Participants visited at different times rather than attending one continuous two-month meeting, and no unified theory emerged.
+whyImportant: 它把此前分散在控制论、计算、心理学和神经模型中的问题聚合成一个名称和社群。这个名称随后影响院系、资金、会议以及公众对整片研究领域的理解。
+whyImportantEn: It gathered problems from cybernetics, computation, psychology, and neural models under one name and community. That name later shaped departments, funding, conferences, and public understanding of the field.
 impact:
   user: ''
   developer: ''

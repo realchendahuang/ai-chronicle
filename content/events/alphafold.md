@@ -1,7 +1,8 @@
 ---
 id: alphafold
 title: AlphaFold 破解蛋白质结构预测
-subtitle: AI 解决生物学 50 年难题
+subtitle: CASP14 上接近实验精度的蛋白质结构预测
+subtitleEn: Protein-structure prediction approaches experimental accuracy at CASP14
 date: '2020-11-30'
 datePrecision: day
 importance: A
@@ -18,9 +19,14 @@ models:
 concepts:
   - protein-folding
   - deep-learning
-summary: DeepMind 的 AlphaFold 在蛋白质结构预测竞赛 CASP 中取得突破性成绩，解决了困扰生物学界 50 年的蛋白质折叠问题。
-whatHappened: AlphaFold 使用深度学习直接从氨基酸序列预测蛋白质的三维结构，精度达到了实验方法的水平。2021 年，DeepMind 开源了 AlphaFold 2 并发布了包含 2 亿+ 蛋白质结构预测的数据库。
-whyImportant: 这是 AI for Science 的里程碑。蛋白质结构是药物研发、疾病理解和生物学的核心问题。AlphaFold 将可能需要数十年实验工作的结构预测压缩到了几分钟。
+summary: AlphaFold 2 在 CASP14 的多数目标上达到接近实验结构的精度，把大量蛋白质的计算预测从研究难题变成可用工具。
+summaryEn: AlphaFold 2 reached near-experimental accuracy on many CASP14 targets, turning computational structure prediction for many proteins from a research challenge into a practical tool.
+background: 蛋白质的氨基酸序列容易读取，三维结构却通常需要 X 射线晶体学、冷冻电镜或核磁共振等昂贵实验。传统计算方法难以在巨大构象空间中稳定找到正确结构。
+backgroundEn: Amino-acid sequences are easy to read, but 3D structures usually require expensive experiments such as X-ray crystallography, cryo-EM, or NMR. Traditional computation struggled to search the enormous conformational space reliably.
+whatHappened: 模型结合多序列比对、残基对表示和结构模块，直接预测原子坐标与置信度。2021 年代码公开，AlphaFold DB 随后扩展到超过 2 亿个预测结构。它预测静态结构，并不等于完整模拟折叠过程或生物功能。
+whatHappenedEn: The model combined multiple-sequence alignments, pair representations, and a structure module to predict atomic coordinates and confidence. Code followed in 2021, and AlphaFold DB expanded beyond 200 million predictions. It predicts structures, not the complete folding process or biological function.
+whyImportant: 研究者可以先用预测结构形成假设，再决定哪些实验最值得做。它显著扩大了结构信息的覆盖范围，但药物作用、动态变化和低置信区域仍需要实验验证。
+whyImportantEn: Researchers could use predicted structures to form hypotheses before choosing expensive experiments. Coverage expanded dramatically, while drug action, dynamics, and low-confidence regions still required experimental validation.
 impact:
   industry: 加速了药物研发和生物科学研究，影响了医药行业。
   developer: 展示了深度学习在科学发现中的巨大潜力。

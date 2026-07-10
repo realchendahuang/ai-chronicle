@@ -1,7 +1,8 @@
 ---
 id: gpt-3
 title: GPT-3 发布
-subtitle: 大语言模型能力的质变——Few-Shot Learning
+subtitle: 1750 亿参数把少样本提示推向通用接口
+subtitleEn: 175 billion parameters turn few-shot prompting into a general interface
 date: '2020-06-11'
 datePrecision: day
 importance: A
@@ -20,12 +21,20 @@ concepts:
   - few-shot-learning
   - scaling-law
   - autoregressive
-summary: OpenAI 发布 GPT-3，拥有 1750 亿参数，展示了令人惊叹的 few-shot learning 能力，让世界第一次意识到规模可以带来能力的质变。
-whatHappened: GPT-3 是当时最大的语言模型，通过 API 提供服务。它不需要针对特定任务进行微调，只需在提示中给出几个例子，就能完成翻译、写作、编程等多种任务。这标志着 AI 从"需要大量标注数据"走向"只需要几个示例"。
-whyImportant: GPT-3 证明了 Scaling Law——更大的模型、更多的数据、更多的算力可以带来意想不到的涌现能力。它为大模型军备竞赛拉开了序幕。
+summary: OpenAI 训练 1750 亿参数 GPT-3，模型只看任务说明或少量示例，就能在不更新权重的情况下处理翻译、问答、文本生成和简单代码。
+summaryEn: OpenAI trained the 175-billion-parameter GPT-3, which handled translation, question answering, text generation, and simple code from instructions or a few examples without updating its weights.
+background: GPT-2 已展示零样本迁移，缩放规律也预示损失会随模型、数据和计算量平滑下降。尚不清楚这种下降能否转化成跨任务的实用行为。
+backgroundEn: GPT-2 had shown zero-shot transfer, and scaling laws predicted smoother loss with more models, data, and compute. It remained unclear whether that improvement would produce useful behavior across tasks.
+whatHappened: 论文比较零样本、单样本和少样本设置。GPT-3 在许多任务上明显改善，但在算术、常识和数据偏差上仍有系统性错误。OpenAI 选择通过 API 提供模型，而不是发布权重。
+whatHappenedEn: The paper compared zero-shot, one-shot, and few-shot settings. GPT-3 improved across many tasks but retained systematic failures in arithmetic, common sense, and bias. OpenAI delivered it through an API rather than releasing weights.
+whyImportant: 提示开始承担过去由数据集格式和微调代码完成的任务配置工作。API 分发也形成新的基础模型商业模式，让同一模型支撑大量下游产品。
+whyImportantEn: Prompts began performing task configuration previously handled by dataset formats and fine-tuning code. API distribution also established a base-model business model in which one model served many downstream products.
 impact:
-  industry: 全球 AI 公司开始竞相训练更大的模型，大模型军备竞赛开始。
-  developer: 开发者开始围绕大模型 API 构建应用，开启了 AI 应用生态。
+  industry: 前沿实验室把更大的训练集群和基础模型 API 纳入长期产品投入。
+  developer: 开发者开始围绕通用模型 API 构建写作、搜索和编程应用。
+impactEn:
+  industry: Frontier labs made larger training clusters and base-model APIs long-term product investments.
+  developer: Developers began building writing, search, and coding products around general model APIs.
 beforeAfter:
   before: 每个 NLP 任务需要独立训练模型，成本高、泛化差。
   after: 一个通用大模型可以通过提示完成多种任务，AI 开始走向通用化。

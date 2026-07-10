@@ -1,7 +1,8 @@
 ---
 id: deep-blue
 title: 深蓝击败国际象棋世界冠军
-subtitle: AI 第一次在顶尖智力竞技中击败人类冠军
+subtitle: 专用芯片与大规模搜索赢下六局制人机赛
+subtitleEn: Specialized chips and large-scale search win a six-game match
 date: '1997-05-11'
 datePrecision: day
 importance: A
@@ -15,9 +16,12 @@ companies:
 concepts:
   - game-tree-search
   - symbolic-ai
-summary: IBM 的超级计算机 "深蓝" 在六局比赛中击败了国际象棋世界冠军卡斯帕罗夫，成为 AI 发展史上的标志性里程碑。
-whatHappened: 深蓝是一台专门为下国际象棋设计的超级计算机，使用暴力搜索和启发式算法分析走法。它在一场备受全球关注的六局比赛中以 3.5-2.5 击败了当时处于巅峰期的卡斯帕罗夫。
-whyImportant: 这是 AI 第一次在传统智力领域击败世界冠军，极大地改变了公众对 AI 能力的认知。
+summary: IBM 深蓝在纽约六局重赛中以 3.5 比 2.5 战胜国际象棋世界冠军 Garry Kasparov，成为首个在正式比赛条件下击败现役世界冠军的计算机系统。
+summaryEn: IBM Deep Blue defeated world chess champion Garry Kasparov 3.5–2.5 in a six-game rematch in New York, the first computer to beat a reigning champion under standard match conditions.
+whatHappened: 深蓝使用专用棋类芯片，每秒评估约 2 亿个局面，再结合搜索、开局库、残局库和由特级大师调校的评价函数选择走法。它是高度专用系统，不能把棋力迁移到其他任务。
+whatHappenedEn: Deep Blue used specialized chess chips to evaluate roughly 200 million positions per second, combining search with opening books, endgame databases, and an evaluation function tuned by grandmasters. It was highly specialized and could not transfer its skill to other tasks.
+whyImportant: 比赛让公众看到大规模计算和领域知识可以在复杂智力任务上超过人类。它也划清了一条边界：赢棋并不等于获得通用推理或学习能力。
+whyImportantEn: The match showed a mass audience that computation and domain knowledge could surpass humans on a complex intellectual task. It also clarified that winning chess did not imply general reasoning or learning.
 beforeAfter:
   before: AI 在国际象棋领域被认为远远不如人类顶级选手。
   after: 计算机在国际象棋领域的统治地位开始建立。
