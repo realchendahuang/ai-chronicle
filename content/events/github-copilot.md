@@ -4,7 +4,7 @@ title: GitHub Copilot 发布
 subtitle: AI 编程助手的开端
 date: '2021-06-29'
 datePrecision: day
-importance: S
+importance: A
 eventType:
   - product
 topics:
@@ -36,6 +36,11 @@ relatedEvents:
   - cursor
   - claude-code
   - codex-agent
+sources:
+  - title: Introducing GitHub Copilot — your AI pair programmer
+    url: https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/
+    publisher: GitHub
+    type: official
 status: verified
 slug: github-copilot
 ---

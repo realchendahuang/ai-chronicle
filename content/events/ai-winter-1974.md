@@ -24,6 +24,11 @@ relatedEvents:
   - dartmouth-workshop
   - expert-systems
   - ai-winter-1987
+sources:
+  - title: Artificial Intelligence — A General Survey
+    url: https://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/p001.htm
+    publisher: UK Science Research Council
+    type: report
 status: verified
 slug: ai-winter-1974
 ---

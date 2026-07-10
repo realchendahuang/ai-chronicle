@@ -11,11 +11,16 @@ keyTopics:
   - ai-coding
   - ai-safety
 keyEvents:
+  - claude-3-5-sonnet
   - claude-code
   - mcp
+  - claude-5-family
 models:
   - claude-3.5-sonnet
   - claude-4-sonnet
+  - claude-opus-4.8
+  - claude-fable-5
+  - claude-sonnet-5
 products:
   - claude
   - claude-code

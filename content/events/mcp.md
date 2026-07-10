@@ -4,7 +4,7 @@ title: MCP 协议发布
 subtitle: AI 与工具之间的通用接口标准
 date: '2024-11-25'
 datePrecision: day
-importance: A
+importance: B
 eventType:
   - protocol
   - open-source
@@ -30,6 +30,11 @@ relatedEvents:
   - function-calling
   - tool-use
   - agent-runtime
+sources:
+  - title: Introducing the Model Context Protocol
+    url: https://www.anthropic.com/news/model-context-protocol
+    publisher: Anthropic
+    type: official
 status: verified
 slug: mcp
 ---

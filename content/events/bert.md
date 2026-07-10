@@ -4,7 +4,7 @@ title: BERT 发布
 subtitle: 预训练语言模型时代的开端
 date: '2018-10-11'
 datePrecision: day
-importance: S
+importance: A
 eventType:
   - model
   - paper
@@ -31,6 +31,11 @@ relatedEvents:
   - gpt-1
   - gpt-2
   - gpt-3
+sources:
+  - title: BERT — Pre-training of Deep Bidirectional Transformers for Language Understanding
+    url: https://arxiv.org/abs/1810.04805
+    publisher: arXiv
+    type: paper
 status: verified
 slug: bert
 ---

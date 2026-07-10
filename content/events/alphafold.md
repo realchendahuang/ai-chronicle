@@ -4,7 +4,7 @@ title: AlphaFold 破解蛋白质结构预测
 subtitle: AI 解决生物学 50 年难题
 date: '2020-11-30'
 datePrecision: day
-importance: S
+importance: A
 eventType:
   - paper
   - milestone
@@ -30,6 +30,11 @@ beforeAfter:
 relatedEvents:
   - alphago
   - deepmind
+sources:
+  - title: AlphaFold — a solution to a 50-year-old grand challenge in biology
+    url: https://deepmind.google/discover/blog/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology/
+    publisher: Google DeepMind
+    type: official
 status: verified
 slug: alphafold
 ---

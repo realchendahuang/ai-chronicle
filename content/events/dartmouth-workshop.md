@@ -38,7 +38,10 @@ relatedEvents:
   - perceptron
   - ai-winter-1974
 sources:
-  - dartmouth-proposal
+  - title: A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence
+    url: http://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html
+    publisher: Stanford University archive
+    type: archive
 status: verified
 slug: dartmouth-workshop
 ---

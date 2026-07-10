@@ -34,6 +34,11 @@ relatedEvents:
   - deep-learning-rise
   - resnet
   - gpt-1
+sources:
+  - title: ImageNet Classification with Deep Convolutional Neural Networks
+    url: https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks
+    publisher: NeurIPS
+    type: paper
 status: verified
 slug: alexnet
 ---

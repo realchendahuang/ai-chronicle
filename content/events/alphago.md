@@ -4,7 +4,7 @@ title: AlphaGo 击败李世石
 subtitle: AI 攻破围棋——人类最复杂的棋盘游戏
 date: '2016-03-15'
 datePrecision: day
-importance: S
+importance: A
 eventType:
   - milestone
 topics:
@@ -37,6 +37,11 @@ relatedEvents:
   - alphazero
   - alphafold
   - openai-five
+sources:
+  - title: Mastering the game of Go with deep neural networks and tree search
+    url: https://www.nature.com/articles/nature16961
+    publisher: Nature
+    type: paper
 status: verified
 slug: alphago
 ---

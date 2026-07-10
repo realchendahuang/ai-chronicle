@@ -35,7 +35,11 @@ relatedEvents:
   - minsky-perceptrons-book
   - backpropagation
   - alexnet
-sources: []
+sources:
+  - title: The Perceptron — A Probabilistic Model for Information Storage and Organization in the Brain
+    url: https://psycnet.apa.org/record/1959-09865-001
+    publisher: Psychological Review
+    type: paper
 status: verified
 slug: perceptron
 ---

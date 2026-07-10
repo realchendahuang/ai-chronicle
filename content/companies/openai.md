@@ -14,12 +14,17 @@ keyEvents:
   - gpt-3
   - chatgpt-launch
   - gpt-4-release
-  - codex-agent
+  - gpt-4o
+  - openai-o1
+  - gpt-5
+  - gpt-5-6
 models:
   - gpt-3
   - gpt-4
   - gpt-4o
   - gpt-4.5
+  - gpt-5
+  - gpt-5.6
 products:
   - chatgpt
   - codex

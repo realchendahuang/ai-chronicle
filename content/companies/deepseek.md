@@ -10,10 +10,14 @@ keyTopics:
   - open-source-models
   - china-ai
 keyEvents:
-  - deepseek
+  - deepseek-v3
+  - deepseek-r1
+  - deepseek-v4
 models:
   - deepseek-v3
   - deepseek-r1
+  - deepseek-v4-pro
+  - deepseek-v4-flash
 relatedCompanies:
   - openai
   - meta

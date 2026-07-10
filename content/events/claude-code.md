@@ -4,7 +4,7 @@ title: Claude Code 发布
 subtitle: 终端原生 AI 编程 Agent
 date: '2025-02-24'
 datePrecision: day
-importance: S
+importance: B
 eventType:
   - product
 topics:
@@ -37,6 +37,11 @@ relatedEvents:
   - devin
   - codex-agent
   - mcp
+sources:
+  - title: Claude 3.7 Sonnet and Claude Code
+    url: https://www.anthropic.com/news/claude-3-7-sonnet
+    publisher: Anthropic
+    type: official
 status: verified
 slug: claude-code
 ---

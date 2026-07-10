@@ -29,6 +29,11 @@ relatedEvents:
   - perceptron
   - alexnet
   - deep-learning-rise
+sources:
+  - title: Learning representations by back-propagating errors
+    url: https://www.nature.com/articles/323533a0
+    publisher: Nature
+    type: paper
 status: verified
 slug: backpropagation
 ---

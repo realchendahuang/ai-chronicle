@@ -1,18 +1,30 @@
 export default {
-  async fetch(request, env, ctx) {
+  async fetch(request) {
     const url = new URL(request.url)
     const path = url.pathname
 
-    // Only handle /ai-chronicle paths
-    if (path.startsWith('/ai-chronicle')) {
-      // Strip prefix and forward to Pages project
-      const newPath = path.replace(/^\/ai-chronicle/, '') || '/'
-      const targetUrl = `https://ai-chronicle-9i3.pages.dev${newPath}${url.search}`
-      return fetch(new Request(targetUrl, request))
+    if (path === '/ai-chronicle') {
+      return Response.redirect(`${url.origin}/ai-chronicle/`, 308)
     }
 
-    // Everything else: let it pass through to the origin server
-    // This worker only intercepts /ai-chronicle/* 
+    if (path.startsWith('/ai-chronicle/')) {
+      const targetUrl = new URL(path + url.search, 'https://ai-chronicle-9i3.pages.dev')
+
+      try {
+        return await fetch(new Request(targetUrl, request))
+      } catch (error) {
+        console.error(JSON.stringify({
+          message: 'AI Chronicle origin fetch failed',
+          path,
+          error: error instanceof Error ? error.message : String(error),
+        }))
+        return new Response('AI Chronicle is temporarily unavailable.', {
+          status: 502,
+          headers: { 'content-type': 'text/plain; charset=utf-8' },
+        })
+      }
+    }
+
     return fetch(request)
   }
 }

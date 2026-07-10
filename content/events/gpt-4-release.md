@@ -4,7 +4,7 @@ title: GPT-4 发布
 subtitle: 多模态大模型的里程碑
 date: '2023-03-14'
 datePrecision: day
-importance: S
+importance: A
 eventType:
   - model
 topics:
@@ -35,6 +35,11 @@ relatedEvents:
   - claude
   - gemini
   - gpt-4o
+sources:
+  - title: GPT-4 Research
+    url: https://openai.com/index/gpt-4-research/
+    publisher: OpenAI
+    type: official
 status: verified
 slug: gpt-4-release
 ---

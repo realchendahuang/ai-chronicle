@@ -37,6 +37,11 @@ relatedEvents:
   - gpt-3
   - chatgpt-launch
   - gpt-4-release
+sources:
+  - title: Attention Is All You Need
+    url: https://arxiv.org/abs/1706.03762
+    publisher: arXiv
+    type: paper
 status: verified
 slug: transformer
 ---

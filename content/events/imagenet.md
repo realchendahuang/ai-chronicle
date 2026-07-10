@@ -25,6 +25,11 @@ beforeAfter:
 relatedEvents:
   - alexnet
   - resnet
+sources:
+  - title: ImageNet — A large-scale hierarchical image database
+    url: https://ieeexplore.ieee.org/document/5206848
+    publisher: IEEE
+    type: paper
 status: verified
 slug: imagenet
 ---

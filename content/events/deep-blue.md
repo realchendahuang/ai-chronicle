@@ -24,6 +24,11 @@ beforeAfter:
 relatedEvents:
   - alphago
   - expert-systems
+sources:
+  - title: Deep Blue
+    url: https://www.ibm.com/history/deep-blue
+    publisher: IBM
+    type: official
 status: verified
 slug: deep-blue
 ---

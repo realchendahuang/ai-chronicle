@@ -28,6 +28,11 @@ relatedEvents:
   - transformer
   - gpt-1
   - bert
+sources:
+  - title: Efficient Estimation of Word Representations in Vector Space
+    url: https://arxiv.org/abs/1301.3781
+    publisher: arXiv
+    type: paper
 status: verified
 slug: word2vec
 ---

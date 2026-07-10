@@ -40,6 +40,11 @@ relatedEvents:
   - gpts-launch
   - assistants-api
   - ai-agent-rise
+sources:
+  - title: Introducing ChatGPT
+    url: https://openai.com/index/chatgpt/
+    publisher: OpenAI
+    type: official
 status: verified
 slug: chatgpt-launch
 ---

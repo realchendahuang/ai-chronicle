@@ -34,7 +34,12 @@ const events = defineCollection({
       after: s.string().optional(),
     }).optional(),
     relatedEvents: s.array(s.string()).default([]),
-    sources: s.array(s.string()).default([]),
+    sources: s.array(s.object({
+      title: s.string(),
+      url: s.string(),
+      publisher: s.string(),
+      type: s.enum(['official', 'paper', 'archive', 'report']).default('official'),
+    })).default([]),
     status: s.enum(['verified', 'draft', 'controversial', 'outdated']).default('verified'),
     slug: s.string(),
   }),
@@ -78,14 +83,40 @@ const companies = defineCollection({
   }),
 })
 
+const modelFamilies = defineCollection({
+  name: 'ModelFamily',
+  pattern: 'model-families/**/*.md',
+  schema: s.object({
+    id: s.string(),
+    title: s.string(),
+    titleEn: s.string(),
+    company: s.string(),
+    description: s.string(),
+    descriptionEn: s.string(),
+    latestModel: s.string(),
+    latestModelEn: s.string(),
+    updatedAt: s.string(),
+    releases: s.array(s.object({
+      name: s.string(),
+      date: s.string(),
+      datePrecision: s.enum(['year', 'month', 'day']).default('day'),
+      status: s.enum(['current', 'legacy', 'preview', 'deprecated']).default('legacy'),
+      summary: s.string(),
+      summaryEn: s.string(),
+      source: s.string(),
+    })).default([]),
+    slug: s.string(),
+  }),
+})
+
 export default defineConfig({
   root: resolve(process.cwd(), 'content'),
   output: {
-    data: resolve(process.cwd(), 'src/.velite'),
+    data: resolve(process.cwd(), '.generated'),
     assets: resolve(process.cwd(), 'public/assets'),
     base: '/assets/',
     clean: true,
     name: '[name].json',
   },
-  collections: { events, concepts, companies },
+  collections: { events, concepts, companies, modelFamilies },
 })

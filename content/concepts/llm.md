@@ -11,7 +11,8 @@ relatedEvents:
   - chatgpt-launch
   - gpt-4-release
   - llama
-  - deepseek
+  - deepseek-v3
+  - deepseek-r1
 relatedConcepts:
   - transformer
   - token

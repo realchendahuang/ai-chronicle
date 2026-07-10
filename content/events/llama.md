@@ -4,7 +4,7 @@ title: Llama 系列发布
 subtitle: Meta 开源大模型打破闭源垄断
 date: '2023-02-24'
 datePrecision: day
-importance: S
+importance: A
 eventType:
   - model
   - open-source
@@ -31,9 +31,15 @@ beforeAfter:
 relatedEvents:
   - chatgpt-launch
   - gpt-4-release
-  - deepseek
+  - deepseek-v3
+  - deepseek-r1
   - qwen
   - mistral
+sources:
+  - title: LLaMA — Open and Efficient Foundation Language Models
+    url: https://arxiv.org/abs/2302.13971
+    publisher: Meta AI
+    type: paper
 status: verified
 slug: llama
 ---

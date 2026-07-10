@@ -4,7 +4,7 @@ title: GPT-3 发布
 subtitle: 大语言模型能力的质变——Few-Shot Learning
 date: '2020-06-11'
 datePrecision: day
-importance: S
+importance: A
 eventType:
   - model
   - paper
@@ -35,6 +35,11 @@ relatedEvents:
   - instructgpt
   - chatgpt-launch
   - gpt-4-release
+sources:
+  - title: Language Models are Few-Shot Learners
+    url: https://arxiv.org/abs/2005.14165
+    publisher: arXiv
+    type: paper
 status: verified
 slug: gpt-3
 ---
