@@ -2,7 +2,7 @@
 id: minimax
 name: MiniMax
 logo: /assets/companies/minimax.svg
-logoSource: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/minimax.svg
+logoSource: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/minimax.svg"
 logoAlt: MiniMax 标志
 logoAltEn: MiniMax logo
 founded: 2021
@@ -29,5 +29,7 @@ relatedCompanies:
   - alibaba
   - deepseek
   - bytedance
+  - moonshot
 slug: minimax
 ---
+

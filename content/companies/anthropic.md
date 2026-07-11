@@ -2,7 +2,7 @@
 id: anthropic
 name: Anthropic
 logo: /assets/companies/anthropic.svg
-logoSource: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/anthropic.svg
+logoSource: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/anthropic.svg"
 logoAlt: Anthropic 标志
 logoAltEn: Anthropic logo
 founded: 2021
@@ -43,3 +43,4 @@ relatedCompanies:
   - google-deepmind
 slug: anthropic
 ---
+

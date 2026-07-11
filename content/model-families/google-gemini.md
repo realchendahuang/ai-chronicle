@@ -9,6 +9,13 @@ latestModel: Gemini 3.5 Flash
 latestModelEn: Gemini 3.5 Flash
 updatedAt: '2026-07-10'
 releases:
+  - name: PaLM / PaLM 2
+    date: '2023-05-10'
+    datePrecision: day
+    status: legacy
+    summary: Gemini 之前的 Pathways 语言旗舰，支撑 Bard 早期能力与 API。
+    summaryEn: Pathways language flagship before Gemini, powering early Bard and APIs.
+    source: https://blog.google/technology/ai/google-palm-2-ai-large-language-model/
   - name: Gemini 1.0
     date: '2023-12-06'
     datePrecision: day

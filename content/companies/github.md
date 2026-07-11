@@ -2,16 +2,15 @@
 id: github
 name: GitHub
 logo: /assets/companies/github.svg
-logoSource: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/github.svg
+logoSource: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/github.svg"
 logoAlt: GitHub 标志
 logoAltEn: GitHub logo
 founded: 2008
-type: developer-platform
+type: technology-company
 region: us
-positioning: 全球最大的开发者协作平台之一，也是 AI Coding 进入主流开发工作流的重要入口。
+positioning: 全球最大代码托管平台，以 Copilot 把大模型写入开发者日常工作流。
 keyTopics:
   - ai-coding
-  - developer-tools
 keyEvents:
   - github-copilot
 models: []
@@ -22,3 +21,4 @@ relatedCompanies:
   - openai
 slug: github
 ---
+

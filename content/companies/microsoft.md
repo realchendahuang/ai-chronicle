@@ -2,24 +2,32 @@
 id: microsoft
 name: Microsoft
 logo: /assets/companies/microsoft.svg
-logoSource: https://commons.wikimedia.org/wiki/File:Microsoft_logo_(2012).svg
+logoSource: "https://cdn.simpleicons.org/microsoft"
 logoAlt: Microsoft 标志
 logoAltEn: Microsoft logo
 founded: 1975
 type: technology-company
 region: us
-positioning: 通过云基础设施、OpenAI 合作与开发者工具，把生成式 AI 带入企业和软件开发工作流。
+positioning: 以 Azure、Copilot 与 Phi 小模型把前沿与端侧 AI 写入操作系统与办公套件。
 keyTopics:
+  - large-language-models
+  - small-language-models
   - ai-coding
-  - ai-infrastructure
-  - enterprise-ai
 keyEvents:
   - github-copilot
-models: []
+models:
+  - phi-1
+  - phi-2
+  - phi-3
+  - phi-4
+  - phi-4-reasoning
 products:
   - github-copilot
+  - azure-openai
+  - copilot
 relatedCompanies:
   - github
   - openai
 slug: microsoft
 ---
+

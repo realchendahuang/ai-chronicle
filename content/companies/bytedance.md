@@ -2,7 +2,7 @@
 id: bytedance
 name: 字节跳动 / ByteDance
 logo: /assets/companies/bytedance.svg
-logoSource: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/bytedance.svg
+logoSource: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/bytedance.svg"
 logoAlt: 字节跳动标志
 logoAltEn: ByteDance logo
 founded: 2012
@@ -30,5 +30,7 @@ relatedCompanies:
   - deepseek
   - zhipu
   - minimax
+  - moonshot
 slug: bytedance
 ---
+

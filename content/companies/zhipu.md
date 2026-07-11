@@ -2,7 +2,7 @@
 id: zhipu
 name: 智谱 AI / Zhipu
 logo: /assets/companies/zhipu.svg
-logoSource: https://www.zhipuai.cn/
+logoSource: "https://www.zhipuai.cn/"
 logoAlt: 智谱 AI 标志
 logoAltEn: Zhipu AI logo
 founded: 2019
@@ -28,5 +28,7 @@ relatedCompanies:
   - deepseek
   - minimax
   - bytedance
+  - moonshot
 slug: zhipu
 ---
+

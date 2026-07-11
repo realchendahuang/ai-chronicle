@@ -36,7 +36,7 @@
 | **事件文章** | 每篇是独立叙事，而非统一模板的知识卡片 |
 | **概念** | 把 LLM、RLHF、Transformer 等词说成人能听懂的话 |
 | **公司** | 组织如何塑造技术路线与产品入口 |
-| **模型谱系** | OpenAI / Anthropic / Google / Meta / DeepSeek / 千问 / 智谱 / MiniMax / 豆包 / Mistral 等代际变化 |
+| **模型谱系** | 国内外主流厂商代际：OpenAI、Anthropic、Google/Gemma、xAI、Meta、Mistral、Microsoft Phi、Amazon Nova、Cohere；千问、DeepSeek、智谱、月之暗面、MiniMax、豆包、文心、混元、零一、百川、星火、阶跃、书生·浦语 等 |
 
 当前规模（会持续生长）：
 

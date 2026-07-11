@@ -2,20 +2,23 @@
 id: ibm
 name: IBM
 logo: /assets/companies/ibm.svg
-logoSource: https://commons.wikimedia.org/wiki/File:IBM_logo.svg
+logoSource: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/ibm.svg"
 logoAlt: IBM 标志
 logoAltEn: IBM logo
 founded: 1911
 type: technology-company
 region: us
-positioning: 早期企业计算与符号 AI 的重要推动者，并通过深蓝塑造公众对机器智能的认知。
+positioning: 从 Deep Blue、Watson 到现代企业 AI 与 Granite 模型的长期计算公司。
 keyTopics:
-  - ai-foundations
+  - symbolic-ai
+  - large-language-models
 keyEvents:
   - deep-blue
+  - ibm-watson
 models: []
 products:
-  - deep-blue
+  - watson
 relatedCompanies: []
 slug: ibm
 ---
+

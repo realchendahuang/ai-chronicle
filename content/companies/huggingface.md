@@ -2,17 +2,15 @@
 id: huggingface
 name: Hugging Face
 logo: /assets/companies/huggingface.svg
-logoSource: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/huggingface.svg
+logoSource: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/huggingface.svg"
 logoAlt: Hugging Face 标志
 logoAltEn: Hugging Face logo
 founded: 2016
-type: platform
-region: us
-positioning: 以模型库、数据集与 Transformers 等工具链成为开放机器学习的默认分发与协作平台。
+type: technology-company
+region: global
+positioning: 开源模型与数据集协作平台，Transformers 库定义了现代 LLM 工程默认接口。
 keyTopics:
   - open-source-models
-  - natural-language-processing
-  - large-language-models
 keyEvents:
   - huggingface-transformers
 models: []
@@ -25,3 +23,4 @@ relatedCompanies:
   - openai
 slug: huggingface
 ---
+

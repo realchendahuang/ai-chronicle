@@ -2,7 +2,7 @@
 id: alibaba
 name: 阿里巴巴 / Alibaba
 logo: /assets/companies/alibaba.svg
-logoSource: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/alibabadotcom.svg
+logoSource: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/alibabadotcom.svg"
 logoAlt: 阿里巴巴标志
 logoAltEn: Alibaba logo
 founded: 1999
@@ -35,5 +35,7 @@ relatedCompanies:
   - bytedance
   - zhipu
   - minimax
+  - moonshot
 slug: alibaba
 ---
+
