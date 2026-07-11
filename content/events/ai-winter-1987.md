@@ -30,10 +30,10 @@ beforeAfterEn:
   after: The commercial market contracted and AI entered a second long cooling period.
 relatedEvents: [expert-systems, deep-learning-rise]
 sources:
-  - title: AI Expert Systems — The Second Wave
-    url: https://www.computerhistory.org/revolution/artificial-intelligence-robotics/13/289
-    publisher: Computer History Museum
-    type: archive
+  - title: A Short History of AI
+    url: https://ai100.stanford.edu/2016-report/appendix-i-short-history-ai
+    publisher: Stanford University AI100
+    type: report
 status: verified
 slug: ai-winter-1987
 ---

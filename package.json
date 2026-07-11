@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "pnpm build && python3 -m http.server 43117 --directory dist/client",
-    "build": "velite && node scripts/ssg.mjs && node scripts/check-site.mjs",
+    "build": "velite && node scripts/check-editorial.mjs && node scripts/ssg.mjs && node scripts/check-site.mjs",
     "build:content": "velite",
     "check": "pnpm build",
+    "check:editorial": "node scripts/check-editorial.mjs",
     "serve": "python3 -m http.server 43117 --directory dist/client",
     "deploy": "pnpm build && wrangler pages deploy dist/client --project-name ai-chronicle --branch main"
   },

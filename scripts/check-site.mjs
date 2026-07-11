@@ -7,6 +7,8 @@ const distDir = join(rootDir, 'dist/client')
 const basePath = '/ai-chronicle'
 
 const events = JSON.parse(readFileSync(join(generatedDir, 'events.json'), 'utf8'))
+const eventArticlesZh = JSON.parse(readFileSync(join(generatedDir, 'eventArticlesZh.json'), 'utf8'))
+const eventArticlesEn = JSON.parse(readFileSync(join(generatedDir, 'eventArticlesEn.json'), 'utf8'))
 const concepts = JSON.parse(readFileSync(join(generatedDir, 'concepts.json'), 'utf8'))
 const companies = JSON.parse(readFileSync(join(generatedDir, 'companies.json'), 'utf8'))
 const modelFamilies = JSON.parse(readFileSync(join(generatedDir, 'modelFamilies.json'), 'utf8'))
@@ -31,6 +33,8 @@ function assertUnique(items, key, label) {
 
 assertUnique(events, 'id', 'event')
 assertUnique(events, 'slug', 'event')
+assertUnique(eventArticlesZh, 'eventId', 'Chinese event article')
+assertUnique(eventArticlesEn, 'eventId', 'English event article')
 assertUnique(concepts, 'id', 'concept')
 assertUnique(concepts, 'slug', 'concept')
 assertUnique(companies, 'id', 'company')
@@ -48,14 +52,24 @@ for (const event of events) {
 }
 
 const eventIds = new Set(events.map((item) => item.id))
+const articleIdsZh = new Set(eventArticlesZh.map((item) => item.eventId))
+const articleIdsEn = new Set(eventArticlesEn.map((item) => item.eventId))
 const conceptIds = new Set(concepts.map((item) => item.id))
 const companyIds = new Set(companies.map((item) => item.id))
 const missingModelFamilyCompanies = modelFamilies.filter((family) => !companyIds.has(family.company))
+const missingArticlesZh = events.filter((event) => !articleIdsZh.has(event.id)).map((event) => event.id)
+const missingArticlesEn = events.filter((event) => !articleIdsEn.has(event.id)).map((event) => event.id)
+const orphanArticlesZh = eventArticlesZh.filter((article) => !eventIds.has(article.eventId)).map((article) => article.eventId)
+const orphanArticlesEn = eventArticlesEn.filter((article) => !eventIds.has(article.eventId)).map((article) => article.eventId)
 const missingEventRefs = [...new Set(events.flatMap((event) => event.relatedEvents).filter((id) => !eventIds.has(id)))]
 const missingConceptRefs = [...new Set(events.flatMap((event) => event.concepts).filter((id) => !conceptIds.has(id)))]
 const missingCompanyRefs = [...new Set(events.flatMap((event) => event.companies).filter((id) => !companyIds.has(id)))]
 
 if (missingEventRefs.length) warnings.push(`${missingEventRefs.length} future event references are not published yet`)
+if (missingArticlesZh.length) failures.push(`Missing Chinese event articles: ${missingArticlesZh.join(', ')}`)
+if (missingArticlesEn.length) failures.push(`Missing English event articles: ${missingArticlesEn.join(', ')}`)
+if (orphanArticlesZh.length) failures.push(`Orphan Chinese event articles: ${orphanArticlesZh.join(', ')}`)
+if (orphanArticlesEn.length) failures.push(`Orphan English event articles: ${orphanArticlesEn.join(', ')}`)
 if (missingConceptRefs.length) warnings.push(`${missingConceptRefs.length} concept references are not published yet`)
 if (missingCompanyRefs.length) failures.push(`Missing company references: ${missingCompanyRefs.join(', ')}`)
 if (missingModelFamilyCompanies.length) failures.push(`Missing model family companies: ${missingModelFamilyCompanies.map((family) => family.company).join(', ')}`)
@@ -90,5 +104,5 @@ if (failures.length) {
   failures.forEach((failure) => console.error(`FAIL ${failure}`))
   process.exitCode = 1
 } else {
-  console.log(`Site check passed: ${htmlFiles.length} HTML pages, ${events.length} events, ${concepts.length} concepts, ${companies.length} companies, ${modelFamilies.length} model families.`)
+  console.log(`Site check passed: ${htmlFiles.length} HTML pages, ${events.length} events, ${eventArticlesZh.length + eventArticlesEn.length} narrative articles, ${concepts.length} concepts, ${companies.length} companies, ${modelFamilies.length} model families.`)
 }

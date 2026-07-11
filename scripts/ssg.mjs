@@ -18,18 +18,23 @@ const siteDir = join(distDir, basePath.slice(1))
 const siteOrigin = 'https://chendahuang.com'
 
 const events = JSON.parse(readFileSync(join(generatedDir, 'events.json'), 'utf8'))
+const eventArticlesZh = JSON.parse(readFileSync(join(generatedDir, 'eventArticlesZh.json'), 'utf8'))
+const eventArticlesEn = JSON.parse(readFileSync(join(generatedDir, 'eventArticlesEn.json'), 'utf8'))
 const concepts = JSON.parse(readFileSync(join(generatedDir, 'concepts.json'), 'utf8'))
 const companies = JSON.parse(readFileSync(join(generatedDir, 'companies.json'), 'utf8'))
 const modelFamilies = JSON.parse(readFileSync(join(generatedDir, 'modelFamilies.json'), 'utf8'))
+const interfaceTranslations = JSON.parse(readFileSync(join(rootDir, 'public/assets/i18n-en.json'), 'utf8'))
 const assetVersion = createHash('sha256')
   .update(readFileSync(join(rootDir, 'public/assets/app.css')))
   .update(readFileSync(join(rootDir, 'public/assets/app.js')))
   .update(readFileSync(join(rootDir, 'public/assets/i18n-en.json')))
-  .update(JSON.stringify({ events, concepts, companies, modelFamilies }))
+  .update(JSON.stringify({ events, eventArticlesZh, eventArticlesEn, concepts, companies, modelFamilies }))
   .digest('hex')
   .slice(0, 12)
 
 const eventById = new Map(events.map((event) => [event.id, event]))
+const eventArticleZhById = new Map(eventArticlesZh.map((article) => [article.eventId, article]))
+const eventArticleEnById = new Map(eventArticlesEn.map((article) => [article.eventId, article]))
 const conceptById = new Map(concepts.map((concept) => [concept.id, concept]))
 const companyById = new Map(companies.map((company) => [company.id, company]))
 const modelFamiliesByCompany = new Map(companies.map((company) => [
@@ -106,11 +111,11 @@ const importanceLabels = {
   C: '补充',
 }
 
-const impactLabels = {
-  user: '对用户',
-  developer: '对开发者',
-  industry: '对行业',
-  product: '对产品',
+const importanceLabelsEn = {
+  S: 'Paradigm',
+  A: 'Industry',
+  B: 'Field',
+  C: 'Context',
 }
 
 const escapeHtml = (value = '') => String(value)
@@ -166,6 +171,18 @@ const topicNameEn = (topic) => topicLabelsEn[topic] || topicName(topic)
 const canonicalTopic = (topic) => topicAliases[topic] || topic
 
 const bilingual = (zh, en, tag = 'span', className = '') => `<${tag}${className ? ` class="${escapeHtml(className)}"` : ''} data-localized data-zh="${escapeHtml(zh)}" data-en="${escapeHtml(en)}">${escapeHtml(zh)}</${tag}>`
+const englishText = (zh, explicit) => explicit || interfaceTranslations[zh] || zh
+
+const metadataItem = (labelZh, labelEn, value, className = '') => value ? `
+  <div${className ? ` class="${escapeHtml(className)}"` : ''}>
+    <dt>${bilingual(labelZh, labelEn)}</dt>
+    <dd>${value}</dd>
+  </div>` : ''
+
+const humanName = (value) => String(value)
+  .split('-')
+  .map((part) => part ? part.charAt(0).toUpperCase() + part.slice(1) : part)
+  .join(' ')
 
 const sortedEvents = [...events].sort((a, b) => a.date.localeCompare(b.date))
 const recentEvents = [...events].sort((a, b) => b.date.localeCompare(a.date))
@@ -307,7 +324,7 @@ function footer() {
       <div class="footer-main">
         <div>
           <a class="footer-brand" href="${urlFor('/')}">AI Chronicle</a>
-          <p>按时间查事件，顺着来源读下去。</p>
+          <p>${bilingual('沿着时间读事件，沿着来源读历史。', 'Read events through time, and history through its sources.')}</p>
         </div>
         <div class="footer-links">
           <a href="${urlFor('/')}">时间轴</a>
@@ -319,8 +336,8 @@ function footer() {
         </div>
       </div>
       <div class="footer-meta">
-        <span>AI 行业事件档案</span>
-        <span>内容版本 · 2026.07</span>
+        ${bilingual('AI 行业事件档案', 'An archive of AI history')}
+        ${bilingual('内容版本 · 2026.07', 'Content edition · 2026.07')}
       </div>
     </footer>`
 }
@@ -523,77 +540,77 @@ function renderTimeline() {
 
 function renderEventPages() {
   sortedEvents.forEach((event, index) => {
+    const articleZh = eventArticleZhById.get(event.id)
+    const articleEn = eventArticleEnById.get(event.id)
     const relatedEvents = event.relatedEvents.map((id) => eventById.get(id)).filter(Boolean)
-    const relatedConcepts = event.concepts.map((id) => conceptById.get(id)).filter(Boolean)
     const relatedCompanies = event.companies.map((id) => companyById.get(id)).filter(Boolean)
     const previousEvent = sortedEvents[index - 1]
     const nextEvent = sortedEvents[index + 1]
     const hasSources = event.sources.length > 0
-    const effectiveStatus = hasSources && event.status === 'verified' ? '已核验' : '待补来源'
+    const isVerified = hasSources && event.status === 'verified'
+    const effectiveStatus = isVerified ? '已核验' : '待补来源'
+    const effectiveStatusEn = isVerified ? 'Verified' : 'Sources pending'
+    const topicLinks = [...new Set(event.topics.map(canonicalTopic))]
+      .map((topic) => `<a href="${urlFor(`/topics/${topic}/`)}">${bilingual(topicName(topic), topicNameEn(topic))}</a>`)
+      .join('')
+    const companyLinks = relatedCompanies
+      .map((company) => `<a href="${urlFor(`/companies/${company.slug}/`)}">${escapeHtml(company.name)}</a>`)
+      .join('')
+    const people = event.people.map((person) => escapeHtml(humanName(person))).join('<span aria-hidden="true">·</span>')
+    const models = event.models.map(escapeHtml).join('<span aria-hidden="true">·</span>')
+    const products = event.products.map(escapeHtml).join('<span aria-hidden="true">·</span>')
 
     const body = `
       <article class="event-article">
         <header class="event-header">
           <div class="breadcrumbs"><a href="${urlFor('/')}">时间轴</a><span>/</span><span>${event.date.slice(0, 4)}</span></div>
           <div class="event-title-grid">
-            <div>
-              <div class="event-kicker"><time>${formatDate(event.date, event.datePrecision)}</time>${importanceBadge(event)}</div>
-              <h1>${escapeHtml(event.title)}</h1>
-              ${event.subtitle ? `<p class="event-subtitle">${escapeHtml(event.subtitle)}</p>` : ''}
+            <div class="event-title-copy">
+              <h1>${bilingual(event.title, englishText(event.title, event.titleEn))}</h1>
+              ${event.subtitle ? `<p class="event-subtitle">${bilingual(event.subtitle, englishText(event.subtitle, event.subtitleEn))}</p>` : ''}
             </div>
-            <div class="event-stamp" aria-label="内容状态"><span>${effectiveStatus}</span><b>${hasSources ? event.sources.length : 0}</b><small>可追溯来源</small></div>
           </div>
         </header>
 
-        <div class="event-body-grid">
-          <div class="event-body">
-            <section class="lead-summary"><span>核心变化</span><p>${escapeHtml(event.summary)}</p></section>
+        <section class="event-metadata">
+          <h2 class="sr-only">${bilingual('事件元数据', 'Event metadata')}</h2>
+          <dl>
+            ${metadataItem('时间', 'Date', bilingual(formatDate(event.date, event.datePrecision), formatDateEn(event.date, event.datePrecision), 'time'))}
+            ${metadataItem('级别', 'Significance', `${bilingual(importanceLabels[event.importance], importanceLabelsEn[event.importance])}<small>${escapeHtml(event.importance)}</small>`)}
+            ${metadataItem('组织', 'Organizations', companyLinks || '—', 'metadata-links')}
+            ${metadataItem('人物', 'People', people || '—')}
+            ${metadataItem('主题', 'Topics', topicLinks || '—', 'metadata-links')}
+            ${metadataItem('模型', 'Models', models || '—')}
+            ${metadataItem('产品', 'Products', products || '—')}
+            ${metadataItem('状态', 'Status', `<i class="status-dot ${isVerified ? 'verified' : 'draft'}"></i>${bilingual(effectiveStatus, effectiveStatusEn)}<small>${hasSources ? event.sources.length : 0} ${bilingual('条来源', hasSources === 1 ? 'source' : 'sources')}</small>`)}
+          </dl>
+        </section>
 
-            ${event.whatHappened ? `<section class="prose-section"><span class="section-number">01</span><h2>发生了什么</h2><p>${escapeHtml(event.whatHappened)}</p></section>` : ''}
-            ${event.background ? `<section class="prose-section"><span class="section-number">02</span><h2>当时的行业背景</h2><p>${escapeHtml(event.background)}</p></section>` : ''}
-            ${event.whyImportant ? `<section class="prose-section why-section"><span class="section-number">${event.background ? '03' : '02'}</span><h2>为什么重要</h2><p>${escapeHtml(event.whyImportant)}</p></section>` : ''}
+        <div class="event-reading">
+          <section class="event-narrative" data-native-article data-article-language="zh" lang="zh-CN">
+            ${articleZh?.content || ''}
+          </section>
+          <section class="event-narrative" data-native-article data-article-language="en" lang="en">
+            ${articleEn?.content || ''}
+          </section>
 
-            ${event.beforeAfter ? `
-              <section class="before-after-section">
-                <div><span>在它之前</span><p>${escapeHtml(event.beforeAfter.before || '')}</p></div>
-                <div><span>在它之后</span><p>${escapeHtml(event.beforeAfter.after || '')}</p></div>
-              </section>` : ''}
-
-            ${event.impact ? `
-              <section class="impact-section">
-                <div class="section-heading inline-heading"><span class="section-number">影响</span><h2>它改变了什么</h2></div>
-                <div class="impact-list">
-                  ${Object.entries(event.impact).filter(([, value]) => value).map(([key, value]) => `
-                    <div><span>${impactLabels[key] || key}</span><p>${escapeHtml(value)}</p></div>
-                  `).join('')}
-                </div>
-              </section>` : ''}
-
-            <section class="source-section">
-              <div class="section-heading inline-heading"><span class="section-number">来源</span><h2>原始资料</h2></div>
-              ${hasSources ? `
-                <ol class="source-list">
-                  ${event.sources.map((source, sourceIndex) => `
-                    <li><span>${String(sourceIndex + 1).padStart(2, '0')}</span><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer"><b>${escapeHtml(source.title)}</b><small>${escapeHtml(source.publisher)} · ${escapeHtml(source.type)}</small></a>${arrowIcon}</li>
-                  `).join('')}
-                </ol>` : `
-                <div class="source-empty"><b>这条事件还缺少可公开核验的一级来源。</b><p>在来源补齐前，它不会被视为已完成编辑。</p></div>`}
-            </section>
-          </div>
-
-          <aside class="event-aside">
-            <div class="aside-block"><span>所属主题</span><div class="aside-tags">${[...new Set(event.topics.map(canonicalTopic))].map((topic) => `<a href="${urlFor(`/topics/${topic}/`)}">${escapeHtml(topicName(topic))}</a>`).join('')}</div></div>
-            ${relatedConcepts.length ? `<div class="aside-block"><span>涉及概念</span><div class="aside-links">${relatedConcepts.map((concept) => `<a href="${urlFor(`/concepts/${concept.slug}/`)}">${escapeHtml(concept.title)}${arrowIcon}</a>`).join('')}</div></div>` : ''}
-            ${relatedCompanies.length ? `<div class="aside-block"><span>相关组织</span><div class="aside-links">${relatedCompanies.map((company) => `<a href="${urlFor(`/companies/${company.slug}/`)}">${escapeHtml(company.name)}${arrowIcon}</a>`).join('')}</div></div>` : ''}
-            <div class="aside-block aside-status"><span>编辑状态</span><p><i class="status-dot ${hasSources ? 'verified' : 'draft'}"></i>${effectiveStatus}</p><small>资料版本 2026.07</small></div>
-          </aside>
+          <section class="source-section">
+            <div class="section-heading inline-heading"><span class="section-number">${bilingual('来源', 'Sources')}</span><h2>${bilingual('原始资料', 'References')}</h2></div>
+            ${hasSources ? `
+              <ol class="source-list">
+                ${event.sources.map((source, sourceIndex) => `
+                  <li><span>${String(sourceIndex + 1).padStart(2, '0')}</span><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer"><b>${escapeHtml(source.title)}</b><small>${escapeHtml(source.publisher)} · ${escapeHtml(source.type)}</small></a>${arrowIcon}</li>
+                `).join('')}
+              </ol>` : `
+              <div class="source-empty"><b>${bilingual('这条事件还缺少可公开核验的一级来源。', 'This event still lacks a publicly verifiable primary source.')}</b></div>`}
+          </section>
         </div>
 
-        ${relatedEvents.length ? `<section class="related-events"><div class="section-heading split-heading"><div><span class="section-number">关联</span><h2>继续沿着影响链阅读</h2></div></div><div>${relatedEvents.map((related) => `<a href="${urlFor(`/events/${related.slug}/`)}"><time>${related.date.slice(0, 4)}</time><h3>${escapeHtml(related.title)}</h3>${arrowIcon}</a>`).join('')}</div></section>` : ''}
+        ${relatedEvents.length ? `<section class="related-events"><div class="section-heading split-heading"><div><span class="section-number">${bilingual('关联', 'Related')}</span><h2>${bilingual('沿时间继续读', 'Continue through time')}</h2></div></div><div>${relatedEvents.map((related) => `<a href="${urlFor(`/events/${related.slug}/`)}"><time>${related.date.slice(0, 4)}</time><h3>${bilingual(related.title, englishText(related.title, related.titleEn))}</h3>${arrowIcon}</a>`).join('')}</div></section>` : ''}
 
         <nav class="event-pagination" aria-label="时间轴前后事件">
-          ${previousEvent ? `<a class="previous" href="${urlFor(`/events/${previousEvent.slug}/`)}"><span>上一个节点</span><b>${escapeHtml(previousEvent.title)}</b></a>` : '<span></span>'}
-          ${nextEvent ? `<a class="next" href="${urlFor(`/events/${nextEvent.slug}/`)}"><span>下一个节点</span><b>${escapeHtml(nextEvent.title)}</b></a>` : '<span></span>'}
+          ${previousEvent ? `<a class="previous" href="${urlFor(`/events/${previousEvent.slug}/`)}"><span>${bilingual('上一个节点', 'Previous')}</span><b>${bilingual(previousEvent.title, englishText(previousEvent.title, previousEvent.titleEn))}</b></a>` : '<span></span>'}
+          ${nextEvent ? `<a class="next" href="${urlFor(`/events/${nextEvent.slug}/`)}"><span>${bilingual('下一个节点', 'Next')}</span><b>${bilingual(nextEvent.title, englishText(nextEvent.title, nextEvent.titleEn))}</b></a>` : '<span></span>'}
         </nav>
       </article>`
 
@@ -861,11 +878,12 @@ function renderTopicPages() {
 function renderAbout() {
   const body = `
     <article class="about-page-content">
-      <header><h1>不追新闻。<br>记录改变路线的事件。</h1></header>
-      <section><span class="section-number">01</span><h2>这个项目是什么</h2><p>AI Chronicle 按时间整理 AI 行业事件，并把事件连接到概念、公司、模型和原始来源。它服务于两种阅读：从头梳理一条路线，或在需要时查清某个节点。</p></section>
-      <section><span class="section-number">02</span><h2>什么事件会被收录</h2><ul><li>它改变了技术范式或产品入口。</li><li>它影响了后续开发者行为与生态结构。</li><li>多年以后回看，仍然有解释和学习价值。</li><li>能够找到可公开核验的原始资料。</li></ul></section>
-      <section><span class="section-number">03</span><h2>重要程度怎么判断</h2><div class="editorial-levels"><p><b>S</b><span>范式级</span>极少数改变行业方向的节点。</p><p><b>A</b><span>行业级</span>对多个方向产生持续影响。</p><p><b>B</b><span>领域级</span>在特定技术或产品路线中重要。</p><p><b>C</b><span>补充</span>帮助理解前后关系的背景节点。</p></div></section>
-      <section><span class="section-number">04</span><h2>编辑原则</h2><p>事实与判断分开；重要判断给出依据；“已核验”必须附有可访问来源；短期热度不自动等于历史地位；争议和局限不因为影响叙事而被删除。</p></section>
+      <header><h1>${bilingual('先有一条时间轴。再慢慢把它写成人的历史。', 'First comes a timeline. Then, slowly, a history of people.')}</h1></header>
+      <section><span class="section-number">01</span><h2>${bilingual('时间轴只是封面', 'The timeline is only the cover')}</h2><p>${bilingual('首页故意只留一条时间轴。点开一个节点，资料卡退到正文之前，文章才真正开始。这里不急着把历史提炼成几条可复用的结论；更愿意留下论文里的反常数字、比赛中的一手棋、产品页上一处诚实的错误，以及人在技术变化里做过的选择。', 'The home page deliberately remains a timeline. Open a node and the record card steps aside before the essay begins. This chronicle is in no hurry to reduce history to reusable lessons. It would rather preserve an anomalous number in a paper, a single move in a match, an honest error on a product page, and the choices people made while the technology was changing.')}</p></section>
+      <section><span class="section-number">02</span><h2>${bilingual('什么值得留下', 'What belongs here')}</h2><ul><li>${bilingual('它确实改变了技术路线、产品入口或行业组织方式。', 'It materially changed a technical route, a product doorway, or the way the industry organized itself.')}</li><li>${bilingual('多年以后回看，事件内部仍有值得读的矛盾与细节。', 'Years later, the event still contains tensions and details worth reading.')}</li><li>${bilingual('能够找到论文、档案、发布记录或监管原文。', 'A paper, archive, release record, or regulatory text can be found.')}</li><li>${bilingual('短期热度本身，不足以成为历史地位。', 'Short-term attention alone is not historical importance.')}</li></ul></section>
+      <section><span class="section-number">03</span><h2>${bilingual('重要程度怎么判断', 'How significance is judged')}</h2><div class="editorial-levels"><p><b>S</b><span>${bilingual('范式级', 'Paradigm')}</span>${bilingual('极少数改变行业方向的节点。', 'The rare nodes that redirect the field.')}</p><p><b>A</b><span>${bilingual('行业级', 'Industry')}</span>${bilingual('对多个方向产生持续影响。', 'Events with lasting effects across several directions.')}</p><p><b>B</b><span>${bilingual('领域级', 'Field')}</span>${bilingual('在一条技术或产品路线中重要。', 'Important within a particular technical or product route.')}</p><p><b>C</b><span>${bilingual('补充', 'Context')}</span>${bilingual('帮助看清前后关系的背景节点。', 'Context that makes the surrounding history legible.')}</p></div></section>
+      <section><span class="section-number">04</span><h2>${bilingual('文章怎样写', 'How the essays are written')}</h2><p>${bilingual('日期、人物、组织、模型与来源集中在开篇的元数据卡片里。正文不再回答一组固定问题，也不共享同一种高潮和结尾。中文与英文依据同一份事实账本分别写作；它们方向一致，但不必逐句相像。', 'Dates, people, organizations, models, and sources stay in the metadata card at the opening. The essay no longer answers a fixed questionnaire, nor does every story share the same climax and ending. Chinese and English are written separately from the same fact ledger: aligned in direction, not sentence by sentence.')}</p></section>
+      <section><span class="section-number">05</span><h2>${bilingual('不能越过的线', 'The line the prose cannot cross')}</h2><p>${bilingual('文学气息不能建立在虚构上。天气、神态、对话和人物内心，没有来源就不补写；厂商自报的评测不写成独立事实，后来才知道的结果也不倒灌进当时。文章可以有判断、有迟疑、有个人情感，但事实必须能够回到原处。', 'Literary feeling cannot be built from invention. Weather, gestures, dialogue, and private thoughts are not supplied without sources. Vendor benchmarks do not become independent fact, and hindsight is not smuggled into the past. An essay may judge, hesitate, and feel; its facts must still lead back to where they came from.')}</p></section>
     </article>`
 
   writePage('about', {

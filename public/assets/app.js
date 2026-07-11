@@ -64,7 +64,7 @@
     const textNodes = []
     while (walker.nextNode()) textNodes.push(walker.currentNode)
     textNodes.forEach((node) => {
-      if (node.parentElement?.closest('[data-localized], script, style')) return
+      if (node.parentElement?.closest('[data-localized], [data-native-article], script, style')) return
       if (!originalText.has(node)) originalText.set(node, node.nodeValue || '')
       const source = originalText.get(node) || ''
       const key = source.trim()

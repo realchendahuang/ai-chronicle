@@ -32,8 +32,8 @@ beforeAfterEn:
   after: Many projects shifted toward narrow-domain knowledge bases and rule-driven expert systems.
 relatedEvents: [logic-theorist, ai-winter-1987]
 sources:
-  - title: Applications of Artificial Intelligence for Chemical Inference
-    url: https://profiles.nlm.nih.gov/spotlight/bb/catalog/nlm:nlmuid-101584906X171-doc
+  - title: Artificial Intelligence and the Heuristic DENDRAL Program
+    url: https://profiles.nlm.nih.gov/spotlight/bb/feature/ai
     publisher: National Library of Medicine
     type: archive
 status: verified

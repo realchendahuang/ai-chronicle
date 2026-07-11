@@ -2,8 +2,8 @@
 id: gpt-5-6
 title: GPT-5.6 发布
 subtitle: 工具编排与持久推理进入旗舰模型
-date: '2026-07-01'
-datePrecision: month
+date: '2026-07-09'
+datePrecision: day
 importance: B
 eventType:
   - model

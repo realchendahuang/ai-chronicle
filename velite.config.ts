@@ -61,6 +61,27 @@ const events = defineCollection({
   }),
 })
 
+const eventArticleSchema = s.object({
+  eventId: s.string(),
+  form: s.string(),
+  narrativeCenter: s.string(),
+  emotionalSource: s.string(),
+  avoid: s.array(s.string()).default([]),
+  content: s.markdown(),
+})
+
+const eventArticlesZh = defineCollection({
+  name: 'EventArticleZh',
+  pattern: 'event-articles/zh/**/*.md',
+  schema: eventArticleSchema,
+})
+
+const eventArticlesEn = defineCollection({
+  name: 'EventArticleEn',
+  pattern: 'event-articles/en/**/*.md',
+  schema: eventArticleSchema,
+})
+
 const concepts = defineCollection({
   name: 'Concept',
   pattern: 'concepts/**/*.md',
@@ -134,5 +155,12 @@ export default defineConfig({
     clean: true,
     name: '[name].json',
   },
-  collections: { events, concepts, companies, modelFamilies },
+  collections: {
+    events,
+    eventArticlesZh,
+    eventArticlesEn,
+    concepts,
+    companies,
+    modelFamilies,
+  },
 })
