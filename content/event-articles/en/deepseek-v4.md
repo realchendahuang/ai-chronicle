@@ -1,22 +1,22 @@
 ---
 eventId: deepseek-v4
-form: Close reading of a migration notice
-narrativeCenter: "DeepSeek-V4 puts parameter scale, a one-million-token context, dual reasoning modes, and the retirement of old aliases into one operational release document"
-emotionalSource: "A frontier model arrives for developers as a set of practical migrations: change a name, keep the base URL, and accept that old entry points will disappear"
+form: preview release note
+narrativeCenter: V4 Pro and Flash previews putting 1M context, thinking/non-thinking modes, and agent-coding claims into one open-weight family
+emotionalSource: specs already point at long-horizon agents while the materials still say Preview—vendor benchmarks must not be mixed with GA
 avoid:
-  - "Writing a preview release as though it had undergone long-term production validation"
-  - "Presenting provider claims of open-model leadership or closed-model parity as independent conclusions"
-  - "Equating a one-million-token input window with reliable reasoning over every token"
+  - writing a preview as full GA
+  - treating official agent-coding scores as third-party reproduction
+  - ignoring Pro/Flash split and sparse activation
 ---
 
-The DeepSeek-V4 announcement was half model introduction and half maintenance notice. It released preview versions of Pro and Flash with open weights. It also told developers that the `base_url` could remain unchanged, while the model name should become `deepseek-v4-pro` or `deepseek-v4-flash`. The old `deepseek-chat` and `deepseek-reasoner` aliases were scheduled to retire on 24 July.
+On 24 April 2026 DeepSeek released **preview** open weights for V4 Pro and V4 Flash and updated official service docs. Timing follows the R1-driven wave of reasoning models: the industry already accepts that open weights can carry long-chain reasoning. The next question is whether those models can hold longer context, steadier tool use, and multi-step work such as coding agents.
 
-Renaming carried an architectural statement. V4 brought the previously separate chat and reasoning entrances into one family, with thinking and non-thinking modes available on both models. Pro contained 1.6 trillion total parameters and activated 49 billion, aimed at harder reasoning and agentic coding. Flash contained 284 billion total parameters and activated 13 billion, positioned by DeepSeek as the faster and less expensive option. Sparse computation continued to separate the capacity stored in weights from the capacity used for one token.
+Per official launch materials, V4-Pro uses a sparse structure with about 1.6 trillion total parameters and 49 billion active, aimed at hard reasoning and agent coding; V4-Flash offers a smaller active footprint for speed and cost. The official API defaults to a context window on the order of one million tokens and supports switching between thinking and non-thinking modes: open thinking when an explicit chain is wanted, close it for latency. These are product-spec statements; preview-stage stability, rate limits, and interface details may still change.
 
-The default one-million-token context in the official service occupied the most visible part of the release. Large repositories, long documents, and accumulated agent histories could more easily fit inside one task. The number also moved the difficult question. Input capacity does not guarantee that a model will retrieve the right detail, reason consistently across the whole span, or perform the correct action at the end. A context window is a container, not a warranty for understanding everything placed within it.
+Claims about agent coding—performance on long-horizon, multi-file, tool-using software tasks—were given at launch as vendor benchmarks and demos. They should be labeled **publisher-reported, preview-stage**, not written as widely independently reproduced industry standards. A 1M window likewise needs layers: length is a capacity ceiling, not proof that arbitrary million-token materials are used losslessly. Retrieval, localization, and consistent reasoning across the whole span are different difficulties.
 
-DeepSeek made agentic coding central to its description. It said V4-Pro reached leading open-model results on agent-coding benchmarks, while Flash approached Pro on simpler agent tasks, and it listed integrations with Claude Code, OpenClaw, and OpenCode. These are provider evaluations and compatibility claims. So too was the comparison with top closed models. The preview's concrete deliverables were downloadable weights, a technical report, API access, and model identifiers that could be run. Stability over long tasks still had to be established inside particular toolchains, permission boundaries, and repositories.
+Continuity with V3 and R1 is worth keeping. V3 published an MoE cost structure; R1 put RL reasoning and distillation into open weights; the V4 preview pushes the narrative toward ultra-long context and agent workloads while still stressing sparse activation to control inference cost. The open-weight path again lines up against closed flagships on the same capability checklist—alignment of claims and specs, with acceptance still depending on real downstream tasks.
 
-V4 extended the open-weight route established by R1 into messier territory. A verifiable mathematics problem can end with one answer. An agent must preserve a longer history, decide when to reason, invoke outside tools, and remain affordable while it continues. Pro and Flash acknowledged that not every task warranted the same number of activated parameters.
+Preview prose should stay restrained. Record 1.6T/49B, the 1M window, dual modes, and the Pro/Flash split. Do not promote unfinished GA, unaudited agent scores, or undisclosed full training cost into settled conclusions. DeepSeek-V4’s place on the timeline is a specification still stamped Preview: direction clear, seal incomplete.
 
-At the end of the notice sat the mundane instruction: keep the address, change the model. Frontier systems are remembered through enormous parameter counts. For the people maintaining an application, their arrival may first be a string edited in configuration, followed by a countdown to an alias that will stop working. Model history and operations history shared the page.
+Preview channels that ship both flagship and fast lines invite early latency–quality curves under real traffic. Agent coding success rates depend on tool APIs, sandboxes, and recovery—not model scores alone. One-million-token windows are capacity ceilings; lossless use of arbitrary million-token dumps is a harder claim. Spec sheets may lead; acceptance belongs to stable releases and third-party failure lists. Preview credit comes from writing unfinished next to the title.

@@ -32,6 +32,17 @@ beforeAfterEn:
   before: AI appeared as a completion plugin or chat sidebar in a traditional editor.
   after: The editor was reorganized around model context and generative operations.
 relatedEvents: [github-copilot, swe-bench, claude-code]
+visual:
+  src: /assets/events/cursor.webp
+  width: 1672
+  height: 941
+  alt: AI 原生编辑器桌面：代码文件、跨文件高亮与侧栏对话由光线连成一体
+  altEn: "AI-native editor desk: code files, multi-file highlights, and side chat linked by light paths"
+  caption: AI Chronicle 原创插图：补全、仓库检索与多文件修改共享同一个编辑器上下文。
+  captionEn: "Original illustration by AI Chronicle: completion, repository retrieval, and multi-file edits share one editor context."
+  credit: AI Chronicle
+  rights: generated
+  prompt: "Editorial product scene of a dark AI-native code editor: multi-panel IDE with abstract code lines, purple/blue highlights connecting file tree to edits and chat panels, sticky notes with graphs, keyboard and coffee; no Cursor logo, no brand marks, no readable company names, 16:9"
 sources:
   - title: Cursor is now Anysphere
     url: https://www.cursor.com/blog/series-a

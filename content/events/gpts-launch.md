@@ -33,6 +33,17 @@ beforeAfterEn:
   before: Customizing ChatGPT required repeated prompts or a separately developed API app.
   after: Instructions, files, and tools could be saved, shared, and distributed through a catalog.
 relatedEvents: [openai-plugins, assistants-api, chatgpt-launch]
+visual:
+  src: /assets/events/gpts-launch.webp
+  width: 1672
+  height: 941
+  alt: 桌面拼装台：多双手为不同用途的助手卡配置指令、文件与工具徽章
+  altEn: "Desktop assembly table: hands configure instruction, file, and tool badges for specialized assistant cards"
+  caption: AI Chronicle 原创插图：自定义 GPTs 让用户用指令、知识和工具拼出专用助手，无需重训模型。
+  captionEn: "Original illustration by AI Chronicle: custom GPTs let users assemble specialized assistants from instructions, knowledge, and tools without retraining."
+  credit: AI Chronicle
+  rights: generated
+  prompt: "Warm editorial product illustration of hands assembling modular assistant cards around a black cube core: folder tokens, education/business/shopping/code icons, tool trays, shelf of finished assistants; craft-table materials; no OpenAI logo, no brand text, 16:9"
 sources:
   - title: Introducing GPTs
     url: https://openai.com/index/introducing-gpts/

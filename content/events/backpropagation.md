@@ -34,6 +34,17 @@ relatedEvents:
   - perceptron
   - alexnet
   - deep-learning-rise
+visual:
+  src: /assets/events/backpropagation.webp
+  width: 1672
+  height: 941
+  alt: 1980 年代实验室台面：大幅图纸上多层网络与红色反向误差箭头
+  altEn: "1980s lab desk: multilayer network on drafting paper with red backward error arrows"
+  caption: AI Chronicle 原创插图：误差信号沿链式法则传回，隐藏层才有机会形成内部表示。
+  captionEn: "Original illustration by AI Chronicle: error signals travel backward by the chain rule so hidden layers can form internal representations."
+  credit: AI Chronicle
+  rights: generated
+  prompt: "Warm archival illustration of a 1980s neural-net research desk: large drafting paper with multilayer network nodes and red dashed arrows flowing backward; CRT computer, spiral notebooks, coffee mug, chalkboards with diagrams; technical hand-drawn aesthetic; no logos, no readable equations as fake paper citations, 16:9"
 sources:
   - title: Learning representations by back-propagating errors
     url: https://www.nature.com/articles/323533a0

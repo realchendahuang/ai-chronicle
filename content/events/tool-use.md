@@ -32,6 +32,17 @@ beforeAfterEn:
   before: Claude mainly consumed text context and generated responses.
   after: Claude could select structured tools inside an application-controlled execution loop.
 relatedEvents: [function-calling, mcp, claude-code]
+visual:
+  src: /assets/events/tool-use.webp
+  width: 1672
+  height: 941
+  alt: 中心控制器连接计算器、检索、数据库、键盘、终端与摄像头，形成工具调用环
+  altEn: "Central controller linked to calculator, search, database, keypad, terminal, and camera in a tool-use loop"
+  caption: AI Chronicle 原创插图：Claude Tool Use 把并行结构化调用变成 API 的常规能力，执行仍在客户端。
+  captionEn: "Original illustration by AI Chronicle: Claude tool use made parallel structured calls a normal API capability while execution stayed client-side."
+  credit: AI Chronicle
+  rights: generated
+  prompt: "Minimal dark-background editorial diagram of a central control module with knobs and colored pins, cables to calculator, magnifying glass, database stack, keypad, code terminal, and camera modules, circular arrows suggesting a tool loop; soft stone materials; no logos, no Anthropic marks, 16:9"
 sources:
   - title: Tool use is now generally available
     url: https://www.anthropic.com/news/tool-use-ga

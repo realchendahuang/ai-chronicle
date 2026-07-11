@@ -1,26 +1,20 @@
 ---
 eventId: bert
-form: Technical essay organized around a missing token
-narrativeCenter: Deliberate absence allowing every Transformer layer to use context from both directions
-emotionalSource: A major advance in language representation beginning with a small act of erasure
+form: pretraining-objective manual
+narrativeCenter: how masked language modeling made a bidirectional Transformer encoder the shared starting point for eleven understanding tasks
+emotionalSource: state-of-the-art GLUE and SQuAD after adding only small output heads—transfer made almost rudely cheap
 avoid:
-  - Describing BERT as an open-ended text generator
-  - Retelling GPT-1 with bidirectionality added as a footnote
-  - Equating benchmark records with solved language understanding
+  - writing BERT as a generative model
+  - replacing MLM/NSP mechanics with empty “bidirectional context” slogans
+  - erasing GPT-1 and ELMo prehistory
 ---
 
-`[MASK]` is not a word anyone writes by accident. It is an instruction to remove something and leave the vacancy visible.
+The acronym spells the ambition: Bidirectional Encoder Representations from Transformers. In 2018 Devlin et al. faced a concrete gap. GPT-1 had shown generative pretraining worked, but left-to-right reading limited tasks that need both sides of a sentence. ELMo supplied bidirectional signals, yet as shallow concatenations attached to task-specific architectures. Could a deep bidirectional representation be pretrained once and attached cheaply to many understanding tasks?
 
-BERT learned from that vacancy. During pretraining, 15 percent of WordPiece positions were selected; most were replaced by `[MASK]`, some by a random token, and some left unchanged. The model had to recover what belonged there. Because the missing answer sat inside the sentence rather than at its far edge, evidence could come from both sides. A Transformer encoder let those left and right contexts meet at every layer.
+Masked language modeling (MLM) was the answer. During training, about 15% of WordPiece tokens are corrupted: 80% replaced with `[MASK]`, 10% with a random token, 10% left unchanged, so the pretrain/fine-tune mismatch softens. The encoder must recover the originals using context on both sides at once. Next-sentence prediction (NSP) takes sentence pairs and asks whether the second follows the first in the original text. The body is a Transformer encoder: BERT-Base has about 110 million parameters (12 layers, hidden size 768, 12 heads); BERT-Large about 340 million (24 layers, 1024, 16 heads). Pretraining used BooksCorpus and English Wikipedia, on the order of 3.3 billion words.
 
-This arrangement sounds obvious now, which is one sign of how thoroughly it settled into practice. A left-to-right language model receives the past and predicts the future. That asymmetry is natural for generation but awkward for tasks in which the decisive clue may follow the word being interpreted. BERT made bidirectionality part of a single deep pretrained network rather than a feature assembled around separate task models.
+Fine-tuning is almost rude in its lightness: attach a small classification or span head on the `[CLS]` token or token states, update on task data, and skip redesigning the whole net per problem. The paper reported new state-of-the-art results on eleven tasks including the GLUE average and SQuAD v1.1/v2.0; SQuAD v1.1 test F1 entered the 90s, and GLUE averages rose sharply. Numbers age as later models pass them; the mechanism stayed. Learn bidirectional conditioning on large unlabeled text first, then treat the representation as a universal initialization.
 
-Its training material combined roughly 800 million words from BooksCorpus with 2.5 billion from English Wikipedia. A second objective asked whether one segment genuinely followed another. The input format carried its own sparse notation: `[CLS]` at the beginning, `[SEP]` between segments, and embeddings marking which segment each token belonged to.
+BERT excels at cloze-style understanding, classification, extraction, and question answering. It does not directly do open-ended long-form generation—that is decoder territory. What it changed was the default in NLP engineering: rather than train every task from random weights, download a pretrained checkpoint. Model hubs, Hugging Face-style distribution, and the industry phrase “pretrain then fine-tune” found an early template in this bidirectional encoder. Masking is an artificial wound; healing it forces the model to see both directions at once.
 
-Then came a deliberate anticlimax. Downstream systems were kept small. Classification read the representation at `[CLS]`. Extractive question answering predicted start and end positions in a passage. Sentence-pair tasks reused the two-segment format. The same pretrained parameters were fine-tuned end to end, with only a thin output layer changing from job to job. BERT Large had 24 layers and about 340 million parameters. Its pretraining ran for four days on 16 Cloud TPUs, a total of 64 TPU chips; once the checkpoint existed, an individual task could be fine-tuned on one Cloud TPU in an hour. Across eleven NLP tasks, including GLUE and SQuAD, the paper reported state-of-the-art results. A large central cost was being divided among many comparatively small adaptations.
-
-The model's limits were also architectural. BERT was built to represent text that had already been supplied. It became excellent raw material for search, classification, extraction, and reading comprehension, but it was not designed to compose an open-ended answer one token after another. The token used in pretraining, `[MASK]`, does not normally appear when the model is fine-tuned or deployed, creating a mismatch the authors partly addressed by sometimes leaving selected words intact or replacing them at random.
-
-For a few years, an enormous portion of applied NLP began from this trained checkpoint. The first design question changed. Instead of asking what network should be invented for a particular dataset, teams asked how this shared representation should be adapted.
-
-At the center of that shift was a blank. Training removed a word, left its place visible, and allowed the model to look in both directions before trying to return it. That peculiar token remained as the trace of an experiment that reorganized applied NLP around representation rather than open-ended generation.
+Input design was deliberate: WordPiece, position embeddings, and segment embeddings sum so single-sentence and sentence-pair tasks share one encoder interface. The classification token pools a sequence; separators mark boundaries. Fine-tuning hyperparameters lived in a small grid, lowering the industrial floor. Search ranking, moderation, intent classification, and document QA all initialized from pretrained checkpoints. Later work questioned next-sentence prediction and mask rates, but those revisions assumed bidirectional encoder pretraining was already the default. Generative models took the headlines; encoder stacks still run, distilled, inside classification and retrieval services.

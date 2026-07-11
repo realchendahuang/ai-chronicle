@@ -33,6 +33,17 @@ beforeAfterEn:
   before: ChatGPT mainly generated text inside a closed conversation.
   after: The chat interface became an orchestration point for external tools and services.
 relatedEvents: [chatgpt-launch, function-calling, gpts-launch, mcp]
+visual:
+  src: /assets/events/openai-plugins.webp
+  width: 1672
+  height: 941
+  alt: 聊天窗口嵌在插线板中央，周围插件卡通过彩色线缆接入旅行、购物、计算等工具
+  altEn: "Chat window set in a patch bay, plugin cards cabled to travel, shopping, compute, and web tools"
+  caption: AI Chronicle 原创插图：ChatGPT 插件用统一目录让对话助手第一次大规模调用外部服务。
+  captionEn: "Original illustration by AI Chronicle: ChatGPT plugins gave a mass audience a shared catalog for calling external services from chat."
+  credit: AI Chronicle
+  rights: generated
+  prompt: "Top-down editorial illustration of a chat interface socketed into an industrial patch bay; colorful cables connect plugin cards for travel, shopping, charts, calculator, web, lock, database; paper-craft icons; no brand logos, no company names, 16:9"
 sources:
   - title: ChatGPT plugins
     url: https://openai.com/index/chatgpt-plugins/

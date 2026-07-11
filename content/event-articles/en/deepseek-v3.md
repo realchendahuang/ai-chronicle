@@ -1,26 +1,22 @@
 ---
 eventId: deepseek-v3
-form: Engineering cost ledger
-narrativeCenter: "The DeepSeek-V3 technical report uses an itemized GPU-hour table to turn frontier-model cost from rumor into an engineering quantity with inspectable boundaries"
-emotionalSource: "A field shadowed by capital scale briefly receives numbers that can be added, disputed, and protected by footnotes"
+form: marginalia on a cost table
+narrativeCenter: a 671B-total / 37B-active MoE and the technical report’s 2.788 million H800 GPU-hour pretraining ledger
+emotionalSource: frontier training cost entering public discussion as a citable table—while “not full project cost” must sit in the same sentence
 avoid:
-  - "Calling the 5.576 million dollar estimate the total research and development cost"
-  - "Reducing the model's architectural contribution to being inexpensive"
-  - "Equating downloadable weights with a fully open training process"
+  - equating pretraining GPU-hours with total company R&D spend
+  - drowning architecture in stock-price narrative
+  - calling open weights unrestricted open source without checking the license
 ---
 
-The figure that escaped most readily from the DeepSeek-V3 technical report was not a benchmark score. It was an invoice assembled from GPU hours.
+On 26 December 2024 DeepSeek released DeepSeek-V3 with a technical report. The model is a mixture-of-experts design: about 671 billion total parameters, about 37 billion activated per token, with Multi-Head Latent Attention and related choices aimed at training and inference bandwidth. Open weights allow download, deployment, and further study; the repository license governs use—open weights are not automatically the most permissive OSI definition.
 
-The table listed 2.664 million H800 GPU hours for pretraining, 119,000 for context extension, and 5,000 for post-training: 2.788 million in total. At the report's assumed rate of two dollars per GPU hour, the arithmetic produced $5.576 million. Frontier-model expenditure, usually reconstructed from rumors about clusters and capital budgets, had been reduced to four columns and a sum.
+The most quoted lines are not a single quiz score but the resource table. Final pretraining is counted at about 2.788 million H800 GPU-hours; at the GPU-hour price the report adopts, that is about $5.576 million. The sentence must be split. The figure describes the **compute ledger of the final pretraining run**, not data purchases, failed experiments, headcount, serving, or historical R&D. Reading $5.576 million as “a frontier model costs only five-and-a-half million end to end” swaps accounting categories. DeepSeek’s own framing is cooler: put the publishable slice of the compute bill on the table so the industry need not rely only on rumor.
 
-The footnote was part of the sum. The estimate covered GPU time for the official training runs described in the report. It excluded prior research and ablation experiments on architecture, algorithms, and data; it was not a full account of personnel, data pipelines, cluster construction, failed trials, or inference infrastructure. The $5.576 million was an estimate under a stated hourly price, not a total project cost retrieved from DeepSeek's books. Once separated from those conditions, a useful measure of training efficiency became an implausibly cheap creation story.
+Architecture explains why the efficiency story can hold. MoE levers total capacity against active FLOPs per step; latent attention compresses keys and values; stability techniques (auxiliary losses, load-balancing related design) appear in inspectable sections. Benchmark tables cover code, math, and general knowledge; publisher numbers are official evaluations. What changed industry talk is that cost structure became discussable. Closed labs’ full bills remain invisible, but at least one open-weight model offered order of magnitude and methodology.
 
-The engineering behind the table was therefore more interesting than the headline made it seem. DeepSeek-V3 was a mixture-of-experts model with 671 billion parameters in total and roughly 37 billion activated for each token. Capacity and per-token computation did not have to rise together because most parameters were idle on any individual pass. The system retained Multi-head Latent Attention and DeepSeekMoE, while introducing a load-balancing approach that did not rely on a dominant auxiliary loss. A multi-token prediction objective trained it to forecast beyond only the next token.
+For developers, V3 offered a then-rare combination: open weights near flagship chat quality with paths to local or private deploy. For infrastructure and investment debates, it put algorithm–systems co-design back beside “only stack GPUs.” R1 would later shift the story toward reinforcement-learned reasoning; V3’s own legacy is a cost table with footnotes and a high-profile MoE success on the open-weight side.
 
-Numerical and systems work carried the architecture onto 2,048 H800 GPUs. FP8 mixed-precision training, overlap between communication and computation, and cross-node communication kernels were designed to reduce the time accelerators spent waiting for one another. The report said the model was pretrained on 14.8 trillion tokens without an unrecoverable loss spike or rollback, then underwent context extension, supervised fine-tuning, and reinforcement learning.
+The best way to read DeepSeek-V3 is with the architecture figure and the expense table open together: how 37B active parameters support 671B capacity on one side, and exactly what 2.788 million GPU-hours measure—and omit—on the other. Public discussion that keeps only a dollar figure wastes the part of the report that chose to be public.
 
-DeepSeek reported results across code, mathematics, and knowledge benchmarks that exceeded other open models and approached several closed ones. They remain the provider's results under its selected evaluations. The released weights gave outside developers more freedom to deploy and examine the model than an API alone would permit. They did not disclose the full training data or reproduce the whole production process. “Open weight” was meaningful, but narrower than “fully open source.”
-
-The report did not demonstrate that a frontier model could be bought with a surprisingly small cheque. It showed that compute expenditure is the outcome of many decisions: expert routing, precision, objectives, communication, hardware constraints, and training stability. The cluster was still large; the research that produced the successful run did not disappear because it was omitted from one line item.
-
-After DeepSeek-V3, the claim that better models simply require more money became harder to leave unexamined. The report supplied a ledger detailed enough to ask where each unit of capital went, then to ask which architectural or systems decision might make one line smaller.
+Report chapters on training stability—routing collapse, numerical issues, mitigations—show that “cheap” presupposes runs that finish. Active parameters govern latency and memory; total parameters govern disk and load. MoE splits those costs so deployers can choose quantization and expert-parallel strategies. Public ledgers invite comparison only inside stated meter bounds: final pretraining GPU-hours are not full R&D invoices. Architecture figure and cost table should be read together.

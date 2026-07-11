@@ -32,6 +32,17 @@ beforeAfterEn:
   before: Applications inferred tools and arguments from free-form model text.
   after: Models and software collaborated through an explicit structured-call contract.
 relatedEvents: [openai-plugins, assistants-api, mcp]
+visual:
+  src: /assets/events/function-calling.webp
+  width: 1672
+  height: 941
+  alt: 混乱聊天气泡经过结构化闸门，变成可校验参数并进入工具抽屉
+  altEn: Messy chat bubbles pass a structure gate into validated parameters and tool drawers
+  caption: AI Chronicle 原创插图：函数调用把自然语言意图收成应用可以校验的参数合同。
+  captionEn: "Original illustration by AI Chronicle: function calling turns natural-language intent into a validated argument contract."
+  credit: AI Chronicle
+  rights: generated
+  prompt: "Split editorial illustration: left side free-floating speech bubbles and fragments; center dark schema gate with geometric slots; right side validated cards leading to tool drawers (calendar, weather, files, calculator); paper-craft and soft 3D mix; no logos, no readable API brand text, 16:9"
 sources:
   - title: Function calling and other API updates
     url: https://openai.com/index/function-calling-and-other-api-updates/

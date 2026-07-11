@@ -1,26 +1,26 @@
 ---
 eventId: deepseek-r1
-form: Reading beside a laboratory report
-narrativeCenter: "R1-Zero exposes the unruly results of pure reinforcement learning before R1 reorganizes that reasoning into something usable and distillable"
-emotionalSource: "The report leaves repetition, mixed languages, and poor readability visible inside its account of success"
+form: reading beside an experimental report
+narrativeCenter: R1-Zero first exposes the rough edge of pure RL; R1 then edits reasoning into usable, distillable models
+emotionalSource: a technical report that keeps repetition, language mixing, and poor readability inside the success story
 avoid:
-  - "Replacing the technical record with stock prices, geopolitics, or rumored training costs"
-  - "Equating a long chain of thought with reliable reasoning"
-  - "Presenting vendor benchmark results as independently reproduced conclusions"
+  - replacing technical material with stock prices, geopolitics, or cost rumors
+  - equating long chains of thought with reliable reasoning
+  - treating vendor benchmarks as independently reproduced facts
 ---
 
-The DeepSeek-R1 report introduces an unruly model before the model named in its title. R1-Zero appears first; R1 is the effort to make what it discovered usable.
+In the DeepSeek-R1 technical report, the most interesting page is not the scoreboard. Between the names R1-Zero and R1 sits an indecorous gap.
 
-R1-Zero was trained with large-scale reinforcement learning without the conventional supervised fine-tuning stage that first demonstrates how a well-formed solution should look. Verifiable tasks supplied rewards. Through repeated attempts, the model developed longer reasoning, self-checking, reconsideration, and changes of strategy. DeepSeek presented the behavior as evidence that reinforcement learning alone could elicit substantial reasoning capability.
+In January 2025 DeepSeek released open-weight reasoning models R1 and R1-Zero, plus six distilled smaller models. R1-Zero was placed directly into large-scale reinforcement learning without a conventional supervised fine-tune to demonstrate how a good answer should be written. Rewards came from tasks with verifiable outcomes; through trial the model developed longer reasoning, self-checks, backtracking, and strategy switches. The report treats those behaviors as evidence that pure RL can elicit reasoning. The same passage admits endless repetition, unreadable prose, and mixed languages. Being able to solve and being able to hand a human a readable trail are not the same skill.
 
-The report did not stop at the successful behavior. R1-Zero repeated itself, mixed languages, and produced text that was difficult to read. Solving a problem and communicating a solution to another person had separated. The raw process was not offered as an aesthetic ideal simply because it scored well.
+R1 therefore does not enshrine Zero’s wild state as ideal. Developers insert a small cold-start dataset before RL, then run multi-stage reinforcement learning and supervised fine-tuning: some stages hunt better reasoning paths, others pull expression and general tasks back toward human preference. The stack still inherits DeepSeek-V3-Base’s mixture-of-experts body—671 billion total parameters, 37 billion active per token. More interesting than another parameter bump is how training order folds between exploration and communication.
 
-R1 was built by moving back and forth across that separation. DeepSeek introduced a small amount of cold-start data before reinforcement learning, then used two reinforcement-learning stages and two supervised fine-tuning stages. Some training continued to search for stronger reasoning; some restored readability, preference alignment, and performance on general tasks. The model inherited the DeepSeek-V3-Base mixture-of-experts architecture—671 billion parameters in total, with 37 billion activated per token—but the more interesting scale was sequential. Discovery and legibility were not achieved by the same step.
+Official evaluations place R1 beside OpenAI o1, Claude 3.5 Sonnet, GPT-4o, and others. Under DeepSeek’s published settings, R1 reaches 79.8% pass@1 on AIME 2024, 97.3% on MATH-500, and 65.9% on LiveCodeBench; it does not lead everywhere—SimpleQA accuracy remains clearly below o1. Numbers are publisher evaluations; sampling uses temperature 0.6 and top-p 0.95, with multiple generations per item to estimate pass@1. Keeping the protocol beats lifting only the tallest cell.
 
-DeepSeek compared R1 with OpenAI o1, Claude 3.5 Sonnet, GPT-4o, and other systems. Under the provider's evaluation settings, R1 recorded 79.8 percent pass@1 on AIME 2024, 97.3 percent on MATH-500, and 65.9 percent on LiveCodeBench. It did not lead everywhere; its SimpleQA accuracy, for example, remained notably below o1. For sampled evaluations, the report used temperature 0.6 and top-p 0.95, with 64 generations per question to estimate pass@1. Those conditions belong beside the numbers. They were company-reported measurements, not yet universal findings detached from sampling and prompts.
+A second line does not stop at the large model. DeepSeek fine-tunes Qwen and Llama families on R1-generated reasoning traces and releases six dense distilled models from 1.5B to 70B. A 32B Qwen variant scores 72.6% AIME 2024 pass@1 on the official table, packing part of the reasoning behavior into something far smaller than 671B. “Open” here means inspectable, deployable, further distillable—even taking only the layer that fits your machine.
 
-The project also traveled downward in size. DeepSeek used reasoning examples generated by R1 to fine-tune Qwen and Llama models, releasing six dense distilled versions from 1.5B to 70B parameters. The 32B Qwen-based model achieved a provider-reported 72.6 percent pass@1 on AIME 2024. Distillation moved part of the learned behavior into systems far smaller than the 671B parent. The release offered the largest weights alongside a ladder of more accessible models that people could study, deploy, and adapt.
+The repository keeps unheroic usage notes: do not set temperature too low, lest endless loops; avoid extra system prompts; some queries skip thinking unless explicitly started with a think tag. Leaderboard strength still depends on small runtime conditions.
 
-The repository's usage notes preserved an unheroic coda. Very low temperatures could produce endless repetition. The authors advised against adding a system prompt. Some queries required an explicit instruction to begin with `<think>` because the model might otherwise skip its reasoning. A model formidable in a table still depended on small operational conditions to remain useful.
+A myth of sudden reasoning has no room for the report’s rough edges. R1’s public path is more crooked: grow behavior under verifiable rewards, admit unreadability and instability, then use data, preference, and engineering to make something humans can use, and finally press capability into smaller models. The release hands over answers and a training process not polished into false neatness.
 
-A clean fable in which reasoning simply appeared could not contain the disorder preserved in the R1 report. Reward produced behaviors; those behaviors were capable but awkward; data and further training made them communicable; distillation carried portions into smaller models. The release supplied strong answers while leaving the scaffolding and rough edges visible enough to show that capability had been assembled rather than awakened.
+Group-relative policy optimization, contrasted with PPO in the paper, drops a separate value model and estimates advantages from rewards inside output groups. Verifiable rewards from math and code explain STEM-strong tables and weaker open-fact cells. Distilled dense models let schools and small teams touch reasoning behavior without MoE serving clusters. Product decisions about whether to show chains of thought sit beside scoreboards; long traces can persuade even when wrong.

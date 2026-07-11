@@ -1,24 +1,22 @@
 ---
 eventId: resnet
-form: technical argument from a failed comparison
-narrativeCenter: the paradox of a 34-layer network training worse than an 18-layer one and the residual formulation built to answer it
-emotionalSource: the frustration of added capacity becoming added difficulty, relieved by an almost parameter-free identity path
+form: anomalous experiment and residual derivation
+narrativeCenter: how a 34-layer plain net losing to an 18-layer net motivated identity shortcuts that made depth optimizable again
+emotionalSource: the blunt insult of deeper networks fitting the training set worse
 avoid:
-  - turning residual connections into a life lesson
-  - substituting road or bridge metaphors for the actual mapping
-  - misidentifying the degradation problem as only vanishing gradients
+  - turning residual connections into life metaphors
+  - replacing the equations with bridge-and-road imagery
+  - equating degradation with vanishing gradients alone
 ---
 
-Suppose additional layers in a neural network accomplish nothing. The deeper model should still be able to copy the shallower one: the new layers need only learn the identity mapping and pass their input through unchanged. By that reasoning, a 34-layer network should perform at least as well as an 18-layer version.
+If extra layers did nothing, a deeper network should at least match a shallower one. By that logic a 34-layer model should not lose to an 18-layer model: the added layers need only learn the identity map. On ImageNet, Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun observed the opposite. A plain 34-layer network produced higher training error and higher validation error than its 18-layer counterpart. Depth increased, and the training set became harder to fit.
 
-The experiment did not cooperate. A plain 34-layer network had higher error on validation data and on its training set. It had more representational capacity and fit the examples worse.
+The paper calls this degradation. The authors carefully separate it from vanishing gradients: the experiments already used batch normalization, forward signals and backward gradients stayed in reasonable ranges, and training longer did not close the gap. The difficulty was not only whether a signal could cross dozens of layers, but whether an optimizer could easily drive those new layers toward an identity that looks simple on paper. Deeper is not better unless optimization can actually find the solution that changes nothing.
 
-The ResNet paper called this the degradation problem and took care not to reduce it to vanishing gradients. The experiments already used batch normalization, keeping forward signals and backward gradients at workable scales. Longer training did not remove the gap. The question was no longer simply whether information could pass through many layers. It was whether optimization could persuade a stack of nonlinear transformations to approximate even the apparently trivial act of leaving its input alone.
+Residual learning reframes what a stack of layers must answer. Instead of learning a target mapping \(H(x)\) directly, a residual block learns a residual \(F(x)=H(x)-x\) and outputs \(F(x)+x\). The input \(x\) travels forward through a shortcut; when dimensions match, the identity shortcut adds neither parameters nor meaningful computation. When dimensions change, a projection shortcut aligns channels. If the best operation is “leave it alone,” the residual branch only needs to push its weights toward zero rather than reconstruct the input through many nonlinearities.
 
-Residual learning changed the target assigned to a block. If a group of layers would normally learn a mapping H(x), it was asked instead to learn the residual F(x)=H(x)-x. The block's output became F(x)+x. A shortcut carried x directly forward. Where input and output dimensions matched, that identity connection added no parameters and almost no computation. If the correct transformation was “make no change,” the learned branch could move toward zero rather than reconstructing x through several nonlinear layers.
+The decisive control keeps everything else matched: a 34-layer plain network and a 34-layer residual network share comparable depth and width; the residual version adds shortcuts. The result flips. Degradation disappears, training error falls below the 18-layer baseline, and extra depth finally buys accuracy. The team then built 50-, 101-, and 152-layer networks; even the 152-layer model had lower computational complexity than VGG-19. An ensemble of six residual models reached 3.57% top-five error on the ImageNet test set and won the 2015 ILSVRC classification task. Residual backbones also moved quickly into detection and localization pipelines such as Faster R-CNN.
 
-The paper paired a plain 34-layer network with a residual network of matching depth and widths; the consequential change was the addition of shortcuts. The residual model escaped the degradation seen in its plain counterpart and achieved lower training error than the 18-layer version. The team extended the design to 50, 101, and 152 layers. An ensemble of six models at different depths reached 3.57 percent top-five error on the ImageNet test set and won the 2015 classification task. Even the 152-layer individual network required less computational complexity than VGG-19.
+ResNet’s lasting force sits in that control experiment more than in the headline “152.” It did not invent a stronger primitive layer, and it did not require every shortcut to learn new parameters. It allowed information to pass unchanged when a transformation was not worth doing. Optimizers could start from an identity solution and decide where to deviate. Later vision backbones almost defaulted to some form of shortcut—residual blocks, dense links, residual branches inside Transformers—all reading as the same engineering judgment: depth only counts if it remains trainable.
 
-The memorable number is 152, but the paper's argument lives in the failed 34-versus-18 comparison. ResNet did not invent a more expressive individual operation. It allowed information to remain stable when another transformation was unnecessary. Optimization could begin from an easy identity route and learn only the places where departing from that route improved the objective.
-
-Depth no longer required every layer to justify itself by altering the signal. Some of the architecture's new power came from making “do nothing here” an answer the network could reach easily.
+The team also pushed residual nets past one hundred layers on CIFAR-10, showing that fixing degradation did not depend on ImageNet’s particular scale. Plain nets again struggled as depth grew; residual versions could deepen and reduce error. Pretrained ResNet-50 and ResNet-101 weights became default transfer-learning starting points across medical imaging, remote sensing, and industrial inspection. The durable export was not the integer 152 but the rule: guarantee an approximate identity solution first, then let the optimizer choose where to deviate.

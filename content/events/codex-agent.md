@@ -33,6 +33,17 @@ beforeAfterEn:
   before: One developer usually worked with one coding assistant in one local session.
   after: Multiple agents could handle repository tasks in parallel inside isolated environments.
 relatedEvents: [codex, swe-bench, claude-code, agent-runtime]
+visual:
+  src: /assets/events/codex-agent.webp
+  width: 1672
+  height: 941
+  alt: 云端编程控制台俯视：多个隔离舱并行跑代码任务，操作者在中控台审阅
+  altEn: "Overhead cloud coding console: isolated pods run parallel code tasks while an operator reviews at center"
+  caption: AI Chronicle 原创插图：Codex 云端 Agent 用隔离环境并行处理仓库任务并回传证据。
+  captionEn: "Original illustration by AI Chronicle: the cloud Codex agent runs repository tasks in isolated environments and returns evidence."
+  credit: AI Chronicle
+  rights: generated
+  prompt: "Clean futuristic overhead view of five glass cloud coding pods connected to a central console; each pod has monitors with abstract code and green checks; operator at bottom desk reviewing patch evidence; dark industrial product style; no logos, no brand text, 16:9"
 sources:
   - title: Introducing Codex
     url: https://openai.com/index/introducing-codex/

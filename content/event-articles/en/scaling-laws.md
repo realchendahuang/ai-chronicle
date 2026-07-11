@@ -1,28 +1,22 @@
 ---
 eventId: scaling-laws
-form: Commentary on charts and budgets
-narrativeCenter: Smooth loss curves moving from empirical observation into plans for training and capital
-emotionalSource: The seduction of making the future calculable, restrained by the conditions and later corrections attached to every fit
+form: reading empirical curves
+narrativeCenter: how power laws across seven orders of magnitude turned loss, parameters, data, and compute into a budget language
+emotionalSource: “will bigger help?” becoming a slope one can fit rather than a slogan
 avoid:
-  - Treating an empirical power law as a timeless law of nature
-  - Replacing measured cross-entropy loss with claims about emergent abilities
-  - Ignoring later revisions to compute-optimal data and parameter allocation
+  - treating power laws as natural law or eternal truth
+  - ignoring later Chinchilla revisions of optimal balance
+  - drowning experimental conditions in investment hype
 ---
 
-The vertical axis did not say intelligence. It did not say poetry, translation, or reasoning. It said cross-entropy loss.
+Kaplan et al. (2020) titled their work like a lab memo: *Scaling Laws for Neural Language Models*. The question is unromantic. Given a finite compute budget, should one spend on a larger model, more data, or longer training? The team fit cross-entropy loss across roughly seven orders of magnitude of training compute, tracking how loss moved with non-embedding parameter count \(N\), dataset size \(D\), and training compute \(C\).
 
-In *Scaling Laws for Neural Language Models*, researchers trained models ranging from thousands to roughly a billion non-embedding parameters and varied three quantities: model size \(N\), dataset size \(D\), and training compute \(C\). On logarithmic plots, points gathered around straight lines across several orders of magnitude. In ordinary coordinates, those lines became power laws.
+Within the architecture family and data regime they tested, loss followed smooth power-law trends in those scale variables. When other factors were not yet bottlenecks, curves could be extrapolated rather than breaking after a mystical threshold. From the fits the authors discussed compute-optimal allocation—how to balance \(N\) against training tokens at fixed \(C\)—and offered empirical formulas for that regime. Details depend on depth–width choices, optimizers, and data cleaning. These are not physical constants; they are a map drawn on a particular experimental grid.
 
-The finding was conditional and extremely useful. When neither data nor compute nor parameters formed the limiting bottleneck, adding more of one reduced loss with a surprisingly smooth regularity. Early portions of a training curve could help predict its later course. Small runs could inform the likely outcome of larger ones. A team could estimate when fixed data would become insufficient, or how to divide a compute budget between a larger model and more optimization steps.
+The map’s usefulness outran the appendix. Research managers and infrastructure teams gained a shared language: loss drops could be rough-forecast, cluster purchases and training calendars argued against slopes instead of against a feeling that “we need more cards.” Larger models and longer runs became easier to defend in budget review—scaling moved from slogan toward a planning assumption. Boundaries still need writing down. Power laws describe trends in training or validation loss such as cross-entropy; they do not guarantee monotonic downstream capability. Data quality, alignment objectives, and test-time compute sit outside the original curves.
 
-Before such curves, “bigger tends to work better” was an observation. After them, it could enter a planning document.
+Later work redrew some contour lines. Results such as DeepMind’s Chinchilla showed that, at similar compute, smaller models with more tokens can beat parameter-heavy, data-starved configurations, correcting an industry reading that over-favored stacking parameters. Kaplan’s paper and these revisions do not annihilate each other. The former established the engineering habit that scale variables can be fit and extrapolated; the latter adjusted what “compute-optimal” means under a given regime.
 
-The paper's own prescription favored very large models trained short of full convergence on a comparatively modest amount of data. Large models, it found, reached a target loss with fewer samples and optimization steps. The slogan hidden inside the analysis—“Big models may be more important than big data”—fit the investment climate that followed.
+Scaling laws do not promise endless progress. They promise that before data repetition, optimization failure, or broken evaluation intervene, loss often follows a slope one can draw. For organizations that reserve GPUs months ahead, a debatable slope is already more useful than “bigger is better.”
 
-It was not the last word. In 2022, the Chinchilla work revisited compute-optimal allocation and argued that many large models had been undertrained on data. The power-law framework survived, but the recommended ratio changed. This is what an empirical engineering law looks like in use: powerful enough to guide enormous expenditure, provisional enough to be revised by another set of experiments.
-
-Nor did the 2020 paper promise that the fitted curves would continue forever. Loss cannot fall toward zero at the same rate without limit. The measurements described particular model families, datasets, and scale ranges. Whether a smoother decline in language-modeling loss reliably produced the abilities people cared about was left as an open question. The paper invoked “more is different,” but a line fitted through loss values could not specify every difference that more might bring.
-
-The charts changed institutions as much as experiments. Frontier training could begin before a full run existed: fit exponents, price hardware, choose a model and data allocation, calculate whether another order of magnitude was worth attempting. Surprise did not disappear from model behavior. It was capital that became less willing to be surprised.
-
-The practical artifact was a fitted rule with a domain, not a prophecy. Labs could use it to budget an experiment before running it; later measurements could—and did—change the recommended allocation. Its value depended on keeping the measured range, error bars, and assumptions attached.
+Log–log plots of loss versus compute made slope a shared intuition device for labs booking chips months ahead. Misuse appears when cross-entropy is equated with user satisfaction, or when extrapolation continues after data repetition and broken evaluation. Maturity means labeling domains of validity and failure. Chinchilla and related work rewrote optimal balance without erasing the habit of fitting curves. The contribution is that “bigger” must carry a checkable forecast.

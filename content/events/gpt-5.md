@@ -36,6 +36,17 @@ relatedEvents:
   - openai-o1
   - gpt-4o
   - gpt-5-6
+visual:
+  src: /assets/events/gpt-5.webp
+  width: 1672
+  height: 941
+  alt: 深蓝底上的精密路由装置：输入球分流到快速轨与深度推理轨后再汇合
+  altEn: "Precision routing machine on deep blue: an input sphere splits into a fast track and a deep-reasoning track then rejoin"
+  caption: AI Chronicle 原创插图：GPT-5 在 ChatGPT 中把快速回答与深度推理交给系统路由。
+  captionEn: "Original illustration by AI Chronicle: in ChatGPT, GPT-5 routes requests between fast answers and deeper reasoning."
+  credit: AI Chronicle
+  rights: generated
+  prompt: "Minimal technical illustration of a brass-and-dark-metal routing machine: white sphere enters, splits into upper red fast track with clock gauge and lower green deliberate track with gears and tool icons, then exits; blueprint grid background; no logos, no readable product names, 16:9"
 sources:
   - title: Introducing GPT-5
     url: https://openai.com/index/introducing-gpt-5/

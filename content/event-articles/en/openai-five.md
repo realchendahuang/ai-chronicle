@@ -1,24 +1,20 @@
 ---
 eventId: openai-five
-form: Post-match technical reckoning
-narrativeCenter: A two-game result resting on roughly forty-five thousand years of simulated play under constrained rules
-emotionalSource: The compact time of a sports score beside the almost incomprehensible duration manufactured for training
+form: public match record under restricted rules
+narrativeCenter: five agents, a 17-hero pool and other limits, winning the first two games of a best-of-three exhibition against 2018 TI champions OG
+emotionalSource: real-time, partially observed, long-horizon team play grown from self-play—with rule cuts always on stage
 avoid:
-  - Inventing team reactions or specific team fights
-  - Treating the restricted hero pool as complete mastery of Dota 2
-  - Converting a game victory into proof of general intelligence
+  - claiming unrestricted full-Dota dominance
+  - inventing player emotions or caster lines
+  - hiding sample-efficiency costs
 ---
 
-On the scoreboard, there was very little to record: OpenAI Five 2, OG 0.
+In 2019 OpenAI Five faced OG, champions of The International 2018, in a public exhibition. The series was best of three; OpenAI Five took the first two games. Five agents each controlled one hero and coordinated in real time on one team. That result must be read with the constraints: a pool of about seventeen draftable heroes, plus limits on items and some mechanics—not the full unrestricted hero pool and rule set of then-current ranked play.
 
-The match took place in April 2019 against the reigning Dota 2 world champions. Each game unfolded at ordinary speed. The system that won them had arrived by another clock. Its final training line extended across ten months and accumulated the equivalent of roughly 45,000 years of self-play. OpenAI described the distributed system as manufacturing about 180 years of game experience each day and reported a total of 800 petaflop/s-days of computation. Since the version defeated at The International in 2018, training compute had increased eightfold.
+Dota 2 differs from Go in the environment itself. Time is continuous, the action space is huge, vision is partial, games last tens of minutes, and outcomes hinge on five-person resource allocation, stacking, runes, teamfights, and buyback timing. OpenAI stacked experience with large-scale distributed reinforcement learning and self-play. Public materials described on the order of 180 years of gameplay accumulated per day (a human-play-time conversion used in communications—treat it as an order-of-magnitude figure). On the algorithm side sat large-scale variants of policy-gradient methods such as PPO, with replay and heavily engineered training infrastructure; reward shaping and observation features were tightly bound to Dota’s rules.
 
-Dota 2 provided the mess that board games remove. It is real-time and partially observed. Five teammates act at once, divide resources, choose when to fight or retreat, and pursue plans whose consequences may arrive much later. There is no courteous alternation of turns. OpenAI Five did not watch the broadcast image; its observation was a large vector—about 20,000 numbers describing game state.
+The public wins showed that, inside a clipped but still ferociously complex real-time team game, pure self-play can produce team strategies that beat a world-champion roster—at least under that version’s rules and hero pool. They did not show that reinforcement learning had “solved” esports, nor that sample cost is affordable for arbitrary tasks. Simulated games on a multi-million-year scale bought an environment-specific agent; a new map or patch often means burning compute again. Partial observability and long-horizon credit assignment remain hard; human players’ adaptation and transfer do not sit on the same cost curve.
 
-The researchers had expected that the environment might demand elaborate hierarchical reinforcement learning. Much of the actual progress came from pushing familiar components—PPO, self-play, distributed simulation—across a larger and more durable training system. Continuity itself became an engineering problem. When the game changed or the model architecture needed alteration, a technique the team called “surgery” transferred parameters so that the long run did not have to begin again.
+OpenAI Five sits between AlphaGo’s board clarity and open-world mess. It pushed the RL story from turn-based perfect information into fights that require positioning and ability timing, and it pushed the logic of “compute for data” into public view: without a cheap simulator the path does not travel far. After the exhibition, full reproduction barriers stayed high. What remains are games won inside a rule fence—and the fence itself. Seventeen heroes and the other limits remind readers that breakthroughs in complex environments often happen first on engineered slices.
 
-The victory's perimeter was plain. The final match used 17 heroes. An attempted expansion to 25 did not bring the new heroes to professional level in time, and Lich was removed after a major change in Dota's 7.20 update. Items and other rules were also constrained. Most important, a game can be copied into thousands of parallel environments. Many real problems cannot supply centuries of cheap, automatically scored experience.
-
-After the exhibition, a public cooperative mode produced a less decisive but useful observation. Agents trained only through self-play could join human teammates without immediately becoming incoherent. One tester, Sheever, described an AI-controlled Viper sacrificing itself for her and the unusual trust that followed. The remark is evidence about a player's experience, not evidence that the system understood loyalty.
-
-OpenAI retired Five after the event. The score therefore did not begin a long reign. It closed an engineering account. If experience can be generated, synchronized, and scored in vast quantities, a policy can acquire forms of coordination that once looked inaccessible to reinforcement learning. But the bill remains attached. Behind two clean wins sat 800 petaflop/s-days and forty-five thousand synthetic years—a duration made invisible only because the environment permitted time to be copied.
+Infrastructure mixed large GPU and CPU farms; observations were structured game features from the API rather than raw pixels. Hero-pool limits reduced combinatorial explosion so self-play could grind roster understanding. Patch version and draft lists live in technical blogs; strip those constraints and claims of “solving Dota” overreach. Credit assignment across minutes of fog-of-war play remains hard even with reward shaping. The portable lesson is that complex team games can be sliced, and that compute buys strategy only inside the slice.

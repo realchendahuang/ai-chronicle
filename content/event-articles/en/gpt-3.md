@@ -1,26 +1,24 @@
 ---
 eventId: gpt-3
-form: Essay on the prompt as a temporary dataset
-narrativeCenter: Examples inside the context specifying a task without any update to the model weights
-emotionalSource: The pleasure of rapid adaptation shadowed by abrupt failures on simple questions
+form: paper reading around the prompt box
+narrativeCenter: how zero-, one-, and few-shot prompts temporarily specify tasks without updating 175 billion parameters
+emotionalSource: rapid in-context adaptation set beside systematic failures on arithmetic and common sense
 avoid:
-  - Repeating the scaling-law story as a tale of inevitable victory through size
-  - Treating few-shot performance as mastery of every demonstrated task
-  - Hiding arithmetic failures, bias, and possible benchmark contamination
+  - replaying scale-always-wins rhetoric from the scaling-laws essay
+  - equating few-shot scores with having truly learned every task
+  - hiding data contamination, bias, and the API distribution choice
 ---
 
-GPT-3 moved part of machine-learning development into a piece of prose.
+Preparing a model for a task used to mean touching training sets and code. GPT-3 moved part of that work into the input box.
 
-The paper called its evaluation settings zero-shot, one-shot, and few-shot. In the first, the model received a task description. In the second, one worked example appeared as well. In the third, several input–answer pairs were written into the context before the test item. Nothing happened to the weights. There was no gradient update and no new training run. The examples simply occupied the same temporary window as the question.
+The 2020 paper describes an autoregressive Transformer with about 175 billion parameters, trained on a large mix of web and other text. Evaluation is deliberately cast as three prompting regimes. Zero-shot gives only a task description; one-shot adds a single full example; few-shot stacks several input–answer pairs into context. The model continues the text without gradient updates. “Learning,” here, happens inside one forward context: examples temporarily define answer format, label meaning, even a textual operation never fine-tuned as such.
 
-This made a prompt resemble a miniature dataset—one that could be edited with a text cursor. A sequence of examples could establish the desired answer format, assign meanings to labels, indicate a translation direction, or demonstrate a novel word operation. The 175-billion-parameter model then continued the pattern.
+A prompt is therefore not only a question but a tiny dataset. The paper reports roughly 86.4% few-shot accuracy on LAMBADA; TriviaQA rising from about 64.3% zero-shot to 71.2% few-shot; WebQuestions from about 14.4% to 41.5%. Translation direction, grammar correction, invented-word explanation, and simple code completion enter the same few-shot protocol. 175 billion parameters make the phenomenon visible without making results tidy. Some two-digit arithmetic looks reliable; more digits fail quickly. WiC word-sense judgment sits near chance. Common-sense and adversarial reasoning lag specialized systems. Example order and wording move scores—the authors call what internal task forms in context an open question.
 
-Some changes were dramatic. On LAMBADA, reformulating the problem as fill-in-the-blank and providing examples produced a reported few-shot accuracy of 86.4 percent. On TriviaQA, the paper reported 64.3 percent zero-shot and 71.2 percent few-shot. WebQuestions rose from 14.4 to 41.5 percent. Similar prompting was used for translation, grammar correction, questions, and simple code.
+The breadth of training text adds another uncertainty. Test items may appear in approximate form online; contamination analyses help but cannot absolutely clear every benchmark. The bias discussion leaves a precise, heavy line: models trained on the internet have internet-scale bias. Scale amplifies usable patterns and stereotypes together.
 
-The same tables refused to form a clean ascent. GPT-3 could handle some two-digit arithmetic and then deteriorate sharply as digits accumulated. It approached chance on WiC word-sense classification. Adversarial natural-language inference and parts of commonsense reasoning remained difficult. The order and wording of demonstrations mattered. The paper could show that behavior changed inside the context; it could not fully explain what sort of temporary task representation the model had formed there.
+OpenAI did not release GPT-3 weights. Access came through an API. Prompting became both a control method and a product interface: developers without training clusters—or even without training a downstream model—could trial translators, classifiers, or writing tools from a few examples. The business form in which one base model serves many applications takes shape here.
 
-Scale also enlarged the uncertainty around data. A corpus drawn broadly from the web may contain benchmark questions or close relatives. The authors performed contamination analyses, but no procedure could certify the complete absence of overlap across every evaluation. Bias arrived through the same door. The paper's compact phrase—models trained on the internet have internet-scale biases—was less a rhetorical flourish than a warning about what indiscriminate reach collects.
+GPT-3 moved task definition from the training pipeline into rewritable text. That text is cheap, flexible, and fragile. It can make a model look immediately compliant and still break on a reordering, a rephrase, or a slightly harder sum. The paper’s uneven tables preserve the feel of a new interface, not a certificate of universal competence.
 
-OpenAI distributed GPT-3 through an API rather than downloadable weights. That choice made the prompt both the experimental instrument and the product interface. A developer without a training cluster could try a classifier, translator, writing tool, or code generator by changing examples in a request. One underlying model could support many products while its operator retained control of the model itself.
-
-The enduring oddity of GPT-3 is how quickly competence could appear and vanish. A few examples made the model look as though it had understood a new rule on the spot; a reordered example or longer sum revealed how contingent that understanding was. Task design became cheaper, faster, and more accessible. It also became grammatical: software behavior could now depend on the exact way an instruction happened to be written.
+A model-size table from 125 million to 175 billion parameters shows few-shot gains rising with scale. Training mixed trillions of tokens under paper-reported mixtures; context length was 2,048. Prompt engineering entered evaluation culture because templates move scores. Contamination analyses and bias chapters sit beside the high cells. API keys became a means of production and prompts a configuration file—the product grammar GPT-3 left behind when weights stayed closed.

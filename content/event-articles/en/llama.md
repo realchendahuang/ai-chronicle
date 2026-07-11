@@ -1,26 +1,22 @@
 ---
 eventId: llama
-form: History of distance collapsing around model weights
-narrativeCenter: Research-licensed weights escaping the hosted-API relation and becoming material for quantization, fine-tuning, and local inference
-emotionalSource: The intimacy of being able to touch a model file beside the disorder created when distribution outruns the intended license boundary
+form: history of weight access
+narrativeCenter: 7B–65B models under noncommercial research terms, 1.4T-token training, and the post-leak explosion of quantization and fine-tunes
+emotionalSource: “weights you can apply for” is not “open source for any commercial use”—the leak nailed the difference to everyone’s forehead
 avoid:
-  - Using democratization as a substitute for specific consequences
-  - Collapsing open weights, open code, transparent training, and open-source licensing into one term
-  - Portraying the community as a single anonymous heroic actor
+  - calling LLaMA 1 open-source software
+  - ignoring how the leak actually drove the ecosystem
+  - backfilling Llama 2/3 terms onto the first generation
 ---
 
-A hosted model is always somewhere else. A request leaves the machine, an answer returns, and the weights remain at a distance.
+In February 2023 Meta published the LLaMA paper and offered four sizes: 7B, 13B, 33B, and 65B parameters. The 65B model trained on about 1.4 trillion tokens. The paper stressed training comparatively smaller models on more tokens as another path between inference cost and quality, and reported competitive benchmarks against larger dense models. Weights did not hang under a click-to-download, arbitrary-commercial-use open-source license. Approved researchers could obtain them under noncommercial terms; application and compliance gates were real.
 
-Meta's LLaMA announcement in February 2023 changed that distance for a new class of capable language models. The family included 7B, 13B, 33B, and 65B parameter versions. The paper argued for training comparatively smaller models on more tokens when inference cost mattered, and reported competitive results across a range of benchmarks. Researchers could apply to obtain the weights.
+Then the weights leaked. Torrents circulated, and quantization (GPTQ, llama.cpp, and kin), LoRA fine-tunes, local chat UIs, and dataset-cleaning guides exploded within weeks. Technical fact and legal fact must be written in two columns: being able to run 7B and 13B on disk does not automatically mean a license allows your commercial product to do so. The industry was forced to distinguish open weights, open code, and OSI open-source licenses—three phrases marketing copy often kneads into one.
 
-Then the release escaped its intended choreography. The weights leaked and circulated beyond approved recipients. A rapidly expanding set of independent projects confronted practical questions: how far could precision be reduced without destroying capability, how could fine-tuning be made cheaper, what inference code would fit the model into consumer hardware? Quantization and adapter methods were not slogans about openness. They were answers to VRAM, throughput, and installation.
+LLaMA’s methodological contribution and distribution accident are entangled. Methodologically it wrote “smaller model + enough tokens” into the open-weight narrative, challenging parameter-stacking as the only story. On distribution, research licensing plus a leak became an involuntary global deployment experiment. University labs, startups, and hobbyists touched model internals near chat-product quality on their own GPUs—or even CPUs—rather than only through APIs. Llama 2 later offered broader commercial terms with remaining restrictions; that is the next chapter, not February 2023 as-was.
 
-Local language-model use became plausible by accumulation. One person optimized a kernel, another documented a conversion, another produced a compact fine-tune, another built an interface. Their motives and standards varied. A research release became a wider ecosystem not through a single coordinated act but through many incompatible attempts to make the files useful.
+For closed API vendors, the LLaMA ecosystem suddenly localized a price and feature reference. For safety and policy debates, capability diffusion no longer depended only on one company’s release button. Benchmark tables in the paper age; the observation that “once weights can be copied, community toolchains grow on a weekly clock” still applies.
 
-The word “open” obscured as much as it explained. The first LLaMA was not issued under an open-source software license; access was governed by a research license. Llama 2 later expanded commercial permissions while retaining additional restrictions. Possessing weights, reading source code, knowing the training data, and receiving rights that satisfy an open-source definition are separate conditions. LLaMA's influence forced these distinctions into ordinary model discussion because a vague label no longer described what people were actually allowed to do.
+LLaMA is not a clean open-source victory speech. It is an openness with a crack: formal channels had gates, informal channels had a flood, and the flood carved the modern default toolbox of quantization and fine-tuning. Reading the history means seeing Meta’s paper numbers and the overnight `.cpp` commits on GitHub at once.
 
-Hosted APIs continued to offer important forms of order: managed hardware, stable endpoints, moderation, and centrally maintained versions. Downloadable weights offered another kind of power. They could remain inside an organization's data boundary, be inspected by researchers, run without a network service, or be altered in ways the publisher neither approved nor anticipated. The same transfer of control enabled adaptation and misuse.
-
-Frontier APIs retained clear commercial advantages, while LLaMA established that a parallel technical culture could grow around possession rather than access. Afterward, every major model release invited a practical question before the benchmark debate had finished: can anyone get the weights?
-
-Behind that question was no abstract manifesto. People wanted to know how much memory the model consumed, what happened if they changed it, and whether it could run on a machine they controlled. They wanted the faraway service to become an object on the desk.
+From research licenses to torrent floods to later broader commercial terms, Meta’s openness strategy itself became an object of study. Startups gained offline demos and on-prem narratives; counsel had to enter early or launch would stall on provenance. Quantization habits born that spring still structure local inference. The vocabulary correction—open weights versus open-source licenses—is institutional residue as durable as any single checkpoint.

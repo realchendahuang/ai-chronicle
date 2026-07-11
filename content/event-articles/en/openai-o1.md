@@ -1,26 +1,26 @@
 ---
 eventId: openai-o1
 form: Technical essay on waiting
-narrativeCenter: "o1 recasts time and computation spent before an answer from mere latency into a scalable source of model capability"
-emotionalSource: "Computers have long treated delay as a defect; this release attached both a price and an intellectual expectation to waiting"
+narrativeCenter: "o1 rewrites time and compute spent before an answer from system lag into an expandable model capability"
+emotionalSource: "Computers long treated immediate response as virtue; here waiting is priced openly and loaded with intellectual expectation"
 avoid:
-  - "Treating hidden reasoning as an auditable proof"
-  - "Using mathematics competition results as a complete account of reasoning"
-  - "Claiming test-time compute replaced training scale"
+  - Equating a hidden reasoning process with an auditable proof
+  - Using contest math scores as a summary of all reasoning
+  - Claiming test-time compute replaces training scale
 ---
 
-For most of computing history, a delay has arrived with an apology. The progress bar reassures us that the machine has not stopped. The spinner asks for patience without claiming that patience will make the result more intelligent.
+Computers usually apologize for waiting. Progress bars, spinners, and “loading” explain why a result has not arrived. On 12 September 2024, when OpenAI released o1-preview and o1-mini, waiting was presented by a frontier lab as a capability: some problems deserve more computation before an answer.
 
-OpenAI presented o1-preview differently. Some questions, the release suggested, improved when the model spent more computation before answering. Waiting was no longer only overhead in the delivery of capability. It had become one of the ways capability could be increased.
+Ordinary chat models can emit reasoning steps, yet they often process simple questions and hard proofs with a similar token-by-token procedure. For o1, OpenAI described another training path: reinforcement learning that develops longer internal reasoning—trying, checking, revising—and partial gains on complex tasks as test-time compute rises. Scaling no longer happens only before training ends. After deployment, each problem can still receive a different thinking budget.
 
-Ordinary chat models can produce intermediate reasoning, but simple questions and hard proofs still pass through broadly similar next-token generation. OpenAI described o1 as trained through reinforcement learning to develop a longer internal reasoning process: try an approach, detect trouble, revise, and continue. The company reported that performance on some complex tasks rose as more test-time computation was allocated. Scaling, in other words, did not end when training did. Each problem could receive a different budget after deployment.
+o1-mini beside o1-preview shows reasoning products split by size and cost from day one. Strict rate limits force users to spend “thinking quota” on hard problems. Missing browse and file upload kept the first reasoning models inside a more closed input surface, avoiding stacked failures from tools and long context. System-card tradition continues: capability claims beside risks and mitigations. Waiting is productized while process transparency is partly withdrawn—a trade, not a free lunch.
 
-The clearest demonstrations came from mathematics, science, and programming. OpenAI reported substantial gains over GPT-4o on American Invitational Mathematics Examination problems, Codeforces competitions, and graduate-level science questions. These are vendor results under specific conditions, not a general certificate of intelligence. Problems with verifiable answers are especially suited to repeated derivation and outcome-based reward. An ambiguous requirement, an uncertain fact, or a conflict of values does not become a well-formed theorem because a model runs for longer.
+Official scores in mathematics, science, and programming made the difference legible. On AIME problems, Codeforces contests, and graduate-level science questions such as GPQA, o1 showed large gains over GPT-4o under OpenAI's reported settings—vendor evaluations, not a general certificate of intelligence. Contest items have checkable answers and reward iterative derivation; open-world facts, ambiguous demands, and value conflicts do not become math problems merely because the model spends longer.
 
-The release also changed the evidence available to the user. The full internal chain of thought was not exposed. A product could provide an answer or a summarized explanation, but the hidden computation itself was not an inspectable proof. “Reasoned for longer” described a training and inference strategy. It did not guarantee that a particular run reasoned correctly, nor did a polished account necessarily reveal the actual route by which the answer was produced.
+Access belongs in the same ledger. o1-preview entered ChatGPT and the API as a preview with strict rate limits. At launch it lacked several ChatGPT features already present on other models, including web browsing and file uploads. It was not a full replacement for the default chat model, but a reasoning tier with quotas, feature gaps, and an explicit user choice. The full internal chain of thought was not shown to users: products could return answers or cleaned summaries without making hidden computation an auditable proof. “Thinking longer” describes training and inference mechanics; it does not guarantee correctness, and a polished explanation is not necessarily the path that produced the answer.
 
-That distinction matters because duration carries its own aura. People are accustomed to equating deliberation with care. A slower answer can therefore earn trust before its content has earned it. More test-time compute may increase the chance of solving a difficult problem, while simultaneously increasing latency, expense, and the temptation to accept an answer because something unseen appeared to work hard on it.
+Safety materials, including a later system card, discussed risks particular to reasoning models: longer internal processes can probe refusal boundaries and need matching training and monitoring. Those are the publisher's risk narratives and mitigations, not proof that risk has ended. Waiting raises the chance of success while raising cost, latency, and a new trust temptation—people prefer answers that arrived slowly.
 
-Model selection acquired a price in time. Quick generation remained appropriate for many requests. Difficult work could be routed to a costlier reasoning process. Products had to decide when an answer deserved additional computation and when the better response was immediate uncertainty. Training data, parameters, and training compute had not become obsolete; test-time compute added another axis beside them.
+Model choice acquired a price in time. Instant answers still suit many tasks; hard problems can call costlier reasoning; products must decide when to wait and when to admit ignorance quickly. Test-time compute does not replace data, parameters, or training scale; it adds another dial beside those older levers.
 
-“A machine that contemplates” would place o1 inside an analogy the release could not establish. The practical change sat in the allocation ledger. Most of the intelligence budget had once been spent by the time a model was served. Now the arrival of a question triggered another decision: how much more should this one be allowed to cost?
+“A contemplative machine” pulls o1 into an unverifiable metaphor. The confirmable change is in compute accounting: once, most of the capability budget was spent when training finished; now, after a question arrives, the system can still decide how much more to spend. The spinner remains. Besides slowness, it marks intentional expenditure—and in autumn 2024 that expenditure still carried preview, rate-limit, and feature-gap labels.

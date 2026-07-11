@@ -1,22 +1,22 @@
 ---
 eventId: seq2seq
-form: experimental notebook
-narrativeCenter: a general encoder-decoder interface made practical by the inelegant trick of reversing the source sentence
-emotionalSource: an ambitious end-to-end structure depending on one modest intervention that shortened the gradient's path
+form: close reading of a diagram
+narrativeCenter: two multilayer LSTMs that compress a variable-length input into a vector and expand it into a variable-length output—and the almost odd trick of reversing the source
+emotionalSource: an entire translation pipeline collapsing into one end-to-end chain, still rescued by a word-order experiment
 avoid:
-  - dismissing statistical machine translation as simply obsolete or ineffective
-  - letting the later Transformer replace the paper's own concerns
-  - treating the fixed-vector bottleneck as a costless unification
+  - writing this as a prequel to the Transformer
+  - ignoring that statistical phrase-based MT was still mainstream
+  - inserting attention into this paper’s architecture
 ---
 
-Statistical machine translation was assembled from specialized parts. Words were segmented, phrases aligned, candidate translations scored by separate models, and those scores tuned into a working pipeline. Neural networks could already map an input to a fixed class. Translation required something less obedient: both the source and the output had variable length, and their lengths did not have to match.
+Machine translation has variable-length inputs and variable-length outputs. Around 2014, production systems still chained tokenization, phrase tables, alignment models, reordering, and language models, each with its own objective. In *Sequence to Sequence Learning with Neural Networks*, Sutskever, Vinyals, and Le did something coarser: one multilayer LSTM reads an entire source sentence; another multilayer LSTM receives the final hidden state and emits the target one token at a time until an end symbol appears.
 
-Seq2Seq offered a concise interface. One multilayer LSTM read the source sentence token by token and compressed it into a fixed-dimensional internal state. A second LSTM began from that state and generated the target sentence one token at a time until it emitted an end marker. Variable-length sequences now fit a single trainable objective. Summarization, dialogue, and other transformations could later be phrased in the same abstract form: consume one sequence, produce another.
+The encoder compresses a sequence of any length into a fixed-dimensional vector. The decoder is conditioned on that vector and, at each step, predicts the next word. Training uses teacher forcing: the decoder learns next-token distributions given true prefixes, minimizing the negative log-likelihood of the full target. Inference expands candidates with beam search. The paper used four-layer LSTMs with 1,000-unit hidden states and reported competitive BLEU on WMT’14 English-to-French, with a decoder vocabulary on the order of 80,000 words. For a neural model, that meant optimizing whole-sentence mapping under a single differentiable loss rather than assembling phrase alignments after the fact.
 
-The maneuver that made the large experiment work was less elegant than the interface. The researchers reversed the source words while leaving the target order unchanged. An input *a, b, c* reached the encoder as *c, b, a*, while the decoder still produced *α, β, γ*. Corresponding words near the beginnings of the two sentences were brought closer in the computational graph. The shortest dependencies became shorter, and optimization improved. The paper did not claim a complete explanation, but the measurements were stark: reversing the source raised the single-model test BLEU score from 25.9 to 30.6 and helped performance on long sentences.
+The detail easiest to remember sits in Figure 1’s reversed ABC. The authors found that reversing the source word order—feeding the encoder the source sentence backwards—made training easier and improved long-sentence performance. A working intuition is that early source words then sit closer in time to early target words, shortening the effective path gradients must travel. It is not an elegant linguistic theory so much as an engineering observation that made it into both the main text and the diagram.
 
-The experiment was substantial. Training used twelve million English-French sentence pairs. Four-layer LSTMs with 1,000 units in each layer produced about 384 million parameters and ran for roughly ten days. An ensemble of five reversed-source models scored 34.8 BLEU on the WMT 2014 English-to-French task, above the paper's phrase-based baseline of 33.3. Used to rerank one thousand candidates from the statistical system, the LSTMs helped reach 36.5. The new method did not arrive by simply discarding the old pipeline. It first exceeded one baseline on its own and then improved that pipeline as a component.
+Seq2Seq did not remove the fixed-vector bottleneck; very long sentences still had to squeeze all information into the encoder’s final state. Attention mechanisms that followed, notably Bahdanau et al., let the decoder re-read source positions at each step; the 2017 Transformer later removed recurrence itself. Those steps are not this paper’s body text. What remains is a transferable task shape: translation, summarization, dialogue, and many later text-to-text problems can first be described as reading one sequence and writing another. Components of the pipeline could still be debated; the frame had unified.
 
-The fixed state unified the architecture and compressed every detail of a source sentence through one narrow channel. Attention mechanisms soon allowed a decoder to consult source positions anew at each output step rather than relying only on the final encoded vector.
+Reading the source backwards does not sound like a grand invention. It is a reminder that early neural translation advances mixed architectural bets with small rewrites of the optimization path. Variable-length mapping was caught by one loss. Long-range dependence was, for a while, shortened by a reversal into a distance LSTMs could learn more stably.
 
-Before that change, the 2014 paper had already preserved a useful engineering detail. Its clean encoder–decoder diagram became competitive only after the source sentence was fed in backward and the gradient found a more manageable distance.
+Length analyses in the paper show performance falling more steeply with source length before reversal and flattening afterward. Beam width, vocabulary truncation, and rare-word handling still decide whether BLEU approaches phrase-based systems. End-to-end does not mean knob-free; knobs move from phrase-table feature weights to depth, width, and search. The unified frame is what later attention papers plug into without rewriting the task definition itself.

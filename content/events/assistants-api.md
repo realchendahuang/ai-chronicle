@@ -33,6 +33,17 @@ beforeAfterEn:
   before: Applications managed agent state and tool loops themselves.
   after: Model providers offered hosted stateful agent APIs.
 relatedEvents: [function-calling, gpts-launch, agent-runtime]
+visual:
+  src: /assets/events/assistants-api.webp
+  width: 1672
+  height: 941
+  alt: 模块化托管助手机器：会话、运行、文件、检索与代码解释器串在同一传送带上
+  altEn: "Modular hosted-assistant machine: conversation, runs, files, retrieval, and code interpreter along one conveyor"
+  caption: AI Chronicle 原创插图：Assistants API 把线程、文件与工具执行收成平台侧的状态机。
+  captionEn: "Original illustration by AI Chronicle: the Assistants API packages threads, files, and tool execution as a platform state machine."
+  credit: AI Chronicle
+  rights: generated
+  prompt: "Editorial illustration of a modular industrial assistant machine with five bays: conversation files, run gears, document shelves, magnifying-glass retrieval arm, and a code chamber; a continuous paper tape conveyor runs through all bays above a control panel with switches and grid; dark metallic product-editorial style; no logos, no readable brand text, 16:9"
 sources:
   - title: New models and developer products announced at DevDay
     url: https://openai.com/index/new-models-and-developer-products-announced-at-devday/

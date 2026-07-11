@@ -1,24 +1,22 @@
 ---
 eventId: word2vec
-form: essay on a computational map
-narrativeCenter: local prediction turning patterns of word companionship into distances and directions
-emotionalSource: a thin objective revealing linguistic regularities while refusing to become a complete theory of meaning
+form: efficiency notes
+narrativeCenter: learning dense word vectors cheaply from billion-word corpora by local-context prediction
+emotionalSource: analogy arithmetic that looks magical while the title insists on efficient estimation
 avoid:
-  - treating vector analogies as dependable symbolic reasoning
-  - building the article around the popular king-minus-man example
-  - claiming that one fixed vector contains a word's full meaning
+  - treating word vectors as genuine logical reasoning
+  - ignoring one-hot encodings and earlier neural language models
+  - using later contextual models to erase the 2013 contribution boundary
 ---
 
-In a one-hot representation, every word is an address. *Cat*, *dog*, and *tax rate* occupy different cells, but the encoding itself contains no reason for the first two to be closer than either is to the third. Earlier neural language models could learn continuous word representations. Their cost made the method difficult to apply to very large vocabularies and corpora.
+The title is blunt: *Efficient Estimation of Word Representations in Vector Space*. In 2013, Mikolov, Chen, Corrado, and Dean cared first about cost—how to learn word vectors on corpora of billions of tokens without making every experiment a research project of its own.
 
-Word2Vec's answer was to make the learning task thinner. CBOW predicts a word from the words around it. Skip-gram reverses the direction, predicting nearby words from the current one. Across countless short windows of text, the model repeats that narrow exercise. The vectors are not dictionary definitions placed into the system. They are parameters left behind by repeated guesses about which words keep appearing near one another.
+One-hot encodings treated every word as an unrelated axis. Earlier neural language models could learn embeddings, but large-vocabulary softmax layers and deeper networks made them expensive. Word2Vec reduced the problem to two shallow prediction tasks. Continuous bag-of-words (CBOW) predicts a center word from its neighbors; Skip-gram reverses the direction and predicts context words from the center. The networks carry almost no hidden nonlinearity: inputs are embeddings, outputs are classifications over the vocabulary. The real savings came from training tricks. Hierarchical softmax walks a binary tree instead of normalizing over the full vocabulary. Negative sampling updates only the true word and a handful of noise words, avoiding a full-vocabulary gradient at every step.
 
-The 2013 papers concentrated on efficiency. Expensive nonlinear hidden layers used by earlier neural language models could be removed from these objectives. Hierarchical softmax and, in related work, negative sampling reduced the cost of dealing with a large output vocabulary. Once training became cheaper, researchers could increase dimensions, vocabulary, and corpus size and compare how those decisions altered the learned space. The work reported high-quality vectors learned from 1.6 billion words in less than a day.
+Papers and follow-up notes showed geometric regularities: similar words land nearby; some analogies approximately satisfy vector offsets, as in the often-cited king − man + woman ≈ queen family of examples. The results are persuasive and easy to overread. Vector arithmetic is not reliable symbolic calculus. Window size, corpus, and objective all change which relations look clean. Polysemy is crushed into a single point. Social stereotypes in the training text enter the distance structure as well—later work measured bias as a reproducible geometric fact rather than a moral appendix.
 
-The resulting geometry gave Word2Vec its fame. Cities and countries, singular and plural forms, adjectives and adverbs often occupied approximately consistent directions. The paper assembled 19,544 analogy questions across five semantic and nine syntactic relation types. Subtracting one vector and adding another could move the nearest neighbor toward a word that fit one of those relations. The spectacle of arithmetic over language was real enough to be useful and fragile enough to be misunderstood. The answer changes with frequency, corpus, vocabulary, and the behavior of nearest-neighbor search. The operation is not a general symbolic proof.
+Word2Vec’s immediate force was industrial. Search, recommendation, text classification, and the input layers of later neural models suddenly had a dense representation one could download and fine-tune. Google’s open tools let teams obtain lexical semantics without first training a full language model. Distributed representations moved from papers into default components, and they posed the problem later solved by ELMo and BERT: a static vector cannot change meaning with the sentence. The 2013 answer stopped at points on a vocabulary. That was already enough to rewrite the first layer of many NLP pipelines.
 
-A further limit is built into the word table. Each word receives one fixed vector. *Bank* beside a river and *bank* holding money share the same entry; Word2Vec does not construct a new representation from the sentence in which the word currently appears. Contextual models would later address this compression.
+Efficiency, here, is not false modesty. It means a researcher could sweep massive text on ordinary servers and compress co-occurrence statistics into a few hundred real-valued dimensions. Semantic structure arrived as a byproduct. The title chose to emphasize what could be estimated at all, and fast.
 
-The static vector is best read as a map of textual neighborhood. Frequent associations become short distances. Grammatical habits leave directions. Rare uses may disappear. Social prejudice in the corpus is not filtered out by the elegance of the geometry; it can settle into the same space as semantic similarity.
-
-Word2Vec made such maps inexpensive, dense, and easy to reuse in search, classification, and neural language systems. Whether a direction represented knowledge, convention, or bias remained a question for the text that drew it.
+Skip-gram and CBOW are asymmetric across corpus sizes: with abundant data Skip-gram often yields better rare-word vectors, while CBOW trains faster. Subsampling frequent tokens reduces uninformative co-occurrence updates so the window spends capacity on content words. After the tools shipped, industry treated embeddings as pluggable components for search expansion, query rewriting, and text features in recommenders. Static vectors aged out once contextual models arrived; the habit of learning representations from unlabeled text first did not.

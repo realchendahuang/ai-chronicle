@@ -1,24 +1,24 @@
 ---
 eventId: openai-plugins
 form: Product archaeology
-narrativeCenter: A short-lived catalog revealing how a conversational model might choose among external services
-emotionalSource: Early excitement around browsing, calculation, and transactions disturbed by permissions and prompt injection
+narrativeCenter: A short-lived directory that never became the final standard, yet exposed early how a conversational assistant would connect to the outside world
+emotionalSource: Excitement from the first search, calculation, and booking tools, mixed with noise from permissions and prompt injection
 avoid:
-  - Narrating the plugin directory as the triumph of a durable ecosystem
-  - Mistaking a short product life for historical insignificance
-  - Substituting a list of launch partners for an account of the product idea
+  - Writing the plugin catalog as a triumphant ecosystem story
+  - Equating a short life with historical worthlessness
+  - Substituting a partner list for narrative
 ---
 
-ChatGPT plugins imagined the internet as a directory the model could read.
+Looking back at ChatGPT plugins, the retired directory still holds an overly tidy image of the internet: line up websites and services, let the model choose.
 
-In early 2023, the chat product was still largely bounded by its trained knowledge and the text supplied in a conversation. It could propose a journey but not inspect a current fare; describe a calculation and make a numerical mistake; mention a restaurant without placing a reservation. Plugins opened different doors. Browsing supplied recent web information. Code Interpreter carried out computation. Third parties such as Expedia and Wolfram exposed services the model could select after a user enabled them.
+On 23 March 2023, OpenAI opened plugin testing to waitlisted users. ChatGPT then still felt like a closed conversation room. It could explain a travel plan without knowing live fares; write calculation steps while stumbling on simple arithmetic; recommend a restaurant without completing a booking. Plugins opened a few doors. Browsing brought fresh web information; a code interpreter took over calculation; third parties such as Expedia and Wolfram placed their capabilities in the same chat surface. Users enabled plugins; the model selected among them and assembled calls. Access was not a universal default switch but limited alpha and test seats. OpenAI's own browsing and code plugins sat beside third-party ones—a reminder that tools came both from ecosystem partners and from the platform itself.
 
-The connective tissue was almost quaint: a manifest identified the plugin, and an OpenAPI description explained its operations. Documentation originally written so human developers could integrate an API now had another reader. Names, parameter descriptions, and scope influenced whether a language model selected the right operation and filled it correctly.
+Waitlists biased early experience toward developers, press, and power users whose feedback shaped review and permission design. Manifests and OpenAPI elevated service self-description into model-readable contracts—an idea tool ecosystems keep rediscovering. Browsing imported web content and classic prompt-injection equations; code plugins outsourced arithmetic reliability to an execution environment and exposed LM math fragility. After the directory retired, the mechanisms were disassembled and reused, not deleted.
 
-The result looked briefly like an app store for a conversational operating layer. It behaved more like a market erected before its civic rules were finished. As listings multiplied, discovery and review grew difficult, and many plugins offered near-duplicate purposes. More serious problems followed from the same mechanism that made the catalog useful. If a model could read an external page and decide what to do, instructions hidden in that page could compete with the user's request. If it could act through an authorized service, permission was no longer a box checked once; it had to survive the model's interpretation of each step.
+The integration style matched the moment's simplicity. A manifest under a domain told ChatGPT who the plugin was; an OpenAPI description said what it could do. Interface documents written for human developers now had to be readable by a model. Names, parameter descriptions, and permission scopes were no longer internal engineering details; they affected whether the model picked a tool and whether a user's sentence became a correct call. Discovery, authorization, and invocation were packed into one conversation stream—strong product intuition, concentrated governance and safety problems.
 
-A conventional program has a control flow engineers can trace. A plugin-enabled assistant inserted a probabilistic judgment into that flow. It might choose a tool, omit one, or construct a call from an imperfect reading of the conversation. The directory made these judgments accessible to a mass audience before the surrounding security model had matured.
+It sounded like the start of an app store and behaved more like a hastily built bazaar. Stalls multiplied; discovery and review grew hard; many plugins differed little. Harder still: once the model read external pages and accessed services on a user's behalf, malicious instructions, authorization boundaries, and mistaken actions entered the dialogue together. A language model can decide what to do next without gaining the clear control flow of conventional software. Convenience and risk were the same act: handing judgment to the model.
 
-The catalog correctly anticipated that a chat window could become an entrance to search, computation, and external transactions. It guessed that the durable product shape would be a storefront: arrange services in a directory and let the model choose. Function calling, GPT Actions, and later agent systems moved instead toward lower-level contracts.
+The plugin directory did not become the general standard for model–tool connection. Function calling, GPT Actions, and later agent interfaces dismantled it into more basic capabilities; the store form and product name receded. Some abilities continued as product features such as code interpretation / data analysis and browsing, no longer mainly distributed through a plugin shelf. The engineering questions that remained were concrete: how the model selects tools, how parameters are validated, when users authorize, whether external responses can be trusted. Spring 2023 put those questions into ChatGPT in one place. After the directory closed, they stayed inside every external call.
 
-The difficult work survived the storefront. A person's intention still had to remain intact through model interpretation, argument construction, software permissions, and the final action. Tool selection, validation, authorization, and untrusted responses outlived the directory because none of them had ever been solved by arranging icons in one.
+Archaeology here is not about declaring that plugins “should have become the standard.” It is about admitting that a failed or withdrawn product experiment can still set the next stage's problems on the table early. The catalog was short-lived. The seam problems were not.

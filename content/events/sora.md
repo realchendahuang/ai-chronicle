@@ -33,6 +33,17 @@ beforeAfterEn:
   before: Text-to-video consisted mainly of short, visibly unstable research clips.
   after: Minute-scale generation and complex shot control became frontier targets.
 relatedEvents: [diffusion-models, stable-diffusion, gpt-4o]
+visual:
+  src: /assets/events/sora.webp
+  width: 1672
+  height: 941
+  alt: 电影胶片拼贴：同一身影穿过城市黄昏的连续镜头，旁侧是时空结构草图
+  altEn: "Film-strip collage: one figure moves through continuous dusk city shots beside spacetime structure sketches"
+  caption: AI Chronicle 原创插图：Sora 把视频生成表述为对时空世界的统一建模。
+  captionEn: "Original illustration by AI Chronicle: Sora frames video generation as unified modeling of a spatiotemporal world."
+  credit: AI Chronicle
+  rights: generated
+  prompt: "Cinematic editorial collage of curved film strips showing continuous shots of a lone figure walking through rainy dusk city streets, bridges, markets, windows; surrounding storyboard sketches, camera geometry, spacetime patch diagrams on dark paper; painterly frames, no logos, no readable brand text, 16:9"
 sources:
   - title: Video generation models as world simulators
     url: https://openai.com/index/video-generation-models-as-world-simulators/

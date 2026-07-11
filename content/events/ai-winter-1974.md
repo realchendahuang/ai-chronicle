@@ -27,6 +27,17 @@ relatedEvents:
   - dartmouth-workshop
   - expert-systems
   - ai-winter-1987
+visual:
+  src: /assets/events/ai-winter-1974.webp
+  width: 1672
+  height: 941
+  alt: 1970 年代风格的 AI 实验室正在收摊：主机与打孔卡旁，一人装箱文件
+  altEn: "1970s-style AI lab being packed up: mainframes and punch cards, one person boxing files"
+  caption: AI Chronicle 原创插图：第一次 AI 寒冬里，实验室的冷却首先表现为经费、设备和人的撤离。
+  captionEn: "Original illustration by AI Chronicle: in the first AI winter, cooling meant funding, machines, and people leaving the room."
+  credit: AI Chronicle
+  rights: generated
+  prompt: "Muted archival painting of a 1970s computer laboratory being dismantled: beige CRTs, mainframe cabinets, punched cards, paper plotter, cardboard boxes stacked high, one researcher packing shelves under cool fluorescent light through tall windows; empty chairs, quiet industrial atmosphere; no logos, no readable text, restrained historical editorial style, 16:9"
 sources:
   - title: Artificial Intelligence — A General Survey
     url: https://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/p001.htm

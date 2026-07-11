@@ -33,6 +33,17 @@ beforeAfterEn:
   before: Applications assembled model calls, tool loops, and multi-agent collaboration themselves.
   after: Model platforms offered unified response APIs and dedicated agent development tools.
 relatedEvents: [assistants-api, function-calling, mcp, codex-agent]
+visual:
+  src: /assets/events/agent-runtime.webp
+  width: 1672
+  height: 941
+  alt: 抽象的 Agent 运行时工作台：任务块进入齿轮执行核心，旁侧是交接、护栏与追踪模块
+  altEn: "Abstract agent runtime workbench: task blocks enter a geared execution core beside handoff, guardrail, and tracing modules"
+  caption: AI Chronicle 原创插图：Responses API 与 Agents SDK 把工具、交接、护栏和追踪收进同一套运行时。
+  captionEn: "Original illustration by AI Chronicle: the Responses API and Agents SDK fold tools, handoffs, guardrails, and tracing into one runtime."
+  credit: AI Chronicle
+  rights: generated
+  prompt: "Editorial 3D illustration of an agent runtime control workbench on a dark surface: stacked task documents and status panels feed into a central transparent gear mechanism; colored cubes move along rails; modules for multi-agent handoff, shield guardrails, refresh loops, and tracing charts; bottom tool strip with folders, search, wrench, logs, charts; no logos, no readable brand text, no neon brain, clean technical product-editorial style, 16:9"
 sources:
   - title: New tools for building agents
     url: https://openai.com/index/new-tools-for-building-agents/

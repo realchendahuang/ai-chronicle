@@ -35,6 +35,17 @@ relatedEvents:
   - gpt-4-release
   - chatgpt-launch
   - gpt-5
+visual:
+  src: /assets/events/gpt-4o.webp
+  width: 1672
+  height: 941
+  alt: 桌面多模态仪器：话筒波形与镜头画面在同一核心汇合，两侧是说话与倾听的人
+  altEn: "Desktop multimodal instrument: speech waveforms and camera imagery meet in one core between two people"
+  caption: AI Chronicle 原创插图：GPT-4o 把文本、视觉与音频放进同一模型路径，产品开放仍分阶段。
+  captionEn: "Original illustration by AI Chronicle: GPT-4o places text, vision, and audio on one model path, while product access still shipped in stages."
+  credit: AI Chronicle
+  rights: generated
+  prompt: "Editorial still life of a sci-fi desktop instrument fusing voice and vision: microphone horn on left with orange waveform, camera lens on right projecting a landscape, central glowing ring mixing streams, two people conversing on either side; cream and brass materials; no logos, no brand text, 16:9"
 sources:
   - title: Hello GPT-4o
     url: https://openai.com/index/hello-gpt-4o/

@@ -1,24 +1,28 @@
 ---
 eventId: mcp
-form: Short history of a protocol
-narrativeCenter: "MCP tries to replace the multiplying private connections between AI hosts and external systems with a reusable boundary"
-emotionalSource: "Ecosystems are often slowed not by a shortage of intelligent models but by many people rewriting the same inconspicuous adapters"
+form: Short essay on protocol history
+narrativeCenter: "MCP tries to rewrite the multiplying connections between every AI app and every external system into reusable protocol boundaries"
+emotionalSource: "What often slows an ecosystem is not missing smart models but countless people rewriting the same unglamorous adapters"
 avoid:
-  - "Writing prospective adoption as completed industry unification"
-  - "Claiming the protocol itself solves authorization or prompt injection"
-  - "Confusing MCP with model-level function calling"
+  - Writing adoption prospects as finished industry unification
+  - Claiming MCP automatically solves permissions and prompt injection
+  - Collapsing MCP with model function calling
 ---
 
-Anthropic released the Model Context Protocol on 25 November 2024 with an open specification, SDKs, local-server support in Claude Desktop, and example servers. Its target was visible in the multiplication of private adapters. One application connected to one source is manageable; ten hosts paired independently with ten services create a matrix in which every connection must explain permissions, objects, and return formats again.
+Connecting one AI application to one data source is usually not hard. Connecting ten applications each to ten data sources is no longer twenty endpoints and a few authentication snippets. Every host has a plugin format; every service has objects and permissions; every pair re-explains what is readable here, what is allowed there, and in what shape results return.
 
-MCP divided that connection into named responsibilities. A server exposed capabilities. A client established the connection and negotiated them. The host retained the model interaction, the user interface, and decisions about permission. Servers could offer tools, read-only resources, and reusable prompts; JSON-RPC carried the messages.
+On 25 November 2024, Anthropic released the Model Context Protocol (MCP) against that multiplication problem.
 
-The hoped-for economy was straightforward. A GitHub, Postgres, or local-files integration could be implemented once and used by multiple compatible hosts instead of being rewritten for every model application. The protocol did not prescribe what the model should think about the retrieved information. It gave software a shared way to announce and exchange what was available.
+Client/server split lets ecosystems grow along two lines: hosts implement clients; tool providers implement servers. Example servers show expressible work types, not enterprise completeness. Early adopter lists are social capital; standard pressure comes when a second and third host share a handshake without private dialect. Local servers with filesystem and shell power are especially dangerous; default-trusting community servers replays plugin-era lessons. MCP bets connection tax can fall if trust tax is collected.
 
-Function calling addressed a neighboring but different layer. It specified how a model could choose a function and emit arguments. MCP concerned discovery, connection, capability description, and the return path between a host and an external provider. One resembled a calling convention; the other attempted to standardize the socket. They could operate together, and neither guaranteed that whatever was connected was trustworthy.
+The protocol uses a client–server structure: an MCP server exposes capabilities; a client connects and negotiates; a host carries the model, user interaction, and permission decisions. Servers can offer tools, read-only resources, and prompt templates; the message layer uses JSON-RPC. A GitHub, Postgres, or local-file integration can then be reused by multiple compatible hosts without rewriting for every model UI. Anthropic also opened the specification, SDKs, local server support in Claude Desktop, and a set of example servers.
 
-At launch, Anthropic listed prebuilt servers for services including Google Drive, Slack, GitHub, Git, Postgres, and Puppeteer. It also named early adopters or collaborators such as Block, Apollo, Zed, Replit, Codeium, and Sourcegraph. These were participants and plans documented by the release, not proof that a standard had already won. A protocol becomes infrastructure only through independent implementations, sustained compatibility, and a specification that survives extension without fragmenting into dialects.
+This is not the same problem function calling solves. Function calling specifies how a model chooses tools and emits parameters. MCP cares more about where tools are discovered, how a host connects, how capabilities are described, and how results travel a common interface. One is call syntax; the other tries to specify the socket. They can work together; neither decides what sits behind the socket. Writing MCP as “another tool-use button” misses the layer it wants to standardize.
 
-Convenience expanded the security boundary at the same time. A server allowed to read files, query a database, or execute a command may return hostile content, encourage the model to invoke another tool, or receive authority the user did not understand granting. MCP described communication; it did not perform trust. Consent prompts, least privilege, source marking, isolation of results, and defenses against prompt injection remained duties of hosts and implementers.
+At launch Anthropic listed prefabricated servers for Google Drive, Slack, GitHub, Git, Postgres, and Puppeteer, and named early adopters or collaborators including Block, Apollo, and tools such as Zed, Replit, Codeium, and Sourcegraph. Those are launch participants and plans, not proof the protocol is already an industry standard. A standard lives by later independent implementations, cross-host compatibility, and whether the spec survives extension without shattering—none of which a publisher can declare alone.
 
-Protocols rarely receive the applause reserved for models. When they succeed, an adapter is never written, an integration continues working after the host changes, and eventually the connecting layer becomes too ordinary to mention. MCP made a bid for precisely that kind of disappearance: a future in which attaching an AI application to the outside world no longer begins with a private agreement between every pair of systems.
+Connection is never only convenience. A server that can read files, query databases, or run commands can also return malicious content, induce other tool calls, or obtain permissions a user never truly understood. MCP defines a communication boundary; it does not complete trust judgment for the host. Authorization prompts, least privilege, provenance, result isolation, and defenses against prompt injection still fall on implementers and users. A universal socket makes devices easier to plug in and makes plugging in the wrong device more serious.
+
+Launch day delivered a specification, SDKs, and examples—not a mandate that the industry switch. Whether MCP becomes a default connection layer depends on later independent implementations staying compatible and on permission UX that lets ordinary people understand what they authorize.
+
+Protocol history rarely has a glowing model demo. Success often looks like glue code no longer written, an integration that still works after a host swap, or a protocol that finally disappears from attention. That invisibility is what MCP seeks: connections between AI and the outside world that need not begin as private conventions every time. Late 2024 delivered a specification and first implementations, not a finished ecosystem—the latter is paid for in compatibility and time.

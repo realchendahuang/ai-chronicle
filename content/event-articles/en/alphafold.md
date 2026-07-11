@@ -1,26 +1,22 @@
 ---
 eventId: alphafold
-form: Chronicle of a blind scientific assessment
-narrativeCenter: CASP14 establishing AlphaFold 2 through targets whose experimental structures remained hidden
-emotionalSource: Decades of experimental effort meeting a computational prediction in two sets of nearly coincident coordinates
+form: contest scores and boundary notes
+narrativeCenter: median GDT_TS 92.4 on CASP14 single-chain prediction expanding structural hypotheses without equaling dynamics or drugs
+emotionalSource: experimental structures slow and expensive; predicted structures suddenly batch-queryable—trust must track confidence
 avoid:
-  - Calling structure prediction a complete simulation of protein folding
-  - Declaring experimental structure determination obsolete
-  - Leaping from structural accuracy to completed drug discovery
+  - claiming protein folding was completely solved
+  - treating AlphaFold DB coverage as experimental replacement
+  - erasing the 2021 code and database aftermath
 ---
 
-CASP keeps its authority by withholding the answer.
+Amino-acid sequences are comparatively easy to read. Three-dimensional protein structures usually require X-ray crystallography, cryo-EM, or NMR—slow and costly. Computational structure prediction had tried for decades without stably reaching experimental accuracy across the vast conformational space. In the 2020 CASP14 blind assessment, DeepMind’s AlphaFold 2 moved the conversation from whether hope existed to which systems were already near usable.
 
-Since 1994, the biennial Critical Assessment of protein Structure Prediction has selected proteins whose structures have recently been determined experimentally but not yet made public. Competitors receive amino-acid sequences and submit three-dimensional predictions. Only after submissions close are the hidden experimental structures released for comparison. The arrangement removes a comfort common to technology demonstrations: no participant gets to choose the cases that make its system look best.
+The headline figure from the paper and CASP evaluation is a median GDT_TS of about 92.4 across all targets, with many predictions approaching experimental accuracy (hard subsets and individual domains still lag). GDT_TS measures backbone agreement with experiment at multiple distance cutoffs. A median of 92.4 does not mean every residue is perfect; it means the overall distribution crossed a gulf common to prior methods. The system combines coevolutionary signal from multiple-sequence alignments, pair representations, and a structure module to predict atomic coordinates, and it reports confidence measures such as pLDDT so users can see which stretches to trust more.
 
-At CASP14 in 2020, AlphaFold 2 achieved a median GDT score of 92.4 across all targets. GDT runs from 0 to 100 and measures, in effect, how much of a predicted chain lies close to the reference structure. CASP co-founder John Moult had described scores around 90 as competitive with experimental results. AlphaFold's average positional error was about 1.6 angstroms—roughly the width of an atom. On the hardest free-modeling targets, where no close known structure could serve as a template, the median remained 87.0.
+In 2021 code and weights were released for research use; the AlphaFold Protein Structure Database later expanded beyond 200 million predicted structures, covering many sequences lacking experimental entries. Biologists can download a model, form hypotheses about domains, candidate interfaces, and mutation sites, then prioritize crystallography or mutational assays. That is a workflow change: structural information shifts from scarce experimental output toward a searchable prior.
 
-These results did not come from simulating every physical step by which a protein folds inside a cell. AlphaFold treated the protein as a spatial system to be inferred. Multiple-sequence alignments supplied traces of evolution: positions that vary together may be constrained by proximity or function. Pair representations tracked possible relations between residues. Attention repeatedly exchanged information between the sequence and pair views, and a structure module produced atomic coordinates together with confidence estimates.
+Boundaries belong in the same paragraph as the scores. AlphaFold 2 targets static single-chain (and limited related) structure prediction. It does not simulate the folding path, capture dynamics, automatically solve every complex and ligand pose, or replace efficacy and safety experiments. Low-confidence regions, intrinsically disordered stretches, rare folds, and conformation dependent on experimental conditions still fail or stay vague. Database entries are predictions, not equivalents of PDB experimental deposits.
 
-The test's design made the claim unusually precise. The system could predict the static structures of many proteins from sequence with accuracy that, on numerous CASP targets, approached the experimental reference. It did not thereby reveal every molecular motion, interaction, or biological function. A single predicted conformation does not settle how a protein binds another protein, DNA, RNA, or a drug. Low-confidence regions and dynamic complexes still demand experiments and other forms of modeling.
+CASP14 tables age quickly; the workflow remains: inspect prediction and confidence before spending experimental budget. Scientific questions partly shift from “can we guess the shape?” toward “how do we plug shape hypotheses into mechanism and design?” AlphaFold 2 did not end structural biology. It changed the supply curve of structural hypotheses.
 
-Those qualifications belong beside the achievement, not beneath it. By 2020, sequence databases contained on the order of 180 million protein sequences, while the Protein Data Bank held about 170,000 experimentally determined structures. Sequencing had become abundant; structure remained slow and expensive, commonly requiring X-ray crystallography, cryo-electron microscopy, or nuclear magnetic resonance. A reliable computational hypothesis could change which experiments scientists chose to undertake first.
-
-In 2021, code was released, and the AlphaFold Database would eventually expand beyond 200 million predicted structures. Scale arrived after the test of credibility.
-
-The useful image is two coordinate sets laid over one another after the sealed answer has been opened: one assembled through physical experiments, the other submitted while that result was still unavailable. A scientific community had spent decades constructing an examination that made a company's self-assessment insufficient. CASP14 allowed the coincidence of those coordinates, rather than a slogan about “solving life,” to carry the claim.
+Multiple-sequence-alignment quality strongly affects predictions: rich families score higher confidence; orphan proteins and fast-evolving regions struggle. Biologists learned to read pLDDT color scales before trusting a backbone, then to cross-check with known folds and experiments. Code release enabled modification and distillation; the structure database extended benefits to researchers who never train models. CASP’s blind median is external validity; database coverage is surface area; neither replaces laboratory adjudication.

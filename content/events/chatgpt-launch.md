@@ -46,6 +46,17 @@ relatedEvents:
   - gpts-launch
   - assistants-api
   - function-calling
+visual:
+  src: /assets/events/chatgpt-launch.webp
+  width: 1672
+  height: 941
+  alt: 空白聊天窗口被多双手环绕，背景拼贴学习、编码与日常桌面场景
+  altEn: "Blank chat window surrounded by many hands, collage of studying, coding, and everyday desks"
+  caption: AI Chronicle 原创插图：ChatGPT 把研究预览做成谁都能打开的对话入口。
+  captionEn: "Original illustration by AI Chronicle: ChatGPT turned a research preview into a chat door anyone could open."
+  credit: AI Chronicle
+  rights: generated
+  prompt: "Editorial collage: centered blank chat UI with empty bubbles and input bar, many diverse hands reaching toward it; surrounding torn-paper scenes of classroom studying, coding laptop, cooking, notebooks; paper texture, muted colors; no logos, no brand names, no readable product text, 16:9"
 sources:
   - title: Introducing ChatGPT
     url: https://openai.com/index/chatgpt/

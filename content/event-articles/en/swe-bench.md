@@ -1,24 +1,24 @@
 ---
 eventId: swe-bench
-form: Anatomy of a benchmark
-narrativeCenter: "SWE-bench turns resolved GitHub issues back into executable examinations by restoring repositories to the moment before the fix"
-emotionalSource: "The excitement of fluent code generation meeting the stubborn causal texture of maintained software"
+form: Benchmark anatomy
+narrativeCenter: "How SWE-bench turns already-resolved GitHub issues into an executable exam"
+emotionalSource: "Excitement that models can write code collides with long, petty, uncooperative causal chains in real repositories"
 avoid:
-  - "Equating leaderboard scores with everyday developer productivity"
-  - "Ignoring incomplete tests, environment failures, or differences in evaluation protocol"
-  - "Recycling the heroic narrative of solving an isolated programming exercise"
+  - Equating leaderboard scores with everyday developer productivity
+  - Ignoring incomplete tests or environment sensitivity
+  - Reusing hero narratives of single-function code generation
 ---
 
-Every SWE-bench task begins with an act of reversal.
+SWE-bench's raw material is not problems invented for models. It is a short stretch of software past: a GitHub issue, a later accepted change, and the codebase before that change.
 
-A repository that has already survived a reported problem is returned to its earlier state. The accepted repair is removed. The issue remains. A model receives that snapshot and is asked to find its own way from complaint to patch, after which the project's tests decide what the patch has accomplished. The answer is not the code that most resembles the maintainer's solution. It is a change that makes the specified behavior work without breaking what the test suite can still see.
+In October 2023, researchers including a Princeton team introduced the benchmark in a paper. Tasks roll a repository back to the moment before the fix, leave the issue text, and ask a model to walk the path again. The answer is not code that merely looks reasonable. The model must deliver a patch; the patch must enter the original project's execution environment; tests decide whether the problem is fixed or only hidden elsewhere. The paper collected 2,294 issues from 12 popular Python repositories. Each had been reported, discussed, and solved by people, so the tasks keep what contest problems rarely copy: incomplete context, bugs that cross functions and files, dependency versions that interfere, and project habits left unsaid behind a one-line issue.
 
-The first dataset contained 2,294 resolved issues drawn from twelve widely used Python repositories. These were not exercises written to expose one algorithmic trick. Their difficulty had accumulated in the ordinary way software becomes difficult: an issue description assumed local knowledge; the relevant behavior crossed files; dependencies mattered; a compact fix could sit behind a long search through code that was nearby but not responsible.
+Real issues bias the bench toward defects with clear reports and automatable tests; tribal knowledge bugs stay scarce. Python and chosen repos shape leaderboard overfitting. The 1.96% starting score is a historical anchor: later double-digit success must declare subset, prompts, and attempts. Anatomy ends not in worship of rankings but in reading protocols—otherwise coding-agent progress is only percentage animation.
 
-Earlier coding benchmarks generally built a fence around the task. Given a description and a function signature, a model generated the missing implementation. That question was useful, but it quietly performed much of software engineering on the model's behalf. It selected the file, isolated the problem, supplied the interface, and made execution cheap. SWE-bench removed some of that assistance. The model now had to decide where to look, understand enough of the repository to edit safely, run tests, read failures, and revise.
+“Understanding code” becomes concrete. The model must find what to read, separate adjacency from true relevance, run tests after edits, and chase failures. Sometimes the correct patch is short and the difficulty is reaching those few lines. Traditional code benchmarks fence a problem and ask whether a function can be written. SWE-bench removes part of the fence and leaves a repository and a ticket.
 
-The initial results were severe. The paper reported that the best-performing model, Claude 2, resolved 1.96 percent of the tasks; the researchers' SWE-Llama models managed only a portion of the easier cases. This was not evidence that language models could not program. It was a measurement of how much work lay between producing plausible code and maintaining a living codebase. Retrieval, long context, environment setup, tool use, iteration, and regression testing—activities previously supplied by the developer—had entered the exam together.
+First-paper results were almost discouragingly cold. The best reported system, Claude 2, solved 1.96% of issues; the authors' SWE-Llama handled only simpler slices. That figure does not mean language models of the time could not program. It measures the strip product demos often skip between “can generate code” and “can maintain software.” Repository navigation, long context, tool use, environment setup, test feedback, and multi-turn revision—once held in developers' hands—enter the exam together. Paper numbers bind to then-current models and settings; later higher leaderboard scores must be read with subset filters, prompts, whether relevant files are given, execution budgets, and scaffolding.
 
-Once coding agents became a commercial category, SWE-bench and later variants such as SWE-bench Verified became a shared language for progress. A shared language is not a universal one. Scores vary with the chosen subset, problem filtering, prompts, hints about relevant files, execution budget, tool design, and the condition of the test environment. Passing existing tests does not prove correctness in cases the suite does not cover. A percentage that omits its protocol can become less a result than a decoration.
+Different subsets, filtered versions such as Verified, and public leaderboards soon became a shared language for coding agents. New trouble followed: a score moves with task selection, prompting, file hints, budgets, and test coverage. Passing existing tests does not guarantee a fix is correct in all cases; percentages under different protocols cannot be ranked without the protocols. Figures such as Devin's reported 13.86%, if compared to the paper's 1.96% without sample and prompt conditions, invent a false progress story.
 
-The benchmark imposed a useful indifference. It did not care whether a patch looked sophisticated or whether the model explained it persuasively. Original maintainers had already left a small historical record—issue, code before repair, code after repair—and SWE-bench made that record executable. The repository was reconstructed, the modification applied, and the tests run. A confident patch could still receive the least rhetorical answer in software engineering: another failing test.
+The exam refuses to admire the surface of code. Elegant patches and confident write-ups cannot answer for the repository. The environment is restored, the edit applied, tests return. Software engineering stands before the model with its ordinary temper: what happens after the change is the real answer. SWE-bench's historical role is to turn that “what happened” into a measurement that can be run again—not a freeze-frame from a demo video.

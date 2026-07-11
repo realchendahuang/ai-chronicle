@@ -1,24 +1,24 @@
 ---
 eventId: github-copilot
-form: History of an editor gesture
-narrativeCenter: Code generation entering routine work as a suggestion to accept, reject, or revise
-emotionalSource: The relief of skipping small labor paired with the ease of admitting an unreviewed error
+form: History of an editor action
+narrativeCenter: Code generation compressed for the first time into accept, reject, and revise during ordinary typing
+emotionalSource: A suggestion that saves trivial labor can also smuggle unreviewed error into a project
 avoid:
-  - Describing an autocomplete product as an autonomous software engineer
-  - Repeating the Codex model and API launch story
-  - Claiming universal productivity gains without evidence
+  - Writing a completion product as an autonomous software engineer
+  - Retelling Codex's model release and API demos
+  - Claiming productivity gains without evidence
 ---
 
-GitHub Copilot appeared before the code was finished.
+GitHub Copilot entered the editor through unfinished code.
 
-That placement defined the product. In the June 2021 technical preview, a Visual Studio Code extension read the file being edited and used OpenAI Codex to suggest what might come next. Sometimes it offered a line; sometimes a function. The developer could accept it, ignore it, or keep only enough to continue.
+The technical preview of 29 June 2021 placed OpenAI Codex inside Visual Studio Code. The extension read the code under edit and proposed the next line—or a whole function—from names, comments, and surrounding context. Developers did not need to leave the editor, formulate a complete question, and copy an answer back. Suggestions appeared while typing and were accepted, rejected, or revised. Access was a limited technical preview, first in VS Code, not a default option across every IDE.
 
-The history of programming assistance already contained powerful tools. Language servers knew which variables were in scope and what arguments an API accepted. Static analysis found classes of mistakes. Conventional completion could reliably enumerate names. Copilot attempted a less certain operation: infer a possible implementation from a comment, a function name, and neighboring code.
+Putting Codex into gray inline suggestions was an interaction demotion: no prompt craft required, only keep typing. Accept/reject/edit rates matter more to the product than leaderboard scores, even when early materials did not publish every internal metric. GitHub–OpenAI collaboration wrote the event: model capability on one side, developer distribution on the other. License and training-data disputes followed, proving a light suggestion still sits on heavy copyright ground. Preview lightness and legal weight shared one timeline from day one.
 
-A test, a familiar algorithm, repetitive boilerplate—these were natural demonstrations because intent was visible and the desired form had appeared many times in public code. GitHub initially emphasized Python, JavaScript, TypeScript, Ruby, and Go, while supporting a broader range unevenly. Access was limited and the label “technical preview” mattered. The suggestions were generated hypotheses, not knowledge of the repository's unwritten requirements.
+That product design mattered more than any demo sample. Traditional autocomplete excelled at listing variables, methods, and types in scope; a language server can know precisely which parameters an API accepts. Copilot might propose an implementation: test cases, boilerplate, a common algorithm, even a function body inferred from a comment. It need not know the project's true intent; it turns traces of intent—names, comments, surrounding code—into candidate code. Suggestions appear as inline ghost text. One Tab looks light.
 
-Calling the system an “AI pair programmer” gave it a memorable role, but its real contribution was smaller and more persistent. It did not negotiate requirements or own the consequences of a merge. It inserted a candidate into a high-frequency gesture. Instead of opening a separate interface, composing a full question, and copying the response back, the programmer encountered the model in the ordinary pause after typing.
+GitHub called it an “AI pair programmer” in the launch post, but the product's actual action was narrower and easier to form a habit around. It did not join requirements discussion or own post-merge failures; it kept offering a next possibility. The preview covered many languages and frameworks, with particular emphasis on Python, JavaScript, TypeScript, Ruby, and Go. GitHub also warned clearly that generated code could be wrong and could reproduce patterns from training data. That was not decorative disclaimer; it was a warning written jointly by product mechanism and training-data origin.
 
-Responsibility remained on the human side of that pause. Suggested code could contain an incorrect dependency, miss an edge case, reproduce an insecure pattern, or simply solve a different problem. Because Codex had been trained on public source code, questions about licensing, attribution, and outputs resembling training material followed the product into the editor. “Suggestion” reduced friction without dissolving provenance.
+The identity of “suggestion” lowered the barrier and assigned responsibility. Code is not correct because a model produced it; developers still check dependencies, edge cases, security, and license risk. Codex trained on large amounts of public source code, which quickly made training-data licensing, similar-snippet output, and authorship contested. A moment of convenience inside the editor connected to a set of unresolved problems outside it. Later research and litigation would pull on those borders; in summer 2021, the problem was already in the product notes.
 
-The consequential unit was the tiny decision repeated across a workday: Tab, Escape, edit; accept three lines, discard the fourth; trust a test only after running it. Code could arrive before its author had decided exactly how to write it, and review could begin before composition was complete. The gesture was light. Testing, attribution, and the consequences of merging remained on the other side of the keypress.
+Copilot in 2021 was still a technical preview, and only first in Visual Studio Code. Its product mechanism was already set: suggestions appear inline; developers accept, ignore, or revise one at a time. One Tab looks light; tests, review, authorization, and post-merge consequences remain entirely on the other side of the key. Later chat, agent, and multi-file features would expand the product. This day established the smallest unit—the next block of code, continually offered in the input stream and always rejectable.
