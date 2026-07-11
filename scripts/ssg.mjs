@@ -25,12 +25,13 @@ const eventArticlesEn = JSON.parse(readFileSync(join(generatedDir, 'eventArticle
 const concepts = JSON.parse(readFileSync(join(generatedDir, 'concepts.json'), 'utf8'))
 const companies = JSON.parse(readFileSync(join(generatedDir, 'companies.json'), 'utf8'))
 const modelFamilies = JSON.parse(readFileSync(join(generatedDir, 'modelFamilies.json'), 'utf8'))
+const valueChainLayers = JSON.parse(readFileSync(join(generatedDir, 'valueChainLayers.json'), 'utf8'))
 const interfaceTranslations = JSON.parse(readFileSync(join(rootDir, 'public/assets/i18n-en.json'), 'utf8'))
 const assetHasher = createHash('sha256')
   .update(readFileSync(join(rootDir, 'public/assets/app.css')))
   .update(readFileSync(join(rootDir, 'public/assets/app.js')))
   .update(readFileSync(join(rootDir, 'public/assets/i18n-en.json')))
-  .update(JSON.stringify({ events, eventArticlesZh, eventArticlesEn, concepts, companies, modelFamilies }))
+  .update(JSON.stringify({ events, eventArticlesZh, eventArticlesEn, concepts, companies, modelFamilies, valueChainLayers }))
 
 for (const assetPath of [
   ...events.map((event) => event.visual?.src),
@@ -52,6 +53,25 @@ const modelFamiliesByCompany = new Map(companies.map((company) => [
   company.id,
   modelFamilies.filter((family) => family.company === company.id),
 ]))
+const valueChainLayersSorted = [...valueChainLayers].sort((a, b) => a.order - b.order || a.title.localeCompare(b.title, 'zh-CN'))
+const valueChainById = new Map(valueChainLayersSorted.map((layer) => [layer.id, layer]))
+const valueChainLayersByCompany = new Map()
+for (const layer of valueChainLayersSorted) {
+  for (const companyId of layer.companies || []) {
+    if (!valueChainLayersByCompany.has(companyId)) valueChainLayersByCompany.set(companyId, [])
+    valueChainLayersByCompany.get(companyId).push(layer)
+  }
+}
+const segmentLabels = {
+  upstream: '上游',
+  midstream: '中游',
+  downstream: '下游',
+}
+const segmentLabelsEn = {
+  upstream: 'Upstream',
+  midstream: 'Midstream',
+  downstream: 'Downstream',
+}
 
 const topicLabels = {
   'ai-foundations': 'AI 基础',
@@ -339,6 +359,7 @@ function nav(active) {
   const items = [
     ['timeline', '/', '时间轴'],
     ['topics', '/topics/', '主题'],
+    ['stack', '/stack/', '产业链'],
     ['concepts', '/concepts/', '概念'],
     ['models', '/models/', '模型'],
     ['companies', '/companies/', '公司'],
@@ -898,6 +919,7 @@ function renderCompanyPages() {
           <div><span class="section-number">路线</span><h2>它在押注什么</h2></div>
           <div>${[...new Set(company.keyTopics.map(canonicalTopic))].map((topic) => `<a href="${urlFor(`/topics/${topic}/`)}">${escapeHtml(topicName(topic))}${arrowIcon}</a>`).join('')}</div>
         </section>
+        ${(valueChainLayersByCompany.get(company.id) || []).length ? `<section class="company-models"><div><span class="section-number">产业链</span><h2>所在产业层</h2></div><div>${valueChainLayersByCompany.get(company.id).map((layer) => `<a href="${urlFor(`/stack/${layer.slug}/`)}"><span>${bilingual(layer.title, layer.titleEn)}</span><small>${segmentLabels[layer.segment] || layer.segment} · ${escapeHtml(layer.oneLiner)}</small>${arrowIcon}</a>`).join('')}</div></section>` : ''}
         ${relatedModelFamilies.length ? `<section class="company-models"><div><span class="section-number">模型</span><h2>模型谱系</h2></div><div>${relatedModelFamilies.map((family) => `<a href="${urlFor(`/models/${family.slug}/`)}"><span>${bilingual(family.title, family.titleEn)}</span><small>${bilingual(family.latestModel, family.latestModelEn)}</small>${arrowIcon}</a>`).join('')}</div></section>` : ''}
         ${keyEvents.length ? `<section class="related-events"><div class="section-heading split-heading"><div><span class="section-number">节点</span><h2>关键事件</h2></div></div><div>${keyEvents.map((event) => `<a href="${urlFor(`/events/${event.slug}/`)}"><time>${event.date.slice(0, 4)}</time><h3>${escapeHtml(event.title)}</h3>${arrowIcon}</a>`).join('')}</div></section>` : ''}
       </article>`
@@ -987,6 +1009,124 @@ function renderTopicPages() {
   })
 }
 
+function renderValueChainPages() {
+  const segmentOrder = ['upstream', 'midstream', 'downstream']
+  const body = `
+    <section class="page-intro">
+      <div><h1>${bilingual('AI 产业链', 'AI value chain')}</h1></div>
+      <p>${bilingual(
+        '从晶圆与加速芯片，到云、框架、基础模型、分发入口与应用。竖着读，看清英伟达上下游；横着点，跳进馆内公司、事件与概念。',
+        'From wafers and accelerators to cloud, frameworks, foundation models, distribution doors, and apps. Read vertically for upstream/downstream; click through to companies, events, and concepts in the museum.',
+      )}</p>
+    </section>
+    <section class="value-chain-legend">
+      <span><i class="seg-upstream"></i>${segmentLabels.upstream} Upstream</span>
+      <span><i class="seg-midstream"></i>${segmentLabels.midstream} Midstream</span>
+      <span><i class="seg-downstream"></i>${segmentLabels.downstream} Downstream</span>
+    </section>
+    <section class="value-chain-stack" aria-label="产业链分层">
+      ${valueChainLayersSorted.map((layer, index) => {
+        const companyCount = layer.companies.filter((id) => companyById.has(id)).length
+        return `
+        <a class="value-chain-card seg-${escapeHtml(layer.segment)}" href="${urlFor(`/stack/${layer.slug}/`)}">
+          <div class="value-chain-card-meta">
+            <span>${String(index + 1).padStart(2, '0')}</span>
+            <em>${segmentLabels[layer.segment] || layer.segment}</em>
+          </div>
+          <h2>${escapeHtml(layer.title)}</h2>
+          <p>${escapeHtml(layer.oneLiner)}</p>
+          <small>${companyCount} ${bilingual('家馆内机构', 'museum orgs')} · ${layer.roles.length} ${bilingual('类角色', 'role types')}</small>
+          ${arrowIcon}
+        </a>`
+      }).join('')}
+    </section>
+    <section class="value-chain-note">
+      <h2>${bilingual('怎么读这条链', 'How to read this stack')}</h2>
+      <ol>
+        <li>${bilingual('底层越靠制造与能源约束；上层越靠产品分发与工作流。', 'Lower layers bind manufacturing and power; upper layers bind distribution and workflows.')}</li>
+        <li>${bilingual('英伟达横跨「加速芯片」与「软件栈/互联」——算力商品化的关键枢纽。', 'NVIDIA spans accelerators and software/interconnect—the hub of commoditized compute.')}</li>
+        <li>${bilingual('模型公司吃中游云与框架；应用公司多数调用 API 或开源权重，少数再训领域模型。', 'Model labs consume midstream cloud and frameworks; apps mostly call APIs or open weights, some fine-tune domain models.')}</li>
+        <li>${bilingual('监管与版权从外侧挤压每一层，尤其是先进芯片出口与生成式媒体。', 'Regulation and copyright squeeze every layer from outside—especially advanced chips and generative media.')}</li>
+      </ol>
+    </section>`
+
+  writePage('stack', {
+    title: 'AI 产业链',
+    description: '梳理 AI 从半导体、GPU、云、框架到基础模型与应用的上下游产业结构。',
+    path: '/stack/',
+    active: 'stack',
+    body,
+    bodyClass: 'index-page value-chain-index',
+  })
+
+  valueChainLayersSorted.forEach((layer) => {
+    const layerCompanies = layer.companies.map((id) => companyById.get(id)).filter(Boolean)
+    const layerEvents = layer.relatedEvents.map((id) => eventById.get(id)).filter(Boolean)
+    const layerConcepts = layer.relatedConcepts.map((id) => conceptById.get(id)).filter(Boolean)
+    const depends = layer.dependsOn.map((id) => valueChainById.get(id)).filter(Boolean)
+    const feeds = layer.feedsInto.map((id) => valueChainById.get(id)).filter(Boolean)
+    const detailBody = `
+      <article class="value-chain-article">
+        <header>
+          <div class="breadcrumbs">
+            <a href="${urlFor('/stack/')}">${bilingual('产业链', 'Value chain')}</a>
+            <span>/</span>
+            <span>${segmentLabels[layer.segment] || layer.segment}</span>
+          </div>
+          <p class="value-chain-kicker">${bilingual('第', 'Layer')} ${layer.order} · ${segmentLabels[layer.segment]} / ${segmentLabelsEn[layer.segment]}</p>
+          <h1>${escapeHtml(layer.title)}</h1>
+          <p class="value-chain-lead">${escapeHtml(layer.oneLiner)}</p>
+          <p>${escapeHtml(layer.description)}</p>
+        </header>
+        ${(depends.length || feeds.length) ? `
+        <section class="value-chain-links">
+          ${depends.length ? `<div><span class="section-number">${bilingual('依赖', 'Depends on')}</span><div>${depends.map((item) => `<a href="${urlFor(`/stack/${item.slug}/`)}">${escapeHtml(item.title)}${arrowIcon}</a>`).join('')}</div></div>` : ''}
+          ${feeds.length ? `<div><span class="section-number">${bilingual('供给', 'Feeds into')}</span><div>${feeds.map((item) => `<a href="${urlFor(`/stack/${item.slug}/`)}">${escapeHtml(item.title)}${arrowIcon}</a>`).join('')}</div></div>` : ''}
+        </section>` : ''}
+        <section class="value-chain-roles">
+          <div class="section-heading"><span class="section-number">${bilingual('角色', 'Roles')}</span><h2>${bilingual('这一层谁在干活', 'Who works on this layer')}</h2></div>
+          <div class="value-chain-role-grid">
+            ${layer.roles.map((role) => `
+              <article>
+                <h3>${escapeHtml(role.name)}</h3>
+                <p>${escapeHtml(role.summary)}</p>
+                ${role.examples?.length ? `<ul>${role.examples.map((example) => `<li>${escapeHtml(example)}</li>`).join('')}</ul>` : ''}
+              </article>`).join('')}
+          </div>
+        </section>
+        ${layerCompanies.length ? `
+        <section class="company-models">
+          <div><span class="section-number">${bilingual('馆内机构', 'In museum')}</span><h2>${bilingual('可点进档案的公司', 'Companies with pages')}</h2></div>
+          <div>${layerCompanies.map((company) => `<a href="${urlFor(`/companies/${company.slug}/`)}">${companyLogo(company, 'company-logo-inline')}<span>${escapeHtml(company.name)}</span><small>${escapeHtml(company.positioning)}</small>${arrowIcon}</a>`).join('')}</div>
+        </section>` : ''}
+        ${layerEvents.length ? `
+        <section class="related-events">
+          <div class="section-heading split-heading"><div><span class="section-number">${bilingual('事件', 'Events')}</span><h2>${bilingual('相关编年节点', 'Related chronicle nodes')}</h2></div></div>
+          <div>${layerEvents.map((event) => `<a href="${urlFor(`/events/${event.slug}/`)}"><time>${event.date.slice(0, 4)}</time><h3>${escapeHtml(event.title)}</h3>${arrowIcon}</a>`).join('')}</div>
+        </section>` : ''}
+        ${layerConcepts.length ? `
+        <section class="company-models">
+          <div><span class="section-number">${bilingual('概念', 'Concepts')}</span><h2>${bilingual('读懂这一层', 'Concepts for this layer')}</h2></div>
+          <div>${layerConcepts.map((concept) => `<a href="${urlFor(`/concepts/${concept.slug}/`)}"><span>${escapeHtml(concept.title)}</span><small>${escapeHtml(concept.oneLiner)}</small>${arrowIcon}</a>`).join('')}</div>
+        </section>` : ''}
+        ${layer.relatedTopics?.length ? `
+        <section class="company-route">
+          <div><span class="section-number">${bilingual('专题', 'Topics')}</span><h2>${bilingual('相关主题路线', 'Related topic routes')}</h2></div>
+          <div>${[...new Set(layer.relatedTopics.map(canonicalTopic))].map((topic) => `<a href="${urlFor(`/topics/${topic}/`)}">${escapeHtml(topicName(topic))}${arrowIcon}</a>`).join('')}</div>
+        </section>` : ''}
+      </article>`
+
+    writePage(`stack/${layer.slug}`, {
+      title: layer.title,
+      description: layer.oneLiner,
+      path: `/stack/${layer.slug}/`,
+      active: 'stack',
+      body: detailBody,
+      bodyClass: 'value-chain-page',
+    })
+  })
+}
+
 function renderAbout() {
   const body = `
     <article class="about-page-content">
@@ -1016,6 +1156,8 @@ function writeSupportFiles() {
     ...companies.map((company) => ({ type: '公司', title: company.name, description: company.positioning, url: urlFor(`/companies/${company.slug}/`) })),
     ...modelFamilies.map((family) => ({ type: '模型', title: family.title, description: family.description, url: urlFor(`/models/${family.slug}/`) })),
     ...topicIndex.map((topic) => ({ type: '主题', title: topic.label, description: `${topic.events.length} 个关键节点`, url: urlFor(`/topics/${topic.id}/`) })),
+    ...valueChainLayersSorted.map((layer) => ({ type: '产业链', title: layer.title, description: layer.oneLiner, url: urlFor(`/stack/${layer.slug}/`) })),
+    { type: '产业链', title: 'AI 产业链', description: '从半导体到应用的上下游结构', url: urlFor('/stack/') },
   ]
 
   writeFileSync(join(siteDir, 'assets/search-index.json'), JSON.stringify(searchIndex), 'utf8')
@@ -1027,12 +1169,13 @@ function writeSupportFiles() {
   )
 
   const routes = [
-    '/', '/timeline/', '/concepts/', '/models/', '/companies/', '/topics/', '/about/',
+    '/', '/timeline/', '/concepts/', '/models/', '/companies/', '/topics/', '/stack/', '/about/',
     ...events.map((event) => `/events/${event.slug}/`),
     ...concepts.map((concept) => `/concepts/${concept.slug}/`),
     ...companies.map((company) => `/companies/${company.slug}/`),
     ...modelFamilies.map((family) => `/models/${family.slug}/`),
     ...topicIndex.map((topic) => `/topics/${topic.id}/`),
+    ...valueChainLayersSorted.map((layer) => `/stack/${layer.slug}/`),
   ]
 
   writeFileSync(join(siteDir, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.map((route) => `  <url><loc>${canonicalFor(route)}</loc></url>`).join('\n')}\n</urlset>`, 'utf8')
@@ -1060,7 +1203,8 @@ renderConceptPages()
 renderModelFamilyPages()
 renderCompanyPages()
 renderTopicPages()
+renderValueChainPages()
 renderAbout()
 writeSupportFiles()
 
-console.log(`Generated ${events.length} events, ${concepts.length} concepts, ${companies.length} companies, ${modelFamilies.length} model families, and ${topicIndex.length} topic routes.`)
+console.log(`Generated ${events.length} events, ${concepts.length} concepts, ${companies.length} companies, ${modelFamilies.length} model families, ${valueChainLayersSorted.length} value-chain layers, and ${topicIndex.length} topic routes.`)

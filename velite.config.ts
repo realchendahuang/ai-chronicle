@@ -163,6 +163,36 @@ const modelFamilies = defineCollection({
   }),
 })
 
+const valueChainLayers = defineCollection({
+  name: 'ValueChainLayer',
+  pattern: 'value-chain/**/*.md',
+  schema: s.object({
+    id: s.string(),
+    order: s.number().int().positive(),
+    segment: s.enum(['upstream', 'midstream', 'downstream']),
+    title: s.string(),
+    titleEn: s.string(),
+    oneLiner: s.string(),
+    oneLinerEn: s.string(),
+    description: s.string(),
+    descriptionEn: s.string(),
+    feedsInto: s.array(s.string()).default([]),
+    dependsOn: s.array(s.string()).default([]),
+    roles: s.array(s.object({
+      name: s.string(),
+      nameEn: s.string(),
+      summary: s.string(),
+      summaryEn: s.string(),
+      examples: s.array(s.string()).default([]),
+    })).default([]),
+    companies: s.array(s.string()).default([]),
+    relatedTopics: s.array(s.string()).default([]),
+    relatedEvents: s.array(s.string()).default([]),
+    relatedConcepts: s.array(s.string()).default([]),
+    slug: s.string(),
+  }),
+})
+
 export default defineConfig({
   root: resolve(process.cwd(), 'content'),
   output: {
@@ -179,5 +209,6 @@ export default defineConfig({
     concepts,
     companies,
     modelFamilies,
+    valueChainLayers,
   },
 })

@@ -1151,3 +1151,197 @@ html[data-lang='en'] .model-family-title h1 { letter-spacing: -.065em; }
   .event-narrative blockquote { padding-left: 18px; }
   .event-reading .source-section { margin-top: 72px; padding-top: 32px; }
 }
+
+/* —— AI value chain / 产业链 —— */
+.value-chain-legend {
+  width: min(100%, calc(var(--max) + var(--gutter) * 2));
+  margin: 0 auto;
+  padding: 0 var(--gutter) 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+  color: var(--text-muted);
+  font: 500 13px/1.4 var(--sans);
+}
+.value-chain-legend i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+  border-radius: 2px;
+  vertical-align: -1px;
+}
+.value-chain-legend .seg-upstream { background: #3d7ea6; }
+.value-chain-legend .seg-midstream { background: #5b7fff; }
+.value-chain-legend .seg-downstream { background: #49b58a; }
+.value-chain-stack {
+  width: min(100%, calc(var(--max) + var(--gutter) * 2));
+  margin: 0 auto;
+  padding: 0 var(--gutter) 64px;
+  display: grid;
+  gap: 12px;
+}
+.value-chain-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto auto;
+  column-gap: 20px;
+  row-gap: 8px;
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+  border-left-width: 4px;
+  background: var(--surface);
+  text-decoration: none;
+  color: inherit;
+  transition: background 160ms ease, border-color 160ms ease;
+}
+.value-chain-card.seg-upstream { border-left-color: #3d7ea6; }
+.value-chain-card.seg-midstream { border-left-color: #5b7fff; }
+.value-chain-card.seg-downstream { border-left-color: #49b58a; }
+.value-chain-card:hover { background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
+.value-chain-card-meta {
+  grid-row: 1 / span 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  min-width: 52px;
+}
+.value-chain-card-meta span {
+  font: 600 12px var(--mono);
+  color: var(--text-muted);
+}
+.value-chain-card-meta em {
+  font: 700 11px/1.2 var(--sans);
+  font-style: normal;
+  color: var(--text-soft);
+  letter-spacing: 0.04em;
+}
+.value-chain-card h2 {
+  grid-column: 2;
+  margin: 0;
+  font: 800 24px/1.2 var(--serif);
+  letter-spacing: -0.03em;
+}
+.value-chain-card p {
+  grid-column: 2;
+  margin: 0;
+  color: var(--text-soft);
+  font: 500 15px/1.65 var(--sans);
+}
+.value-chain-card small {
+  grid-column: 2;
+  color: var(--text-muted);
+  font: 500 12px var(--mono);
+}
+.value-chain-card svg {
+  grid-column: 3;
+  grid-row: 1 / span 3;
+  align-self: center;
+  width: 20px;
+  height: 20px;
+  opacity: 0.55;
+}
+.value-chain-note {
+  width: min(100%, calc(var(--max) + var(--gutter) * 2));
+  margin: 0 auto 100px;
+  padding: 28px var(--gutter);
+  border-top: 1px solid var(--border);
+}
+.value-chain-note h2 {
+  margin: 0 0 14px;
+  font: 800 22px var(--serif);
+}
+.value-chain-note ol {
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--text-soft);
+  font: 500 15px/1.85 var(--sans);
+}
+.value-chain-article {
+  width: min(100%, calc(var(--max) + var(--gutter) * 2));
+  margin: 0 auto;
+  padding: 48px var(--gutter) 100px;
+}
+.value-chain-article > header { max-width: 820px; margin-bottom: 40px; }
+.value-chain-kicker {
+  margin: 0 0 10px;
+  color: var(--text-muted);
+  font: 600 12px var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.value-chain-article > header h1 {
+  margin: 0 0 12px;
+  font: 900 clamp(36px, 4.5vw, 56px)/1.05 var(--serif);
+  letter-spacing: -0.04em;
+}
+.value-chain-lead {
+  margin: 0 0 16px;
+  color: var(--text);
+  font: 600 18px/1.6 var(--sans);
+}
+.value-chain-article > header > p:last-child {
+  margin: 0;
+  color: var(--text-soft);
+  font: 500 16px/1.85 var(--sans);
+}
+.value-chain-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.value-chain-links > div > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+.value-chain-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+  font: 600 14px var(--sans);
+}
+.value-chain-links a:hover { border-color: var(--border-strong); background: var(--surface-2); }
+.value-chain-links a svg { width: 16px; height: 16px; }
+.value-chain-roles { margin-bottom: 48px; }
+.value-chain-role-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+}
+.value-chain-role-grid article {
+  padding: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+.value-chain-role-grid h3 {
+  margin: 0 0 10px;
+  font: 800 18px var(--serif);
+}
+.value-chain-role-grid p {
+  margin: 0 0 12px;
+  color: var(--text-soft);
+  font: 500 14px/1.7 var(--sans);
+}
+.value-chain-role-grid ul {
+  margin: 0;
+  padding-left: 1.1em;
+  color: var(--text-muted);
+  font: 500 13px/1.6 var(--sans);
+}
+@media (max-width: 900px) {
+  .value-chain-card {
+    grid-template-columns: auto 1fr;
+  }
+  .value-chain-card svg { display: none; }
+  .value-chain-links { grid-template-columns: 1fr; }
+  .value-chain-role-grid { grid-template-columns: 1fr; }
+}
