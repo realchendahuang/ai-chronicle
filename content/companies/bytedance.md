@@ -19,6 +19,7 @@ keyTopics:
   - generative-media
 keyEvents:
   - seedance-1-0
+  - seedance-2-0
 models:
   - doubao-1.0
   - doubao-1.6

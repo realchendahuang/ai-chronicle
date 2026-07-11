@@ -28,6 +28,9 @@ keyEvents:
   - gpt-5
   - gpt-5-6
   - sora-public
+  - sora-2
+  - sora-discontinued
+  - codex-cli
 models:
   - gpt-1
   - gpt-2

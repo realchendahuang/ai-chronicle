@@ -54,6 +54,8 @@ relatedEvents:
   - runway-gen-3
   - seedance-1-0
   - vidu-1-0
+  - sora-2
+  - sora-discontinued
 visual:
   src: "/assets/events/sora-public.webp"
   width: 1280

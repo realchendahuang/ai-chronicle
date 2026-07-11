@@ -51,6 +51,7 @@ relatedEvents:
   - claude-code
   - codex-agent
   - github-copilot
+  - codex-cli
 sources:
   - title: Introducing Devin
     url: "https://cognition.ai/blog/introducing-devin"

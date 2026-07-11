@@ -43,6 +43,7 @@ relatedEvents:
   - github-copilot
   - cursor
   - devin
+  - codex-cli
 visual:
   src: /assets/events/codex-agent.webp
   width: 1672

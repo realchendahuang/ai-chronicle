@@ -55,6 +55,7 @@ relatedEvents:
   - codex-agent
   - mcp
   - swe-bench
+  - codex-cli
 sources:
   - title: Claude 3.7 Sonnet and Claude Code
     url: "https://www.anthropic.com/news/claude-3-7-sonnet"

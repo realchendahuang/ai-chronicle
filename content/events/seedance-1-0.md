@@ -52,6 +52,7 @@ relatedEvents:
   - vidu-1-0
   - sora-public
   - hunyuan-video
+  - seedance-2-0
 visual:
   src: "/assets/events/seedance-1-0.webp"
   width: 1280

@@ -40,6 +40,7 @@ relatedEvents:
   - claude-code
   - devin
   - codex-agent
+  - codex-cli
 visual:
   src: /assets/events/cursor.webp
   width: 1672

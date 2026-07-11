@@ -50,6 +50,7 @@ relatedEvents:
   - claude-code
   - codex-agent
   - cursor
+  - codex-cli
 sources:
   - title: SWE-bench — Can Language Models Resolve Real-World GitHub Issues?
     url: "https://arxiv.org/abs/2310.06770"

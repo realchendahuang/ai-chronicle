@@ -44,6 +44,8 @@ relatedEvents:
   - sora-public
   - kling-1-0
   - vidu-1-0
+  - sora-2
+  - sora-discontinued
 visual:
   src: /assets/events/sora.webp
   width: 1672

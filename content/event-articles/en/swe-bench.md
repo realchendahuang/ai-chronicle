@@ -20,3 +20,6 @@ Later verified subsets and agent leaderboards are aftermath. Autumn 2023 nails t
 After the benchmark launched, leaderboards and papers began speaking in the same tasks. Agent systems were named more often than single completions, because repo-level repair needs search, edit, and test loops. SWE-bench did not solve software engineering; it made “how many real issues solved” checkable. What is checkable can also be gamed, subsetted, and over-read—those side effects are ordinary aging of a ruler.
 
 The figure 2,294 also reminds us that an eval set is a sample, not all of software engineering. Preference for Python and automatable issues shapes how agents are optimized. Rulers change behavior; behavior then demands ruler updates. Benchmarks and systems advance by pulling on each other.
+SWE-bench only fully means something when read with Devin, Claude Code, Codex CLI, and Cursor: it measures the chance of greening tests in real repos, not chat fluency. Agent-coding topic density comes from different failure modes under one ruler—sandbox tasks, terminal permissions, editor indexes.
+
+Benchmarks age, tasks leak, harnesses change. The chronicle should still keep the moment this ruler was forged in 2023—after which every autonomous-engineer claim faces a public mark that can be questioned.
