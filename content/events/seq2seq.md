@@ -32,7 +32,7 @@ beforeAfter:
 beforeAfterEn:
   before: Translation depended on multiple separately trained and tuned components.
   after: A neural network could learn the mapping from source sequence to target sequence directly.
-relatedEvents: [word2vec, transformer]
+relatedEvents: [word2vec, lstm, bahdanau-attention, transformer]
 visual:
   src: /assets/events/seq2seq.webp
   width: 1800

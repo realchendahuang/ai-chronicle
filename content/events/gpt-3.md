@@ -39,6 +39,8 @@ beforeAfter:
   before: 每个 NLP 任务需要独立训练模型，成本高、泛化差。
   after: 一个通用大模型可以通过提示完成多种任务，AI 开始走向通用化。
 relatedEvents:
+  - dall-e
+  - clip
   - gpt-1
   - gpt-2
   - instructgpt

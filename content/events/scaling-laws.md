@@ -31,7 +31,7 @@ beforeAfter:
 beforeAfterEn:
   before: Scaling models relied mainly on intuition and isolated observations.
   after: Returns to scale could be fitted, predicted, and incorporated into training plans.
-relatedEvents: [gpt-2, gpt-3, instructgpt]
+relatedEvents: [gpt-2, gpt-3, instructgpt, chinchilla]
 visual:
   src: /assets/events/scaling-laws.webp
   width: 1400

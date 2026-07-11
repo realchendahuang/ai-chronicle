@@ -9,6 +9,8 @@ datePrecision: day
 importance: B
 eventType: [model, open-source]
 topics: [open-source-models, model-efficiency, large-language-models]
+companies:
+  - mistral
 models: [mistral-7b]
 concepts: [open-weight, attention, llm]
 summary: Mistral AI 以 Apache 2.0 许可证发布 Mistral 7B 权重。模型采用分组查询注意力和 4096 token 滑动窗口；发布方报告它在多项基准上超过 Llama 2 13B，但这属于厂商基准比较。
@@ -31,7 +33,7 @@ beforeAfter:
 beforeAfterEn:
   before: The open-model story was driven mainly by larger Llama releases.
   after: Small-model efficiency, permissive licensing, and MoE became central competitive dimensions.
-relatedEvents: [llama, qwen, deepseek-v3]
+relatedEvents: [llama, llama-2, mixtral, qwen, deepseek-v3]
 visual:
   src: /assets/events/mistral.webp
   width: 1800

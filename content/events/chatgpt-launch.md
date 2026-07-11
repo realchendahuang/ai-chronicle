@@ -40,6 +40,7 @@ beforeAfter:
   before: AI 更多存在于论文、API、Demo 和企业后台能力里。
   after: AI 变成普通用户可以直接使用和分享的消费级产品。
 relatedEvents:
+  - whisper
   - gpt-3
   - gpt-4-release
   - openai-plugins

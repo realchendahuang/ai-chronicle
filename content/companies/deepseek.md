@@ -25,6 +25,6 @@ models:
 relatedCompanies:
   - openai
   - meta
-  - alibaba-qwen
+  - alibaba
 slug: deepseek
 ---

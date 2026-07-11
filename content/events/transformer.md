@@ -41,6 +41,7 @@ beforeAfter:
   before: NLP 依赖 RNN/LSTM 进行序列建模，训练慢、难并行化、长序列效果差。
   after: Transformer 成为 NLP 和后续多模态 AI 的统一基础架构。
 relatedEvents:
+  - bahdanau-attention
   - bert
   - gpt-1
   - gpt-3

@@ -48,6 +48,10 @@ relatedEvents:
   - tool-use
   - agent-runtime
 sources:
+  - title: Model Context Protocol specification
+    url: https://modelcontextprotocol.io/
+    publisher: MCP
+    type: official
   - title: Introducing the Model Context Protocol
     url: https://www.anthropic.com/news/model-context-protocol
     publisher: Anthropic

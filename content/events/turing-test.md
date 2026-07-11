@@ -43,6 +43,10 @@ beforeAfterEn:
   after: Researchers had an interactive behavioral framework that could be tested and criticized.
 relatedEvents: [dartmouth-workshop, eliza, chatgpt-launch]
 sources:
+  - title: Computing Machinery and Intelligence (Mind, via CSUDH reprint)
+    url: https://redirect.cs.umbc.edu/courses/471/papers/turing.pdf
+    publisher: Mind / reprint
+    type: archive
   - title: Computing Machinery and Intelligence
     url: https://academic.oup.com/mind/article/LIX/236/433/986238
     publisher: Mind

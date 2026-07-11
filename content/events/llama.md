@@ -36,6 +36,7 @@ beforeAfter:
   before: 大语言模型主要由 OpenAI 和 Google 等闭源公司掌控。
   after: 开源大模型生态蓬勃发展，全球 AI 能力开始民主化。
 relatedEvents:
+  - llama-2
   - chatgpt-launch
   - gpt-4-release
   - deepseek-v3

@@ -33,7 +33,7 @@ beforeAfter:
 beforeAfterEn:
   before: High-quality text-to-image generation was mainly available through closed labs and hosted products.
   after: Generative models could run locally, be forked, and be continuously recombined by a community.
-relatedEvents: [diffusion-models, llama, sora]
+relatedEvents: [diffusion-models, dall-e, clip, sora]
 visual:
   src: /assets/events/stable-diffusion.webp
   width: 500

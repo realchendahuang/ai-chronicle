@@ -40,9 +40,9 @@
 
 当前规模（会持续生长）：
 
-- **70** 个关键事件  
-- **140** 篇中英文正文（分别写作，不是机翻镜像）  
-- **70** 张事件主视觉（史料优先，必要时原创编辑插图）  
+- **82** 个关键事件  
+- **164** 篇中英文正文（分别写作，不是机翻镜像）  
+- **82** 张事件主视觉（史料优先，必要时原创编辑插图）  
 - 中英切换 · 明暗主题 · 桌面与移动端
 
 ---
@@ -155,7 +155,7 @@ Dates must be exact; sources must open. Essays may still carry warmth—hesitati
 | **Companies** | How organizations shape routes and products |
 | **Model lineages** | Generations of GPT, Claude, Gemini, Llama, DeepSeek, and more |
 
-Current scale (still growing): **70** events · **140** bilingual essays · **70** event visuals · Chinese / English · light / dark · desktop / mobile.
+Current scale (still growing): **82** events · **164** bilingual essays · **82** event visuals · Chinese / English · light / dark · desktop / mobile.
 
 ### Editorial lines we do not cross
 

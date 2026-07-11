@@ -9,6 +9,8 @@ datePrecision: month
 importance: A
 eventType: [product, infrastructure]
 topics: [ai-infrastructure, deep-learning]
+companies:
+  - nvidia
 products: [cuda]
 concepts: [gpu]
 summary: NVIDIA 发布 CUDA，让开发者用 C 风格工具直接编写在 GPU 上运行的通用并行程序。

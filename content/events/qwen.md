@@ -9,6 +9,8 @@ datePrecision: day
 importance: B
 eventType: [model, open-source]
 topics: [open-source-models, china-ai, large-language-models]
+companies:
+  - alibaba
 models: [qwen-7b, qwen-7b-chat]
 concepts: [open-weight, llm]
 summary: 阿里云发布 Qwen-7B 与 Qwen-7B-Chat 的代码和权重；基础模型以超过 2.2 万亿 token 预训练，覆盖中文、英文、代码和多语言文本。许可允许研究使用，月活用户低于一亿的商业主体可直接使用，更大规模须另行申请。
