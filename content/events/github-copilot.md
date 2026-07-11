@@ -46,6 +46,9 @@ relatedEvents:
   - codex-agent
   - devin
   - swe-bench
+  - aider
+  - continue-dev
+  - windsurf
 visual:
   src: /assets/events/github-copilot.webp
   width: 1200

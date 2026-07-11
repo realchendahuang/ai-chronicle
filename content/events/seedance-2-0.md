@@ -52,6 +52,7 @@ relatedEvents:
   - sora-2
   - kling-1-0
   - eu-ai-act
+  - seedance-2-5
 visual:
   src: "/assets/events/seedance-2-0.webp"
   width: 1280

@@ -65,6 +65,20 @@ releases:
     summary: 更新 Pro、Flash-Lite 与视觉生成分支，在性能、成本和媒体能力之间形成更细的产品层级。
     summaryEn: Refreshed Pro, Flash-Lite, and visual-generation branches with a finer-grained balance of performance, cost, and media capability.
     source: https://ai.google.dev/gemini-api/docs/changelog
+  - name: Veo
+    date: '2024-05-14'
+    datePrecision: day
+    status: legacy
+    summary: Google DeepMind 视频生成旗舰亮相 I/O，对位 Sora 后的全球视频赛道。
+    summaryEn: Google DeepMind video flagship debuts at I/O, pairing the post-Sora global video track.
+    source: https://deepmind.google/models/veo/
+  - name: Veo 3
+    date: '2025-05-20'
+    datePrecision: day
+    status: current
+    summary: 原生同步音频与更强可控性，接入 Gemini 应用与 API。
+    summaryEn: Native synced audio and stronger control, shipping into Gemini apps and APIs.
+    source: https://deepmind.google/models/veo/
   - name: Gemini 3.5 Flash
     date: '2026-05-19'
     datePrecision: day

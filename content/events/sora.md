@@ -46,6 +46,8 @@ relatedEvents:
   - vidu-1-0
   - sora-2
   - sora-discontinued
+  - google-veo
+  - google-veo-3
 visual:
   src: /assets/events/sora.webp
   width: 1672

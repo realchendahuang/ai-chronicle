@@ -56,6 +56,9 @@ relatedEvents:
   - codex
   - swe-bench
   - openai-o1
+  - aider
+  - continue-dev
+  - windsurf
 visual:
   src: "/assets/events/codex-cli.webp"
   width: 1280

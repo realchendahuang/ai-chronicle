@@ -18,6 +18,8 @@ keyEvents:
   - alphago
   - alphafold
   - alphafold-3
+  - google-veo
+  - google-veo-3
 models: []
 products: []
 relatedCompanies:

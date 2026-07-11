@@ -5,8 +5,8 @@ titleEn: Doubao / Seed model lineage
 company: bytedance
 description: 字节跳动以豆包大模型与 Seed 研究品牌覆盖通用对话、推理、代码、语音与视频生成，并以火山引擎 API 与亿级 C 端产品形成双轮交付。
 descriptionEn: ByteDance’s Doubao models and Seed research brand cover general chat, reasoning, code, speech, and video generation, delivered both via Volcano Engine APIs and billion-scale consumer products.
-latestModel: Seed2.1 / 豆包 2.x
-latestModelEn: Seed2.1 / Doubao 2.x
+latestModel: Seedance 2.5 / Seed2.1
+latestModelEn: Seedance 2.5 / Seed2.1
 updatedAt: '2026-07-11'
 releases:
   - name: 豆包大模型（首发）
@@ -72,5 +72,12 @@ releases:
     summary: 面向真实生产力与 Agent 工作流的 Seed2.1 系列，在豆包、TRAE 与火山引擎 API 同步上线。
     summaryEn: Seed2.1 series aimed at real productivity and agent workflows, shipping on Doubao, TRAE, and Volcano Engine APIs together.
     source: https://seed.bytedance.com/zh/blog/seed2-1-officially-released-advancing-ai-productivity
+  - name: Seedance 2.5
+    date: '2026-07-03'
+    datePrecision: day
+    status: current
+    summary: 主打约 30 秒连续生成，减少分段拼接，时长成为公开竞争轴。
+    summaryEn: Targets ~30s continuous generation with less stitching; duration becomes a public competition axis.
+    source: https://seed.bytedance.com/en/seedance
 slug: bytedance-doubao
 ---

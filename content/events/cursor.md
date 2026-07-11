@@ -41,6 +41,9 @@ relatedEvents:
   - devin
   - codex-agent
   - codex-cli
+  - windsurf
+  - continue-dev
+  - aider
 visual:
   src: /assets/events/cursor.webp
   width: 1672

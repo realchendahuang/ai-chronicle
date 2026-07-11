@@ -20,6 +20,8 @@ keyTopics:
 keyEvents:
   - gemini
   - gemini-3-5-flash
+  - google-veo
+  - google-veo-3
 models:
   - bert
   - palm

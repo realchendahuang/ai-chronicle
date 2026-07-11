@@ -54,6 +54,7 @@ relatedEvents:
   - sora-discontinued
   - seedance-1-0
   - kling-1-0
+  - google-veo-3
 visual:
   src: "/assets/events/sora-2.webp"
   width: 1280
