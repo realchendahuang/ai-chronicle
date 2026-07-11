@@ -32,15 +32,15 @@ beforeAfterEn:
 relatedEvents: [perceptron, ai-winter-1974, backpropagation]
 visual:
   src: /assets/events/minsky-perceptrons-book.webp
-  width: 1672
-  height: 941
-  alt: 翻开的计算几何书：线性分界线旁是圆点与三角，周围散落 XOR 与分类示意图
-  altEn: "Open computational-geometry book: linear separator between dots and triangles, XOR and classification sketches around it"
-  caption: AI Chronicle 原创插图：《Perceptrons》用几何语言划出单层线性模型的边界。
-  captionEn: "Original illustration by AI Chronicle: Perceptrons used geometry to map the limits of single-layer linear models."
-  credit: AI Chronicle
-  rights: generated
-  prompt: "Still-life editorial illustration of an open academic book showing a linear decision boundary between blue circles and red triangles, surrounded by paper cutouts of XOR-like regions, network sketches, and a small campus model; soft studio light; no brand logos, no fake book title text that could be misread as a real cover scan, 16:9"
+  width: 1280
+  height: 720
+  alt: 马文·明斯基肖像照片
+  altEn: Portrait photograph of Marvin Minsky
+  caption: 马文·明斯基。1969 年他与西摩·佩珀特合著的《Perceptrons》用几何语言划出单层线性模型的边界。
+  captionEn: Marvin Minsky. The 1969 book Perceptrons, with Seymour Papert, mapped the geometric limits of single-layer linear models.
+  credit: Steamtalks, CC BY-SA 2.0, via Wikimedia Commons
+  sourceUrl: https://commons.wikimedia.org/wiki/File:Marvin_Minsky.jpg
+  rights: cc
 sources:
   - title: Perceptrons — An Introduction to Computational Geometry
     url: https://mitpress.mit.edu/9780262631112/perceptrons/

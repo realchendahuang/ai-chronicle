@@ -1,24 +1,24 @@
 ---
 eventId: mcp
-form: short protocol history
-narrativeCenter: MCP tries to rewrite the multiplying connections between AI apps and external systems as reusable protocol boundaries
-emotionalSource: what slows ecosystems is often not missing smart models, but countless people rewriting the same quiet adapters
+form: Protocol release note
+narrativeCenter: Host / Client / Server writing tool discovery and invocation as a reusable client–server interface
+emotionalSource: Relief when integrations need not be rewritten per host—and sobriety that trust and permission stay at the boundary
 avoid:
-  - casting adoption prospects as finished industry unification
-  - claiming MCP automatically solves permissions and prompt injection
-  - conflating MCP with model function calling
+  - Declaring the release an accomplished industry standard
+  - Claiming MCP automatically solves prompt injection and malicious servers
+  - Collapsing it with function calling into one layer
 ---
 
-Connecting one AI application to one data source is usually not hard. Ten applications each connecting to ten data sources is no longer twenty endpoints and a few auth snippets. Every host has its own plugin format; every service has its own objects and permissions; every pair must re-explain what is readable, what is allowed, and in what shape results return.
+Function calling solved how a model emits tool arguments. It did not specify how editors, desktop assistants, and data sources discover, connect, and authorize one another. Each host still kept its own plugin format. Build an integration once, switch hosts, and often build again.
 
-On 25 November 2024 Anthropic released the Model Context Protocol (MCP) for that multiplication problem.
+On 25 November 2024, Anthropic released the Model Context Protocol (MCP). It uses JSON-RPC and distinguishes Host, Client, and Server: a Server may declare tools, read-only resources, and prompt templates; a Client handles connection and capability negotiation; the Host keeps user permissions and control of model interaction. In principle one integration can be reused by many compatible apps; tool ecosystems need not be rewritten around a single model vendor. Prefabricated servers and early adopters or collaborators listed at launch are participants and plans, not proof the protocol had become an industry standard.
 
-The protocol uses a client–server structure: an MCP Server exposes capabilities; a Client connects and negotiates; a Host carries the model, user interaction, and permission decisions. Servers can provide tools, read-only resources, and prompt templates; the message layer uses JSON-RPC. A GitHub, Postgres, or local-file integration can then be reused across compatible hosts without rewriting for every model UI. Anthropic also opened the specification, SDKs, local-server support in Claude Desktop, and a set of example servers—documents, chat, code, browser automation—showing what kinds of work the protocol can express, not that those integrations were enterprise-complete.
+A protocol is not a safety certificate. Malicious servers, over-broad grants, and prompt injection remain on the host–user boundary. A standard lives by independent implementations, host compatibility, and whether the spec survives extension without fracturing—none of which a publisher can unilaterally declare. MCP also does not sit on the same layer as a `tool_use` content block inside one conversation: one governs connection and discovery; the other how a model emits structured calls in a session. Collapse the two into one word, and debugging loses its owner.
 
-This is not the same problem function calling solves. Function calling specifies how a model chooses tools and emits parameters; MCP cares more about where tools are discovered, how a host connects, how capabilities are described, and how results travel over a common interface. One is call syntax; the other tries to specify the socket. They can work together, and neither decides what plugs in behind the socket. Writing MCP as “another tool-use button” misses the layer it wants to standardize.
+Reading the protocol in late autumn 2024 means seeing an effort to lift integration problems from product dialect into an interface sketch—not a finish line. Sketches matter because later arguments at least have a diagram to point at and revise: trust models, permission prompts, and server lists can share one coordinate system.
 
-At launch Anthropic listed prefabricated servers for Google Drive, Slack, GitHub, Git, Postgres, and Puppeteer, and named early adopters or collaborators such as Block, Apollo, and Zed, Replit, Codeium, and Sourcegraph. Those were launch participants and plans, not proof the protocol had become an industry standard. A standard lives by how many independent implementations follow, whether hosts stay compatible, and whether the specification survives extension without fracturing—none of which a publisher can unilaterally declare.
+A protocol text can specify message shape; it cannot specify goodwill. Hosts still decide which servers to trust by default, how to show permissions, and how to stop after prompt injection. Early-adopter lists prove willingness to try, not that the ecosystem has locked onto this standard. Writing MCP as “already unifying the tool world” mistakes a launch-day sketch for a finished plan.
 
-Connection is never only convenience. A Server that can read files, query databases, or run commands can also return malicious content, steer a model into other tools, or gain permissions the user never truly understood. MCP defines a communication boundary; it does not make trust decisions for the host. Authorization prompts, least privilege, source labeling, result isolation, and prompt-injection defenses still fall to implementers and users. Compared with function calling, MCP pulls “tool install and discovery” into a system layer outside the model chat: users or admins first decide which Servers to trust; the model then chooses among tools already exposed. That layering resembles OS permission models and inherits supply-chain risk—a malicious Server is a new attack surface.
+That the Host keeps permission control is the easiest sentence in the protocol to ignore. Without it, a Server list becomes an attack-surface list. MCP’s restraint is claiming to solve connection, not trust. Trust still needs hosts to supply product and policy.
 
-Protocol history rarely has dazzling demos. Success often looks like glue code no longer written, an integration that still works after a host swap, or a protocol people finally stop noticing. Late 2024 delivered a specification and first implementations, not a finished ecosystem—the latter is bought with compatibility and time. Convenience and attack surface belong in the same sentence.
+JSON-RPC and capability negotiation let implementations split by language and process without shared memory. That is the minimum work a protocol layer should do. After the minimum, ecosystems can compete on server quality and host experience rather than private plugin formats.

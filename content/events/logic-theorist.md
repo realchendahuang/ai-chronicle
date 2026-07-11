@@ -33,15 +33,15 @@ beforeAfterEn:
 relatedEvents: [dartmouth-workshop, expert-systems]
 visual:
   src: /assets/events/logic-theorist.webp
-  width: 1672
-  height: 941
-  alt: 1950 年代研究室：桌面卡片图构成证明搜索树，背景是图论板与早期计算机
-  altEn: "1950s research room: card graph of a proof search tree, graph board and early computer in the background"
-  caption: AI Chronicle 原创插图：Logic Theorist 把定理证明写成可搜索的状态空间与启发式路径。
-  captionEn: "Original illustration by AI Chronicle: Logic Theorist treated theorem proving as a searchable state space with heuristic paths."
-  credit: AI Chronicle
-  rights: generated
-  prompt: "Historical editorial scene of 1950s symbolic AI research: large table map of blank cards linked into a proof-search graph with one red path, two researchers at chalkboard and desk, early computer and punched cards, warm archival painting style; no readable fake theorems, no logos, 16:9"
+  width: 1280
+  height: 720
+  alt: 约 1958 年，赫伯特·西蒙与艾伦·纽厄尔对弈的黑白照片
+  altEn: Black-and-white photo of Herbert A. Simon and Allen Newell at a chess match, c. 1958
+  caption: 赫伯特·西蒙与艾伦·纽厄尔。Logic Theorist 把定理证明改写成可搜索的状态空间与启发式选择。
+  captionEn: Herbert A. Simon and Allen Newell. Logic Theorist reframed theorem proving as searchable state space with heuristic choice.
+  credit: Paolo Massa, public domain, via Wikimedia Commons
+  sourceUrl: https://commons.wikimedia.org/wiki/File:Herbert_A._Simon_and_Allen_Newell_Chess_Match.jpg
+  rights: public-domain
 sources:
   - title: The Logic Theory Machine
     url: https://www.rand.org/pubs/papers/P868.html

@@ -1,26 +1,22 @@
 ---
 eventId: gpts-launch
-form: Product-sociology essay
-narrativeCenter: Lowering assistant creation to instructions, files, and tool toggles while lowering the cost of producing interchangeable artifacts
-emotionalSource: The freshness of giving an idea a reusable form and the mild disappointment of a catalog filling with repetitions
+form: Configurable-assistant product history
+narrativeCenter: Without retraining, instructions, files, tools, and Actions packaged into a shareable GPT
+emotionalSource: Ease of low-friction customization—and noise when homogeneous content piles up fast
 avoid:
-  - Mocking non-developers for creating lightweight assistants
-  - Describing a GPT as a separately trained model
-  - Concluding with marketing language about a no-code revolution
+  - Writing the GPT Store as launching the same day as DevDay
+  - Inflating configured assistants into a full agent platform
+  - Omitting Plus / Enterprise access
 ---
 
-Name it. Describe its job. Upload a few documents. Turn on browsing, images, or code; connect an Action if the built-in tools are not enough. A custom GPT could be assembled in minutes.
+On 6 November 2023, at OpenAI’s first DevDay, GPTs targeted ChatGPT Plus and Enterprise users: write instructions in natural language, upload files, enable built-in tools, attach custom Actions when needed—no model retraining, no full app stack first. GPT Builder folded name, description, knowledge, and capabilities into a shareable object. The create button sat close; the training cluster sat far.
 
-At OpenAI's first DevDay on 6 November 2023, GPT Builder gathered pieces that had previously lived at very different levels of effort. Access went first to ChatGPT Plus and Enterprise users, not to every free account. The lightest form of customization had been a prompt pasted again at the start of every conversation. The heavier form required an API, a user interface, retrieval, configuration storage, and hosting. GPTs created a layer in between: more persistent than a chat, much less than an independent application.
+It was a direct admission of demand for light customization. Many people did not want a complete software project; they wanted a ChatGPT wrapped around particular materials and workflows. Actions brought external APIs back into the chat so configuration began to resemble a minimal agent; permissions, auth, and failure handling still stretched between user and platform. The GPT Store, initially planned for November, opened in January 2024—distribution catalog and creation capability were not the same day’s work; a wrong timeline inflates how mature the ecosystem was.
 
-Calling GPTs “everyone trains a model” is a common misread. Weights stay on the platform; users contribute instructions, files, and tool config. Misreads inflate expectation and disappointment. The accurate sentence: the platform productized context containers and tried to solve discovery with a Store—two months late. By January 2024, informal sharing had already produced homogeneous inventory the shelf had to govern.
+Low barriers quickly produced sameness: many GPTs were thin prompts and thin files; discovery and quality became new problems. The Store tried to organize noise with catalogs and recommendations and also introduced platform distribution power. GPTs validated the product value of a configuration layer and showed that without stable use cases and distribution, a create button makes shelves more than network effects.
 
-Its object was not a newly trained model. A GPT packaged instructions, files, available capabilities, and sometimes external Actions around the underlying ChatGPT service. This technical modesty made the product socially interesting. A teacher could prepare an assistant around course material. A team could preserve internal rules. A hobbyist could make personal preferences reusable and share the result without maintaining a server. Configuration that once lived in private chat history gained a boundary.
+The same evening, the Assistants API handed similar capabilities to a developer object model; GPTs handed them to clicks and natural language. Both paths shared the temptation of “no retraining” and the later bills of governance and migration. Configurable assistants lower the entry cost; they do not cancel the question of for whom, for what, and under which permissions an assistant works.
 
-The same low friction produced abundance before it produced distinction. Many creators reached for similar jobs and promises. Names, profile images, and instruction sets converged. OpenAI also announced a public GPT Store, but the store did not open with the DevDay demo. Planned for November 2023, it slipped to January 2024. Creation, distribution, review, and governance did not share one timeline. Being able to create did not answer why anyone should keep using the result. Without maintained knowledge, a stable workflow, or hard-to-copy judgment, a custom assistant often collapsed back into ordinary ChatGPT with an extra name.
+The Store’s delayed opening shows creation and distribution are different product lines. Without a catalog, sharing rides links; with a catalog, quality, safety review, and recommendation become new bottlenecks. GPTs lowered the bar to “make an assistant” and put “assistant flood” on the table early. Configurable products are rarely decided by whether creation is possible—they are decided by who still wants to use what was created.
 
-This is the familiar predicament of every platform that makes production easier. Website builders did not make every website worth returning to; app stores did not grant every app an audience. Lowering the cost of making something moves scarcity elsewhere. Maintenance, trust, discovery, and a reason to return become more expensive relative to creation.
-
-Collapsing GPTs and the GPT Store into one event misstates what November delivered: Plus and Enterprise users received the builder first; the public shelf arrived nearly two months later. In the gap, people already shared links and reused one another's assistants while distribution order was still unfinished.
-
-GPTs gave non-developers a legitimate new medium, even where the result was small. A reusable context container can be useful without becoming a company or a mass-market product. The mistake is to confuse the pleasure of quick formation with finished value. Configuration is light at the moment it finishes. Maintenance, trust, and reasons to return grow heavier the next day.
+Plus and Enterprise access kept early GPTs inside paid circles, avoiding an undifferentiated day-one flood and also limiting sample diversity. Configurable assistants carried product layering from the start: who may create, who may distribute, who may share inside an org—larger questions than “can you write a prompt.”

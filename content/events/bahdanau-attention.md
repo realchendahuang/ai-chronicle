@@ -40,13 +40,13 @@ visual:
   src: /assets/events/bahdanau-attention.webp
   width: 1280
   height: 720
-  alt: "网格图纸上连接两侧抽象符号的柔和热力对齐曲线"
-  altEn: "Soft alignment curves bridging abstract symbols on a grid draft"
-  caption: "AI Chronicle 原创插图：注意力让模型学会看向源句的不同位置。"
-  captionEn: "Original illustration by AI Chronicle: attention learns where to look in the source sentence."
-  credit: AI Chronicle
-  rights: generated
-  prompt: "Editorial illustration of neural machine translation attention alignment, soft heatmap bridges, scientific journal aesthetic, muted teal and ochre, no text no logos, 16:9"
+  alt: Yoshua Bengio 2019 年肖像
+  altEn: Portrait of Yoshua Bengio in 2019
+  caption: Yoshua Bengio。2014–2015 年与 Bahdanau、Cho 合作的对齐与翻译工作，把注意力写成可学习的软对齐。
+  captionEn: Yoshua Bengio. With Bahdanau and Cho in 2014–2015, alignment-and-translation work made attention a learnable soft alignment.
+  credit: Maryse Boyce, CC BY 4.0, via Wikimedia Commons
+  sourceUrl: https://commons.wikimedia.org/wiki/File:Yoshua_Bengio_2019.jpg
+  rights: cc
 sources:
   - title: Neural Machine Translation by Jointly Learning to Align and Translate
     url: https://arxiv.org/abs/1409.0473

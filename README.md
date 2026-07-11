@@ -43,6 +43,7 @@
 - **86** 个关键事件  
 - **172** 篇中英文正文（分别写作，不是机翻镜像）  
 - **86** 张事件主视觉（史料优先，必要时原创编辑插图）  
+- **67** 个概念页  
 - 中英切换 · 明暗主题 · 桌面与移动端
 
 ---
@@ -155,7 +156,7 @@ Dates must be exact; sources must open. Essays may still carry warmth—hesitati
 | **Companies** | How organizations shape routes and products |
 | **Model lineages** | Generations of GPT, Claude, Gemini, Llama, DeepSeek, and more |
 
-Current scale (still growing): **86** events · **172** bilingual essays · **86** event visuals · Chinese / English · light / dark · desktop / mobile.
+Current scale (still growing): **86** events · **172** bilingual essays · **86** event visuals · **67** concepts · Chinese / English · light / dark · desktop / mobile.
 
 ### Editorial lines we do not cross
 

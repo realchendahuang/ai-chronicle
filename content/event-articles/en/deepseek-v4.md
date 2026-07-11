@@ -1,22 +1,22 @@
 ---
 eventId: deepseek-v4
-form: preview release note
-narrativeCenter: V4 Pro and Flash previews putting 1M context, thinking/non-thinking modes, and agent-coding claims into one open-weight family
-emotionalSource: specs already point at long-horizon agents while the materials still say Preview—vendor benchmarks must not be mixed with GA
+form: Preview release note
+narrativeCenter: Under a preview label, million-token context, dual modes, and agent-coding claims share one open-weight family
+emotionalSource: Specs point at longer agent work while materials still say preview
 avoid:
-  - writing a preview as full GA
-  - treating official agent-coding scores as third-party reproduction
-  - ignoring Pro/Flash split and sparse activation
+  - Writing preview as general availability
+  - Treating vendor agent-coding scores as third-party reproduction
+  - Ignoring product-line split and sparse activation
 ---
 
-On 24 April 2026 DeepSeek released **preview** open weights for V4 Pro and V4 Flash and updated official service docs. Timing follows the R1-driven wave of reasoning models: the industry already accepts that open weights can carry long-chain reasoning. The next question is whether those models can hold longer context, steadier tool use, and multi-step work such as coding agents.
+On 24 April 2026, DeepSeek released preview open-weight builds of V4 Pro and V4 Flash and updated its service notes. The label comes before the specs: *preview* is not ornament; it is the first state a reader must see. Writing preview as general availability forges a false completion record on the timeline.
 
-Per official launch materials, V4-Pro uses a sparse structure with about 1.6 trillion total parameters and 49 billion active, aimed at hard reasoning and agent coding; V4-Flash offers a smaller active footprint for speed and cost. The official API defaults to a context window on the order of one million tokens and supports switching between thinking and non-thinking modes: open thinking when an explicit chain is wanted, close it for latency. These are product-spec statements; preview-stage stability, rate limits, and interface details may still change.
+Per launch materials, Pro targets hard reasoning and agent coding at about 1.6 trillion total parameters and 49 billion active; Flash trades a smaller active footprint for a faster, cheaper path. Official serving defaults to about a one-million-token context and offers thinking and non-thinking modes—on for explicit chain-style reasoning, off for lower latency. Thinking raises output tokens and cost; non-thinking sits closer to ordinary completion. Total parameters still govern load and disk; active parameters track closer to one inference’s compute—sparse design keeps the two bills apart, continuing the company’s efficiency narrative.
 
-Claims about agent coding—performance on long-horizon, multi-file, tool-using software tasks—were given at launch as vendor benchmarks and demos. They should be labeled **publisher-reported, preview-stage**, not written as widely independently reproduced industry standards. A 1M window likewise needs layers: length is a capacity ceiling, not proof that arbitrary million-token materials are used losslessly. Retrieval, localization, and consistent reasoning across the whole span are different difficulties.
+Agent coding and long context share one family story. Vendor benchmarks position a product; they do not replace independent reproduction. Stability, rate limits, and interface detail may still move in preview. Open weights allow download and trial deployment; licenses and service terms remain those of the repository and official site. Product-line split also warns readers: not every tier carries the same work; treating Flash as Pro, or a preview API as a production SLA, misreads the sheet.
 
-Continuity with V3 and R1 is worth keeping. V3 published an MoE cost structure; R1 put RL reasoning and distillation into open weights; the V4 preview pushes the narrative toward ultra-long context and agent workloads while still stressing sparse activation to control inference cost. The open-weight path again lines up against closed flagships on the same capability checklist—alignment of claims and specs, with acceptance still depending on real downstream tasks.
+V4 does not declare a finished agent pipeline. It places million-token context, mode switches, and sparse efficiency into downloadable preview checkpoints first. Capability claims, preview boundaries, and open weights should be read as three parallel lines—not one line covering the other two. The longer the spec sheet, the clearer that “stronger” is not enough: how long a context, which mode, how many active parameters, which license, and whether it is still preview.
 
-Preview prose should stay restrained. Record 1.6T/49B, the 1M window, dual modes, and the Pro/Flash split. Do not promote unfinished GA, unaudited agent scores, or undisclosed full training cost into settled conclusions. DeepSeek-V4’s place on the timeline is a specification still stamped Preview: direction clear, seal incomplete.
+A preview’s honesty is writing unfinished into the label. Million-token context and thinking mode point at longer agent work; sparse activation points at cost; both may still move. Open weights let outsiders try early—and bear preview instability early. Read V4 with the two syllables of *preview* louder than any parameter number.
 
-Preview channels that ship both flagship and fast lines invite early latency–quality curves under real traffic. Agent coding success rates depend on tool APIs, sandboxes, and recovery—not model scores alone. One-million-token windows are capacity ceilings; lossless use of arbitrary million-token dumps is a harder claim. Spec sheets may lead; acceptance belongs to stable releases and third-party failure lists. Preview credit comes from writing unfinished next to the title.
+Agent-coding claims in a preview note should be read as direction, not a report card. If outsiders reproduce official numbers on incomplete toolchains, the gap itself is information: preview APIs, prompt templates, and eval scripts may not yet be frozen. Open weights lower the cost of looking—and raise the cost of misreading: treat preview as production, and bills and stability will teach together.

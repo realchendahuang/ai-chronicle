@@ -1,24 +1,22 @@
 ---
 eventId: swe-bench
-form: Benchmark anatomy
-narrativeCenter: "How SWE-bench turns already-resolved GitHub issues into an executable exam"
-emotionalSource: "Excitement that models can write code collides with long, petty, uncooperative causal chains in real repositories"
+form: Birth of a benchmark
+narrativeCenter: Real GitHub issues split “can write a function” from “can fix a repository” into two measurable things
+emotionalSource: Sobriety when first model scores were low—and the product-narrative turn once a shared target appeared
 avoid:
-  - Equating leaderboard scores with everyday developer productivity
-  - Ignoring incomplete tests or environment sensitivity
-  - Reusing hero narratives of single-function code generation
+  - Treating the benchmark as solved software engineering
+  - Omitting task construction and test verification
+  - Inflating the 2023 scene with later agent scores
 ---
 
-SWE-bench's raw material is not problems invented for models. It is a short stretch of software past: a GitHub issue, a later accepted change, and the codebase before that change.
+Benchmarks such as HumanEval mostly ask whether a model can emit a standalone function from a description. Real development often asks something else: inside an existing repository, read an issue, edit the right files, and keep the original tests green. One is a fill-in-the-blank exam; the other is repairing pipes on someone else’s site without breaking what already carries water.
 
-In October 2023, researchers including a Princeton team introduced the benchmark in a paper. Tasks roll a repository back to the moment before the fix, leave the issue text, and ask a model to walk the path again. The answer is not code that merely looks reasonable. The model must deliver a patch; the patch must enter the original project's execution environment; tests decide whether the problem is fixed or only hidden elsewhere. The paper collected 2,294 issues from 12 popular Python repositories. Each had been reported, discussed, and solved by people, so the tasks keep what contest problems rarely copy: incomplete context, bugs that cross functions and files, dependency versions that interfere, and project habits left unsaid behind a one-line issue.
+Around 10 October 2023, a Princeton team released SWE-bench: 2,294 resolved issues from real Python repositories turned into executable software-engineering tasks. Each task supplies a repository snapshot and issue text; the model must produce a patch verified by the project’s own tests. The score is not whether the code looks plausible; it is whether tests pass. Construction details—snapshot boundaries, test commands, how failures count—decide whether the ruler is honest.
 
-Real issues bias the bench toward defects with clear reports and automatable tests; tribal knowledge bugs stay scarce. Python and chosen repos shape leaderboard overfitting. The 1.96% starting score is a historical anchor: later double-digit success must declare subset, prompts, and attempts. Anatomy ends not in worship of rankings but in reading protocols—otherwise coding-agent progress is only percentage animation.
+First model scores were low. Low scores were not humiliation—they were the ruler starting to work: pretty completion is not software engineering. The evaluation still has bounds—mostly Python, particular repos, automatable issues—and does not represent every language or org process. A shared target nevertheless appeared. Product claims began to face harder questions: can you fix real issues, pass tests, and handle long context—not only emit handsome fragments?
 
-“Understanding code” becomes concrete. The model must find what to read, separate adjacency from true relevance, run tests after edits, and chase failures. Sometimes the correct patch is short and the difficulty is reaching those few lines. Traditional code benchmarks fence a problem and ask whether a function can be written. SWE-bench removes part of the fence and leaves a repository and a ticket.
+Later verified subsets and agent leaderboards are aftermath. Autumn 2023 nails the reframing: software-engineering ability rewritten from “can write code” into “can submit a verifiable fix in a real repository.” Rulers dull, skew, and get gamed; before this one, the industry lacked even a shared sentence for the rewrite. Without a shared sentence, demo videos can stand in for evidence; with one, there is at least a place to object, redesign, and run again.
 
-First-paper results were almost discouragingly cold. The best reported system, Claude 2, solved 1.96% of issues; the authors' SWE-Llama handled only simpler slices. That figure does not mean language models of the time could not program. It measures the strip product demos often skip between “can generate code” and “can maintain software.” Repository navigation, long context, tool use, environment setup, test feedback, and multi-turn revision—once held in developers' hands—enter the exam together. Paper numbers bind to then-current models and settings; later higher leaderboard scores must be read with subset filters, prompts, whether relevant files are given, execution budgets, and scaffolding.
+After the benchmark launched, leaderboards and papers began speaking in the same tasks. Agent systems were named more often than single completions, because repo-level repair needs search, edit, and test loops. SWE-bench did not solve software engineering; it made “how many real issues solved” checkable. What is checkable can also be gamed, subsetted, and over-read—those side effects are ordinary aging of a ruler.
 
-Different subsets, filtered versions such as Verified, and public leaderboards soon became a shared language for coding agents. New trouble followed: a score moves with task selection, prompting, file hints, budgets, and test coverage. Passing existing tests does not guarantee a fix is correct in all cases; percentages under different protocols cannot be ranked without the protocols. Figures such as Devin's reported 13.86%, if compared to the paper's 1.96% without sample and prompt conditions, invent a false progress story.
-
-The exam refuses to admire the surface of code. Elegant patches and confident write-ups cannot answer for the repository. The environment is restored, the edit applied, tests return. Software engineering stands before the model with its ordinary temper: what happens after the change is the real answer. SWE-bench's historical role is to turn that “what happened” into a measurement that can be run again—not a freeze-frame from a demo video.
+The figure 2,294 also reminds us that an eval set is a sample, not all of software engineering. Preference for Python and automatable issues shapes how agents are optimized. Rulers change behavior; behavior then demands ruler updates. Benchmarks and systems advance by pulling on each other.

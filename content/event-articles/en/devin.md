@@ -1,24 +1,24 @@
 ---
 eventId: devin
-form: Close reading of a product launch
-narrativeCenter: "Devin redefines how users hand off programming work by placing editor, terminal, browser, and progress reporting in one product"
-emotionalSource: "What tempts is not one code generation but the promise that a person can leave a task for a while—temptation held in check by demo and evaluation borders"
+form: Category-naming event
+narrativeCenter: A demo with chat, shell, editor, and browser open together pushes “software-engineering agent” into a public product category
+emotionalSource: Temptation to hand off an issue and wait—and distrust from eval and marketing-language disputes
 avoid:
-  - Treating official demos as generally reproducible production capacity
-  - Directly ranking 13.86% against scores under other settings
-  - Using “will it replace programmers” as the whole suspense
+  - Writing demo ability as a generally available engineer replacement
+  - Omitting SWE-bench figures and comparison-method controversy
+  - Inventing unpublished internal mechanics
 ---
 
-On 12 March 2024, Cognition announced Devin. The launch page put four ordinary things into one product: a chat window, a code editor, a shell, and a browser. Side by side, they described how work is handed off; code generation was only one step.
+On 12 March 2024, Cognition announced Devin. The demo UI showed chat, shell, editor, and browser together: plan work, edit code, run commands, browse docs, and deliver results inside a sandbox. For people used to completions and side-panel chat, the product unit suddenly became “hand the work off and wait for return.” Waiting was designed into the product rather than treated as a system fault.
 
-Earlier coding assistants mostly stayed at the developer's hand. A person selected code, wrote a question, accepted completion, then ran commands themselves; unfamiliar docs meant another trip to a browser. Devin's demos gathered those actions into a sandboxed machine. It could read unfamiliar documentation, install dependencies, reproduce bugs, edit files, run tests, report progress, and take mid-course feedback. Launch materials called the relationship an “AI software engineer.” The name is bold; the product proposition in the interface is plain: can a user assign a task without ferrying context step by step? The launch was a company announcement and waitlist/demo form—not unlimited open hire of a general engineer service for everyone that day.
+Official materials reported 13.86% of SWE-bench tasks solved. The number is neither low nor high—striking against then-current baselines, still low against an “autonomous engineer” story. Comparison methods in launch materials later drew disputes over reproducibility and marketing language: the moment a category is named is often when measurement and rhetoric tangle hardest. Keep 13.86% and the controversy together; do not keep only the ad line.
 
-A startup calling an “AI software engineer” forced incumbents to answer full task loops, not only completion. Sandbox machines lower laptop-fear and raise “will this transfer to our monorepo?” questions. Demos plus benchmarks show video alone no longer persuades and scores alone get setting fights. The category's courtesy became a duet: process visible, results measurable. Whether Devin stayed ahead matters less than making the duet obligatory.
+Whether the first version matched the pitch, Devin made “software-engineering agent” an explicit product category. Copilot improved generation, Cursor improved editing, SWE-bench offered a ruler; Devin pushed end-to-end execution into public view. The market then leaned into autonomous-execution narratives—sometimes ahead of real ability.
 
-To make delegation visible, Cognition showed videos from building sites to fixing open-source issues and published SWE-bench results. Officially, Devin solved 13.86% of tasks end to end; footnotes said the run used a random quarter of the dataset, while comparison models received hints about files to edit. The company then promised a fuller technical report later. The percentage therefore belongs to a specific official evaluation protocol. Taking only the large headline number and ranking it against the paper's full-set original settings or other scaffolding invents false progress.
+A sandbox lowers direct risk and also frames the capability boundary. People who wait for results still need to accept work: tests, diffs, logs, alignment with requirements. A category can be named overnight; engineering trust still accumulates patch by patch and regression by regression. A demo can open the category’s door; how long the hallway is must be measured with reproducible tasks and rejectable deliverables.
 
-Debate after launch was nearly as strong as interest. People frame-checked demos, asked how tasks were chosen, how many attempts were needed, whether failures were cut, and whether an agent that closed a loop on camera could survive messy environments, ambiguous requirements, and long runs in ordinary codebases. The debate did not erase Devin; it exposed the evidence standard a new category must meet. Completion tools need only show the next line is useful. An autonomous agent that claims to take a stretch of work must disclose process, cost, failure, and reproducibility conditions.
+Whether or not the first version delivered the full pitch, the name raised expectations. Engineers began describing needs as “can we hand the issue to an agent,” while procurement and security asked about sandbox bounds, data residency, and who owns failure. A demo opened the category’s door; hallway length is measured with reproducible tasks and rejectable deliverables. Reading 13.86% as “already enough” or as “worthless” is both too simple—it is an early mark on a ruler, with controversy written beside the mark.
 
-The market Devin opened did not depend on whether the first version deserved the word “engineer.” Model vendors, editors, and startups began putting planning, terminal operation, test loops, and result delivery on the same roadmap. “Write me a function” gradually yielded to another sentence: “Take this issue.”
+Browser and shell side by side in a sandbox imply a minimal complete set for a software-engineering agent: read docs, edit code, run commands, see results. Missing one falls back toward chat completion. After the category is named, successors must answer whether they hold that complete set—and what governance sits beyond it.
 
-A few words apart, responsibility moves far. The first sentence still keeps process with the person; the second asks a machine to leave with the task and return with something reviewable. At Devin's launch, people saw exactly that distance—not yet fully filled by capability—and the evaluation and demo borders that must stay public if the distance is to shrink. Names can run ahead. Evidence stays in the footnotes.
+Once public vision forms, fundraising, hiring, and headlines orbit the same category word. If capability evidence lags the word’s spin rate, controversy becomes the category’s companion noise. A full reading of Devin includes 13.86%, the demo UI, and the later dispute over comparison methods.

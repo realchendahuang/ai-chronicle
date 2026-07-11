@@ -36,15 +36,15 @@ relatedEvents:
   - deep-learning-rise
 visual:
   src: /assets/events/backpropagation.webp
-  width: 1672
-  height: 941
-  alt: 1980 年代实验室台面：大幅图纸上多层网络与红色反向误差箭头
-  altEn: "1980s lab desk: multilayer network on drafting paper with red backward error arrows"
-  caption: AI Chronicle 原创插图：误差信号沿链式法则传回，隐藏层才有机会形成内部表示。
-  captionEn: "Original illustration by AI Chronicle: error signals travel backward by the chain rule so hidden layers can form internal representations."
-  credit: AI Chronicle
-  rights: generated
-  prompt: "Warm archival illustration of a 1980s neural-net research desk: large drafting paper with multilayer network nodes and red dashed arrows flowing backward; CRT computer, spiral notebooks, coffee mug, chalkboards with diagrams; technical hand-drawn aesthetic; no logos, no readable equations as fake paper citations, 16:9"
+  width: 1280
+  height: 720
+  alt: 杰弗里·辛顿在英属哥伦比亚大学的肖像
+  altEn: Portrait of Geoffrey Hinton at the University of British Columbia
+  caption: 杰弗里·辛顿。1986 年前后，反向传播使多层网络的误差信号得以沿链式法则回传。
+  captionEn: Geoffrey Hinton. Around 1986, backpropagation made it practical to send error signals back through multilayer nets by the chain rule.
+  credit: InverseHypercube, CC BY-SA 3.0, via Wikimedia Commons
+  sourceUrl: https://commons.wikimedia.org/wiki/File:Geoffrey_Hinton_at_UBC.jpg
+  rights: cc
 sources:
   - title: Learning representations by back-propagating errors
     url: https://www.nature.com/articles/323533a0

@@ -40,13 +40,13 @@ visual:
   src: /assets/events/lstm.webp
   width: 1280
   height: 720
-  alt: "档案图纸风格：蜿蜒铁轨上的蓝色车厢序列与一扇记住过去车辆的闸门"
-  altEn: "Archival diagram of blue rail cars on a winding track with a memory gate"
-  caption: "AI Chronicle 原创插图：LSTM 用门控在长序列里选择性地留下与忘记。"
-  captionEn: "Original illustration by AI Chronicle: LSTM uses gates to keep and forget along long sequences."
-  credit: AI Chronicle
-  rights: generated
-  prompt: "Editorial illustration for LSTM neural network history, 1997 academic era. Abstract train cars on a winding track with a memory gate, parchment technical drawing, muted blues, no text no logos, 16:9"
+  alt: Sepp Hochreiter 肖像照片
+  altEn: Portrait photograph of Sepp Hochreiter
+  caption: Sepp Hochreiter。他与 Jürgen Schmidhuber 在 1997 年提出 LSTM，用门控记忆缓解循环网络的长程依赖困难。
+  captionEn: Sepp Hochreiter. With Jürgen Schmidhuber in 1997, he introduced LSTM gated memory to ease long-range dependency problems in recurrent nets.
+  credit: SeppHochreiter, CC BY-SA 4.0, via Wikimedia Commons
+  sourceUrl: https://commons.wikimedia.org/wiki/File:Sepp_Hochreiter_1.jpg
+  rights: cc
 sources:
   - title: Long Short-Term Memory
     url: https://direct.mit.edu/neco/article/9/8/1735/6109/Long-Short-Term-Memory
