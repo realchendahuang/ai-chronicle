@@ -17,6 +17,7 @@ const distDir = join(rootDir, 'dist/client')
 const basePath = '/ai-chronicle'
 const siteDir = join(distDir, basePath.slice(1))
 const siteOrigin = 'https://chendahuang.com'
+const githubRepoUrl = 'https://github.com/realchendahuang/ai-chronicle'
 
 const events = JSON.parse(readFileSync(join(generatedDir, 'events.json'), 'utf8'))
 const eventArticlesZh = JSON.parse(readFileSync(join(generatedDir, 'eventArticlesZh.json'), 'utf8'))
@@ -364,12 +365,13 @@ function footer() {
           <a href="${urlFor('/concepts/')}">概念</a>
           <a href="${urlFor('/models/')}">模型谱系</a>
           <a href="${urlFor('/about/')}">关于与编辑原则</a>
+          <a class="external-footer-link" href="${githubRepoUrl}" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开本项目仓库（新窗口）"><span>GitHub</span><i aria-hidden="true">↗</i></a>
           <a class="external-footer-link" href="${siteOrigin}/" target="_blank" rel="noopener noreferrer" aria-label="访问陈大黄主站（新窗口）"><span>主站</span><i aria-hidden="true">↗</i></a>
         </div>
       </div>
       <div class="footer-meta">
-        ${bilingual('AI 行业事件档案', 'An archive of AI history')}
-        ${bilingual('内容版本 · 2026.07', 'Content edition · 2026.07')}
+        ${bilingual('开源项目 · 欢迎贡献', 'Open source · contributions welcome')}
+        <a class="footer-meta-link" href="${githubRepoUrl}" target="_blank" rel="noopener noreferrer">${githubRepoUrl.replace('https://', '')}</a>
       </div>
     </footer>`
 }
@@ -918,6 +920,7 @@ function renderAbout() {
       <section><span class="section-number">03</span><h2>${bilingual('重要程度怎么判断', 'How significance is judged')}</h2><div class="editorial-levels"><p><b>S</b><span>${bilingual('范式级', 'Paradigm')}</span>${bilingual('极少数改变行业方向的节点。', 'The rare nodes that redirect the field.')}</p><p><b>A</b><span>${bilingual('行业级', 'Industry')}</span>${bilingual('对多个方向产生持续影响。', 'Events with lasting effects across several directions.')}</p><p><b>B</b><span>${bilingual('领域级', 'Field')}</span>${bilingual('在一条技术或产品路线中重要。', 'Important within a particular technical or product route.')}</p><p><b>C</b><span>${bilingual('补充', 'Context')}</span>${bilingual('帮助看清前后关系的背景节点。', 'Context that makes the surrounding history legible.')}</p></div></section>
       <section><span class="section-number">04</span><h2>${bilingual('文章怎样写', 'How the essays are written')}</h2><p>${bilingual('日期、人物、组织、模型与来源集中在开篇的元数据卡片里。正文不再回答一组固定问题，也不共享同一种高潮和结尾。中文与英文依据同一份事实账本分别写作；它们方向一致，但不必逐句相像。', 'Dates, people, organizations, models, and sources stay in the metadata card at the opening. The essay no longer answers a fixed questionnaire, nor does every story share the same climax and ending. Chinese and English are written separately from the same fact ledger: aligned in direction, not sentence by sentence.')}</p></section>
       <section><span class="section-number">05</span><h2>${bilingual('不能越过的线', 'The line the prose cannot cross')}</h2><p>${bilingual('文学气息不能建立在虚构上。天气、神态、对话和人物内心，没有来源就不补写；厂商自报的评测不写成独立事实，后来才知道的结果也不倒灌进当时。文章可以有判断、有迟疑、有个人情感，但事实必须能够回到原处。', 'Literary feeling cannot be built from invention. Weather, gestures, dialogue, and private thoughts are not supplied without sources. Vendor benchmarks do not become independent fact, and hindsight is not smuggled into the past. An essay may judge, hesitate, and feel; its facts must still lead back to where they came from.')}</p></section>
+      <section><span class="section-number">06</span><h2>${bilingual('开源仓库', 'Open source')}</h2><p>${bilingual('AI Chronicle 是独立维护的开源项目。内容、构建脚本与站点资源都在 GitHub 公开：', 'AI Chronicle is an independently maintained open-source project. Content, build scripts, and site assets are public on GitHub:')}</p><p><a class="external-footer-link" href="${githubRepoUrl}" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开本项目仓库（新窗口）"><span>${githubRepoUrl.replace('https://', '')}</span><i aria-hidden="true">↗</i></a></p><p>${bilingual('欢迎通过 Issue 与 Pull Request 补充事件、来源、译文和图片署名。', 'Issues and pull requests are welcome for events, sources, translations, and image credits.')}</p></section>
     </article>`
 
   writePage('about', {

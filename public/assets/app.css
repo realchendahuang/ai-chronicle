@@ -616,7 +616,9 @@ a.tag:hover, .aside-tags a:hover { border-color: var(--blue); color: var(--blue)
 .footer-links a { padding: 7px 0; color: #d2d0c7; font-size: 12px; }
 .footer-links a:hover { color: var(--yellow); }
 .footer-links .external-footer-link { display: inline-flex; align-items: center; gap: 7px; }
-.footer-meta { padding-top: 16px; padding-bottom: 16px; border-top: 1px solid #44433e; display: flex; justify-content: space-between; color: #8f8d84; font: 500 9px var(--mono); letter-spacing: .08em; }
+.footer-meta { padding-top: 16px; padding-bottom: 16px; border-top: 1px solid #44433e; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: #8f8d84; font: 500 9px var(--mono); letter-spacing: .08em; }
+.footer-meta-link { color: inherit; text-decoration: none; border-bottom: 1px solid transparent; }
+.footer-meta-link:hover { color: var(--yellow); border-bottom-color: currentColor; }
 
 .search-dialog { width: min(720px, calc(100vw - 32px)); max-height: min(720px, calc(100vh - 50px)); padding: 0; border: 0; background: transparent; color: var(--ink); overflow: visible; }
 .search-dialog::backdrop { background: rgba(23,23,20,.68); backdrop-filter: blur(5px); }
@@ -817,9 +819,9 @@ body::before { background: radial-gradient(circle at 50% -10%, color-mix(in srgb
 .chronicle-page .site-header.is-scrolled { box-shadow: var(--shadow); }
 .site-footer,
 .chronicle-page .site-footer { border-top-color: var(--border); background: var(--surface); color: var(--text); }
-.footer-main p, .footer-links a, .footer-meta { color: var(--text-muted); }
+.footer-main p, .footer-links a, .footer-meta, .footer-meta-link { color: var(--text-muted); }
 .footer-meta { border-top-color: var(--border); }
-.footer-links a:hover { color: var(--accent); }
+.footer-links a:hover, .footer-meta-link:hover { color: var(--accent); }
 
 .brand-mark i:first-child,
 .chronicle-page .brand-mark i:first-child { background: var(--text); }

@@ -2,6 +2,9 @@
 
 用关键事件理解 AI 的发展脉络。项目以事件为主线，把概念、公司和主题路线连接成一个可学习、可追溯的静态知识站。
 
+- 正式站：<https://chendahuang.com/ai-chronicle/>
+- 开源仓库：<https://github.com/realchendahuang/ai-chronicle>
+
 全站使用同一套明暗主题设计系统，并支持中文 / English 即时切换。主时间轴只保留改变行业方向的节点；GPT、Claude、Gemini、Llama 与 DeepSeek 的完整代际变化收录在“模型谱系”中。
 
 ## 本地运行
