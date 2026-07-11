@@ -21,8 +21,8 @@ concepts:
   - open-weight
   - model-distillation
   - quantization
-summary: Meta 发布 7B、13B、33B 和 65B 参数的 LLaMA 论文与研究许可权重。权重随后外泄，社区很快完成量化、微调和本地运行工具。
-summaryEn: Meta released the LLaMA paper and research-licensed weights at 7B, 13B, 33B, and 65B parameters. After the weights leaked, the community quickly built quantization, fine-tuning, and local-running tools.
+summary: Meta 发布 7B、13B、33B 和 65B 参数的 LLaMA 论文，并向获批研究者提供非商业许可权重；其中 65B 模型用 1.4 万亿 token 训练。权重随后外泄，社区迅速开发量化、微调和本地推理工具。
+summaryEn: Meta published LLaMA at 7B, 13B, 33B, and 65B parameters and offered noncommercial weights to approved researchers; the 65B model was trained on 1.4 trillion tokens. After the weights leaked, the community rapidly built quantization, fine-tuning, and local-inference tools.
 background: GPT-3.5 与 PaLM 等高能力模型主要通过封闭 API 提供。研究者难以检查权重、修改训练流程，或在自己的硬件和数据边界内运行模型。
 backgroundEn: Capable models such as GPT-3.5 and PaLM were mainly available through closed APIs. Researchers could not inspect weights, modify training, or run them within their own hardware and data boundaries.
 whatHappened: LLaMA 强调用更多 token 训练相对较小模型，在多项基准上以较少参数达到竞争表现。初版不是开源软件许可；Llama 2 之后才提供更广商业使用条款，仍带有额外限制。
@@ -42,6 +42,17 @@ relatedEvents:
   - deepseek-r1
   - qwen
   - mistral
+visual:
+  src: /assets/events/llama.webp
+  width: 1400
+  height: 1980
+  alt: '《LLaMA: Open and Efficient Foundation Language Models》论文首页'
+  altEn: First page of the paper LLaMA Open and Efficient Foundation Language Models
+  caption: LLaMA 论文首页，作者在摘要中强调用更多公开数据训练较小模型。
+  captionEn: The first page of the LLaMA paper, whose abstract emphasizes training smaller models on more public data.
+  credit: Hugo Touvron 等 / arXiv
+  sourceUrl: https://arxiv.org/abs/2302.13971
+  rights: official-editorial
 sources:
   - title: LLaMA — Open and Efficient Foundation Language Models
     url: https://arxiv.org/abs/2302.13971

@@ -11,8 +11,8 @@ eventType: [paper]
 topics: [deep-learning, multimodal-ai]
 papers: [denoising-diffusion-probabilistic-models]
 concepts: [diffusion, generative-model]
-summary: Ho、Jain 与 Abbeel 提出 Denoising Diffusion Probabilistic Models，用逐步加噪和反向去噪生成高质量图像。
-summaryEn: Jonathan Ho, Ajay Jain, and Pieter Abbeel introduced denoising diffusion probabilistic models, generating images through a forward noise process and learned reverse denoising.
+summary: Ho、Jain 与 Abbeel 提出 DDPM：训练网络预测逐步加入图像的噪声，再用 1000 步反向过程采样。论文在 CIFAR-10 上报告 3.17 的 FID 和 9.46 的 Inception Score。
+summaryEn: Jonathan Ho, Ajay Jain, and Pieter Abbeel introduced DDPM, training a network to predict noise and sampling through a 1,000-step reverse process. The paper reported a 3.17 FID and 9.46 Inception Score on CIFAR-10.
 background: GAN 能生成锐利图像，但训练容易不稳定并出现模式崩塌。早期扩散模型有清晰概率解释，却在样本质量和计算效率上不够实用。
 backgroundEn: GANs produced sharp images but were unstable and prone to mode collapse. Earlier diffusion models had a clear probabilistic interpretation but were not yet practical in quality or efficiency.
 whatHappened: 前向过程逐步把数据变成高斯噪声，神经网络学习预测每一步加入的噪声，采样时从随机噪声反向迭代得到图像。
@@ -32,6 +32,17 @@ beforeAfterEn:
   before: GANs dominated high-quality image generation.
   after: Diffusion became the mainstream foundation for image and video generation.
 relatedEvents: [gan, stable-diffusion, sora]
+visual:
+  src: /assets/events/diffusion-models.webp
+  width: 1400
+  height: 1812
+  alt: 《Denoising Diffusion Probabilistic Models》论文首页
+  altEn: First page of the paper Denoising Diffusion Probabilistic Models
+  caption: DDPM 论文首页；这项工作让扩散模型成为高质量图像生成的实用途径。
+  captionEn: The first page of the DDPM paper, which made diffusion a practical route to high-quality image generation.
+  credit: Jonathan Ho、Ajay Jain、Pieter Abbeel / arXiv
+  sourceUrl: https://arxiv.org/abs/2006.11239
+  rights: official-editorial
 sources:
   - title: Denoising Diffusion Probabilistic Models
     url: https://arxiv.org/abs/2006.11239

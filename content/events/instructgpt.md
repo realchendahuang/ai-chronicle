@@ -12,8 +12,8 @@ topics: [large-language-models, ai-safety]
 companies: [openai]
 models: [instructgpt]
 concepts: [rlhf, fine-tuning, llm]
-summary: OpenAI 公开 InstructGPT 训练方法，通过示范数据、偏好排序和强化学习，让语言模型更按用户指令回答。
-summaryEn: OpenAI described InstructGPT, using demonstrations, preference rankings, and reinforcement learning to make language models follow user instructions more reliably.
+summary: OpenAI 公开 InstructGPT 的三阶段训练方法：监督示范微调、人工偏好奖励模型、再用 PPO 强化学习。标注员在成对比较中更常选择 1.3B InstructGPT，而不是大约大 100 倍的 175B GPT-3，但该结果只代表这套任务和标注规范。
+summaryEn: "OpenAI described InstructGPT's three-stage procedure: supervised demonstrations, a reward model trained on preference rankings, and PPO reinforcement learning. Labelers preferred the 1.3B InstructGPT to the roughly 100-times-larger 175B GPT-3 in pairwise comparisons, within the study's prompts and labeling rules."
 background: 纯粹预测下一个词的模型能续写文本，却不天然理解用户是在提问、要求改写还是拒绝危险内容。增大参数并不能自动解决交互目标不一致。
 backgroundEn: A next-token predictor could continue text but did not inherently know whether a user wanted an answer, a rewrite, or refusal of harmful content. More parameters did not automatically align interaction goals.
 whatHappened: 标注员先写出理想回答用于监督微调，再对多个模型回答排序，训练奖励模型，最后通过 PPO 优化策略。1.3B 参数模型在人类偏好中胜过 175B 的原始 GPT-3。
@@ -35,6 +35,17 @@ beforeAfterEn:
   before: Large models mainly continued text according to patterns in pretraining data.
   after: Post-training deliberately shaped instruction following, refusals, and expressions of uncertainty.
 relatedEvents: [gpt-3, chatgpt-launch, claude]
+visual:
+  src: /assets/events/instructgpt.webp
+  width: 1400
+  height: 1812
+  alt: 《Training language models to follow instructions with human feedback》论文首页
+  altEn: First page of the paper Training language models to follow instructions with human feedback
+  caption: InstructGPT 论文首页，摘要中列出了监督微调、奖励模型与人类反馈强化学习三阶段训练。
+  captionEn: The first page of the InstructGPT paper; its abstract outlines supervised fine-tuning, reward modeling, and reinforcement learning from human feedback.
+  credit: Long Ouyang 等 / arXiv
+  sourceUrl: https://arxiv.org/abs/2203.02155
+  rights: official-editorial
 sources:
   - title: Training language models to follow instructions with human feedback
     url: https://arxiv.org/abs/2203.02155

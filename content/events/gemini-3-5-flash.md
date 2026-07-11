@@ -20,6 +20,18 @@ concepts:
   - coding-agent
   - tool-calling
 summary: Google 发布 Gemini 3.5 Flash 正式版，把持续高强度 Agent 与代码任务定位为 Flash 主力场景，并将其设为 gemini-flash-latest 的默认模型。
+summaryEn: Google made Gemini 3.5 Flash generally available on May 19, 2026 and moved the gemini-flash-latest alias to it. Google positioned the model for sustained agent and coding workloads; those capability descriptions were launch claims, not independent evaluations.
+visual:
+  src: /assets/events/gemini-3-5-flash.png
+  width: 1200
+  height: 630
+  alt: 深色背景上的 Gemini API Release notes 官方卡片
+  altEn: The official Gemini API Release notes card on a dark background
+  caption: Google Gemini API 更新日志的官方发布卡片；Gemini 3.5 Flash 的上线记录发布于该日志。
+  captionEn: Google's official Gemini API release-notes card; the availability of Gemini 3.5 Flash was recorded in that changelog.
+  credit: Google
+  sourceUrl: https://ai.google.dev/gemini-api/docs/changelog
+  rights: official-editorial
 background: Flash 系列最初主要强调速度与成本，但 Agent 和代码任务要求模型在长时间执行中保持推理、工具调用和状态一致性。
 whatHappened: Gemini 3.5 Flash 面向持续前沿表现优化，重点覆盖 Agent 与代码工作。Google 同期继续推进托管 Agent 和计算机操作能力，把模型与执行环境更紧密地结合。
 whyImportant: 它说明“快速档”不再只承担简单任务。高吞吐模型开始成为长期 Agent 的主力，能力分层逐渐从大小模型转向不同工作负载。

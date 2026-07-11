@@ -24,8 +24,8 @@ concepts:
   - prompt
   - token
   - context-window
-summary: OpenAI 以“研究预览”发布 ChatGPT。用户只需打开网页输入自然语言，即可连续追问、改写文本、解释代码或要求模型承认错误。
-summaryEn: OpenAI released ChatGPT as a research preview. In a web browser, users could ask follow-up questions, rewrite text, explain code, or push the model to acknowledge mistakes.
+summary: OpenAI 以免费“研究预览”发布基于 GPT-3.5 的 ChatGPT，把经过人工反馈训练的模型放进保留上下文的网页对话界面。它能连续追问、改写文本和解释代码，也会自信地给出错误答案。
+summaryEn: OpenAI released ChatGPT as a free research preview, placing a GPT-3.5 model trained with human feedback in a browser chat interface that retained conversational context. It supported follow-up questions, rewriting, and code explanation while still producing confident falsehoods.
 background: InstructGPT 已证明人类反馈能改善指令遵循，GPT-3.5 也通过 API 提供能力，但调用 API 仍需要开发经验。网页聊天把模型使用门槛降到接近搜索和即时通信。
 backgroundEn: InstructGPT had shown that human feedback improved instruction following, and GPT-3.5 was available through APIs, but using an API still required development experience. Web chat reduced the barrier to something closer to search or messaging.
 whatHappened: 产品保留同一会话中的上下文，并允许用户对回答点赞或点踩，继续收集偏好数据。模型仍会编造事实、受上下文长度限制，也可能被提示绕过安全规则。

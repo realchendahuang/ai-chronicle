@@ -12,8 +12,8 @@ topics: [consumer-ai, ai-agent, developer-tools]
 companies: [openai]
 products: [gpts, gpt-store]
 concepts: [prompt, tool-calling, rag]
-summary: OpenAI 在首届 DevDay 发布 GPTs，让 ChatGPT 用户通过对话配置专用助手，并上传资料、启用工具或连接自定义 Actions。
-summaryEn: At its first DevDay, OpenAI introduced GPTs, letting ChatGPT users configure specialized assistants through conversation, upload knowledge, enable tools, and connect custom Actions.
+summary: OpenAI 在首届 DevDay 发布 GPTs，让 ChatGPT Plus 和 Enterprise 用户用指令、上传文件、内置工具及自定义 Actions 配置专用助手，无需重新训练模型。原定 11 月上线的 GPT Store 延至 2024 年 1 月开放。
+summaryEn: At its first DevDay, OpenAI introduced GPTs for ChatGPT Plus and Enterprise users, combining instructions, uploaded files, built-in tools, and custom Actions without retraining a model. The GPT Store, initially planned for November, opened in January 2024.
 background: 创建模型应用通常需要 API、前端、检索和托管。大量用户只需要一个围绕特定资料和工作流定制的 ChatGPT，而不是完整软件项目。
 backgroundEn: Building a model application usually required APIs, a frontend, retrieval, and hosting. Many users only needed a ChatGPT tailored to particular documents and workflows rather than a full software project.
 whatHappened: GPT Builder 把名称、指令、文件、能力和 Actions 封装成可分享对象。OpenAI 随后上线 GPT Store，用目录分发公开 GPT。
@@ -36,6 +36,10 @@ relatedEvents: [openai-plugins, assistants-api, chatgpt-launch]
 sources:
   - title: Introducing GPTs
     url: https://openai.com/index/introducing-gpts/
+    publisher: OpenAI
+    type: official
+  - title: Introducing the GPT Store
+    url: https://openai.com/index/introducing-the-gpt-store/
     publisher: OpenAI
     type: official
 status: verified

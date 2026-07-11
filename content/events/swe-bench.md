@@ -12,6 +12,17 @@ topics: [ai-coding, ai-agent]
 concepts: [swe-bench, repository-context, coding-agent]
 summary: 普林斯顿团队发布 SWE-bench，把真实 Python 仓库中的 2,294 个已解决 Issue 转成可执行的软件工程评测任务。
 summaryEn: Princeton researchers introduced SWE-bench, turning 2,294 resolved issues from real Python repositories into executable software-engineering tasks.
+visual:
+  src: /assets/events/swe-bench.png
+  width: 8510
+  height: 2000
+  alt: SWE-bench 流程图，从真实 GitHub issue 和代码库到模型补丁与单元测试
+  altEn: SWE-bench workflow from a real GitHub issue and codebase to a model-generated patch and unit tests
+  caption: SWE-bench 论文主图：模型接收 issue 文本与代码库快照，生成补丁，再由仓库测试判断是否解决问题。
+  captionEn: "The SWE-bench paper's lead figure: a model receives an issue and repository snapshot, generates a patch, and is evaluated with repository tests."
+  credit: Jimenez et al.
+  sourceUrl: https://arxiv.org/abs/2310.06770
+  rights: official-editorial
 background: HumanEval 等基准主要测试从说明生成独立函数，无法覆盖真实开发中的代码库导航、依赖理解、跨文件修改和回归测试。
 backgroundEn: Benchmarks such as HumanEval focused on generating isolated functions and did not cover repository navigation, dependency reasoning, cross-file edits, or regression testing.
 whatHappened: 每个任务提供仓库快照和 Issue 描述，模型需要生成补丁，再由原项目测试验证。首批模型表现很低，说明代码生成能力不能直接等同于软件工程能力。

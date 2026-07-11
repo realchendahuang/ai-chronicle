@@ -11,8 +11,8 @@ eventType: [model, open-source]
 topics: [open-source-models, model-efficiency, large-language-models]
 models: [mistral-7b]
 concepts: [open-weight, attention, llm]
-summary: Mistral AI 以 Apache 2.0 许可证发布 Mistral 7B 权重，使用分组查询注意力和滑动窗口注意力降低推理成本。
-summaryEn: Mistral AI released Mistral 7B weights under Apache 2.0, using grouped-query and sliding-window attention to reduce inference cost.
+summary: Mistral AI 以 Apache 2.0 许可证发布 Mistral 7B 权重。模型采用分组查询注意力和 4096 token 滑动窗口；发布方报告它在多项基准上超过 Llama 2 13B，但这属于厂商基准比较。
+summaryEn: Mistral AI released Mistral 7B weights under Apache 2.0. The model used grouped-query attention and a 4,096-token sliding window; the company reported outperforming Llama 2 13B on several benchmarks, a vendor-run comparison rather than an independent finding.
 background: Llama 2 已扩大开放权重模型生态，但本地部署仍受显存、吞吐和商业许可约束。市场需要更小、许可更宽松的高质量基础模型。
 backgroundEn: Llama 2 had expanded the open-weight ecosystem, but local deployment remained constrained by memory, throughput, and licensing. The market needed smaller capable models under permissive terms.
 whatHappened: 7B 模型在多项公开基准上超过更大的 Llama 2 13B，并允许商业使用。随后发布的 Mixtral 又用稀疏 MoE 提高有效容量。
@@ -32,6 +32,17 @@ beforeAfterEn:
   before: The open-model story was driven mainly by larger Llama releases.
   after: Small-model efficiency, permissive licensing, and MoE became central competitive dimensions.
 relatedEvents: [llama, qwen, deepseek-v3]
+visual:
+  src: /assets/events/mistral.webp
+  width: 1800
+  height: 1074
+  alt: Mistral AI 发布 Mistral 7B 时的黑底像素风模型主视觉
+  altEn: Mistral AI's dark pixel-style launch artwork for Mistral 7B
+  caption: Mistral AI 为 Mistral 7B 发布文章制作的官方缩略图。
+  captionEn: Mistral AI's official thumbnail for the Mistral 7B announcement.
+  credit: Mistral AI
+  sourceUrl: https://mistral.ai/news/announcing-mistral-7b
+  rights: official-editorial
 sources:
   - title: Mistral 7B
     url: https://mistral.ai/news/announcing-mistral-7b

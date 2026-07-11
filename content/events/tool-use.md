@@ -11,8 +11,8 @@ eventType: [api, product]
 topics: [ai-agent, developer-tools]
 companies: [anthropic]
 concepts: [tool-calling, agent]
-summary: Anthropic 宣布 Claude Tool Use 正式可用，开发者可以用 JSON Schema 定义客户端工具，由模型返回结构化调用请求。
-summaryEn: Anthropic made Claude tool use generally available, allowing developers to define client tools with JSON Schema and receive structured calls from the model.
+summary: Anthropic 宣布 Claude Tool Use 正式可用。开发者用 JSON Schema 定义客户端工具，Claude 返回 `tool_use` 内容块和结构化参数；实际执行、权限检查与结果回传仍由客户端负责。
+summaryEn: Anthropic made Claude Tool Use generally available. Developers described client-side tools with JSON Schema, and Claude returned a `tool_use` content block with structured arguments; execution, authorization, and result submission remained the client's responsibility.
 background: 函数调用已经成为大模型接入实时数据和业务系统的基本模式，但各家 API 的并行调用、错误处理和提示约定仍在快速演化。
 backgroundEn: Function calling had become the basic way to connect models with live data and business systems, while parallel calls, error handling, and prompting conventions were still evolving across providers.
 whatHappened: Claude 可以根据工具描述选择一个或多个工具，并把参数交给应用执行。Anthropic 同时提供了面向客服和图像任务的工具使用示例。

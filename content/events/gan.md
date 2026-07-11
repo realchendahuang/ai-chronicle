@@ -12,8 +12,8 @@ topics: [deep-learning, multimodal-ai]
 papers: [generative-adversarial-nets]
 people: [ian-goodfellow]
 concepts: [deep-learning, generative-model]
-summary: Ian Goodfellow 等人提出生成对抗网络，让生成器制造样本、判别器区分真假，两者通过同一个对抗目标训练。
-summaryEn: Ian Goodfellow and colleagues introduced generative adversarial networks, training a generator to create samples and a discriminator to distinguish real from generated data.
+summary: Ian Goodfellow 等人提出生成对抗网络，以同一个 minimax 目标训练生成器与判别器。论文在 MNIST、Toronto Face Database 和 CIFAR-10 上展示结果，并指出两部分训练需要保持同步。
+summaryEn: Ian Goodfellow and colleagues introduced generative adversarial networks, training a generator and discriminator through one minimax objective. Experiments used MNIST, the Toronto Face Database, and CIFAR-10, and the paper noted the need to keep the two learners synchronized.
 background: 生成模型通常需要明确写出概率分布或使用近似推断，训练和采样都可能复杂。研究者需要一种能直接学习数据分布的替代方法。
 backgroundEn: Generative models often required explicit probability distributions or approximate inference, making training and sampling difficult. Researchers wanted a more direct way to learn data distributions.
 whatHappened: 生成器把随机噪声映射成样本，判别器输出样本来自真实数据的概率。训练目标形成二人零和博弈，理想状态下生成分布逼近真实分布。

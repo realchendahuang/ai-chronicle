@@ -24,6 +24,17 @@ concepts:
   - terminal-agent
 summary: Anthropic 随 Claude 3.7 Sonnet 发布 Claude Code 研究预览。这个命令行工具读取仓库、修改文件、运行命令，并在每次高风险操作前请求权限。
 summaryEn: Anthropic released a research preview of Claude Code alongside Claude 3.7 Sonnet. The command-line tool read repositories, edited files, ran commands, and requested permission before higher-risk actions.
+visual:
+  src: /assets/events/claude-code.png
+  width: 1900
+  height: 1000
+  alt: 橙色背景上由手托住人头轮廓，头部内是节点图形
+  altEn: A hand supports a head outline containing a node diagram on an orange background
+  caption: Anthropic 为 Claude 3.7 Sonnet 与 Claude Code 联合发布文章制作的官方主视觉。
+  captionEn: Anthropic's official lead artwork for the joint Claude 3.7 Sonnet and Claude Code announcement.
+  credit: Anthropic
+  sourceUrl: https://www.anthropic.com/news/claude-3-7-sonnet
+  rights: official-editorial
 background: Copilot 和 Cursor 把模型放进编辑器，Devin 把任务放进独立工作区。许多工程师仍把终端、Git 和测试命令当作真实开发流程的中心。
 backgroundEn: Copilot and Cursor placed models inside editors, while Devin put tasks in an independent workspace. Many engineers still treated the terminal, Git, and test commands as the center of real development.
 whatHappened: Claude Code 在本地进程中搜索代码、编辑文件和执行测试，可使用 CLAUDE.md 保存项目指令，并连接 GitHub 与 MCP 工具。它并非天然“自主”，能力取决于权限、上下文、测试和用户监督。

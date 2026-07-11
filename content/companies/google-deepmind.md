@@ -1,6 +1,10 @@
 ---
 id: google-deepmind
 name: Google DeepMind
+logo: /assets/companies/google-deepmind.svg
+logoSource: https://storage.googleapis.com/gdm-deepmind-com-prod-public/icons/google_deepmind_48dp.svg
+logoAlt: Google DeepMind 标志
+logoAltEn: Google DeepMind logo
 founded: 2010
 type: ai-lab
 region: global

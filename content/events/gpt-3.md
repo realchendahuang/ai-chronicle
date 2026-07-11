@@ -21,8 +21,8 @@ concepts:
   - few-shot-learning
   - scaling-law
   - autoregressive
-summary: OpenAI 训练 1750 亿参数 GPT-3，模型只看任务说明或少量示例，就能在不更新权重的情况下处理翻译、问答、文本生成和简单代码。
-summaryEn: OpenAI trained the 175-billion-parameter GPT-3, which handled translation, question answering, text generation, and simple code from instructions or a few examples without updating its weights.
+summary: OpenAI 训练 1750 亿参数 GPT-3，并以零样本、单样本和少样本提示评估它。模型无需更新权重即可尝试翻译、问答、文本生成和简单代码，但不同任务的结果差异很大。
+summaryEn: OpenAI trained the 175-billion-parameter GPT-3 and evaluated it with zero-, one-, and few-shot prompts. It attempted translation, question answering, text generation, and simple code without weight updates, with sharply uneven results across tasks.
 background: GPT-2 已展示零样本迁移，缩放规律也预示损失会随模型、数据和计算量平滑下降。尚不清楚这种下降能否转化成跨任务的实用行为。
 backgroundEn: GPT-2 had shown zero-shot transfer, and scaling laws predicted smoother loss with more models, data, and compute. It remained unclear whether that improvement would produce useful behavior across tasks.
 whatHappened: 论文比较零样本、单样本和少样本设置。GPT-3 在许多任务上明显改善，但在算术、常识和数据偏差上仍有系统性错误。OpenAI 选择通过 API 提供模型，而不是发布权重。
@@ -44,6 +44,17 @@ relatedEvents:
   - instructgpt
   - chatgpt-launch
   - gpt-4-release
+visual:
+  src: /assets/events/gpt-3.webp
+  width: 1400
+  height: 1812
+  alt: 《Language Models are Few-Shot Learners》论文首页
+  altEn: First page of the paper Language Models are Few-Shot Learners
+  caption: GPT-3 论文首页，作者名单跨越 OpenAI 当时的大模型研究团队。
+  captionEn: The first page of the GPT-3 paper, listing OpenAI's large language model research team.
+  credit: Tom B. Brown 等 / arXiv
+  sourceUrl: https://arxiv.org/abs/2005.14165
+  rights: official-editorial
 sources:
   - title: Language Models are Few-Shot Learners
     url: https://arxiv.org/abs/2005.14165

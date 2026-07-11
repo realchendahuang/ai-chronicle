@@ -12,8 +12,8 @@ topics: [large-language-models, natural-language-processing, ai-safety]
 companies: [openai]
 models: [gpt-2]
 concepts: [transformer, autoregressive, few-shot-learning]
-summary: OpenAI 发布 15 亿参数 GPT-2 的研究结果，展示模型无需任务微调即可完成基础问答、摘要和翻译。
-summaryEn: OpenAI presented the 1.5-billion-parameter GPT-2, showing basic question answering, summarization, and translation without task-specific fine-tuning.
+summary: OpenAI 公布在约 800 万个网页文档上训练的 15 亿参数 GPT-2，并演示模型在不做任务微调时完成基础问答、摘要和翻译。公司起初只发布较小版本，随后于 2019 年 11 月放出完整模型。
+summaryEn: OpenAI presented the 1.5-billion-parameter GPT-2, trained on roughly eight million web documents, and demonstrated basic question answering, summarization, and translation without task-specific fine-tuning. It initially withheld the full model, then released it in November 2019.
 background: GPT-1 已证明预训练后微调有效，但每项任务仍需要标签和额外训练。研究者开始检验单纯扩大通用语言建模能否产生任务能力。
 backgroundEn: GPT-1 showed that pretraining followed by fine-tuning worked, but each task still needed labels and additional training. Researchers began testing whether larger general language models could acquire task behavior directly.
 whatHappened: GPT-2 在约 800 万网页组成的 WebText 上训练。OpenAI 先只发布小模型，以生成滥用风险为由分阶段开放，九个月后发布完整权重。
@@ -33,6 +33,17 @@ beforeAfterEn:
   before: Pretrained models usually needed fine-tuning for downstream tasks.
   after: Triggering task behavior through natural-language context began to look viable.
 relatedEvents: [gpt-1, gpt-3]
+visual:
+  src: /assets/events/gpt-2.webp
+  width: 1400
+  height: 1812
+  alt: 《Language Models are Unsupervised Multitask Learners》技术报告首页
+  altEn: First page of the technical report Language Models are Unsupervised Multitask Learners
+  caption: GPT-2 技术报告首页，摘要概述了大规模语言模型在零样本设置下迁移任务的实验。
+  captionEn: The first page of the GPT-2 technical report, whose abstract outlines zero-shot task transfer with a large language model.
+  credit: Alec Radford 等 / OpenAI
+  sourceUrl: https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf
+  rights: official-editorial
 sources:
   - title: Better Language Models and Their Implications
     url: https://openai.com/index/better-language-models/

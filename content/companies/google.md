@@ -1,6 +1,10 @@
 ---
 id: google
 name: Google
+logo: /assets/companies/google.svg
+logoSource: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/google.svg
+logoAlt: Google 标志
+logoAltEn: Google logo
 founded: 1998
 type: technology-company
 region: us

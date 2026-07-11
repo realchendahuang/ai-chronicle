@@ -94,6 +94,9 @@
 
     const dictionary = normalized === 'en' ? await loadTranslations() : (translations || {})
     translateTree(document.body, dictionary, normalized)
+    document.querySelectorAll('[data-localized-alt]').forEach((image) => {
+      image.alt = normalized === 'en' ? image.dataset.altEn : image.dataset.altZh
+    })
     document.title = normalized === 'en' && dictionary[originalTitle]
       ? dictionary[originalTitle]
       : originalTitle

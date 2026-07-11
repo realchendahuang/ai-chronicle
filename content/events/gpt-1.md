@@ -12,8 +12,8 @@ topics: [large-language-models, natural-language-processing]
 companies: [openai]
 models: [gpt-1]
 concepts: [transformer, pretraining, fine-tuning, autoregressive]
-summary: OpenAI 用 1.17 亿参数的 Transformer 解码器先做无监督语言模型训练，再对多种有监督任务微调。
-summaryEn: OpenAI trained a 117-million-parameter Transformer decoder as an unsupervised language model, then fine-tuned it across supervised tasks.
+summary: OpenAI 在 BooksCorpus 上预训练 1.17 亿参数、12 层的 Transformer 解码器，再分别微调到 12 个有监督任务；论文报告其中 9 项刷新当时最佳结果。
+summaryEn: OpenAI pretrained a 12-layer, 117-million-parameter Transformer decoder on BooksCorpus, then fine-tuned it on 12 supervised tasks; the paper reported state-of-the-art results on nine.
 background: NLP 模型通常为每个任务单独设计结构，并依赖大量标注数据。词向量能迁移词级知识，却不足以表示整句和长程上下文。
 backgroundEn: NLP models were usually designed for individual tasks and depended on large labeled datasets. Word embeddings transferred lexical knowledge but not full-sentence or long-range context.
 whatHappened: 模型在 BooksCorpus 上预测下一个词，再用同一主体适配文本蕴含、问答、语义相似度和分类任务。任务格式被转换成模型可读取的序列。
@@ -33,6 +33,17 @@ beforeAfterEn:
   before: Each NLP task usually required a dedicated architecture and many labels.
   after: One pretrained Transformer could transfer across tasks.
 relatedEvents: [transformer, bert, gpt-2]
+visual:
+  src: /assets/events/gpt-1.webp
+  width: 1400
+  height: 1812
+  alt: 《Improving Language Understanding by Generative Pre-Training》论文首页
+  altEn: First page of the paper Improving Language Understanding by Generative Pre-Training
+  caption: OpenAI 2018 年生成式预训练论文的首页，后来常被称为 GPT-1 论文。
+  captionEn: The first page of OpenAI's 2018 generative pretraining paper, later commonly called the GPT-1 paper.
+  credit: Alec Radford、Karthik Narasimhan、Tim Salimans、Ilya Sutskever / OpenAI
+  sourceUrl: https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf
+  rights: official-editorial
 sources:
   - title: Improving Language Understanding by Generative Pre-Training
     url: https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf

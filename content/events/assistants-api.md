@@ -12,8 +12,8 @@ topics: [ai-agent, developer-tools]
 companies: [openai]
 products: [assistants-api]
 concepts: [agent, tool-calling, rag]
-summary: OpenAI 在 DevDay 发布 Assistants API，为开发者托管对话线程、文件检索、代码解释器和函数调用。
-summaryEn: At DevDay, OpenAI launched the Assistants API with hosted conversation threads, file retrieval, Code Interpreter, and function calling.
+summary: OpenAI 在 DevDay 以测试版发布 Assistants API，定义 Assistant、Thread、Message 与 Run 等托管对象，并接入文件检索、Code Interpreter 和函数调用。它把会话状态交给平台管理，也引入了由平台规定的运行状态机。
+summaryEn: At DevDay, OpenAI launched the Assistants API in beta, defining hosted Assistant, Thread, Message, and Run objects with retrieval, Code Interpreter, and function calling. It moved conversation state onto the platform while introducing a provider-defined run state machine.
 background: 开发者需要自己保存对话、截断上下文、上传文件、运行工具并把结果拼回提示。大量应用重复实现相同的 Agent 基础设施。
 backgroundEn: Developers had to store conversations, trim context, upload files, run tools, and return results to prompts. Many applications rebuilt the same agent infrastructure.
 whatHappened: API 引入 Assistant、Thread、Message 和 Run 等对象，由平台管理执行状态与工具调用。它随后在 Responses API 和 Agents SDK 出现后进入弃用迁移路线。

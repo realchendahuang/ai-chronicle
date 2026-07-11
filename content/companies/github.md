@@ -1,6 +1,10 @@
 ---
 id: github
 name: GitHub
+logo: /assets/companies/github.svg
+logoSource: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/github.svg
+logoAlt: GitHub 标志
+logoAltEn: GitHub logo
 founded: 2008
 type: developer-platform
 region: us

@@ -21,4 +21,4 @@ This is the familiar predicament of every platform that makes production easier.
 
 GPTs gave non-developers a legitimate new medium, even where the result was small. A reusable context container can be useful without becoming a company or a mass-market product. The mistake would be to confuse the pleasure of quick formation with finished value.
 
-The launch made an idea feel close to software: a few paragraphs and documents could acquire a name, a boundary, and a share link. It also exposed the long distance between having a shape and becoming a work that survives its first click.
+The launch demonstrated configuration, not maintenance. Uploaded knowledge could age, Actions could change, and model updates could alter instruction behavior. The GPT Store planned for November slipped to January 2024, so distribution and governance did not arrive with the DevDay demo.

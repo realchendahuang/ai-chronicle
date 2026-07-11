@@ -25,6 +25,17 @@ people:
 summary: Frank Rosenblatt 提出感知机学习规则，并在 Cornell Aeronautical Laboratory 制作 Mark I 硬件，用样本训练二元图像分类。
 summaryEn: Frank Rosenblatt introduced the perceptron learning rule and built the Mark I hardware at Cornell Aeronautical Laboratory to learn binary image classifications from examples.
 background: 达特茅斯会议之后，研究者开始探索如何让机器从经验中学习。罗森布拉特受到生物神经元的启发，设计了一个简单的数学模型。
+visual:
+  src: /assets/events/perceptron.webp
+  width: 350
+  height: 455
+  alt: 感知机发明者 Frank Rosenblatt 的黑白肖像
+  altEn: Black-and-white portrait of perceptron inventor Frank Rosenblatt
+  caption: Frank Rosenblatt。1957 年，他提出了能够根据样本误差调整权重的感知机。
+  captionEn: Frank Rosenblatt, who introduced the error-driven perceptron learning rule in 1957.
+  credit: Cornell University faculty photograph, CC BY-SA 4.0, via Wikimedia Commons
+  sourceUrl: https://commons.wikimedia.org/wiki/File:Frank_Rosenblatt.jpg
+  rights: cc
 whatHappened: 输入经过可调权重求和，再由阈值函数给出类别。预测错误时，学习规则按样本方向修改权重；对线性可分数据，这个过程可以证明收敛。它无法表示 XOR 等非线性边界。
 whatHappenedEn: Inputs were multiplied by adjustable weights and passed through a threshold. On an error, the learning rule updated weights toward the example; convergence could be proved for linearly separable data. It could not represent nonlinear boundaries such as XOR.
 whyImportant: 感知机把“学习”落实为根据误差更新参数的算法，并提供了可运行硬件。它的严格边界同样重要，后来多层网络与反向传播正是为跨过这些边界发展起来。

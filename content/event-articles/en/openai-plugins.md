@@ -23,4 +23,4 @@ The plugin catalog did not become the permanent universal interface. Function ca
 
 Plugins correctly anticipated that a chat window could become an entrance to search, computation, and external transactions. They treated the difficult part as arranging tools in a catalog. Experience suggested otherwise. The harder problem was preserving a correspondence among a person's intention, a model's interpretation, a software service's permissions, and the action finally taken.
 
-The directory is gone as the central metaphor. The questions it exposed now sit inside nearly every agent architecture.
+The directory ceased to be the central interface. Tool selection, argument validation, user authorization, and untrusted external responses remained concrete integration problems in later agent systems.

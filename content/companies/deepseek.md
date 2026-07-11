@@ -1,6 +1,10 @@
 ---
 id: deepseek
 name: DeepSeek（深度求索）
+logo: /assets/companies/deepseek.svg
+logoSource: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/deepseek.svg
+logoAlt: DeepSeek 标志
+logoAltEn: DeepSeek logo
 founded: 2023
 type: ai-lab
 region: cn

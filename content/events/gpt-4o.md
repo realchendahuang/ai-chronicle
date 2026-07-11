@@ -20,6 +20,7 @@ concepts:
   - llm
   - multimodal
 summary: OpenAI 发布 GPT-4o，以同一神经网络处理文本、视觉与音频，让实时语音和视觉交互第一次成为通用模型的原生能力。
+summaryEn: OpenAI released GPT-4o, a single model trained across text, vision, and audio. At launch, its text and image capabilities shipped in ChatGPT and the API, while the low-latency audio experience remained a staged preview.
 background: GPT-4 时代的多模态体验往往由多个模型串联完成，语音交互需要分别经过转写、语言模型和语音合成，延迟和信息损失都很明显。
 whatHappened: GPT-4o 的“o”代表 omni。模型原生接收并生成文本、音频和图像信息，语音响应速度接近人类对话，并显著降低多模态推理成本。
 whyImportant: 它把多模态从产品外围的组合能力推进成模型底层能力，改变了语音助手、实时翻译、视觉问答和人机交互的设计空间。

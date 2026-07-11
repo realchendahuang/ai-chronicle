@@ -26,6 +26,17 @@ papers: []
 summary: 1956 年夏天，研究者在达特茅斯学院讨论学习、语言、抽象和自我改进机器。项目提案首次用“Artificial Intelligence”命名这组问题。
 summaryEn: In the summer of 1956, researchers at Dartmouth discussed learning, language, abstraction, and self-improving machines. The proposal named this cluster of problems “Artificial Intelligence.”
 background: 在此之前，图灵已经提出了"机器能思考吗"的问题，麦卡洛克和皮茨提出了人工神经元模型，但 AI 还不是一个有名称、有组织的学科。
+visual:
+  src: /assets/events/dartmouth-workshop.webp
+  width: 1600
+  height: 769
+  alt: 达特茅斯学院的 Dartmouth Hall 正面
+  altEn: Front elevation of Dartmouth Hall at Dartmouth College
+  caption: 达特茅斯学院校园。1956 年的夏季研究项目在这里把“人工智能”确立为共同的研究名称。
+  captionEn: Dartmouth College, where the 1956 summer research project established “artificial intelligence” as a shared name for a field.
+  credit: Kenneth C. Zirkel, CC BY 4.0, via Wikimedia Commons
+  sourceUrl: https://commons.wikimedia.org/wiki/File:Dartmouth_Hall_at_Dartmouth_College.jpg
+  rights: cc
 whatHappened: McCarthy、Minsky、Rochester 与 Shannon 在 1955 年提案中预计，十名研究者用一个夏天即可推进机器学习和智能模拟。实际参与者分批到访，并非所有人连续开会两个月，项目也没有立刻产生统一理论。
 whatHappenedEn: McCarthy, Minsky, Rochester, and Shannon proposed in 1955 that ten researchers working for one summer could advance machine learning and simulations of intelligence. Participants visited at different times rather than attending one continuous two-month meeting, and no unified theory emerged.
 whyImportant: 它把此前分散在控制论、计算、心理学和神经模型中的问题聚合成一个名称和社群。这个名称随后影响院系、资金、会议以及公众对整片研究领域的理解。

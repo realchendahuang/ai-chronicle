@@ -15,6 +15,17 @@ summary: NVIDIA 发布 CUDA，让开发者用 C 风格工具直接编写在 GPU 
 summaryEn: NVIDIA introduced CUDA, allowing developers to write general parallel programs for GPUs with C-like tools.
 background: GPU 已拥有大量并行计算单元，但通用计算需要把问题改写成图形着色流程，开发门槛高，生态也不稳定。
 backgroundEn: GPUs already contained large numbers of parallel units, but general computation had to be expressed through graphics pipelines, making development difficult and the ecosystem fragile.
+visual:
+  src: /assets/events/cuda.webp
+  width: 600
+  height: 580
+  alt: CUDA 中 CPU、主内存与 GPU 内存之间的数据处理流程图
+  altEn: Diagram of data flow between CPU, main memory, and GPU memory in CUDA
+  caption: 'CUDA 的基本处理流程：数据传入 GPU 内存，由并行核心执行计算，再把结果送回主内存。'
+  captionEn: 'CUDA’s basic processing flow: data moves to GPU memory, parallel cores execute the work, and results return to main memory.'
+  credit: Tosaka, CC BY 3.0, via Wikimedia Commons
+  sourceUrl: https://commons.wikimedia.org/wiki/File:CUDA_processing_flow_(En).PNG
+  rights: cc
 whatHappened: CUDA 提供编程模型、编译器、运行时和数学库，让线程、内存层次与 GPU 内核成为普通软件工程对象。随后 cuDNN 等库进一步封装了神经网络运算。
 whatHappenedEn: CUDA supplied a programming model, compiler, runtime, and math libraries, making threads, memory hierarchies, and GPU kernels ordinary software-engineering concerns. Libraries such as cuDNN later packaged neural-network operations.
 whyImportant: 深度学习需要重复执行大规模矩阵运算。CUDA 让研究者不必自己发明一套硬件和工具链，就能持续利用商品 GPU 的性能增长。

@@ -12,8 +12,8 @@ topics: [ai-agent, consumer-ai, developer-tools]
 companies: [openai]
 products: [chatgpt-plugins]
 concepts: [tool-calling, agent]
-summary: OpenAI 开放 ChatGPT 插件测试，让第三方用清单文件和 OpenAPI 描述向 ChatGPT 提供网络搜索、代码执行和业务 API。
-summaryEn: OpenAI introduced ChatGPT plugins, allowing third parties to expose web search, code execution, and business APIs through a manifest and OpenAPI description.
+summary: OpenAI 向候补名单用户开放 ChatGPT 插件测试。第三方以域名下的清单文件和 OpenAPI 规范描述接口，模型可据此选择调用；最初的浏览器和代码解释器插件由 OpenAI 自己提供。
+summaryEn: OpenAI opened ChatGPT plugins to users from a waitlist. Third parties described endpoints through a domain-hosted manifest and an OpenAPI specification for the model to select, while OpenAI supplied the initial browsing and code-interpreter plugins.
 background: ChatGPT 的知识受训练截止日期限制，也不能可靠执行计算或访问用户授权的外部系统。开发者各自搭建集成，缺少统一发现和权限界面。
 backgroundEn: ChatGPT was limited by a knowledge cutoff and could not reliably calculate or access user-authorized systems. Developers built custom integrations without a shared discovery or permission interface.
 whatHappened: 首批插件包括浏览器、代码解释器和 Expedia、Wolfram 等第三方服务。模型选择工具并组装调用，用户在 ChatGPT 内启用插件。

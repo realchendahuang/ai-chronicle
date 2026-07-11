@@ -23,6 +23,18 @@ concepts:
   - tool-calling
   - context-window
 summary: OpenAI 发布 GPT-5.6，以 Sol、Terra、Luna 三档覆盖旗舰能力、成本平衡与高吞吐，并加入程序化工具调用、多 Agent 编排、显式缓存和持久推理。
+summaryEn: OpenAI released the GPT-5.6 Sol, Terra, and Luna tiers on July 9, 2026. The API added programmatic tool calling, explicit prompt caching, and persistent reasoning, while multi-agent orchestration launched in beta rather than as a generally available capability.
+visual:
+  src: /assets/events/gpt-5-6.png
+  width: 1200
+  height: 630
+  alt: 粉橙渐变背景上的 OpenAI Developers Model guidance 卡片
+  altEn: An OpenAI Developers Model guidance card on a pink-orange gradient
+  caption: OpenAI 开发者文档“Model guidance”页面的官方分享卡片；GPT-5.6 的使用说明发布于该页面。
+  captionEn: The official social card for OpenAI's Model guidance documentation, where usage guidance for GPT-5.6 was published.
+  credit: OpenAI
+  sourceUrl: https://developers.openai.com/api/docs/guides/latest-model
+  rights: official-editorial
 background: GPT-5.4 与 5.5 已把百万上下文、计算机操作、托管 Shell、Skills 和 MCP 纳入模型工作流，但复杂任务仍需要更高效的工具编排和跨轮推理复用。
 whatHappened: GPT-5.6 允许模型在托管运行时中编写 JavaScript 调用合资格工具，并提供多 Agent beta、显式提示缓存、持久推理、max 推理强度和 Pro 模式。三档模型分别面向能力、成本和吞吐。
 whyImportant: 它继续把旗舰模型从“生成回答”推进为“组织计算、工具和子任务”的执行系统，也让上下文与推理复用成为生产工作流的一等能力。

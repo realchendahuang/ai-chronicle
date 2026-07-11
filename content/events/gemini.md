@@ -12,8 +12,8 @@ topics: [large-language-models, multimodal-ai, consumer-ai]
 companies: [google, google-deepmind]
 models: [gemini-ultra, gemini-pro, gemini-nano]
 concepts: [multimodal, llm]
-summary: Google DeepMind 发布 Gemini 1.0，以 Ultra、Pro、Nano 三个规模覆盖数据中心、通用产品和端侧设备。
-summaryEn: Google DeepMind launched Gemini 1.0 in Ultra, Pro, and Nano sizes for data centers, general products, and on-device use.
+summary: Google DeepMind 发布 Gemini 1.0，以 Ultra、Pro、Nano 三个规模覆盖数据中心、通用产品和端侧设备。发布当日 Bard 接入 Pro，Nano 登上 Pixel 8 Pro；Ultra 则等到 2024 年才面向用户开放。
+summaryEn: Google DeepMind launched Gemini 1.0 in Ultra, Pro, and Nano sizes for data centers, general products, and on-device use. Bard received Pro and Pixel 8 Pro received Nano at launch, while Ultra did not reach users until 2024.
 background: Google 已拥有 PaLM、Bard 和多项视觉、语音研究，但模型与产品品牌分散。GPT-4 的多模态能力迫使 Google 统一前沿模型路线。
 backgroundEn: Google had PaLM, Bard, and extensive vision and speech research, but its models and product brands were fragmented. GPT-4’s multimodal capabilities increased pressure to unify the frontier roadmap.
 whatHappened: Gemini 从训练开始处理多模态数据，而非只在语言模型外接视觉模块。Pro 进入 Bard，Nano 进入 Pixel，Ultra 面向高难度任务随后上线。
@@ -35,6 +35,17 @@ beforeAfterEn:
   before: Google’s conversational models, multimodal research, and product brands were fragmented.
   after: Gemini became a unified model brand spanning devices, cloud, and consumer products.
 relatedEvents: [gpt-4-release, gpt-4o, gemini-3-5-flash]
+visual:
+  src: /assets/events/gemini.webp
+  width: 1300
+  height: 731
+  alt: 黑色背景中央为 Gemini 字样，下方蓝白光线交汇
+  altEn: The Gemini name centered on a black background above converging blue and white light trails
+  caption: Google 在 Gemini 1.0 发布文章中展示的官方主视觉。
+  captionEn: Google's official lead image for the Gemini 1.0 launch article.
+  credit: Google
+  sourceUrl: https://blog.google/technology/ai/google-gemini-ai/
+  rights: official-editorial
 sources:
   - title: Introducing Gemini — our largest and most capable AI model
     url: https://blog.google/technology/ai/google-gemini-ai/

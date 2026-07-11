@@ -20,6 +20,18 @@ concepts:
   - llm
   - coding-agent
 summary: Anthropic 发布 Claude 3.5 Sonnet，以更低的价格和更快的速度达到接近或超过上一代旗舰的代码、视觉和推理表现。
+summaryEn: Anthropic released Claude 3.5 Sonnet at $3 per million input tokens and $15 per million output tokens, the same API price tier as Claude 3 Sonnet. The launch also introduced Artifacts as a preview feature in Claude.ai.
+visual:
+  src: /assets/events/claude-3-5-sonnet.webp
+  width: 2400
+  height: 1200
+  alt: 橙色背景上的白色人头轮廓，头部中央是 Anthropic 星形标记
+  altEn: A white head silhouette with Anthropic's starburst mark on an orange background
+  caption: Anthropic 为 Claude 3.5 Sonnet 发布文章制作的官方主视觉。
+  captionEn: Anthropic's official lead artwork for the Claude 3.5 Sonnet announcement.
+  credit: Anthropic
+  sourceUrl: https://www.anthropic.com/news/claude-3-5-sonnet
+  rights: official-editorial
 background: 大模型产品早期常把最高能力集中在最昂贵的旗舰档，但真实生产工作更需要速度、价格和智能的平衡。
 whatHappened: Claude 3.5 Sonnet 在代码生成、视觉推理和复杂指令执行上显著提升，同时推出 Artifacts，让模型输出可以在独立工作区中查看和继续编辑。
 whyImportant: 它证明“主力模型”不必等同于最大模型。Sonnet 逐渐成为开发者和 Agent 工作流的默认平衡档，也推动厂商重新设计模型分层。

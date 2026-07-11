@@ -16,6 +16,17 @@ summary: Demis Hassabis、Shane Legg 与 Mustafa Suleyman 在伦敦创立 DeepMi
 summaryEn: Demis Hassabis, Shane Legg, and Mustafa Suleyman founded DeepMind in London to build general learning systems and apply them to real problems.
 background: 深度学习重新升温，但研究大多按视觉、语音、控制等任务分散推进。强化学习也缺少能在复杂环境中稳定扩展的表示方法。
 backgroundEn: Deep learning was regaining momentum, but research remained divided across vision, speech, control, and other tasks. Reinforcement learning also lacked representations that scaled reliably to complex environments.
+visual:
+  src: /assets/events/deepmind.webp
+  width: 1200
+  height: 1600
+  alt: 伦敦国王十字 Google DeepMind 总部入口
+  altEn: Entrance to Google DeepMind headquarters at King's Cross in London
+  caption: 伦敦国王十字的 Google DeepMind 总部。DeepMind 于 2010 年在伦敦创立，2014 年被 Google 收购。
+  captionEn: Google DeepMind’s headquarters at King’s Cross, London. DeepMind was founded in the city in 2010 and acquired by Google in 2014.
+  credit: Gciriani, CC BY-SA 4.0, via Wikimedia Commons
+  sourceUrl: https://commons.wikimedia.org/wiki/File:Google-Deep_Mind_headquarters_in_London,_6_Pancras_Square.jpg
+  rights: cc
 whatHappened: DeepMind 组建跨神经科学、机器学习和工程的团队，先用 Atari 游戏验证从像素到动作的深度强化学习，之后推进 AlphaGo、AlphaZero 与 AlphaFold。
 whatHappenedEn: DeepMind assembled researchers from neuroscience, machine learning, and engineering, first demonstrating deep reinforcement learning from pixels in Atari games and later building AlphaGo, AlphaZero, and AlphaFold.
 whyImportant: 它形成了一条连续可见的研究路线，从通用学习算法走到科学应用，也改变了大型科技公司组织前沿 AI 研究的方式。

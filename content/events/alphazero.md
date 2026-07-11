@@ -11,8 +11,8 @@ eventType: [paper, milestone]
 topics: [reinforcement-learning, game-ai]
 companies: [google-deepmind]
 concepts: [deep-reinforcement-learning, monte-carlo-tree-search]
-summary: DeepMind 发布 AlphaZero，只给系统游戏规则，再通过自我对弈学习国际象棋、将棋和围棋。
-summaryEn: DeepMind introduced AlphaZero, which learned chess, shogi, and Go from game rules and self-play alone.
+summary: DeepMind 发布 AlphaZero，用同一套自我对弈、策略—价值网络和蒙特卡洛树搜索方法分别学习国际象棋、将棋与围棋。三个网络各自从随机参数训练，并不共享已经学到的棋艺。
+summaryEn: DeepMind introduced AlphaZero, applying the same combination of self-play, a policy-and-value network, and Monte Carlo tree search separately to chess, shogi, and Go. Each game used its own training run from random parameters rather than one shared trained network.
 background: AlphaGo 结合人类棋谱监督学习、自我对弈和人工设计的搜索流程，证明深度强化学习能处理围棋，但系统仍针对单一游戏精心搭建。
 backgroundEn: AlphaGo combined supervised learning from human games, self-play, and a carefully designed search pipeline. It solved Go but remained tailored to one game.
 whatHappened: AlphaZero 使用一套通用网络预测走子概率和局面价值，再用蒙特卡洛树搜索产生更强的训练目标。每种游戏从随机对弈开始，不输入人类策略。

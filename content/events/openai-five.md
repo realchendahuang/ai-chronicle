@@ -12,8 +12,8 @@ topics: [reinforcement-learning, game-ai, ai-infrastructure]
 companies: [openai]
 products: [openai-five]
 concepts: [reinforcement-learning, self-play]
-summary: OpenAI Five 在公开比赛中以 2 比 0 击败 Dota 2 冠军战队 OG，完成五个智能体的实时协作与对抗。
-summaryEn: OpenAI Five defeated Dota 2 world champion team OG by 2–0, coordinating five agents in a real-time competitive game.
+summary: OpenAI Five 在一场三局两胜的公开赛中连胜两局，击败 2018 年 Dota 2 世界冠军 OG。比赛使用 17 名可选英雄及若干规则限制，五个智能体各自控制一名角色并实时协作。
+summaryEn: OpenAI Five won the first two games of a best-of-three exhibition against OG, the 2018 Dota 2 world champion. The match used a 17-hero pool and other restrictions, with five agents each controlling one character in real time.
 background: 围棋等棋类回合明确、动作离散。Dota 2 同时包含实时控制、部分可观测、长时间规划、海量动作和团队协作。
 backgroundEn: Board games have clear turns and discrete actions. Dota 2 adds real-time control, partial observability, long horizons, huge action spaces, and team coordination.
 whatHappened: 系统使用大规模分布式强化学习和自我博弈，每天积累相当于约 180 年的对局经验。比赛版本仍限制了英雄、物品和部分游戏规则。

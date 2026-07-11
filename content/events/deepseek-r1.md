@@ -22,6 +22,18 @@ concepts:
   - distillation
   - open-weight
 summary: DeepSeek 发布开放推理模型 DeepSeek-R1，以强化学习驱动的推理能力和开放权重迅速引发全球关注。
+summaryEn: DeepSeek released the open-weight reasoning models DeepSeek-R1 and R1-Zero, along with six distilled variants. The paper attributed R1-Zero's emerging reasoning behavior to large-scale reinforcement learning, while the production R1 model added cold-start data and supervised stages.
+visual:
+  src: /assets/events/deepseek-r1.png
+  width: 2105
+  height: 1488
+  alt: DeepSeek-R1 论文中 PPO 与 GRPO 强化学习流程的对比图
+  altEn: Comparison of PPO and GRPO reinforcement-learning workflows from the DeepSeek-R1 paper
+  caption: DeepSeek-R1 论文对 PPO 与 GRPO 的流程对比；GRPO 不使用价值模型，而是从同组输出的奖励估计优势。
+  captionEn: The DeepSeek-R1 paper compares PPO with GRPO, which omits a value model and estimates advantages from rewards within a group of outputs.
+  credit: DeepSeek-AI
+  sourceUrl: https://arxiv.org/abs/2501.12948
+  rights: official-editorial
 whatHappened: DeepSeek-R1 在推理任务上展示了长链条思考能力，并同步开放模型权重与技术报告。项目还提供了多个蒸馏版本，让更小规模的模型能够继承部分推理能力。
 whyImportant: R1 把“前沿推理能力能否开放、能否低成本复现”从假设变成现实问题。它推动行业重新评估闭源模型的价格、开放模型的能力边界，以及强化学习在推理训练中的作用。
 impact:

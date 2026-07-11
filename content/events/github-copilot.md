@@ -22,8 +22,8 @@ concepts:
   - code-generation
   - ai-pair-programmer
   - ide-agent
-summary: GitHub 发布 Copilot 技术预览，把 OpenAI Codex 生成的单行或整段代码建议放进 Visual Studio Code。
-summaryEn: GitHub launched a technical preview of Copilot, placing single-line and whole-function suggestions from OpenAI Codex inside Visual Studio Code.
+summary: GitHub 发布 Copilot 技术预览，把 OpenAI Codex 生成的单行或整段函数建议直接放进 Visual Studio Code。开发者需主动接受建议，GitHub 同时明确提示生成代码可能错误或复现训练数据中的模式。
+summaryEn: GitHub launched Copilot as a technical preview, placing OpenAI Codex suggestions—from individual lines to whole functions—inside Visual Studio Code. Developers had to accept each suggestion, and GitHub warned that generated code could be wrong or reproduce patterns from training data.
 background: 传统补全依赖语言服务器、符号和局部模式，能列出 API 或变量，却很难根据注释与周围代码生成完整实现。
 backgroundEn: Traditional completion relied on language servers, symbols, and local patterns. It could list APIs or variables but rarely generated a full implementation from comments and surrounding code.
 whatHappened: 插件把当前文件和相关上下文发送给模型，生成可接受、拒绝或继续编辑的建议。它可以根据函数名、注释和已有代码完成测试、样板与常见算法，但输出仍需开发者审查。
@@ -42,6 +42,17 @@ relatedEvents:
   - cursor
   - claude-code
   - codex-agent
+visual:
+  src: /assets/events/github-copilot.webp
+  width: 1200
+  height: 630
+  alt: GitHub Copilot 技术预览卡片，左侧写有 Your AI pair programmer，右侧展示代码补全界面
+  altEn: GitHub Copilot technical-preview card with Your AI pair programmer at left and a code-completion interface at right
+  caption: GitHub 为 Copilot 公开技术预览制作的发布主视觉。
+  captionEn: GitHub's launch artwork for the Copilot technical preview.
+  credit: GitHub
+  sourceUrl: https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/
+  rights: official-editorial
 sources:
   - title: Introducing GitHub Copilot — your AI pair programmer
     url: https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/

@@ -10,8 +10,8 @@ importance: A
 eventType: [research, product]
 topics: [ai-foundations, enterprise-ai]
 concepts: [symbolic-ai]
-summary: 斯坦福团队开始开发 DENDRAL，用化学知识和启发式规则从质谱数据推断分子结构。
-summaryEn: A Stanford team began developing DENDRAL, using chemical knowledge and heuristic rules to infer molecular structures from mass-spectrometry data.
+summary: Joshua Lederberg、Edward Feigenbaum、Carl Djerassi 与 Bruce Buchanan 等人在斯坦福开发 DENDRAL，用化学约束和启发式规则生成、筛除质谱数据对应的候选分子结构。系统在限定化合物类别中辅助专家分析，不能覆盖全部化学空间。
+summaryEn: At Stanford, Joshua Lederberg, Edward Feigenbaum, Carl Djerassi, Bruce Buchanan, and collaborators developed DENDRAL to generate and prune candidate molecular structures with chemical constraints and mass-spectrometry evidence. It assisted experts within selected compound classes rather than covering all of chemistry.
 background: 通用问题求解器在真实专业领域中容易遇到组合爆炸。缺少领域知识时，程序需要搜索太多可能答案。
 backgroundEn: General problem solvers ran into combinatorial explosion in real expert domains. Without domain knowledge, programs had to explore too many possible answers.
 whatHappened: DENDRAL 将化学家的规则与计算机搜索结合，先生成候选分子，再用实验数据排除不符合的结构。系统不是学习得到知识，而是由专家与知识工程师共同整理规则。

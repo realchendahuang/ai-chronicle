@@ -11,10 +11,21 @@ eventType: [paper, product]
 topics: [natural-language-processing, ai-history]
 people: [joseph-weizenbaum]
 concepts: [nlp]
-summary: Joseph Weizenbaum 发表 ELIZA 论文，展示一个通过关键词、模板和文本改写与人对话的程序。
-summaryEn: Joseph Weizenbaum published ELIZA, a conversational program built from keywords, templates, and text transformations.
+summary: Joseph Weizenbaum 发表 ELIZA 论文：程序按优先级寻找关键词，再用分解与重组规则改写用户输入。著名的 DOCTOR 脚本模仿罗杰斯式访谈，但系统并不建立对谈话内容的语义模型。
+summaryEn: Joseph Weizenbaum published ELIZA, which selected prioritized keywords and transformed input with decomposition and reassembly rules. Its famous DOCTOR script imitated Rogerian interviewing without constructing a semantic model of the conversation.
 background: 自然语言被视为通向机器智能的重要入口，但当时的程序几乎没有语义理解能力。
 backgroundEn: Natural language was seen as an important route to machine intelligence, but programs of the time had almost no semantic understanding.
+visual:
+  src: /assets/events/eliza.webp
+  width: 751
+  height: 487
+  alt: 终端窗口中的 ELIZA 对话示例
+  altEn: Example ELIZA conversation displayed in a terminal window
+  caption: ELIZA 的一次对话演示。画面来自后来的开源复现，用来呈现程序以提问和复述维持谈话的方式。
+  captionEn: An ELIZA conversation in a later open-source reimplementation, showing how questions and reformulations sustained the exchange.
+  credit: Public-domain screenshot, via Wikimedia Commons; implementation by Norbert Landsteiner
+  sourceUrl: https://commons.wikimedia.org/wiki/File:ELIZA_conversation.png
+  rights: public-domain
 whatHappened: 最著名的 DOCTOR 脚本模仿罗杰斯式心理治疗师，经常把用户的话改写成问题。程序规则很浅，部分用户却愿意向它倾诉，并认为它理解了自己。
 whatHappenedEn: Its best-known DOCTOR script imitated a Rogerian therapist, often turning a user’s words back into questions. The rules were shallow, yet some users confided in it and attributed understanding to the program.
 whyImportant: ELIZA 同时留下了产品机会和警告。对话界面能显著降低使用门槛，但流畅互动会让人高估系统实际具备的理解与判断。

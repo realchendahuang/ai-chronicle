@@ -15,7 +15,7 @@ Each training run began from random play. Given a board position, one neural net
 
 There was no fixed teacher in this loop. The network gave search a direction. Search improved on the current policy and returned a lesson. Outcomes supplied a final correction. As self-play advanced, the source of examples advanced with it.
 
-The paper reported that within twenty-four hours AlphaZero separately reached superhuman performance in chess, shogi, and Go and defeated leading programs for each game. It examined fewer positions than a high-speed engine such as Stockfish because the learned policy and value directed search more selectively.
+The final *Science* paper reported different training times for the three runs: about nine hours for chess, twelve for shogi, and thirteen days for Go. During play AlphaZero searched roughly 80,000 chess positions per second, compared with about 70 million for Stockfish; the learned policy and value made the much smaller search more selective.
 
 The word *general* requires care. AlphaZero was not one fully trained network moving among the three boards with a shared set of acquired skills. The board representations and legal actions differed, and each game was trained separately from random parameters. What remained common was the algorithmic arrangement: one policy-and-value network, self-play, tree search, and learning from the result. The method transferred; the learned chess, shogi, and Go knowledge did not.
 

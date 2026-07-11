@@ -1,6 +1,10 @@
 ---
 id: ibm
 name: IBM
+logo: /assets/companies/ibm.svg
+logoSource: https://commons.wikimedia.org/wiki/File:IBM_logo.svg
+logoAlt: IBM 标志
+logoAltEn: IBM logo
 founded: 1911
 type: technology-company
 region: us

@@ -11,8 +11,8 @@ eventType: [model, open-source]
 topics: [open-source-models, china-ai, large-language-models]
 models: [qwen-7b, qwen-7b-chat]
 concepts: [open-weight, llm]
-summary: 阿里云发布 Qwen-7B 与 Qwen-7B-Chat 的代码和权重，提供中文、英文、多语言与代码能力，并允许符合条件的商业使用。
-summaryEn: Alibaba Cloud released code and weights for Qwen-7B and Qwen-7B-Chat, covering Chinese, English, multilingual, and coding tasks with commercial use under stated conditions.
+summary: 阿里云发布 Qwen-7B 与 Qwen-7B-Chat 的代码和权重；基础模型以超过 2.2 万亿 token 预训练，覆盖中文、英文、代码和多语言文本。许可允许研究使用，月活用户低于一亿的商业主体可直接使用，更大规模须另行申请。
+summaryEn: Alibaba Cloud released code and weights for Qwen-7B and Qwen-7B-Chat; the base model was pretrained on more than 2.2 trillion tokens spanning Chinese, English, code, and multilingual text. Its license allowed research and commercial use below a 100-million-monthly-user threshold, with separate permission required above it.
 background: 2023 年开放权重模型快速增长，但高质量中文数据、中文指令跟随和本地企业部署仍缺少稳定选择。
 backgroundEn: Open-weight models expanded rapidly in 2023, but high-quality Chinese data, Chinese instruction following, and local enterprise deployment still lacked durable options.
 whatHappened: 首批 7B 模型在 ModelScope 和 Hugging Face 发布，随后扩展到不同参数规模、视觉、音频、代码与数学版本，并逐步调整许可。

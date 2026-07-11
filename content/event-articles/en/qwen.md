@@ -23,4 +23,4 @@ Continuity matters especially where language is not an afterthought. Chinese cap
 
 The original date therefore marks an opening rather than a culmination. Later results should not be used to inflate what Qwen-7B could do in 2023. They explain why the first release became historically relevant. The repository did not go quiet. The name remained available for new branches, and users could carry knowledge from one generation into the next.
 
-Model culture rewards the moment a checkpoint arrives. Infrastructure is built in the slower interval afterward: bug reports answered, licenses clarified, formats supported, descendants made compatible. Qwen's place in the chronicle belongs as much to that interval as to release day.
+The first license also set a concrete boundary. Research and many commercial uses were allowed, but organizations above 100 million monthly active users needed separate permission. “Open weights” described access to the checkpoint, not an absence of conditions, and later Qwen licenses should not be read backward into the 2023 release.

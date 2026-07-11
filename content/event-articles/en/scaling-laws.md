@@ -25,4 +25,4 @@ Nor did the 2020 paper promise that the fitted curves would continue forever. Lo
 
 The charts changed institutions as much as experiments. Frontier training could begin before a full run existed: fit exponents, price hardware, choose a model and data allocation, calculate whether another order of magnitude was worth attempting. Surprise did not disappear from model behavior. It was capital that became less willing to be surprised.
 
-A scaling curve is easy to romanticize because it points beyond the last measured dot. Its honest form includes the error bars, the bottlenecks, and the later paper that alters the recipe. Read that way, it is neither prophecy nor mere description. It is a ruler laid against an unknown future, useful precisely because everyone can see where the markings end.
+The practical artifact was a fitted rule with a domain, not a prophecy. Labs could use it to budget an experiment before running it; later measurements could—and did—change the recommended allocation. Its value depended on keeping the measured range, error bars, and assumptions attached.

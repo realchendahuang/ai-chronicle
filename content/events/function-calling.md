@@ -11,8 +11,8 @@ eventType: [api, product]
 topics: [ai-agent, developer-tools, large-language-models]
 companies: [openai]
 concepts: [tool-calling, agent]
-summary: OpenAI 为 GPT-4 与 GPT-3.5 Turbo 加入函数调用，让开发者声明函数和 JSON 参数结构，由模型选择调用并生成参数。
-summaryEn: OpenAI added function calling to GPT-4 and GPT-3.5 Turbo, allowing developers to declare functions and JSON schemas for the model to select and populate.
+summary: OpenAI 在 0613 版 GPT-4 与 GPT-3.5 Turbo 中加入函数调用。开发者用 JSON Schema 声明函数，模型返回函数名与参数；应用仍须校验参数、执行函数并把结果送回模型。
+summaryEn: OpenAI added function calling to the 0613 versions of GPT-4 and GPT-3.5 Turbo. Developers declared functions with JSON Schema and received a function name and arguments; the application still had to validate, execute, and return the result.
 background: 早期开发者让模型用自然语言或约定格式输出命令，再自行解析。格式漂移、字段缺失和提示注入让工具集成脆弱。
 backgroundEn: Early developers asked models to emit commands in natural language or improvised formats and parsed them manually. Format drift, missing fields, and prompt injection made tool integration fragile.
 whatHappened: API 接收函数名称、说明和 JSON Schema。模型返回结构化调用意图，应用验证参数、执行外部代码，再把结果送回模型继续回答。

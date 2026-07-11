@@ -1,5 +1,6 @@
 import {
   cpSync,
+  existsSync,
   mkdirSync,
   readFileSync,
   rmSync,
@@ -24,12 +25,21 @@ const concepts = JSON.parse(readFileSync(join(generatedDir, 'concepts.json'), 'u
 const companies = JSON.parse(readFileSync(join(generatedDir, 'companies.json'), 'utf8'))
 const modelFamilies = JSON.parse(readFileSync(join(generatedDir, 'modelFamilies.json'), 'utf8'))
 const interfaceTranslations = JSON.parse(readFileSync(join(rootDir, 'public/assets/i18n-en.json'), 'utf8'))
-const assetVersion = createHash('sha256')
+const assetHasher = createHash('sha256')
   .update(readFileSync(join(rootDir, 'public/assets/app.css')))
   .update(readFileSync(join(rootDir, 'public/assets/app.js')))
   .update(readFileSync(join(rootDir, 'public/assets/i18n-en.json')))
   .update(JSON.stringify({ events, eventArticlesZh, eventArticlesEn, concepts, companies, modelFamilies }))
-  .digest('hex')
+
+for (const assetPath of [
+  ...events.map((event) => event.visual?.src),
+  ...companies.map((company) => company.logo),
+].filter(Boolean)) {
+  const localPath = join(rootDir, 'public', assetPath.replace(/^\/+/, ''))
+  if (existsSync(localPath)) assetHasher.update(readFileSync(localPath))
+}
+
+const assetVersion = assetHasher.digest('hex')
   .slice(0, 12)
 
 const eventById = new Map(events.map((event) => [event.id, event]))
@@ -183,6 +193,28 @@ const humanName = (value) => String(value)
   .split('-')
   .map((part) => part ? part.charAt(0).toUpperCase() + part.slice(1) : part)
   .join(' ')
+
+const companyLogo = (company, className = '') => company?.logo
+  ? `<img class="company-logo${className ? ` ${escapeHtml(className)}` : ''}" src="${assetUrl(company.logo)}" alt="" width="32" height="32" loading="lazy" decoding="async" aria-hidden="true">`
+  : ''
+
+const eventVisual = (event) => {
+  const visual = event.visual
+  if (!visual) return ''
+  const credit = visual.sourceUrl
+    ? `<a href="${escapeHtml(visual.sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(visual.credit)}</a>`
+    : `<span>${escapeHtml(visual.credit)}</span>`
+  return `
+    <figure class="event-visual">
+      <div class="event-visual-frame">
+        <img src="${assetUrl(visual.src)}" width="${visual.width}" height="${visual.height}" alt="${escapeHtml(visual.alt)}" data-localized-alt data-alt-zh="${escapeHtml(visual.alt)}" data-alt-en="${escapeHtml(visual.altEn)}" loading="lazy" decoding="async">
+      </div>
+      <figcaption>
+        ${bilingual(visual.caption, visual.captionEn, 'span', 'event-visual-caption')}
+        <small>${credit}</small>
+      </figcaption>
+    </figure>`
+}
 
 const sortedEvents = [...events].sort((a, b) => a.date.localeCompare(b.date))
 const recentEvents = [...events].sort((a, b) => b.date.localeCompare(a.date))
@@ -554,7 +586,7 @@ function renderEventPages() {
       .map((topic) => `<a href="${urlFor(`/topics/${topic}/`)}">${bilingual(topicName(topic), topicNameEn(topic))}</a>`)
       .join('')
     const companyLinks = relatedCompanies
-      .map((company) => `<a href="${urlFor(`/companies/${company.slug}/`)}">${escapeHtml(company.name)}</a>`)
+      .map((company) => `<a class="company-link" href="${urlFor(`/companies/${company.slug}/`)}">${companyLogo(company, 'company-logo-inline')}<span>${escapeHtml(company.name)}</span></a>`)
       .join('')
     const people = event.people.map((person) => escapeHtml(humanName(person))).join('<span aria-hidden="true">·</span>')
     const models = event.models.map(escapeHtml).join('<span aria-hidden="true">·</span>')
@@ -583,10 +615,12 @@ function renderEventPages() {
             ${metadataItem('模型', 'Models', models || '—')}
             ${metadataItem('产品', 'Products', products || '—')}
             ${metadataItem('状态', 'Status', `<i class="status-dot ${isVerified ? 'verified' : 'draft'}"></i>${bilingual(effectiveStatus, effectiveStatusEn)}<small>${hasSources ? event.sources.length : 0} ${bilingual('条来源', hasSources === 1 ? 'source' : 'sources')}</small>`)}
+            ${metadataItem('史实', 'Historical record', bilingual(event.summary, event.summaryEn), 'metadata-record')}
           </dl>
         </section>
 
         <div class="event-reading">
+          ${eventVisual(event)}
           <section class="event-narrative" data-native-article data-article-language="zh" lang="zh-CN">
             ${articleZh?.content || ''}
           </section>
@@ -711,7 +745,7 @@ function renderModelFamilyPages() {
           <a href="${urlFor(`/models/${family.slug}/`)}" class="model-family-row">
             <span>${String(index + 1).padStart(2, '0')}</span>
             <div>
-              ${bilingual(family.title, family.titleEn, 'h2')}
+              <div class="model-family-name">${companyLogo(company, 'company-logo-model')}${bilingual(family.title, family.titleEn, 'h2')}</div>
               ${bilingual(family.description, family.descriptionEn, 'p')}
             </div>
             <small>${escapeHtml(company?.name || family.company)}</small>
@@ -738,7 +772,7 @@ function renderModelFamilyPages() {
           <div class="breadcrumbs"><a href="${urlFor('/models/')}">模型谱系</a><span>/</span><a href="${urlFor(`/companies/${company?.slug || family.company}/`)}">${escapeHtml(company?.name || family.company)}</a></div>
           <div class="model-family-title">
             <div>
-              ${bilingual(family.title, family.titleEn, 'h1')}
+              <div class="model-family-name">${companyLogo(company, 'company-logo-hero')}${bilingual(family.title, family.titleEn, 'h1')}</div>
               ${bilingual(family.description, family.descriptionEn, 'p')}
             </div>
             <aside><span>当前模型</span><b>${bilingual(family.latestModel, family.latestModelEn)}</b><small>更新于 ${formatDate(family.updatedAt)}</small></aside>
@@ -778,7 +812,7 @@ function renderCompanyPages() {
       ${companies.map((company, index) => `
         <a href="${urlFor(`/companies/${company.slug}/`)}">
           <span>${String(index + 1).padStart(2, '0')}</span>
-          <div><h2>${escapeHtml(company.name)}</h2><p>${escapeHtml(company.positioning)}</p></div>
+          <div>${companyLogo(company, 'company-logo-card')}<h2>${escapeHtml(company.name)}</h2><p>${escapeHtml(company.positioning)}</p></div>
           <small>${company.region === 'cn' ? '中国' : company.region === 'us' ? '美国' : '全球'} · ${company.founded || '—'}</small>
           ${arrowIcon}
         </a>`).join('')}
@@ -800,7 +834,7 @@ function renderCompanyPages() {
       <article class="company-article">
         <header>
           <div class="breadcrumbs"><a href="${urlFor('/companies/')}">行业玩家</a><span>/</span><span>${company.region === 'cn' ? '中国' : company.region === 'us' ? '美国' : '全球'}</span></div>
-          <div class="company-title"><h1>${escapeHtml(company.name)}</h1><span>${company.founded || '—'}—</span></div>
+          <div class="company-title"><div class="company-title-name">${companyLogo(company, 'company-logo-hero')}<h1>${escapeHtml(company.name)}</h1></div><span>${company.founded || '—'}—</span></div>
           <p>${escapeHtml(company.positioning)}</p>
         </header>
         <section class="company-route">

@@ -1,6 +1,10 @@
 ---
 id: openai
 name: OpenAI
+logo: /assets/companies/openai.svg
+logoSource: https://commons.wikimedia.org/wiki/File:OpenAI_Logo.svg
+logoAlt: OpenAI 标志
+logoAltEn: OpenAI logo
 founded: 2015
 type: ai-lab
 region: us

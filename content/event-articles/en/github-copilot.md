@@ -23,4 +23,4 @@ Responsibility remained on the human side of that pause. Suggested code could co
 
 The important unit was therefore not a spectacular generated program. It was the tiny decision repeated across a workday: Tab, Escape, edit; accept three lines, discard the fourth; trust a test only after running it. No single decision established a new programming paradigm. Together they changed the texture of authorship. Code could arrive before its author had decided exactly how to write it, and review could begin before composition was complete.
 
-Copilot's earliest form did not take over the development process. It gave the process something to disagree with.
+The preview did not take over a development process. It placed a candidate at a familiar control point—Tab to accept, Escape to ignore—while testing, review, attribution, and the consequences of merging remained with the developer.

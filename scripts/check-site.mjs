@@ -43,12 +43,33 @@ assertUnique(modelFamilies, 'id', 'model family')
 assertUnique(modelFamilies, 'slug', 'model family')
 
 for (const event of events) {
+  if (!event.summaryEn?.trim()) failures.push(`Missing English historical record: ${event.id}`)
   if (event.status === 'verified' && event.sources.length === 0) {
     failures.push(`Verified event has no source: ${event.id}`)
   }
   for (const source of event.sources) {
     if (!/^https?:\/\//.test(source.url)) failures.push(`Invalid source URL in ${event.id}: ${source.url}`)
   }
+  const visual = event.visual
+  if (visual) {
+    for (const field of ['src', 'alt', 'altEn', 'caption', 'captionEn', 'credit', 'rights']) {
+      if (!String(visual[field] || '').trim()) failures.push(`Missing visual ${field}: ${event.id}`)
+    }
+    if (!(visual.width > 0) || !(visual.height > 0)) failures.push(`Invalid visual dimensions: ${event.id}`)
+    if (visual.rights === 'generated' && !visual.prompt?.trim()) failures.push(`Generated visual lacks prompt: ${event.id}`)
+    if (visual.rights !== 'generated' && !visual.sourceUrl?.trim()) failures.push(`Sourced visual lacks source URL: ${event.id}`)
+    const visualPath = join(rootDir, 'public', String(visual.src || '').replace(/^\/+/, ''))
+    if (!existsSync(visualPath) || statSync(visualPath).size === 0) failures.push(`Missing local visual file: ${event.id}`)
+  }
+}
+
+for (const company of companies) {
+  for (const field of ['logo', 'logoSource', 'logoAlt', 'logoAltEn']) {
+    if (!String(company[field] || '').trim()) failures.push(`Missing company ${field}: ${company.id}`)
+  }
+  if (company.logoSource && !/^https?:\/\//.test(company.logoSource)) failures.push(`Invalid logo source URL: ${company.id}`)
+  const logoPath = join(rootDir, 'public', String(company.logo || '').replace(/^\/+/, ''))
+  if (!existsSync(logoPath) || statSync(logoPath).size === 0) failures.push(`Missing local company logo: ${company.id}`)
 }
 
 const eventIds = new Set(events.map((item) => item.id))
@@ -77,6 +98,9 @@ if (missingModelFamilyCompanies.length) failures.push(`Missing model family comp
 const htmlFiles = collectFiles(distDir).filter((file) => file.endsWith('.html'))
 for (const file of htmlFiles) {
   const html = readFileSync(file, 'utf8')
+  if (/\/events\/[^/]+\/index\.html$/.test(file)) {
+    if (!html.includes('metadata-record')) failures.push(`Event page lacks historical record: ${file.replace(rootDir, '')}`)
+  }
   const attributes = [...html.matchAll(/(?:href|src)="([^"]+)"/g)].map((match) => match[1])
 
   for (const value of attributes) {

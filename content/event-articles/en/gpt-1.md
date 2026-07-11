@@ -21,4 +21,4 @@ That grammar of reuse was the paper's real invention. Its “general” model wa
 
 Nothing in the method looked theatrical. Unsupervised pretraining was not new, the Transformer had already been published, and fine-tuning was familiar. What changed was the joinery. A general body could learn from abundant unlabeled prose, while a comparatively small amount of supervised data told it what particular work to do.
 
-Later systems would enlarge the body, shrink the amount of adaptation, and move task specification into prompts. GPT-1 belongs to the quieter moment before all that: when a scattered collection of language problems was folded, one by one, into a shared input form. The future entered not as a machine that could do everything, but as a decision to stop building a different machine for every question.
+Later systems enlarged the body, reduced adaptation, and moved more task specification into prompts. None of that was present yet. GPT-1's concrete result was narrower and easier to verify: twelve supervised evaluations, one shared pretrained body, and nine new state-of-the-art scores after task-specific fine-tuning.

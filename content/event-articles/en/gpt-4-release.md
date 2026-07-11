@@ -23,4 +23,4 @@ Why close the technical center while expanding the behavioral perimeter? By Marc
 
 This is not simply a story of secrecy replacing science. The disclosed evaluations provided evidence worth examining, and disclosure of a recipe has never guaranteed reproducibility at frontier cost. Still, the asymmetry became a defining fact of the period. The public could call the model repeatedly, institutions could build around it, and researchers could probe its outputs, while the process that produced those outputs remained beyond public inspection.
 
-Some technologies enter history through a diagram of their mechanism. GPT-4 entered through its performance profile—and through the blank space where the mechanism would once have been printed.
+GPT-4 was therefore documented chiefly through behavior: benchmark tables, demonstrations, red-team findings, and API outputs. Researchers could probe those outputs, but the report did not let them independently reconstruct the model's scale, data mixture, architecture, or training run.

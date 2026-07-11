@@ -18,6 +18,7 @@ concepts:
   - llm
   - chain-of-thought
 summary: OpenAI 发布 o1-preview，把更多计算放到回答前的推理过程，在数学、科学和编程任务上显著提高复杂问题求解能力。
+summaryEn: OpenAI released o1-preview and o1-mini, models trained to spend additional computation on an internal reasoning process before answering. The preview arrived with strict rate limits and without several ChatGPT features, including web browsing and file uploads.
 background: 规模扩展长期主要发生在训练阶段，但复杂推理任务仍容易在一次快速生成中出错。行业开始寻找“让模型在回答前花更多计算”的新路线。
 whatHappened: o1 通过强化学习学习更长的内部推理过程，并随着测试时计算增加而提高表现。它在高难度数学、科学和代码基准上展示了不同于普通聊天模型的能力曲线。
 whyImportant: o1 让测试时计算成为继训练数据、参数与算力之后的另一条扩展轴，也让“推理模型”成为独立的产品类别。

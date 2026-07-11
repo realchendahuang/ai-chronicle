@@ -21,8 +21,8 @@ concepts:
   - multimodal
   - llm
   - reasoning
-summary: OpenAI 发布 GPT-4。模型接受文本和图像输入，在模拟律师资格考试中达到约前 10%，并提高代码、专业问答与复杂指令表现。
-summaryEn: OpenAI released GPT-4 with text and image input, performance around the top ten percent on a simulated bar exam, and stronger results in coding, professional questions, and complex instructions.
+summary: OpenAI 发布 GPT-4，并报告其在模拟律师资格考试中达到约前 10%，而 GPT-3.5 约在后 10%。图像输入最初仅限合作方测试；技术报告未披露参数量、训练数据构成、架构或训练算力。
+summaryEn: OpenAI released GPT-4 and reported performance around the top 10% on a simulated bar exam, versus roughly the bottom 10% for GPT-3.5. Image input was initially limited to partners, and the technical report omitted parameter count, training-data composition, architecture, and training compute.
 background: ChatGPT 已形成大规模使用，但 GPT-3.5 在长推理、事实可靠性和复杂约束上经常失败。多模态产品还需要把视觉模型与语言模型分开串联。
 backgroundEn: ChatGPT had reached mass use, but GPT-3.5 often failed on long reasoning, factual reliability, and complex constraints. Multimodal products still chained separate vision and language models.
 whatHappened: 技术报告公布评测、风险和安全训练结果，却没有披露模型规模、训练计算量、数据集构成或具体架构。图像输入先以有限形式开放，文本 API 成为主要生产入口。

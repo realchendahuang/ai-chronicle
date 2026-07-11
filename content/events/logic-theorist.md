@@ -12,8 +12,8 @@ topics: [ai-foundations, ai-history]
 companies: []
 people: [allen-newell, herbert-simon, cliff-shaw]
 concepts: [symbolic-ai, game-tree-search]
-summary: Newell、Simon 与 Shaw 开发 Logic Theorist，让程序通过启发式搜索证明《数学原理》中的命题。
-summaryEn: Allen Newell, Herbert Simon, and Cliff Shaw built Logic Theorist, which used heuristic search to prove propositions from Principia Mathematica.
+summary: Allen Newell、Herbert Simon 与 Cliff Shaw 开发 Logic Theorist，用启发式搜索证明《数学原理》第二章 52 个命题中的 38 个；其中一个证明比书中版本更短。
+summaryEn: Allen Newell, Herbert Simon, and Cliff Shaw built Logic Theorist, which used heuristic search to prove 38 of 52 propositions in chapter two of *Principia Mathematica*. One proof was shorter than the published version.
 background: 早期计算机主要被看作高速算术设备。要让机器处理推理，研究者必须把符号、规则和求解过程表示成可执行步骤。
 backgroundEn: Early computers were viewed mainly as fast arithmetic machines. Symbolic reasoning required researchers to represent symbols, rules, and problem-solving steps in executable form.
 whatHappened: Logic Theorist 把证明过程视为状态空间搜索，用启发式规则减少需要尝试的路径。它证明了书中 52 个命题中的 38 个，其中一个证明比原书更短。

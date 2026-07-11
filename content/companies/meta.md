@@ -1,6 +1,10 @@
 ---
 id: meta
 name: Meta
+logo: /assets/companies/meta.svg
+logoSource: https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/meta.svg
+logoAlt: Meta 标志
+logoAltEn: Meta logo
 founded: 2004
 type: technology-company
 region: us
