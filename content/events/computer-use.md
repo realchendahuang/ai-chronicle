@@ -8,7 +8,11 @@ date: '2024-10-22'
 datePrecision: day
 importance: A
 eventType: [api, product]
-topics: [ai-agent, large-language-models, multimodal-ai]
+topics:
+  - ai-agent
+  - large-language-models
+  - multimodal-ai
+  - embodied-ai
 companies: [anthropic]
 models: [claude-3.5-sonnet]
 products: [claude]

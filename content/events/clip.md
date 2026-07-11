@@ -8,7 +8,11 @@ date: '2021-01-05'
 datePrecision: day
 importance: A
 eventType: [model, paper]
-topics: [multimodal-ai, computer-vision, large-language-models]
+topics:
+  - multimodal-ai
+  - computer-vision
+  - large-language-models
+  - representation-learning
 companies: [openai]
 models: [clip]
 products: []

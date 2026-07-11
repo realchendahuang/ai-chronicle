@@ -8,7 +8,10 @@ date: '2023-09-27'
 datePrecision: day
 importance: B
 eventType: [model, open-source]
-topics: [open-source-models, model-efficiency, large-language-models]
+topics:
+  - open-source-models
+  - model-efficiency
+  - large-language-models
 companies:
   - mistral
 models: [mistral-7b]

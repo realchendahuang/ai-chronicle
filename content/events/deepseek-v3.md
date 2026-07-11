@@ -11,6 +11,7 @@ topics:
   - large-language-models
   - open-source-models
   - model-efficiency
+  - china-ai
 companies:
   - deepseek
 models:

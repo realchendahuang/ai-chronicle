@@ -80,6 +80,22 @@ const topicLabels = {
   'ai-safety': 'AI 安全',
   'china-ai': '中国 AI',
   'enterprise-ai': '企业 AI',
+  // 扩展专题（博物馆路线）
+  'reasoning-models': '推理模型',
+  'scaling-laws': '扩展定律',
+  'video-generation': '视频生成',
+  'image-generation': '图像生成',
+  'speech-ai': '语音 AI',
+  'small-language-models': '小模型 / 端侧',
+  'ai-regulation': 'AI 治理与监管',
+  'generative-media': '生成式媒体',
+  'world-models': '世界模型',
+  'ai-hardware': 'AI 硬件',
+  'rag-search': '检索增强',
+  rag: '检索增强',
+  'embodied-ai': '具身智能',
+  'symbolic-ai': '符号主义 AI',
+  'protein-folding': '蛋白质结构',
 }
 
 const topicLabelsEn = {
@@ -109,10 +125,26 @@ const topicLabelsEn = {
   'ai-safety': 'AI Safety',
   'china-ai': 'AI in China',
   'enterprise-ai': 'Enterprise AI',
+  'reasoning-models': 'Reasoning Models',
+  'scaling-laws': 'Scaling Laws',
+  'video-generation': 'Video Generation',
+  'image-generation': 'Image Generation',
+  'speech-ai': 'Speech AI',
+  'small-language-models': 'Small / On-device Models',
+  'ai-regulation': 'AI Governance',
+  'generative-media': 'Generative Media',
+  'world-models': 'World Models',
+  'ai-hardware': 'AI Hardware',
+  'rag-search': 'Retrieval-Augmented AI',
+  rag: 'Retrieval-Augmented AI',
+  'embodied-ai': 'Embodied AI',
+  'symbolic-ai': 'Symbolic AI',
+  'protein-folding': 'Protein Folding',
 }
 
 const topicAliases = {
   nlp: 'natural-language-processing',
+  rag: 'rag-search',
 }
 
 const importanceLabels = {
@@ -235,15 +267,29 @@ const eventTranslations = Object.fromEntries(events.flatMap((event) => {
   return pairs.filter(([zh, en]) => zh && en)
 }))
 
+// 预注册全部专题标签，避免新路线在未挂事件前不可见
+const registeredTopics = Object.keys(topicLabels).filter((id) => !topicAliases[id])
+
 const topicIndex = [...new Set([
+  ...registeredTopics,
   ...events.flatMap((event) => event.topics.map(canonicalTopic)),
   ...companies.flatMap((company) => company.keyTopics.map(canonicalTopic)),
 ])]
-  .map((id) => ({
-    id,
-    label: topicName(id),
-    events: sortedEvents.filter((event) => event.topics.some((topic) => canonicalTopic(topic) === id)),
-  }))
+  .map((id) => {
+    const topicEvents = sortedEvents.filter((event) => event.topics.some((topic) => canonicalTopic(topic) === id))
+    const topicCompanies = companies.filter((company) => company.keyTopics.some((topic) => canonicalTopic(topic) === id))
+    const topicFamilies = modelFamilies.filter((family) => {
+      const company = companyById.get(family.company)
+      return company?.keyTopics?.some((topic) => canonicalTopic(topic) === id)
+    })
+    return {
+      id,
+      label: topicName(id),
+      events: topicEvents,
+      companies: topicCompanies,
+      modelFamilies: topicFamilies,
+    }
+  })
   .sort((a, b) => b.events.length - a.events.length || a.label.localeCompare(b.label, 'zh-CN'))
 
 const generatedInterfaceTranslations = Object.fromEntries([
@@ -870,22 +916,32 @@ function renderCompanyPages() {
 function renderTopicPages() {
   const body = `
     <section class="page-intro">
-      <div><h1>主题路线</h1></div>
-      <p>把同一技术路线上的事件放在一起读。</p>
+      <div><h1>主题路线 / 专题</h1></div>
+      <p>按技术路线、产品形态与产业议题把历史拆开读。事件是骨架，相关公司与模型谱系是侧厅。</p>
     </section>
     <section class="topic-directory">
-      ${topicIndex.map((topic, index) => `
+      ${topicIndex.map((topic, index) => {
+        const meta = [
+          topic.events.length ? `${topic.events.length} 事件` : null,
+          topic.modelFamilies.length ? `${topic.modelFamilies.length} 谱系` : null,
+          topic.companies.length ? `${topic.companies.length} 机构` : null,
+        ].filter(Boolean).join(' · ')
+        const range = topic.events.length
+          ? `${topic.events[0].date.slice(0, 4)}—${topic.events.at(-1).date.slice(0, 4)}`
+          : '档案扩建中'
+        return `
         <a href="${urlFor(`/topics/${topic.id}/`)}">
           <span>${String(index + 1).padStart(2, '0')}</span>
           <h2>${escapeHtml(topic.label)}</h2>
-          <p>${topic.events.length ? `${topic.events.length} 个节点 · ${topic.events[0].date.slice(0, 4)}—${topic.events.at(-1).date.slice(0, 4)}` : '路线档案正在建立'}</p>
+          <p>${escapeHtml(meta || '路线档案正在建立')} · ${escapeHtml(range)}</p>
           ${arrowIcon}
-        </a>`).join('')}
+        </a>`
+      }).join('')}
     </section>`
 
   writePage('topics', {
     title: '主题路线',
-    description: '沿主题路线理解 AI Coding、Agent、大模型、开放模型等方向如何演化。',
+    description: '沿主题与专题路线理解大模型、推理、Agent、生成式媒体、中国 AI 等方向如何演化。',
     path: '/topics/',
     active: 'topics',
     body,
@@ -893,11 +949,20 @@ function renderTopicPages() {
   })
 
   topicIndex.forEach((topic) => {
+    const companyBlock = topic.companies.length
+      ? `<section class="company-models"><div><span class="section-number">机构</span><h2>相关机构</h2></div><div>${topic.companies.map((company) => `<a href="${urlFor(`/companies/${company.slug}/`)}"><span>${escapeHtml(company.name)}</span><small>${escapeHtml(company.positioning)}</small>${arrowIcon}</a>`).join('')}</div></section>`
+      : ''
+    const familyBlock = topic.modelFamilies.length
+      ? `<section class="company-models"><div><span class="section-number">谱系</span><h2>相关模型谱系</h2></div><div>${topic.modelFamilies.map((family) => `<a href="${urlFor(`/models/${family.slug}/`)}"><span>${bilingual(family.title, family.titleEn)}</span><small>${bilingual(family.latestModel, family.latestModelEn)}</small>${arrowIcon}</a>`).join('')}</div></section>`
+      : ''
     const detailBody = `
       <section class="topic-hero">
-        <div class="breadcrumbs"><a href="${urlFor('/topics/')}">主题路线</a><span>/</span><span>${topic.events.length} 个节点</span></div>
+        <div class="breadcrumbs"><a href="${urlFor('/topics/')}">主题路线</a><span>/</span><span>${topic.events.length} 个事件 · ${topic.modelFamilies.length} 条谱系</span></div>
         <h1>${escapeHtml(topic.label)}</h1>
-        <p>按时间查看这条路线的关键转折。</p>
+        <p>${bilingual(
+          '事件时间轴是主线；机构与模型谱系帮助把同一议题上的产品代际也读进去。',
+          'The event timeline is the spine; companies and model lineages fill in product generations on the same theme.',
+        )}</p>
       </section>
       <section class="topic-timeline${topic.events.length ? '' : ' is-empty'}">
         ${topic.events.length ? topic.events.map((event, index) => `
@@ -906,12 +971,14 @@ function renderTopicPages() {
             <time>${formatDate(event.date, event.datePrecision)}</time>
             <div><h2>${escapeHtml(event.title)}</h2><p>${escapeHtml(event.summary)}</p></div>
             ${importanceBadge(event, true)}${arrowIcon}
-          </a>`).join('') : '<div class="topic-empty"><h2>这条路线正在建立</h2><p>相关事件会在完成来源核验与编辑后进入时间轴。</p></div>'}
-      </section>`
+          </a>`).join('') : '<div class="topic-empty"><h2>事件线仍在扩建</h2><p>这条专题已开放；相关事件会在完成来源核验后进入时间轴。下方可先浏览关联机构与模型谱系。</p></div>'}
+      </section>
+      ${familyBlock}
+      ${companyBlock}`
 
     writePage(`topics/${topic.id}`, {
-      title: `${topic.label}编年史`,
-      description: `沿时间线理解${topic.label}方向的关键事件与演化。`,
+      title: `${topic.label}专题`,
+      description: `沿时间线与模型谱系理解${topic.label}方向的关键事件与演化。`,
       path: `/topics/${topic.id}/`,
       active: 'topics',
       body: detailBody,

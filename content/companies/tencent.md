@@ -14,6 +14,9 @@ keyTopics:
   - large-language-models
   - multimodal-ai
   - ai-agent
+  - video-generation
+  - image-generation
+  - generative-media
 keyEvents: []
 models:
   - hunyuan

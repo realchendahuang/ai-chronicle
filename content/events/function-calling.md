@@ -8,7 +8,10 @@ date: '2023-06-13'
 datePrecision: day
 importance: A
 eventType: [api, product]
-topics: [ai-agent, developer-tools, large-language-models]
+topics:
+  - ai-agent
+  - developer-tools
+  - large-language-models
 companies: [openai]
 concepts: [tool-calling, agent]
 summary: OpenAI 在 0613 版 GPT-4 与 GPT-3.5 Turbo 中加入函数调用。开发者用 JSON Schema 声明函数，模型返回函数名与参数；应用仍须校验参数、执行函数并把结果送回模型。

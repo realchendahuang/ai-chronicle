@@ -8,7 +8,10 @@ date: '2024-07-12'
 datePrecision: day
 importance: A
 eventType: [regulation]
-topics: [ai-safety, ai-history]
+topics:
+  - ai-safety
+  - ai-history
+  - ai-regulation
 concepts: [ai-governance]
 summary: 欧盟在官方公报发布《人工智能法案》，建立禁止用途、高风险系统、透明度和通用 AI 模型的分层规则。
 summaryEn: The European Union published the AI Act in its Official Journal, establishing tiered rules for prohibited uses, high-risk systems, transparency, and general-purpose AI models.

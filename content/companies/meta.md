@@ -13,6 +13,7 @@ keyTopics:
   - open-source-models
   - large-language-models
   - multimodal-ai
+  - small-language-models
 keyEvents:
   - llama
   - llama-2

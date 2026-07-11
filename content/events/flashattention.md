@@ -8,7 +8,11 @@ date: '2022-05-27'
 datePrecision: day
 importance: A
 eventType: [paper, infrastructure]
-topics: [large-language-models, ai-infrastructure, deep-learning]
+topics:
+  - large-language-models
+  - ai-infrastructure
+  - deep-learning
+  - model-efficiency
 companies: []
 models: []
 products: []

@@ -12,6 +12,7 @@ eventType:
 topics:
   - nlp
   - large-language-models
+  - natural-language-processing
 companies:
   - google
 models:

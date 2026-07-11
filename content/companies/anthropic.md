@@ -14,6 +14,7 @@ keyTopics:
   - ai-agent
   - ai-coding
   - ai-safety
+  - reasoning-models
 keyEvents:
   - constitutional-ai
   - claude

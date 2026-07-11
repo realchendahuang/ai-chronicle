@@ -8,7 +8,11 @@ date: '2020-06-19'
 datePrecision: day
 importance: A
 eventType: [paper]
-topics: [deep-learning, multimodal-ai]
+topics:
+  - deep-learning
+  - multimodal-ai
+  - image-generation
+  - generative-media
 papers: [denoising-diffusion-probabilistic-models]
 concepts: [diffusion, generative-model]
 summary: Ho、Jain 与 Abbeel 提出 DDPM：训练网络预测逐步加入图像的噪声，再用 1000 步反向过程采样。论文在 CIFAR-10 上报告 3.17 的 FID 和 9.46 的 Inception Score。

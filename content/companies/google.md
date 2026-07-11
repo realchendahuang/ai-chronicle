@@ -13,6 +13,10 @@ keyTopics:
   - large-language-models
   - multimodal-ai
   - open-source-models
+  - reasoning-models
+  - small-language-models
+  - video-generation
+  - image-generation
 keyEvents:
   - gemini
   - gemini-3-5-flash

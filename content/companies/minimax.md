@@ -14,6 +14,9 @@ keyTopics:
   - large-language-models
   - multimodal-ai
   - ai-agent
+  - video-generation
+  - generative-media
+  - reasoning-models
 keyEvents: []
 models:
   - abab-6.5

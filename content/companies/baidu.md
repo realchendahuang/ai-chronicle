@@ -13,6 +13,8 @@ keyTopics:
   - china-ai
   - large-language-models
   - multimodal-ai
+  - reasoning-models
+  - speech-ai
 keyEvents: []
 models:
   - ernie-1.0

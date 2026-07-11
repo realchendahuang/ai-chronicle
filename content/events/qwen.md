@@ -8,7 +8,10 @@ date: '2023-08-03'
 datePrecision: day
 importance: B
 eventType: [model, open-source]
-topics: [open-source-models, china-ai, large-language-models]
+topics:
+  - open-source-models
+  - china-ai
+  - large-language-models
 companies:
   - alibaba
 models: [qwen-7b, qwen-7b-chat]

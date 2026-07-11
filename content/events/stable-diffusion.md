@@ -8,7 +8,12 @@ date: '2022-08-22'
 datePrecision: day
 importance: S
 eventType: [model, open-source]
-topics: [multimodal-ai, open-source-models, ai-applications]
+topics:
+  - multimodal-ai
+  - open-source-models
+  - ai-applications
+  - image-generation
+  - generative-media
 models: [stable-diffusion]
 concepts: [diffusion, open-weight, multimodal]
 summary: Stability AI 与 CompVis 发布 Stable Diffusion 1.4 的代码和约 4GB 权重。模型在压缩潜空间中去噪，能在消费级 GPU 上生成 512×512 图像，也让本地微调和第三方界面迅速扩散。

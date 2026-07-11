@@ -13,6 +13,8 @@ keyTopics:
   - large-language-models
   - rag
   - ai-agent
+  - rag-search
+  - enterprise-ai
 keyEvents: []
 models:
   - command

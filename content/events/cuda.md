@@ -8,7 +8,10 @@ date: '2006-11'
 datePrecision: month
 importance: A
 eventType: [product, infrastructure]
-topics: [ai-infrastructure, deep-learning]
+topics:
+  - ai-infrastructure
+  - deep-learning
+  - ai-hardware
 companies:
   - nvidia
 products: [cuda]

@@ -8,7 +8,10 @@ date: '2020-05-22'
 datePrecision: day
 importance: A
 eventType: [paper]
-topics: [large-language-models, natural-language-processing]
+topics:
+  - large-language-models
+  - natural-language-processing
+  - rag-search
 companies: [meta]
 models: []
 products: []

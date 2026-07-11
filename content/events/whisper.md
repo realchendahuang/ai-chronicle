@@ -8,7 +8,10 @@ date: '2022-09-21'
 datePrecision: day
 importance: A
 eventType: [model, open-source]
-topics: [multimodal-ai, ai-applications]
+topics:
+  - multimodal-ai
+  - ai-applications
+  - speech-ai
 companies: [openai]
 models: [whisper]
 concepts: [multimodal, transformer]

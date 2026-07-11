@@ -8,7 +8,10 @@ date: '2023-12-11'
 datePrecision: day
 importance: A
 eventType: [model, open-source]
-topics: [open-source-models, model-efficiency, large-language-models]
+topics:
+  - open-source-models
+  - model-efficiency
+  - large-language-models
 companies: [mistral]
 models: [mixtral-8x7b]
 concepts: [moe, open-weight, llm]

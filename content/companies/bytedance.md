@@ -14,6 +14,9 @@ keyTopics:
   - large-language-models
   - multimodal-ai
   - ai-agent
+  - video-generation
+  - speech-ai
+  - generative-media
 keyEvents: []
 models:
   - doubao-1.0

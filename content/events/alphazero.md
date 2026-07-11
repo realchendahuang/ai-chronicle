@@ -8,7 +8,9 @@ date: '2017-12-05'
 datePrecision: day
 importance: A
 eventType: [paper, milestone]
-topics: [reinforcement-learning, game-ai]
+topics:
+  - reinforcement-learning
+  - game-ai
 companies: [google-deepmind]
 concepts: [deep-reinforcement-learning, monte-carlo-tree-search]
 summary: DeepMind 发布 AlphaZero，用同一套自我对弈、策略—价值网络和蒙特卡洛树搜索方法分别学习国际象棋、将棋与围棋。三个网络各自从随机参数训练，并不共享已经学到的棋艺。

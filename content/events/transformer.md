@@ -12,6 +12,8 @@ topics:
   - large-language-models
   - nlp
   - ai-foundations
+  - natural-language-processing
+  - neural-networks
 companies:
   - google
 papers:

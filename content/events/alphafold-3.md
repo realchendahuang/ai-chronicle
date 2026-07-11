@@ -8,7 +8,9 @@ date: '2024-05-08'
 datePrecision: day
 importance: A
 eventType: [paper, model]
-topics: [ai-for-science, deep-learning]
+topics:
+  - ai-for-science
+  - deep-learning
 companies: [google-deepmind]
 models: [alphafold-3]
 concepts: [protein-folding, diffusion]

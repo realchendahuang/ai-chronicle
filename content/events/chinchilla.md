@@ -8,7 +8,10 @@ date: '2022-03-29'
 datePrecision: day
 importance: A
 eventType: [paper]
-topics: [large-language-models, scaling-laws]
+topics:
+  - large-language-models
+  - scaling-laws
+  - model-efficiency
 companies: [google-deepmind]
 models: [chinchilla]
 concepts: [scaling-law, llm]

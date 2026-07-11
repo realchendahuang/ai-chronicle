@@ -12,6 +12,7 @@ eventType:
 topics:
   - large-language-models
   - nlp
+  - scaling-laws
 companies:
   - openai
 models:

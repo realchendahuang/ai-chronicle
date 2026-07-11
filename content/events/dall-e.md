@@ -8,7 +8,11 @@ date: '2021-01-05'
 datePrecision: day
 importance: A
 eventType: [model, research]
-topics: [multimodal-ai, ai-applications]
+topics:
+  - multimodal-ai
+  - ai-applications
+  - image-generation
+  - generative-media
 companies: [openai]
 models: [dall-e]
 concepts: [multimodal, transformer, llm]

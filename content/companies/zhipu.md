@@ -14,6 +14,7 @@ keyTopics:
   - large-language-models
   - open-source-models
   - ai-agent
+  - reasoning-models
 keyEvents: []
 models:
   - chatglm-6b

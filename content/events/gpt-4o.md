@@ -10,6 +10,7 @@ eventType:
 topics:
   - large-language-models
   - multimodal-ai
+  - speech-ai
 companies:
   - openai
 models:

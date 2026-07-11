@@ -13,6 +13,8 @@ keyTopics:
   - large-language-models
   - multimodal-ai
   - ai-agent
+  - reasoning-models
+  - image-generation
 keyEvents: []
 models:
   - grok-1

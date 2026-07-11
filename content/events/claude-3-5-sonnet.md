@@ -10,6 +10,7 @@ eventType:
 topics:
   - large-language-models
   - ai-coding
+  - ai-agent
 companies:
   - anthropic
 models:

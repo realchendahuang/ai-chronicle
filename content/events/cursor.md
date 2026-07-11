@@ -8,7 +8,9 @@ date: '2024-08-22'
 datePrecision: day
 importance: B
 eventType: [product, company]
-topics: [ai-coding, developer-tools]
+topics:
+  - ai-coding
+  - developer-tools
 products: [cursor]
 concepts: [repository-context, coding-agent, ide-agent]
 summary: Anysphere 宣布完成 6000 万美元 A 轮融资。Cursor 已把模型聊天、代码库索引和生成式编辑直接放进基于 VS Code 的开发环境。

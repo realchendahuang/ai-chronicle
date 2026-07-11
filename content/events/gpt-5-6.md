@@ -11,6 +11,7 @@ topics:
   - large-language-models
   - ai-agent
   - ai-coding
+  - reasoning-models
 companies:
   - openai
 models:

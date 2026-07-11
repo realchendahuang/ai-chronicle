@@ -8,7 +8,9 @@ date: '2023-07-18'
 datePrecision: day
 importance: A
 eventType: [model, open-source]
-topics: [open-source-models, large-language-models]
+topics:
+  - open-source-models
+  - large-language-models
 companies: [meta]
 models: [llama-2]
 concepts: [open-weight, llm, rlhf]

@@ -8,7 +8,9 @@ date: '2023-11-06'
 datePrecision: day
 importance: B
 eventType: [api, platform]
-topics: [ai-agent, developer-tools]
+topics:
+  - ai-agent
+  - developer-tools
 companies: [openai]
 products: [assistants-api]
 concepts: [agent, tool-calling, rag]

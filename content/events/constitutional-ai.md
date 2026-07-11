@@ -8,7 +8,9 @@ date: '2022-12-15'
 datePrecision: day
 importance: A
 eventType: [paper]
-topics: [ai-safety, large-language-models]
+topics:
+  - ai-safety
+  - large-language-models
 companies: [anthropic]
 models: []
 products: []

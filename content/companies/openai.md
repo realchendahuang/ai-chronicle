@@ -14,6 +14,11 @@ keyTopics:
   - multimodal-ai
   - ai-agent
   - ai-coding
+  - reasoning-models
+  - video-generation
+  - image-generation
+  - speech-ai
+  - generative-media
 keyEvents:
   - gpt-3
   - chatgpt-launch

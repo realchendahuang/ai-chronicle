@@ -8,7 +8,12 @@ date: '2024-02-15'
 datePrecision: day
 importance: A
 eventType: [model, research]
-topics: [multimodal-ai, ai-applications]
+topics:
+  - multimodal-ai
+  - ai-applications
+  - video-generation
+  - generative-media
+  - world-models
 companies: [openai]
 models: [sora]
 concepts: [diffusion, transformer, multimodal]

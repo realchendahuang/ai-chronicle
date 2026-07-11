@@ -14,6 +14,9 @@ keyTopics:
   - open-source-models
   - large-language-models
   - multimodal-ai
+  - reasoning-models
+  - video-generation
+  - image-generation
 keyEvents:
   - qwen
 models:

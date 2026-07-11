@@ -13,6 +13,8 @@ keyTopics:
   - large-language-models
   - open-source-models
   - china-ai
+  - reasoning-models
+  - model-efficiency
 keyEvents:
   - deepseek-v3
   - deepseek-r1

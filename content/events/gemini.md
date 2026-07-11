@@ -8,7 +8,10 @@ date: '2023-12-06'
 datePrecision: day
 importance: A
 eventType: [model, product]
-topics: [large-language-models, multimodal-ai, consumer-ai]
+topics:
+  - large-language-models
+  - multimodal-ai
+  - consumer-ai
 companies: [google, google-deepmind]
 models: [gemini-ultra, gemini-pro, gemini-nano]
 concepts: [multimodal, llm]

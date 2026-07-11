@@ -8,17 +8,23 @@ logoAltEn: IBM logo
 founded: 1911
 type: technology-company
 region: us
-positioning: 从 Deep Blue、Watson 到现代企业 AI 与 Granite 模型的长期计算公司。
+positioning: 从 Deep Blue、Watson 到 Granite 开放企业模型，服务受监管行业。
 keyTopics:
-  - symbolic-ai
+  - enterprise-ai
+  - open-source-models
   - large-language-models
+  - ai-history
+  - symbolic-ai
 keyEvents:
   - deep-blue
   - ibm-watson
-models: []
+models:
+  - granite
+  - granite-3
+  - watsonx
 products:
   - watson
+  - watsonx
 relatedCompanies: []
 slug: ibm
 ---
-

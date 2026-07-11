@@ -8,7 +8,9 @@ date: '2024-05-30'
 datePrecision: day
 importance: B
 eventType: [api, product]
-topics: [ai-agent, developer-tools]
+topics:
+  - ai-agent
+  - developer-tools
 companies: [anthropic]
 concepts: [tool-calling, agent]
 summary: Anthropic 宣布 Claude Tool Use 正式可用。开发者用 JSON Schema 定义客户端工具，Claude 返回 `tool_use` 内容块和结构化参数；实际执行、权限检查与结果回传仍由客户端负责。

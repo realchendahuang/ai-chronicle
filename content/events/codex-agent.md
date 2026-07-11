@@ -8,7 +8,10 @@ date: '2025-05-16'
 datePrecision: day
 importance: A
 eventType: [product, model]
-topics: [ai-coding, ai-agent, developer-tools]
+topics:
+  - ai-coding
+  - ai-agent
+  - developer-tools
 companies: [openai]
 products: [codex-agent]
 concepts: [coding-agent, repository-context, swe-bench]

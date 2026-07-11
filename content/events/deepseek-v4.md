@@ -11,6 +11,8 @@ topics:
   - open-source-models
   - model-efficiency
   - ai-coding
+  - china-ai
+  - reasoning-models
 companies:
   - deepseek
 models:

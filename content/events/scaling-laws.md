@@ -8,7 +8,11 @@ date: '2020-01-23'
 datePrecision: day
 importance: A
 eventType: [paper]
-topics: [large-language-models, ai-infrastructure]
+topics:
+  - large-language-models
+  - ai-infrastructure
+  - scaling-laws
+  - model-efficiency
 companies: [openai]
 concepts: [scaling-law, llm]
 summary: OpenAI 研究者在跨越七个数量级的计算规模上拟合经验幂律，测量语言模型交叉熵损失随参数量、数据量和训练计算量的变化，并提出当时的计算预算分配公式。

@@ -8,7 +8,11 @@ date: '2023-06-20'
 datePrecision: day
 importance: A
 eventType: [paper, open-source, infrastructure]
-topics: [large-language-models, ai-infrastructure, open-source-models]
+topics:
+  - large-language-models
+  - ai-infrastructure
+  - open-source-models
+  - model-efficiency
 companies: []
 models: []
 products: [vllm]

@@ -8,7 +8,11 @@ date: '2014-06-10'
 datePrecision: day
 importance: A
 eventType: [paper]
-topics: [deep-learning, multimodal-ai]
+topics:
+  - deep-learning
+  - multimodal-ai
+  - image-generation
+  - generative-media
 papers: [generative-adversarial-nets]
 people: [ian-goodfellow]
 concepts: [deep-learning, generative-model]

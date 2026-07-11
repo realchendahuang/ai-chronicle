@@ -13,6 +13,7 @@ keyTopics:
   - large-language-models
   - small-language-models
   - ai-coding
+  - enterprise-ai
 keyEvents:
   - github-copilot
 models:

@@ -12,6 +12,7 @@ positioning: 以 Amazon Nova 自研模型与 Bedrock 多厂商托管平台服务
 keyTopics:
   - large-language-models
   - multimodal-ai
+  - enterprise-ai
 keyEvents: []
 models:
   - nova-micro
