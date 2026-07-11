@@ -269,8 +269,12 @@ const eventVisual = (event) => {
     </figure>`
 }
 
-const sortedEvents = [...events].sort((a, b) => a.date.localeCompare(b.date))
-const recentEvents = [...events].sort((a, b) => b.date.localeCompare(a.date))
+// 主时间轴倒序：最新事件在前，避免读者每次从最早年份往下翻
+const sortedEvents = [...events].sort((a, b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id))
+// 正序仅用于历史起止年与总览比例尺
+const chronologicalEvents = [...sortedEvents].reverse()
+const earliestEvent = chronologicalEvents[0]
+const latestEvent = sortedEvents[0]
 
 const eventTranslations = Object.fromEntries(events.flatMap((event) => {
   const pairs = [
@@ -318,14 +322,21 @@ const generatedInterfaceTranslations = Object.fromEntries([
     [formatDate(event.date, event.datePrecision), formatDateEn(event.date, event.datePrecision)],
     [timelineDate(event), timelineDateEn(event.date, event.datePrecision)],
   ]),
-  ...topicIndex.flatMap((topic) => [
-    [`${topic.label} · ${topic.events.length}`, `${topicNameEn(topic.id)} · ${topic.events.length}`],
-    [`${topic.events.length} 个节点`, `${topic.events.length} ${topic.events.length === 1 ? 'node' : 'nodes'}`],
-    [
-      `${topic.events.length} 个节点 · ${topic.events[0]?.date.slice(0, 4)}—${topic.events.at(-1)?.date.slice(0, 4)}`,
-      `${topic.events.length} ${topic.events.length === 1 ? 'node' : 'nodes'} · ${topic.events[0]?.date.slice(0, 4)}—${topic.events.at(-1)?.date.slice(0, 4)}`,
-    ],
-  ]),
+  ...topicIndex.flatMap((topic) => {
+    const rows = [
+      [`${topic.label} · ${topic.events.length}`, `${topicNameEn(topic.id)} · ${topic.events.length}`],
+      [`${topic.events.length} 个节点`, `${topic.events.length} ${topic.events.length === 1 ? 'node' : 'nodes'}`],
+    ]
+    if (topic.events.length) {
+      const years = topic.events.map((event) => event.date.slice(0, 4)).sort()
+      const span = `${years.at(-1)}—${years[0]}`
+      rows.push([
+        `${topic.events.length} 个节点 · ${span}`,
+        `${topic.events.length} ${topic.events.length === 1 ? 'node' : 'nodes'} · ${span}`,
+      ])
+    }
+    return rows
+  }),
 ].filter(([zh, en]) => zh && en))
 
 const arrowIcon = `
@@ -537,11 +548,17 @@ function eventRow(event) {
 }
 
 function timelineExperience() {
-  const startYear = Number(sortedEvents[0].date.slice(0, 4))
-  const endYear = Number(recentEvents[0].date.slice(0, 4))
-  const startTime = Date.parse(sortedEvents[0].date)
-  const endTime = Date.parse(recentEvents[0].date)
+  const startYear = Number(earliestEvent.date.slice(0, 4))
+  const endYear = Number(latestEvent.date.slice(0, 4))
+  const startTime = Date.parse(earliestEvent.date)
+  const endTime = Date.parse(latestEvent.date)
+  // 年份键会被当成整数索引升序排列，必须显式倒序
   const eventGroups = Object.entries(Object.groupBy(sortedEvents, (event) => event.date.slice(0, 4)))
+    .sort((a, b) => b[0].localeCompare(a[0]))
+    .map(([year, yearEvents]) => [
+      year,
+      [...yearEvents].sort((a, b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id)),
+    ])
   const tickYears = [...new Set([
     startYear,
     ...Array.from({ length: Math.floor(endYear / 10) - Math.ceil(startYear / 10) + 1 }, (_, index) => (Math.ceil(startYear / 10) + index) * 10),
@@ -558,13 +575,13 @@ function timelineExperience() {
   }
 
   return `
-    <section class="timeline-stage" data-timeline-root data-start-year="${startYear}" data-end-year="${endYear}">
+    <section class="timeline-stage" data-timeline-root data-start-year="${startYear}" data-end-year="${endYear}" data-timeline-order="desc">
       <header class="timeline-masthead">
         <div class="timeline-title">
           <h1>AI 编年史</h1>
-          <p><span>${startYear}—${endYear}</span></p>
+          <p><span>${endYear}—${startYear}</span><small class="timeline-order-hint">${bilingual('倒序 · 新→旧', 'Newest first')}</small></p>
         </div>
-        <div class="timeline-overview" role="img" aria-label="1956 到 ${endYear}，事件按真实年份比例排列的时间总览">
+        <div class="timeline-overview" role="img" aria-label="${startYear} 到 ${endYear}，事件按真实年份比例排列的时间总览；下方列表为倒序阅读">
           <div class="overview-rail">
             <span class="overview-base" aria-hidden="true"></span>
             <span class="overview-progress" aria-hidden="true"></span>
@@ -640,7 +657,7 @@ function renderTimeline() {
 
   writePage('timeline', {
     title: '时间轴',
-    description: '按时间、重要程度和主题浏览 AI 行业关键事件。',
+    description: '按倒序时间、重要程度和主题浏览 AI 行业关键事件（新→旧）。',
     path: '/timeline/',
     active: 'timeline',
     body,
@@ -721,8 +738,8 @@ function renderEventPages() {
         ${relatedEvents.length ? `<section class="related-events"><div class="section-heading split-heading"><div><span class="section-number">${bilingual('关联', 'Related')}</span><h2>${bilingual('沿时间继续读', 'Continue through time')}</h2></div></div><div>${relatedEvents.map((related) => `<a href="${urlFor(`/events/${related.slug}/`)}"><time>${related.date.slice(0, 4)}</time><h3>${bilingual(related.title, englishText(related.title, related.titleEn))}</h3>${arrowIcon}</a>`).join('')}</div></section>` : ''}
 
         <nav class="event-pagination" aria-label="时间轴前后事件">
-          ${previousEvent ? `<a class="previous" href="${urlFor(`/events/${previousEvent.slug}/`)}"><span>${bilingual('上一个节点', 'Previous')}</span><b>${bilingual(previousEvent.title, englishText(previousEvent.title, previousEvent.titleEn))}</b></a>` : '<span></span>'}
-          ${nextEvent ? `<a class="next" href="${urlFor(`/events/${nextEvent.slug}/`)}"><span>${bilingual('下一个节点', 'Next')}</span><b>${bilingual(nextEvent.title, englishText(nextEvent.title, nextEvent.titleEn))}</b></a>` : '<span></span>'}
+          ${previousEvent ? `<a class="previous" href="${urlFor(`/events/${previousEvent.slug}/`)}"><span>${bilingual('更新的节点', 'Newer')}</span><b>${bilingual(previousEvent.title, englishText(previousEvent.title, previousEvent.titleEn))}</b></a>` : '<span></span>'}
+          ${nextEvent ? `<a class="next" href="${urlFor(`/events/${nextEvent.slug}/`)}"><span>${bilingual('更早的节点', 'Older')}</span><b>${bilingual(nextEvent.title, englishText(nextEvent.title, nextEvent.titleEn))}</b></a>` : '<span></span>'}
         </nav>
       </article>`
 
@@ -949,7 +966,10 @@ function renderTopicPages() {
           topic.companies.length ? `${topic.companies.length} 机构` : null,
         ].filter(Boolean).join(' · ')
         const range = topic.events.length
-          ? `${topic.events[0].date.slice(0, 4)}—${topic.events.at(-1).date.slice(0, 4)}`
+          ? (() => {
+            const years = topic.events.map((event) => event.date.slice(0, 4)).sort()
+            return `${years.at(-1)}—${years[0]}`
+          })()
           : '档案扩建中'
         return `
         <a href="${urlFor(`/topics/${topic.id}/`)}">
