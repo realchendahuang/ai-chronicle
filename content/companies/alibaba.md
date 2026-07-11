@@ -13,15 +13,27 @@ keyTopics:
   - china-ai
   - open-source-models
   - large-language-models
+  - multimodal-ai
 keyEvents:
   - qwen
 models:
   - qwen-7b
-  - qwen-7b-chat
+  - qwen1.5
+  - qwen2
+  - qwen2.5
+  - qwen2.5-max
+  - qwen3
+  - qwen3.5
+  - qwen3.7-max
 products:
   - tongyi-qianwen
+  - qwen-chat
+  - alibaba-cloud-model-studio
 relatedCompanies:
   - deepseek
   - meta
+  - bytedance
+  - zhipu
+  - minimax
 slug: alibaba
 ---

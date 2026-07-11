@@ -23,6 +23,13 @@ releases:
     summary: 开放商用权重并提供对话版本，迅速成为企业与开源社区的主流基础模型之一。
     summaryEn: Opened weights for commercial use and added chat variants, quickly becoming a mainstream base model for companies and the open ecosystem.
     source: https://ai.meta.com/llama/
+  - name: Code Llama
+    date: '2023-08-24'
+    datePrecision: day
+    status: legacy
+    summary: 在 Llama 2 上继续代码训练的专用系列，覆盖补全、指令与 Python 特化变体。
+    summaryEn: Code-specialized series continued from Llama 2, covering completion, instruct, and Python-tuned variants.
+    source: https://ai.meta.com/blog/code-llama-large-language-model-coding/
   - name: Llama 3
     date: '2024-04-18'
     datePrecision: day

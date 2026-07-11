@@ -23,15 +23,28 @@ keyEvents:
   - gpt-5
   - gpt-5-6
 models:
+  - gpt-1
+  - gpt-2
   - gpt-3
+  - gpt-3.5
+  - dall-e
+  - codex
+  - whisper
   - gpt-4
+  - dall-e-3
+  - gpt-4-turbo
+  - sora
   - gpt-4o
+  - o1
+  - o3
+  - o4-mini
   - gpt-4.5
   - gpt-5
   - gpt-5.6
 products:
   - chatgpt
   - codex
+  - api
 relatedCompanies:
   - microsoft
   - github

@@ -23,11 +23,18 @@ keyEvents:
   - mcp
   - claude-5-family
 models:
+  - claude-instant
+  - claude-1
+  - claude-2
+  - claude-3
   - claude-3.5-sonnet
-  - claude-4-sonnet
+  - claude-3.5-haiku
+  - claude-3.7-sonnet
+  - claude-4
   - claude-opus-4.8
   - claude-fable-5
   - claude-sonnet-5
+  - claude-haiku-4.5
 products:
   - claude
   - claude-code

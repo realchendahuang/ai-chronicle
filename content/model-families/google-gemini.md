@@ -23,6 +23,13 @@ releases:
     summary: 用混合专家架构把上下文窗口推进到百万 token 级，长视频、长代码库与大文档成为核心场景。
     summaryEn: Used a mixture-of-experts architecture to push context into the million-token range for long video, codebases, and documents.
     source: https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/
+  - name: Gemini 1.5 Flash / Flash-8B
+    date: '2024-05-14'
+    datePrecision: day
+    status: legacy
+    summary: 低延迟、低成本档，把长上下文能力铺到高并发与移动端场景。
+    summaryEn: Low-latency, low-cost tiers that spread long-context capability into high-throughput and mobile scenarios.
+    source: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
   - name: Gemini 2.0
     date: '2024-12-11'
     datePrecision: day

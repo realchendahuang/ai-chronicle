@@ -7,8 +7,15 @@ description: Claude 从安全导向的对话模型，逐步发展为强调长上
 descriptionEn: Claude evolved from a safety-focused conversational model into a family built around long context, reliable tool use, and sustained agentic work.
 latestModel: Claude Fable 5 / Sonnet 5 / Opus 4.8
 latestModelEn: Claude Fable 5 / Sonnet 5 / Opus 4.8
-updatedAt: '2026-07-10'
+updatedAt: '2026-07-11'
 releases:
+  - name: Claude Instant
+    date: '2023-03-14'
+    datePrecision: day
+    status: legacy
+    summary: 与 Claude 1 同期的轻量高速档，用更低延迟覆盖日常对话与高吞吐场景。
+    summaryEn: Lightweight high-speed tier launched with Claude 1 for everyday chat and high-throughput use.
+    source: https://www.anthropic.com/news/introducing-claude
   - name: Claude 1
     date: '2023-03-14'
     datePrecision: day
@@ -44,6 +51,20 @@ releases:
     summary: 以中档成本达到接近旗舰的代码和视觉能力，Sonnet 由此成为 Claude 的主力平衡档。
     summaryEn: Delivered near-flagship coding and vision at a mid-tier cost, turning Sonnet into Claude's primary balance of speed and intelligence.
     source: https://www.anthropic.com/news/claude-3-5-sonnet
+  - name: Claude 3.5 Haiku
+    date: '2024-10-22'
+    datePrecision: day
+    status: legacy
+    summary: 3.5 代的高速低价档，承接高并发、分类与轻量工具调用。
+    summaryEn: High-speed, low-cost 3.5-generation tier for concurrency, classification, and light tool use.
+    source: https://www.anthropic.com/news/3-5-models-and-computer-use
+  - name: Claude 3.5 Sonnet（新）
+    date: '2024-10-22'
+    datePrecision: day
+    status: legacy
+    summary: 同日升级的 3.5 Sonnet，强化计算机使用与 Agent 操作能力。
+    summaryEn: Same-day 3.5 Sonnet upgrade strengthening computer use and agentic operation.
+    source: https://www.anthropic.com/news/3-5-models-and-computer-use
   - name: Claude 3.7 Sonnet
     date: '2025-02-24'
     datePrecision: day

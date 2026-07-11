@@ -18,13 +18,24 @@ keyEvents:
   - deepseek-r1
   - deepseek-v4
 models:
+  - deepseek-coder
+  - deepseek-llm
+  - deepseek-moe
+  - deepseek-math
+  - deepseek-v2
+  - deepseek-coder-v2
   - deepseek-v3
   - deepseek-r1
+  - deepseek-v3.1
+  - deepseek-v3.2
   - deepseek-v4-pro
   - deepseek-v4-flash
 relatedCompanies:
   - openai
   - meta
   - alibaba
+  - zhipu
+  - minimax
+  - bytedance
 slug: deepseek
 ---
