@@ -31,6 +31,17 @@ beforeAfterEn:
   before: AI governance relied mainly on principles, sector rules, and case-by-case enforcement.
   after: Comprehensive risk classes and general-purpose model duties entered statute.
 relatedEvents: [gpt-4-release, llama]
+visual:
+  src: /assets/events/eu-ai-act.webp
+  width: 1191
+  height: 1684
+  alt: 2024 年 7 月 12 日《欧盟官方公报》刊载《人工智能法案》的第一页
+  altEn: First page of the AI Act as published in the Official Journal of the European Union on 12 July 2024
+  caption: 《欧盟官方公报》中的 Regulation (EU) 2024/1689 首页；法律于公布二十天后生效，具体义务分阶段适用。
+  captionEn: The first page of Regulation (EU) 2024/1689 in the Official Journal; the law entered into force twenty days after publication, with obligations applying in stages.
+  credit: Publications Office of the European Union
+  sourceUrl: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202401689
+  rights: official-editorial
 sources:
   - title: Regulation (EU) 2024/1689 — Artificial Intelligence Act
     url: https://eur-lex.europa.eu/eli/reg/2024/1689/oj

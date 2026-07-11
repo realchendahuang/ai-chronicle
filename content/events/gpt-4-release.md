@@ -41,11 +41,26 @@ relatedEvents:
   - claude
   - gemini
   - gpt-4o
+visual:
+  src: /assets/events/gpt-4-release.webp
+  width: 1224
+  height: 1584
+  alt: OpenAI 2023 年 GPT-4 技术报告首页，摘要说明模型可接收图像与文本并输出文本
+  altEn: First page of OpenAI's 2023 GPT-4 Technical Report, whose abstract describes image and text input with text output
+  caption: GPT-4 技术报告首页。报告公布评测与局限，但没有披露模型规模、训练计算量、数据集构成或具体架构。
+  captionEn: The first page of the GPT-4 Technical Report, which reported evaluations and limitations without disclosing model size, training compute, dataset composition, or architecture.
+  credit: OpenAI
+  sourceUrl: https://arxiv.org/abs/2303.08774
+  rights: official-editorial
 sources:
   - title: GPT-4 Research
     url: https://openai.com/index/gpt-4-research/
     publisher: OpenAI
     type: official
+  - title: GPT-4 Technical Report
+    url: https://arxiv.org/abs/2303.08774
+    publisher: OpenAI
+    type: paper
 status: verified
 slug: gpt-4-release
 ---

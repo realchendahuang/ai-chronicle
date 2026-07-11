@@ -32,11 +32,26 @@ beforeAfterEn:
   before: Chinese large models were delivered mainly through closed products and APIs.
   after: A continuously updated Chinese open-model family entered the global developer community.
 relatedEvents: [llama, mistral, deepseek-v3]
+visual:
+  src: /assets/events/qwen.webp
+  width: 1224
+  height: 1584
+  alt: Qwen 团队技术报告首页，列出作者、阿里巴巴集团归属和论文摘要
+  altEn: First page of the Qwen Technical Report, showing its authors, Alibaba Group affiliation, and abstract
+  caption: Qwen 团队在首版权重发布后提交的技术报告首页；论文系统记录了 Qwen 与 Qwen-Chat 模型家族。
+  captionEn: First page of the Qwen Technical Report submitted after the initial weight release, documenting the Qwen and Qwen-Chat model family.
+  credit: Qwen Team, Alibaba Group
+  sourceUrl: https://arxiv.org/abs/2309.16609
+  rights: official-editorial
 sources:
   - title: Qwen-7B release
     url: https://github.com/QwenLM/Qwen-7B
     publisher: Alibaba Cloud
     type: official
+  - title: Qwen Technical Report
+    url: https://arxiv.org/abs/2309.16609
+    publisher: Qwen Team, Alibaba Group
+    type: paper
 status: verified
 slug: qwen
 ---

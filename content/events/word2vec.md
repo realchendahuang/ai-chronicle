@@ -34,6 +34,17 @@ relatedEvents:
   - transformer
   - gpt-1
   - bert
+visual:
+  src: /assets/events/word2vec.webp
+  width: 1800
+  height: 1012
+  alt: Word2Vec 原始论文《向量空间中词表示的高效估计》首页
+  altEn: Title page of the original Word2Vec paper, Efficient Estimation of Word Representations in Vector Space
+  caption: 2013 年 Word2Vec 论文首页；标题把重点放在“高效估计”，对应其为十亿词级训练削减计算开销的设计。
+  captionEn: The 2013 Word2Vec title page emphasizes efficient estimation, matching the paper's effort to make billion-word training computationally practical.
+  credit: Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean
+  sourceUrl: https://arxiv.org/abs/1301.3781
+  rights: official-editorial
 sources:
   - title: Efficient Estimation of Word Representations in Vector Space
     url: https://arxiv.org/abs/1301.3781

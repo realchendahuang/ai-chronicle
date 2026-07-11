@@ -32,6 +32,17 @@ beforeAfterEn:
   before: Deep networks were considered hard to train, and research emphasized shallow models and hand-engineered features.
   after: Layered models could learn representations from data, accelerating deep-network research again.
 relatedEvents: [backpropagation, cuda, alexnet]
+visual:
+  src: /assets/events/deep-learning-rise.webp
+  width: 1800
+  height: 1012
+  alt: 2006 年深度置信网络论文中的分层网络和信念网络示意图
+  altEn: Layered network and belief-net diagrams from the 2006 deep belief network paper
+  caption: 论文以逐层训练的生成模型处理手写数字，并用“解释消除”示例说明隐藏变量之间的依赖。
+  captionEn: The paper trains a generative model layer by layer on handwritten digits and uses an explaining-away example to illustrate dependencies among hidden variables.
+  credit: Geoffrey E. Hinton, Simon Osindero, Yee-Whye Teh
+  sourceUrl: https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf
+  rights: official-editorial
 sources:
   - title: A Fast Learning Algorithm for Deep Belief Nets
     url: https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf

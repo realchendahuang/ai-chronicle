@@ -33,6 +33,17 @@ beforeAfterEn:
   before: Deeper networks were harder to optimize and could degrade in performance.
   after: Skip connections became the standard method for scaling depth.
 relatedEvents: [alexnet, transformer]
+visual:
+  src: /assets/events/resnet.webp
+  width: 1800
+  height: 1012
+  alt: ResNet 论文比较 VGG-19、34 层普通网络和 34 层残差网络的结构
+  altEn: ResNet paper comparison of VGG-19, a 34-layer plain network, and a 34-layer residual network
+  caption: 论文图 3 把普通 34 层网络与加入捷径连接的残差版本并排画出，弧线标出跨层的恒等路径。
+  captionEn: Figure 3 places a plain 34-layer network beside its residual counterpart, with arcs marking identity shortcuts across layers.
+  credit: Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+  sourceUrl: https://arxiv.org/abs/1512.03385
+  rights: official-editorial
 sources:
   - title: Deep Residual Learning for Image Recognition
     url: https://arxiv.org/abs/1512.03385

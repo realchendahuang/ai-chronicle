@@ -33,6 +33,17 @@ beforeAfterEn:
   before: High-quality image generation remained constrained by probabilistic modeling and inference methods.
   after: Adversarial training became a distinct and highly active generative-model path.
 relatedEvents: [alexnet, diffusion-models, stable-diffusion]
+visual:
+  src: /assets/events/gan.webp
+  width: 1800
+  height: 1012
+  alt: GAN 原始论文中交替更新判别器和生成器的训练算法
+  altEn: Training algorithm from the original GAN paper alternating discriminator and generator updates
+  caption: 原始论文的算法 1：先更新判别器，再更新生成器；两者的同步困难后来成为 GAN 训练研究的核心问题之一。
+  captionEn: Algorithm 1 in the original paper updates the discriminator before the generator; keeping the two learners in balance became a central GAN training problem.
+  credit: Ian Goodfellow et al.
+  sourceUrl: https://arxiv.org/abs/1406.2661
+  rights: official-editorial
 sources:
   - title: Generative Adversarial Nets
     url: https://arxiv.org/abs/1406.2661

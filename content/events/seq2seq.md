@@ -33,6 +33,17 @@ beforeAfterEn:
   before: Translation depended on multiple separately trained and tuned components.
   after: A neural network could learn the mapping from source sequence to target sequence directly.
 relatedEvents: [word2vec, transformer]
+visual:
+  src: /assets/events/seq2seq.webp
+  width: 1800
+  height: 1012
+  alt: Seq2Seq 论文中 LSTM 读取反转输入并生成输出序列的结构图
+  altEn: Seq2Seq paper diagram of an LSTM reading a reversed input and generating an output sequence
+  caption: 论文图 1 将输入 ABC 反向送入 LSTM，再逐步输出 WXYZ；反转源句是缩短依赖距离的关键实验技巧。
+  captionEn: Figure 1 feeds ABC to the LSTM in reverse before producing WXYZ; reversing the source was the experiment's key device for shortening dependencies.
+  credit: Ilya Sutskever, Oriol Vinyals, Quoc V. Le
+  sourceUrl: https://arxiv.org/abs/1409.3215
+  rights: official-editorial
 sources:
   - title: Sequence to Sequence Learning with Neural Networks
     url: https://arxiv.org/abs/1409.3215

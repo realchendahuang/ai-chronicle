@@ -14,6 +14,17 @@ summary: Joshua Lederberg、Edward Feigenbaum、Carl Djerassi 与 Bruce Buchanan
 summaryEn: At Stanford, Joshua Lederberg, Edward Feigenbaum, Carl Djerassi, Bruce Buchanan, and collaborators developed DENDRAL to generate and prune candidate molecular structures with chemical constraints and mass-spectrometry evidence. It assisted experts within selected compound classes rather than covering all of chemistry.
 background: 通用问题求解器在真实专业领域中容易遇到组合爆炸。缺少领域知识时，程序需要搜索太多可能答案。
 backgroundEn: General problem solvers ran into combinatorial explosion in real expert domains. Without domain knowledge, programs had to explore too many possible answers.
+visual:
+  src: /assets/events/expert-systems.webp
+  width: 1600
+  height: 1074
+  alt: 约书亚·莱德伯格在 SUMEX 的 LINC 计算机电传终端前
+  altEn: Joshua Lederberg seated at the LINC computer teletype for SUMEX
+  caption: 1974 年 12 月，约书亚·莱德伯格在斯坦福医学实验计算机 SUMEX 的 LINC 电传终端前。SUMEX 为 DENDRAL、MYCIN 等生物医学 AI 项目提供共享计算设施。
+  captionEn: Joshua Lederberg at the LINC teletype for Stanford's SUMEX computer in December 1974. SUMEX provided shared computing for biomedical AI projects including DENDRAL and MYCIN.
+  credit: Stanford University School of Medicine / U.S. National Library of Medicine
+  sourceUrl: https://profiles.nlm.nih.gov/spotlight/bb/catalog/nlm:nlmuid-101584906X19142-img
+  rights: official-editorial
 whatHappened: DENDRAL 将化学家的规则与计算机搜索结合，先生成候选分子，再用实验数据排除不符合的结构。系统不是学习得到知识，而是由专家与知识工程师共同整理规则。
 whatHappenedEn: DENDRAL combined chemists’ rules with computer search, generating candidate molecules and rejecting structures inconsistent with experimental data. Its knowledge was engineered with experts rather than learned from data.
 whyImportant: 它说明窄领域里的高质量知识可以比“通用智能”更快产生实用结果，并催生了 MYCIN、XCON 等专家系统以及知识工程产业。

@@ -40,6 +40,17 @@ relatedEvents:
   - deep-learning-rise
   - resnet
   - gpt-1
+visual:
+  src: /assets/events/alexnet.webp
+  width: 1800
+  height: 1012
+  alt: AlexNet 论文中 ReLU 与 tanh 训练速度的对比图
+  altEn: AlexNet paper figure comparing the training speed of ReLU and tanh units
+  caption: AlexNet 论文用 CIFAR-10 实验展示 ReLU 网络达到相同训练误差所需的迭代次数显著更少。
+  captionEn: The AlexNet paper uses a CIFAR-10 experiment to show that a ReLU network reaches the same training error in far fewer iterations.
+  credit: Alex Krizhevsky, Ilya Sutskever, Geoffrey E. Hinton
+  sourceUrl: https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf
+  rights: official-editorial
 sources:
   - title: ImageNet Classification with Deep Convolutional Neural Networks
     url: https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks

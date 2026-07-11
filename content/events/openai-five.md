@@ -33,6 +33,17 @@ beforeAfterEn:
   before: Public reinforcement-learning breakthroughs centered on board games and single-agent play.
   after: Multi-agent coordination and real-time long-horizon tasks entered frontier demonstrations.
 relatedEvents: [alphazero, openai-o1]
+visual:
+  src: /assets/events/openai-five.webp
+  width: 1800
+  height: 1012
+  alt: OpenAI Five 论文列出的 Dota 2 观察空间、动作空间和比赛限制
+  altEn: OpenAI Five paper passage describing Dota 2 observation and action spaces and match restrictions
+  caption: OpenAI Five 论文记录系统每个时间步约观察 1.6 万个值，并明确写出 17 名英雄池与多单位控制物品等限制。
+  captionEn: The OpenAI Five paper records roughly 16,000 observed values per timestep and states the 17-hero pool and restrictions on items that control multiple units.
+  credit: OpenAI
+  sourceUrl: https://arxiv.org/abs/1912.06680
+  rights: official-editorial
 sources:
   - title: OpenAI Five Defeats Dota 2 World Champions
     url: https://openai.com/index/openai-five-defeats-dota-2-world-champions/
