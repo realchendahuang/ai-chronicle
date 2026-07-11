@@ -11,6 +11,7 @@ eventType: [product, company]
 topics:
   - ai-coding
   - developer-tools
+  - ai-agent
 products: [cursor]
 concepts: [repository-context, coding-agent, ide-agent]
 summary: Anysphere 宣布完成 6000 万美元 A 轮融资。Cursor 已把模型聊天、代码库索引和生成式编辑直接放进基于 VS Code 的开发环境。
@@ -33,7 +34,12 @@ beforeAfter:
 beforeAfterEn:
   before: AI appeared as a completion plugin or chat sidebar in a traditional editor.
   after: The editor was reorganized around model context and generative operations.
-relatedEvents: [github-copilot, swe-bench, claude-code]
+relatedEvents:
+  - github-copilot
+  - swe-bench
+  - claude-code
+  - devin
+  - codex-agent
 visual:
   src: /assets/events/cursor.webp
   width: 1672

@@ -22,3 +22,6 @@ Whether or not the first version delivered the full pitch, the name raised expec
 Browser and shell side by side in a sandbox imply a minimal complete set for a software-engineering agent: read docs, edit code, run commands, see results. Missing one falls back toward chat completion. After the category is named, successors must answer whether they hold that complete set—and what governance sits beyond it.
 
 Once public vision forms, fundraising, hiring, and headlines orbit the same category word. If capability evidence lags the word’s spin rate, controversy becomes the category’s companion noise. A full reading of Devin includes 13.86%, the demo UI, and the later dispute over comparison methods.
+Reading Devin with Cursor and Claude Code shows three faces of agent coding: outsourced tasks, embedded editing, local terminals. SWE-bench offers a public ruler that cannot replace product trust. 13.86% and comparison disputes remind us that in a naming year, metrics and marketing tangle easily.
+
+Topic density requires later products to answer the same set: sandbox borders, permission models, failure visibility, how humans veto. Devin opened public view; after the door, the corridor filled with imitators and more restrained variants. The chronicle should record the opening and that acceptance still waits behind it.

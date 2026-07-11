@@ -10,6 +10,7 @@ eventType:
 topics:
   - ai-coding
   - ai-agent
+  - developer-tools
 companies:
   - anthropic
 products:
@@ -53,6 +54,7 @@ relatedEvents:
   - devin
   - codex-agent
   - mcp
+  - swe-bench
 sources:
   - title: Claude 3.7 Sonnet and Claude Code
     url: "https://www.anthropic.com/news/claude-3-7-sonnet"

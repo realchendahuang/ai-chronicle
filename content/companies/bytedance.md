@@ -17,7 +17,8 @@ keyTopics:
   - video-generation
   - speech-ai
   - generative-media
-keyEvents: []
+keyEvents:
+  - seedance-1-0
 models:
   - doubao-1.0
   - doubao-1.6

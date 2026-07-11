@@ -14,7 +14,8 @@ keyTopics:
   - computer-vision
   - large-language-models
   - multimodal-ai
-keyEvents: []
+keyEvents:
+  - sensenova-5
 models:
   - sensenova
   - sensenova-v6

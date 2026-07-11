@@ -8,7 +8,10 @@ date: '2024-03-12'
 datePrecision: day
 importance: B
 eventType: [product]
-topics: [ai-coding, ai-agent]
+topics:
+  - ai-coding
+  - ai-agent
+  - developer-tools
 products: [devin]
 concepts: [coding-agent, swe-bench, terminal-agent]
 summary: Cognition 公布 Devin，展示一个在沙箱中规划任务、编辑代码、运行命令、浏览文档并提交结果的软件工程 Agent。
@@ -42,7 +45,12 @@ beforeAfter:
 beforeAfterEn:
   before: AI coding products mainly waited for developers to ask and approve each step.
   after: Products began promising sustained execution of complete engineering tasks in isolated environments.
-relatedEvents: [swe-bench, cursor, claude-code, codex-agent]
+relatedEvents:
+  - swe-bench
+  - cursor
+  - claude-code
+  - codex-agent
+  - github-copilot
 sources:
   - title: Introducing Devin
     url: "https://cognition.ai/blog/introducing-devin"

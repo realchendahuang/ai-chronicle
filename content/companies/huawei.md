@@ -15,7 +15,8 @@ keyTopics:
   - enterprise-ai
   - ai-hardware
   - ai-infrastructure
-keyEvents: []
+keyEvents:
+  - pangu-5
 models:
   - pangu
   - pangu-5.0

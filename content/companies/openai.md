@@ -27,6 +27,7 @@ keyEvents:
   - openai-o1
   - gpt-5
   - gpt-5-6
+  - sora-public
 models:
   - gpt-1
   - gpt-2

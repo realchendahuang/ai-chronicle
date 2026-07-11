@@ -37,7 +37,13 @@ beforeAfter:
 beforeAfterEn:
   before: Text-to-video consisted mainly of short, visibly unstable research clips.
   after: Minute-scale generation and complex shot control became frontier targets.
-relatedEvents: [diffusion-models, stable-diffusion, gpt-4o]
+relatedEvents:
+  - diffusion-models
+  - stable-diffusion
+  - gpt-4o
+  - sora-public
+  - kling-1-0
+  - vidu-1-0
 visual:
   src: /assets/events/sora.webp
   width: 1672

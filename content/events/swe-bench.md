@@ -8,7 +8,10 @@ date: '2023-10-10'
 datePrecision: day
 importance: A
 eventType: [paper, benchmark]
-topics: [ai-coding, ai-agent]
+topics:
+  - ai-coding
+  - ai-agent
+  - developer-tools
 concepts: [swe-bench, repository-context, coding-agent]
 summary: 普林斯顿团队发布 SWE-bench，把真实 Python 仓库中的 2,294 个已解决 Issue 转成可执行的软件工程评测任务。
 summaryEn: Princeton researchers introduced SWE-bench, turning 2,294 resolved issues from real Python repositories into executable software-engineering tasks.
@@ -41,7 +44,12 @@ beforeAfter:
 beforeAfterEn:
   before: Coding models were ranked mainly on isolated problems and function-level correctness.
   after: Evaluation required testable changes inside real repositories.
-relatedEvents: [github-copilot, devin, claude-code, codex-agent]
+relatedEvents:
+  - github-copilot
+  - devin
+  - claude-code
+  - codex-agent
+  - cursor
 sources:
   - title: SWE-bench — Can Language Models Resolve Real-World GitHub Issues?
     url: "https://arxiv.org/abs/2310.06770"

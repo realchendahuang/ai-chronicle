@@ -37,7 +37,14 @@ beforeAfter:
 beforeAfterEn:
   before: Global talk treated Chinese video products mainly as followers.
   after: A Chinese platform model became a required head-to-head option.
-relatedEvents: [sora, stable-diffusion, diffusion-models]
+relatedEvents:
+  - sora
+  - stable-diffusion
+  - diffusion-models
+  - vidu-1-0
+  - seedance-1-0
+  - sora-public
+  - luma-ray2
 visual:
   src: /assets/events/kling-1-0.webp
   width: 1280

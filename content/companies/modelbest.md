@@ -14,7 +14,8 @@ keyTopics:
   - small-language-models
   - open-source-models
   - multimodal-ai
-keyEvents: []
+keyEvents:
+  - minicpm
 models:
   - minicpm
   - minicpm-v

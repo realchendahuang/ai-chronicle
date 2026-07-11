@@ -10,6 +10,8 @@ eventType:
   - product
 topics:
   - ai-coding
+  - ai-agent
+  - developer-tools
 companies:
   - github
   - openai
@@ -42,6 +44,8 @@ relatedEvents:
   - cursor
   - claude-code
   - codex-agent
+  - devin
+  - swe-bench
 visual:
   src: /assets/events/github-copilot.webp
   width: 1200

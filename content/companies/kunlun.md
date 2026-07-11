@@ -14,7 +14,8 @@ keyTopics:
   - large-language-models
   - multimodal-ai
   - consumer-ai
-keyEvents: []
+keyEvents:
+  - skywork
 models:
   - skywork
   - skywork-o1

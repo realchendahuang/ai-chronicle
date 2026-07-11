@@ -14,7 +14,8 @@ keyTopics:
   - generative-media
   - multimodal-ai
   - world-models
-keyEvents: []
+keyEvents:
+  - luma-ray2
 models:
   - dream-machine
   - ray2

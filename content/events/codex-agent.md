@@ -35,7 +35,14 @@ beforeAfter:
 beforeAfterEn:
   before: One developer usually worked with one coding assistant in one local session.
   after: Multiple agents could handle repository tasks in parallel inside isolated environments.
-relatedEvents: [codex, swe-bench, claude-code, agent-runtime]
+relatedEvents:
+  - codex
+  - swe-bench
+  - claude-code
+  - agent-runtime
+  - github-copilot
+  - cursor
+  - devin
 visual:
   src: /assets/events/codex-agent.webp
   width: 1672

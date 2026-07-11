@@ -14,7 +14,8 @@ keyTopics:
   - video-generation
   - generative-media
   - multimodal-ai
-keyEvents: []
+keyEvents:
+  - vidu-1-0
 models:
   - vidu
   - vidu-1.5
