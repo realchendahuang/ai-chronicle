@@ -21,4 +21,6 @@ Within selected tasks, DENDRAL could work faster than expert mass-spectrometry a
 
 The archived project history keeps the cost visible. DENDRAL was custom-built, required years of intensive labor and sustained funding, and after more than a decade still handled only certain compound classes rather than all of chemistry. Explicit knowledge travels well through software; tacit, shifting, or poorly expressible knowledge does not become explicit merely because the product is called an expert system.
 
+The computing environment around the work expanded as well. SUMEX-AIM, established in 1973, made Stanford's medical-AI resources available to remote researchers over the ARPANET. By 1980 it hosted nineteen projects, among them DENDRAL and its descendants, MYCIN, MOLGEN, and the University of Pittsburgh's INTERNIST. An expert system was no longer only a program in one laboratory. It was also an institution made of shared machines, network access, domain specialists, and continuing public support.
+
 DENDRAL's tree lost vast numbers of candidates as chemistry cut away impossible branches. It also displayed, branch by branch, where the encoded knowledge ended.

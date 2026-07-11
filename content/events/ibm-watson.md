@@ -49,6 +49,10 @@ sources:
     url: https://www.ibm.com/history/watson-jeopardy
     publisher: IBM
     type: official
+  - title: 'Building Watson: An Overview of the DeepQA Project'
+    url: https://research.ibm.com/publications/building-watson-an-overview-of-the-deepqa-project
+    publisher: IBM Research
+    type: paper
 status: verified
 slug: ibm-watson
 ---

@@ -48,6 +48,14 @@ sources:
     url: https://developer.nvidia.com/cuda-toolkit-archive
     publisher: NVIDIA
     type: official
+  - title: NVIDIA Corporate Timeline
+    url: https://www.nvidia.com/en-us/about-nvidia/corporate-timeline/
+    publisher: NVIDIA
+    type: official
+  - title: Accelerate Machine Learning with the cuDNN Deep Neural Network Library
+    url: https://developer.nvidia.com/blog/accelerate-machine-learning-cudnn-deep-neural-network-library/
+    publisher: NVIDIA Technical Blog
+    type: official
 status: verified
 slug: cuda
 ---

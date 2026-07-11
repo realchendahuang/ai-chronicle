@@ -13,7 +13,7 @@ The protein structure problem invited the language of portraiture: one sequence,
 
 Proteins bind DNA and help regulate genetic information. RNA folds and pairs, and joins proteins in molecular machinery. A small-molecule drug approaches a pocket whose geometry may determine whether any later biological effect is possible. Once AlphaFold 2 had made a striking advance in predicting many protein structures, the important questions did not end at the protein's surface. They gathered there.
 
-AlphaFold 3 widened the unit of prediction. Proteins, nucleic acids, small-molecule ligands, ions, and modified residues could be represented in a single system. The requested output was the joint structure of a complex: not merely what each component might look like alone, but where different kinds of molecules might sit in relation to one another.
+AlphaFold 3 widened the unit of prediction. Proteins, nucleic acids, small-molecule ligands, ions, and modified residues could be represented in a single system. The requested output was the joint structure of a complex, showing each component together with the positions of different kinds of molecules in relation to one another.
 
 The architecture changed with the scope. A Pairformer became the principal processing module in place of AlphaFold 2's Evoformer, with reduced reliance on multiple-sequence alignments. At the output end, a diffusion process generated atomic coordinates. During training, noise was added to known structures and the network learned to reverse that corruption. At inference, it began from noise and repeatedly denoised toward a possible three-dimensional arrangement.
 

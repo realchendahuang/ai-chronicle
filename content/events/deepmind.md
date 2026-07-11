@@ -47,6 +47,14 @@ sources:
     url: https://deepmind.google/about/
     publisher: Google DeepMind
     type: official
+  - title: Google buys UK artificial intelligence start-up DeepMind
+    url: https://www.bbc.com/news/technology-25908379
+    publisher: BBC News
+    type: archive
+  - title: Human-level control through deep reinforcement learning
+    url: https://www.nature.com/articles/nature14236
+    publisher: Nature
+    type: paper
 status: verified
 slug: deepmind
 ---

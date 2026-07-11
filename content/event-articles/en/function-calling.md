@@ -19,7 +19,7 @@ The application still had work to do. It validated the arguments, chose whether 
 
 That distinction protects the feature from its own mythology. Well-formed JSON may contain the wrong city, the wrong date, or an unsafe instruction. Schema validation answers whether an object has the expected shape, not whether the model understood the person who asked for it. Prompt injection remains possible wherever untrusted text can influence tool selection. Authorization, policy, and audit still belong outside the model.
 
-The improvement was nevertheless profound because it was modest. Language models are useful precisely where requests are variable and underspecified. Traditional software is useful where types, permissions, and execution rules must hold. JSON Schema did not make either side resemble the other. It created a seam at which each could hand over a bounded artifact.
+The improvement came from this modest scope. Language models are useful where requests are variable and underspecified. Traditional software is useful where types, permissions, and execution rules must hold. JSON Schema kept those roles separate and created a seam at which each could hand over a bounded artifact.
 
 Weather services, private retrieval systems, order APIs, and execution environments could now join a common loop without pretending prose was a program. Later agent frameworks would add parallel calls, retries, state, and long-running tasks. Their diagrams became elaborate. Near the middle remained the same contract: these are the tools, these are their arguments, the model may propose one, and the application must decide what happens next.
 

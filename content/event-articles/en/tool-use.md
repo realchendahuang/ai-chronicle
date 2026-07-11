@@ -23,4 +23,4 @@ Similarity made the remaining differences more expensive. How should a tool adve
 
 Claude Tool Use did not provide that cross-model, cross-service layer, and it should not be relabeled as MCP before MCP existed. It established a provider-specific way for Claude to call client tools. Its place in protocol history comes from the repeated integration work it made visible. Later efforts, including MCP, would address parts of that broader connection problem; Tool Use was evidence of the demand, not a preview of one inevitable standard.
 
-By 2024, the handles on the tools were starting to share a shape. The next argument would be about the socket they should all fit.
+By 2024, a developer changing model providers could still recognize the same boundary: a named tool, structured arguments, an application-side execution, and a returned result. Reusing the connection itself remained the next problem.

@@ -11,7 +11,7 @@ avoid:
 
 Claude 5 did not arrive as a neatly assembled family.
 
-On 9 June 2026, Anthropic released Fable 5 and Mythos 5, two names attached to the same underlying model but separated by access policy. Fable was broadly available with conservative real-time safeguards: certain cybersecurity requests were redirected to Claude Opus 4.8. Anthropic said the intervention occurred in fewer than five percent of conversations on average and acknowledged that benign requests would sometimes be caught. Mythos relaxed some of those restrictions, but initially appeared only through Project Glasswing, a collaboration with the United States government serving a limited group of cyber defenders and infrastructure organizations. The distinction was not intelligence. It was who was permitted to reach which capability.
+On 9 June 2026, Anthropic released Fable 5 and Mythos 5, two names attached to the same underlying model but separated by access policy. Fable was broadly available with conservative real-time safeguards: certain cybersecurity requests were redirected to Claude Opus 4.8. Anthropic said the intervention occurred in fewer than five percent of conversations on average and acknowledged that benign requests would sometimes be caught. Mythos relaxed some of those restrictions, but initially appeared only through Project Glasswing, a collaboration with the United States government serving a limited group of cyber defenders and infrastructure organizations. Their intelligence was the same; eligibility determined which capability a user could reach.
 
 Three days later, access to Fable and Mythos was paused. Anthropic's update said restoration was underway and offered no triumphant narrative to absorb the interruption. Both returned on 1 July. The earliest history of the family therefore contains a visible crease: launch, withdrawal, redeployment. For models promoted around long-running autonomous work, availability belongs to capability more than release copy usually admits.
 
@@ -23,4 +23,4 @@ Even the benchmark graphics retained signs of construction. Anthropic revised a 
 
 By then, the familiar Opus–Sonnet–Haiku ladder no longer described the full family. Fable meant high broadly available capability with strict live safeguards. Mythos meant the same underlying model under trusted access. Sonnet remained the workhorse balance of price and performance. What made a model a tier now included how long it could work, what it was allowed to do, who could use it, and what a sustained task cost.
 
-The proliferation of names was not only branding. It was the taxonomy struggling to catch up with a fact: at the frontier, capability and permission had become inseparable product properties.
+The proliferation of names showed a taxonomy struggling to catch up. At the frontier, capability and permission had become inseparable product properties.

@@ -9,9 +9,7 @@ avoid:
   - "Treating a mid-tier commercial name as evidence of middling capability"
 ---
 
-Model families once resembled a building with an orderly elevator. The largest, slowest, most expensive system occupied the top floor and was presumed to be the most capable. Smaller models lived below, exchanging intelligence for speed and price. Claude 3.5 Sonnet made the floor plan unreliable.
-
-Anthropic kept the model in the Sonnet price tier: $3 per million input tokens and $15 per million output tokens, with a 200,000-token context window. Yet the company's comparison target was Claude 3 Opus, the previous flagship. Anthropic reported that the new Sonnet ran at roughly twice Opus's speed and improved across reasoning, knowledge, vision, and coding evaluations. In an internal agentic coding test, it said Sonnet resolved 64 percent of the tasks, compared with 38 percent for Opus.
+Claude 3.5 Sonnet kept the price of Anthropic's middle commercial tier: $3 per million input tokens and $15 per million output tokens, with a 200,000-token context window. Its launch comparison, however, pointed upward to Claude 3 Opus, the previous flagship. Anthropic reported roughly twice Opus's speed along with gains across reasoning, knowledge, vision, and coding evaluations. In an internal agentic coding test, it said Sonnet resolved 64 percent of the tasks, compared with 38 percent for Opus.
 
 Those figures record how Anthropic assessed its own release. Their meaning is bounded by the company's task set, tool configuration, and scoring procedure; they do not settle every production workload. The more durable argument did not require an undefeated benchmark. It appeared in the relationship among capability, latency, and cost.
 
@@ -21,4 +19,4 @@ Artifacts, introduced with the model, supplied an interface for that change in u
 
 The release therefore joined two economic movements. Model providers were learning to improve the whole curve of intelligence, speed, and price rather than compete only at its most costly endpoint. Product designers were treating generation as the beginning of work on an artifact rather than the conclusion of a chat turn. Neither movement had the drama of declaring a new maximum parameter count. Both made models easier to place inside ordinary production.
 
-Flagships did not disappear. They continued toward the hardest tasks, while smaller systems pursued efficiency. But the old hierarchy had lost its power to answer the practical question. Teams increasingly did not ask which name sat highest in a family. They asked which model they could afford to leave running—and which one was good enough that they would want to.
+The flagship category survived, but it no longer settled the purchasing decision by itself. Claude 3.5 Sonnet made repeated use part of the capability claim. A model could earn the central place in a workflow through the requests a team could send all day as well as the hardest question it could answer once.

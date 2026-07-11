@@ -44,6 +44,10 @@ sources:
     url: https://www.ibm.com/history/deep-blue
     publisher: IBM
     type: official
+  - title: Deep Blue
+    url: https://doi.org/10.1016/S0004-3702(01)00129-1
+    publisher: Artificial Intelligence
+    type: paper
 status: verified
 slug: deep-blue
 ---

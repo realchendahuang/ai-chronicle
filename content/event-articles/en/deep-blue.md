@@ -23,4 +23,4 @@ The order of the games amplified the symbolism. Kasparov won first. Deep Blue eq
 
 Deep Blue's chess strength ended at the edge of chess; medicine, language, and ordinary reasoning remained elsewhere. The match established two limits at once: a specialized machine could surpass the strongest human in a difficult intellectual task, and the achievement could remain completely enclosed by that task.
 
-Deep Blue was retired after the match. The score stopped changing; the argument about its meaning did not. Its most useful legacy may be a habit of disassembly. Before asking whether a machine has exceeded humanity, ask what the contest measured and how much of the winning performance belonged to computation, stored knowledge, and human design.
+Deep Blue was retired after the match, leaving a score that could no longer grow and a victory that could still be itemized: positions evaluated per second, branches pruned, chess knowledge encoded, and capability ending at the board's edge. Later claims that a machine has “exceeded humanity” can be returned to the same ledger before the slogan is allowed to stand.

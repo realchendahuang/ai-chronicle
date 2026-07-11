@@ -9,11 +9,9 @@ avoid:
   - "Confusing MCP with model-level function calling"
 ---
 
-Connecting one AI application to one data source is usually manageable. Connect ten applications to ten sources and the geometry changes. Every host has its own plugin format; every service carries its own objects and permissions; every pairing must explain, again, what may be read, what may be changed, and how the result returns.
+Anthropic released the Model Context Protocol on 25 November 2024 with an open specification, SDKs, local-server support in Claude Desktop, and example servers. Its target was visible in the multiplication of private adapters. One application connected to one source is manageable; ten hosts paired independently with ten services create a matrix in which every connection must explain permissions, objects, and return formats again.
 
-The Model Context Protocol was designed for that multiplication.
-
-Anthropic released MCP on 25 November 2024 with an open specification, SDKs, local-server support in Claude Desktop, and example servers. Its client–server arrangement divided responsibilities. An MCP server exposed capabilities. A client established the connection and negotiated them. The host retained the model interaction, the user interface, and decisions about permission. Servers could offer tools, read-only resources, and reusable prompts; JSON-RPC carried the messages.
+MCP divided that connection into named responsibilities. A server exposed capabilities. A client established the connection and negotiated them. The host retained the model interaction, the user interface, and decisions about permission. Servers could offer tools, read-only resources, and reusable prompts; JSON-RPC carried the messages.
 
 The hoped-for economy was straightforward. A GitHub, Postgres, or local-files integration could be implemented once and used by multiple compatible hosts instead of being rewritten for every model application. The protocol did not prescribe what the model should think about the retrieved information. It gave software a shared way to announce and exchange what was available.
 

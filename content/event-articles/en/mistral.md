@@ -13,7 +13,7 @@ Mistral 7B arrived with a small set of numbers: seven billion parameters, groupe
 
 By September 2023, downloadable language models were no longer a novelty. Their constraints had become more instructive than their existence. A checkpoint could be available and still be awkward to run: too much memory, too little throughput, or a license that complicated the intended product. Mistral AI treated those limitations as the design brief.
 
-Grouped-query attention reduced the key-value cache burden during inference. Sliding-window attention limited how far each token attended directly while allowing information to propagate across layers. Together, these choices pursued a model that was not merely smaller on a parameter sheet but cheaper in the repeated act of serving tokens.
+Grouped-query attention reduced the key-value cache burden during inference. A 4,096-token sliding window limited how far each token attended directly while allowing information to propagate across layers. Together, these choices pursued lower cost in the repeated act of serving tokens, so the parameter count described a practical saving rather than size alone.
 
 Mistral's release materials reported that the 7B model outperformed the larger Llama 2 13B on several public benchmarks. The wording matters. These were selected measurements published by the model's maker, not a license to call the smaller system universally superior. They supported a narrower claim worth testing in deployment: parameter count alone did not determine the quality available at a practical size.
 

@@ -23,4 +23,4 @@ Meta published comparisons in which Llama 4 models led GPT-4o, Gemini 2.0, DeepS
 
 Llama 4 brought released weights into the same architectural conversation as closed multimodal flagships: early-fusion vision, mixture-of-experts routing, and very long context. It also made the word “open” visibly layered. Developers could download weights, inspect the architecture, fine-tune, and deploy the released models. The teacher, training data, and complete production history remained inside Meta.
 
-The herd crossed a boundary, but not as one body. Scout went far, Maverick went broad, and Behemoth taught from behind the gate. The distances among them were as important as the fact that two had been let out.
+The release boundary ran through the family. Scout and Maverick became files others could deploy and alter. Behemoth remained an internal teacher whose outputs had already shaped one of those files. Llama 4 made access part of the architecture diagram: the students were public artifacts, while the largest source of supervision stayed inside Meta.

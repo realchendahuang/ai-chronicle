@@ -9,9 +9,9 @@ avoid:
   - "Using the spectacle of multiple agents to obscure tracing, permission, and failure handling"
 ---
 
-Before “agent” became a product category, it often lived as an expanding loop in application code. Send a request to the model. Parse the tool it wants. Execute the tool. Put the result back into context. Ask again. Around the loop accumulate timeouts, retries, permissions, logs, and exceptions. The demonstration shows the model's answer; the code that lets the demonstration survive a second run remains offstage.
+OpenAI's 11 March 2025 release gave product names to work that had usually remained offstage. The Responses API unified model text and tool interactions and offered built-in web search, file search, and computer use. The open-source Agents SDK introduced composable concepts for agents, handoffs, guardrails, and tracing.
 
-OpenAI's release on 11 March 2025 named this middle layer. The Responses API unified model text and tool interactions and offered built-in web search, file search, and computer use. The open-source Agents SDK introduced composable concepts for agents, handoffs, guardrails, and tracing. The API concerned how a model response could include and continue through tools. The SDK concerned how an application arranged roles and execution around that response.
+Applications had already been carrying these concerns in an expanding loop: send a request, parse the desired tool, execute it, return the result, ask again. Timeouts, retries, permissions, logs, and exceptions accumulated around the cycle. The Responses API concerned how one model response could continue through tools. The SDK concerned how an application arranged roles and execution around that response.
 
 A handoff sounds conversational until it is implemented. Then it becomes a decision about whether the current agent should transfer a task and its context to another agent with a more suitable mandate. A guardrail is not merely a safety sentence in a system prompt; it is a check surrounding an input, an output, or an action. A trace is plainer still. If a run invokes five model calls, three tools, and one retry, a developer needs the path in order to distinguish a mistaken model judgment from a bad tool return or a flaw in orchestration.
 

@@ -19,4 +19,4 @@ The experiment was substantial. Training used twelve million English-French sent
 
 The fixed state unified the architecture and compressed every detail of a source sentence through one narrow channel. Attention mechanisms soon allowed a decoder to consult source positions anew at each output step rather than relying only on the final encoded vector.
 
-Before that change, the 2014 paper had already preserved an important experimental truth. A general idea does not succeed because its diagram is clean. The sentence had to be fed in backward before the gradient found a manageable distance.
+Before that change, the 2014 paper had already preserved a useful engineering detail. Its clean encoder–decoder diagram became competitive only after the source sentence was fed in backward and the gradient found a more manageable distance.

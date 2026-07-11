@@ -23,4 +23,4 @@ Those qualifications belong beside the achievement, not beneath it. By 2020, seq
 
 In 2021, code was released, and the AlphaFold Database would eventually expand beyond 200 million predicted structures. Scale arrived after the test of credibility.
 
-The decisive image is not a machine “solving life.” It is two coordinate sets laid over one another after the sealed answer has been opened—one assembled through physical experiments, the other submitted while that result was still unavailable. Before AlphaFold could astonish biology, a scientific community had spent decades constructing an examination that made astonishment difficult to fake.
+The useful image is two coordinate sets laid over one another after the sealed answer has been opened: one assembled through physical experiments, the other submitted while that result was still unavailable. A scientific community had spent decades constructing an examination that made a company's self-assessment insufficient. CASP14 allowed the coincidence of those coordinates, rather than a slogan about “solving life,” to carry the claim.

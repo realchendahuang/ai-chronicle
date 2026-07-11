@@ -32,6 +32,14 @@ sources:
     url: https://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/p001.htm
     publisher: UK Science Research Council
     type: report
+  - title: 'Language and Machines: Computers in Translation and Linguistics'
+    url: https://nap.nationalacademies.org/catalog/9547/language-and-machines-computers-in-translation-and-linguistics
+    publisher: National Academy of Sciences
+    type: report
+  - title: Freddy the Robot Was the Fall Guy for British AI
+    url: https://spectrum.ieee.org/freddy-robot-british-ai-winter
+    publisher: IEEE Spectrum
+    type: archive
 status: verified
 slug: ai-winter-1974
 ---

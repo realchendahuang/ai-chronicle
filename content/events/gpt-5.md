@@ -19,7 +19,7 @@ concepts:
   - llm
   - chain-of-thought
   - tool-calling
-summary: OpenAI 发布 GPT-5，把即时回答、深度推理、代码与工具使用整合进同一模型家族，模型开始根据任务自动分配计算。
+summary: OpenAI 发布 GPT-5。ChatGPT 以路由系统在快速模型与深度推理模型之间选择；API 则提供 GPT-5、mini 和 nano 三档独立模型及可配置的推理强度，而不是照搬 ChatGPT 路由。
 summaryEn: OpenAI released GPT-5 in ChatGPT as a routed system that selected between a fast model and a deeper reasoning model according to the request. The API exposed separate GPT-5, mini, and nano models with configurable reasoning effort rather than the ChatGPT router itself.
 background: GPT-4 系列与 o1 系列分别承担通用对话和深度推理，用户和开发者需要在不同模型、速度和成本之间手动选择。
 whatHappened: GPT-5 家族统一快速与推理模式，并强化代码、工具调用和专业任务。产品路由开始根据问题难度自动决定是否投入更多推理计算。

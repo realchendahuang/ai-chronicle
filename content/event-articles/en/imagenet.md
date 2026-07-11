@@ -11,7 +11,7 @@ avoid:
 
 Before ImageNet could help a system recognize an image, someone had to decide what the image would be called.
 
-The web already held billions of photographs. Search engines could retrieve candidates, but a pile of files was not a training set. A category such as “husky,” “sailboat,” or “musical instrument” needed a place among other categories, and every result needed a judgment about whether it belonged. The project began not with a classifier but with an attempt to impose enough order on visible abundance for learning to become measurable.
+The web already held billions of photographs. Search engines could retrieve candidates, but a pile of files was not a training set. A category such as “husky,” “sailboat,” or “musical instrument” needed a place among other categories, and every result needed a judgment about whether it belonged. The project began by imposing enough order on visible abundance for a future classifier's learning to become measurable.
 
 Fei-Fei Li's team borrowed that order from WordNet, the lexical database that arranges English nouns into hierarchical synonym sets. ImageNet aimed to populate these nodes with pictures. Mammals divided into narrower branches; dogs divided again into breeds; vehicles followed a different tree. The 2009 paper described twelve subtrees, 5,247 synsets, and 3.2 million cleaned images, averaging more than six hundred per category. Its stated ambition reached much further: hundreds or thousands of examples for tens of thousands of WordNet noun concepts.
 

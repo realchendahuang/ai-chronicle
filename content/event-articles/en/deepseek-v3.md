@@ -23,4 +23,4 @@ DeepSeek reported results across code, mathematics, and knowledge benchmarks tha
 
 The report did not demonstrate that a frontier model could be bought with a surprisingly small cheque. It showed that compute expenditure is the outcome of many decisions: expert routing, precision, objectives, communication, hardware constraints, and training stability. The cluster was still large; the research that produced the successful run did not disappear because it was omitted from one line item.
 
-After DeepSeek-V3, the claim that better models simply require more money became harder to leave unexamined. A ledger had entered the argument. It asked not whether capital mattered, but where each unit of it was being spent—and whether an architectural or systems decision could make that line smaller.
+After DeepSeek-V3, the claim that better models simply require more money became harder to leave unexamined. The report supplied a ledger detailed enough to ask where each unit of capital went, then to ask which architectural or systems decision might make one line smaller.

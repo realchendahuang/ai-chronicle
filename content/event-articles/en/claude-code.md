@@ -9,9 +9,9 @@ avoid:
   - "Describing the product through the older narrative of editor completion"
 ---
 
-Search the repository. Open a file. Change it. Run the tests. Read the error and search again. If the work holds, commit it—or push it to GitHub.
+Anthropic called Claude Code a research preview when it appeared beside Claude 3.7 Sonnet in February 2025. The label belonged next to a consequential change of setting: the model was now operating inside a command-line session attached to a real repository.
 
-The actions were already familiar, but they had been divided among editor, terminal, and browser. In February 2025, Anthropic's research preview of Claude Code joined them inside one command-line session. Released alongside Claude 3.7 Sonnet, it could search and read code, edit files, write and execute tests, and perform version-control operations while keeping the developer informed. The model no longer waited for a fragment to be pasted into chat. It received interfaces for acting on the repository itself.
+Search, file reading, edits, tests, and version-control operations no longer had to be relayed among an editor, a terminal, a browser, and a chat window. Claude Code could perform that sequence while keeping the developer informed. Instead of waiting for a fragment to be pasted into conversation, it received interfaces for acting on the repository itself.
 
 The terminal mattered for reasons having little to do with its austere appearance. Software can contradict a model there. A missing file produces an immediate failure. A compiler points to the type mismatch. A test command returns an exit code that does not become successful when accompanied by a confident explanation. A plausible patch had to enter the project's existing constraints and survive execution. Each run changed the state of the work; that state became evidence for the next decision.
 

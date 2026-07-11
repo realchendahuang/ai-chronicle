@@ -59,6 +59,14 @@ sources:
     url: https://psycnet.apa.org/record/1959-09865-001
     publisher: Psychological Review
     type: paper
+  - title: Professor’s perceptron paved the way for AI — 60 years too soon
+    url: https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon
+    publisher: Cornell Chronicle
+    type: archive
+  - title: Perceptron, Mark I
+    url: https://americanhistory.si.edu/collections/object/nmah_334414
+    publisher: Smithsonian National Museum of American History
+    type: archive
 status: verified
 slug: perceptron
 ---

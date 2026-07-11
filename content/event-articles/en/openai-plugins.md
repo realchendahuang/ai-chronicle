@@ -19,8 +19,6 @@ The result looked briefly like an app store for a conversational operating layer
 
 A conventional program has a control flow engineers can trace. A plugin-enabled assistant inserted a probabilistic judgment into that flow. It might choose a tool, omit one, or construct a call from an imperfect reading of the conversation. The directory made these judgments accessible to a mass audience before the surrounding security model had matured.
 
-The plugin catalog did not become the permanent universal interface. Function calling, GPT Actions, and later agent systems decomposed the idea into lower-level contracts. The storefront receded. Yet its historical value lies partly in that impermanence. Products often reveal the future in the wrong shape.
+The catalog correctly anticipated that a chat window could become an entrance to search, computation, and external transactions. It guessed that the durable product shape would be a storefront: arrange services in a directory and let the model choose. Function calling, GPT Actions, and later agent systems moved instead toward lower-level contracts.
 
-Plugins correctly anticipated that a chat window could become an entrance to search, computation, and external transactions. They treated the difficult part as arranging tools in a catalog. Experience suggested otherwise. The harder problem was preserving a correspondence among a person's intention, a model's interpretation, a software service's permissions, and the action finally taken.
-
-The directory ceased to be the central interface. Tool selection, argument validation, user authorization, and untrusted external responses remained concrete integration problems in later agent systems.
+The difficult work survived the storefront. A person's intention still had to remain intact through model interpretation, argument construction, software permissions, and the final action. Tool selection, validation, authorization, and untrusted responses outlived the directory because none of them had ever been solved by arranging icons in one.

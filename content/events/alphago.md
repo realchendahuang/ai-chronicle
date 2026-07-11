@@ -57,6 +57,14 @@ sources:
     url: https://www.nature.com/articles/nature16961
     publisher: Nature
     type: paper
+  - title: AlphaGo
+    url: https://deepmind.google/research/alphago/
+    publisher: Google DeepMind
+    type: official
+  - title: "AlphaGo’s ultimate challenge: a five-game match against the legendary Lee Sedol"
+    url: https://blog.google/innovation-and-ai/products/alphagos-ultimate-challenge/
+    publisher: Google
+    type: official
 status: verified
 slug: alphago
 ---

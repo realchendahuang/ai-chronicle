@@ -21,6 +21,6 @@ The word “open” obscured as much as it explained. The first LLaMA was not is
 
 Hosted APIs continued to offer important forms of order: managed hardware, stable endpoints, moderation, and centrally maintained versions. Downloadable weights offered another kind of power. They could remain inside an organization's data boundary, be inspected by researchers, run without a network service, or be altered in ways the publisher neither approved nor anticipated. The same transfer of control enabled adaptation and misuse.
 
-LLaMA did not end the commercial advantage of frontier APIs. It established that a parallel technical culture could grow around possession rather than access. Afterward, every major model release invited a practical question before the benchmark debate had finished: can anyone get the weights?
+Frontier APIs retained clear commercial advantages, while LLaMA established that a parallel technical culture could grow around possession rather than access. Afterward, every major model release invited a practical question before the benchmark debate had finished: can anyone get the weights?
 
 Behind that question was no abstract manifesto. People wanted to know how much memory the model consumed, what happened if they changed it, and whether it could run on a machine they controlled. They wanted the faraway service to become an object on the desk.
