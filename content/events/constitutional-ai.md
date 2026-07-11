@@ -51,11 +51,11 @@ visual:
   prompt: "Editorial illustration for Constitutional AI, open constitution scroll with abstract principle marks casting light on dual-column answer drafts being revised by a calm abstract model figure, warm parchment and soft indigo, no text no logos, 16:9"
 sources:
   - title: 'Constitutional AI: Harmlessness from AI Feedback'
-    url: https://arxiv.org/abs/2212.08073
+    url: "https://arxiv.org/abs/2212.08073"
     publisher: arXiv
     type: paper
   - title: Constitutional AI — Anthropic research overview
-    url: https://www-cdn.anthropic.com/7512771452629584566b6303311496c262da1006/Anthropic_ConstitutionalAI_v2.pdf
+    url: "https://www-cdn.anthropic.com/7512771452629584566b6303311496c262da1006/Anthropic_ConstitutionalAI_v2.pdf"
     publisher: Anthropic
     type: official
 status: verified

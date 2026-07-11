@@ -29,7 +29,7 @@ visual:
   caption: 'CUDA 的基本处理流程：数据传入 GPU 内存，由并行核心执行计算，再把结果送回主内存。'
   captionEn: 'CUDA’s basic processing flow: data moves to GPU memory, parallel cores execute the work, and results return to main memory.'
   credit: Tosaka, CC BY 3.0, via Wikimedia Commons
-  sourceUrl: https://commons.wikimedia.org/wiki/File:CUDA_processing_flow_(En).PNG
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:CUDA_processing_flow_(En).PNG"
   rights: cc
 whatHappened: CUDA 提供编程模型、编译器、运行时和数学库，让线程、内存层次与 GPU 内核成为普通软件工程对象。随后 cuDNN 等库进一步封装了神经网络运算。
 whatHappenedEn: CUDA supplied a programming model, compiler, runtime, and math libraries, making threads, memory hierarchies, and GPU kernels ordinary software-engineering concerns. Libraries such as cuDNN later packaged neural-network operations.
@@ -50,15 +50,15 @@ beforeAfterEn:
 relatedEvents: [deep-learning-rise, alexnet, flashattention]
 sources:
   - title: CUDA Toolkit Archive
-    url: https://developer.nvidia.com/cuda-toolkit-archive
+    url: "https://developer.nvidia.com/cuda-toolkit-archive"
     publisher: NVIDIA
     type: official
   - title: NVIDIA Corporate Timeline
-    url: https://www.nvidia.com/en-us/about-nvidia/corporate-timeline/
+    url: "https://www.nvidia.com/en-us/about-nvidia/corporate-timeline/"
     publisher: NVIDIA
     type: official
   - title: Accelerate Machine Learning with the cuDNN Deep Neural Network Library
-    url: https://developer.nvidia.com/blog/accelerate-machine-learning-cudnn-deep-neural-network-library/
+    url: "https://developer.nvidia.com/blog/accelerate-machine-learning-cudnn-deep-neural-network-library/"
     publisher: NVIDIA Technical Blog
     type: official
 status: verified

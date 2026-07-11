@@ -49,11 +49,11 @@ visual:
   prompt: "Editorial illustration for Mixtral mixture of experts, specialist workstations amber light path, charcoal amber, no logos, 16:9"
 sources:
   - title: Mixtral of experts
-    url: https://mistral.ai/news/mixtral-of-experts
+    url: "https://mistral.ai/news/mixtral-of-experts"
     publisher: Mistral AI
     type: official
   - title: Mixtral of Experts (technical report)
-    url: https://arxiv.org/abs/2401.04088
+    url: "https://arxiv.org/abs/2401.04088"
     publisher: arXiv
     type: paper
 status: verified

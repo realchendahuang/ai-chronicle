@@ -51,15 +51,15 @@ visual:
   prompt: "Editorial illustration for Claude computer use, layered desktop windows with a precise abstract cursor path, small screenshot tiles feeding a calm decision loop, soft orange and slate product-editorial style, no Anthropic logos, no readable brand text, 16:9"
 sources:
   - title: Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku
-    url: https://www.anthropic.com/news/3-5-models-and-computer-use
+    url: "https://www.anthropic.com/news/3-5-models-and-computer-use"
     publisher: Anthropic
     type: official
   - title: Developing a computer use model
-    url: https://www.anthropic.com/news/developing-computer-use
+    url: "https://www.anthropic.com/news/developing-computer-use"
     publisher: Anthropic
     type: official
   - title: Computer use documentation
-    url: https://docs.anthropic.com/en/docs/build-with-claude/computer-use
+    url: "https://docs.anthropic.com/en/docs/build-with-claude/computer-use"
     publisher: Anthropic Docs
     type: official
 status: verified

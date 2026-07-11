@@ -48,7 +48,7 @@ visual:
   prompt: "Editorial illustration of a modular industrial assistant machine with five bays: conversation files, run gears, document shelves, magnifying-glass retrieval arm, and a code chamber; a continuous paper tape conveyor runs through all bays above a control panel with switches and grid; dark metallic product-editorial style; no logos, no readable brand text, 16:9"
 sources:
   - title: New models and developer products announced at DevDay
-    url: https://openai.com/index/new-models-and-developer-products-announced-at-devday/
+    url: "https://openai.com/index/new-models-and-developer-products-announced-at-devday/"
     publisher: OpenAI
     type: official
 status: verified

@@ -42,11 +42,11 @@ visual:
   caption: GPT-2 技术报告首页，摘要概述了大规模语言模型在零样本设置下迁移任务的实验。
   captionEn: The first page of the GPT-2 technical report, whose abstract outlines zero-shot task transfer with a large language model.
   credit: Alec Radford 等 / OpenAI
-  sourceUrl: https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf
+  sourceUrl: "https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf"
   rights: official-editorial
 sources:
   - title: Better Language Models and Their Implications
-    url: https://openai.com/index/better-language-models/
+    url: "https://openai.com/index/better-language-models/"
     publisher: OpenAI
     type: official
 status: verified

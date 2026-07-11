@@ -32,7 +32,7 @@ visual:
   caption: Meta 发布页中的 Llama 4 系列信息图；其中 Behemoth 在发布时仍标为预览，Maverick 与 Scout 标为可用。
   captionEn: Meta's Llama 4 family graphic; Behemoth was still labeled as a preview at launch, while Maverick and Scout were marked available.
   credit: Meta AI
-  sourceUrl: https://ai.meta.com/blog/llama-4-multimodal-intelligence/
+  sourceUrl: "https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
   rights: official-editorial
 background: Llama 3 已形成庞大的开放模型生态，但多模态、长上下文与高效扩展仍是闭源旗舰的主要优势。
 whatHappened: Llama 4 使用混合专家架构，只激活部分参数完成推理。Scout 强调超长上下文，Maverick 强调综合能力；两者都原生处理文本和图像。
@@ -49,7 +49,7 @@ relatedEvents:
   - deepseek-v4
 sources:
   - title: The Llama 4 herd
-    url: https://ai.meta.com/blog/llama-4-multimodal-intelligence/
+    url: "https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
     publisher: Meta AI
     type: official
 status: verified

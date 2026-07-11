@@ -47,7 +47,7 @@ visual:
   prompt: "Editorial product scene of a dark AI-native code editor: multi-panel IDE with abstract code lines, purple/blue highlights connecting file tree to edits and chat panels, sticky notes with graphs, keyboard and coffee; no Cursor logo, no brand marks, no readable company names, 16:9"
 sources:
   - title: Cursor is now Anysphere
-    url: https://www.cursor.com/blog/series-a
+    url: "https://www.cursor.com/blog/series-a"
     publisher: Anysphere
     type: official
 status: verified

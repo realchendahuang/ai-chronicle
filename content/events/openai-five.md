@@ -42,11 +42,11 @@ visual:
   caption: OpenAI Five 论文记录系统每个时间步约观察 1.6 万个值，并明确写出 17 名英雄池与多单位控制物品等限制。
   captionEn: The OpenAI Five paper records roughly 16,000 observed values per timestep and states the 17-hero pool and restrictions on items that control multiple units.
   credit: OpenAI
-  sourceUrl: https://arxiv.org/abs/1912.06680
+  sourceUrl: "https://arxiv.org/abs/1912.06680"
   rights: official-editorial
 sources:
   - title: OpenAI Five Defeats Dota 2 World Champions
-    url: https://openai.com/index/openai-five-defeats-dota-2-world-champions/
+    url: "https://openai.com/index/openai-five-defeats-dota-2-world-champions/"
     publisher: OpenAI
     type: official
 status: verified

@@ -45,15 +45,15 @@ visual:
   caption: Yoshua Bengio。2014–2015 年与 Bahdanau、Cho 合作的对齐与翻译工作，把注意力写成可学习的软对齐。
   captionEn: Yoshua Bengio. With Bahdanau and Cho in 2014–2015, alignment-and-translation work made attention a learnable soft alignment.
   credit: Maryse Boyce, CC BY 4.0, via Wikimedia Commons
-  sourceUrl: https://commons.wikimedia.org/wiki/File:Yoshua_Bengio_2019.jpg
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:Yoshua_Bengio_2019.jpg"
   rights: cc
 sources:
   - title: Neural Machine Translation by Jointly Learning to Align and Translate
-    url: https://arxiv.org/abs/1409.0473
+    url: "https://arxiv.org/abs/1409.0473"
     publisher: arXiv
     type: paper
   - title: ICLR 2015 conference page (align and translate)
-    url: https://iclr.cc/archive/www/doku.php%3Fid=iclr2015:accepted-main.html
+    url: "https://iclr.cc/archive/www/doku.php%3Fid=iclr2015:accepted-main.html"
     publisher: ICLR
     type: archive
 status: verified

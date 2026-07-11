@@ -42,11 +42,11 @@ visual:
   caption: 论文图 3 把普通 34 层网络与加入捷径连接的残差版本并排画出，弧线标出跨层的恒等路径。
   captionEn: Figure 3 places a plain 34-layer network beside its residual counterpart, with arcs marking identity shortcuts across layers.
   credit: Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun
-  sourceUrl: https://arxiv.org/abs/1512.03385
+  sourceUrl: "https://arxiv.org/abs/1512.03385"
   rights: official-editorial
 sources:
   - title: Deep Residual Learning for Image Recognition
-    url: https://arxiv.org/abs/1512.03385
+    url: "https://arxiv.org/abs/1512.03385"
     publisher: arXiv
     type: paper
 status: verified

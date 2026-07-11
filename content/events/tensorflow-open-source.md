@@ -42,11 +42,11 @@ visual:
   caption: 开源发布后的 TensorFlow 系统论文把研究实验、分布式训练与生产推理写进同一套数据流架构。
   captionEn: The TensorFlow systems paper, published after the open-source release, describes research, distributed training, and production inference within one dataflow architecture.
   credit: Martín Abadi et al., Google Brain
-  sourceUrl: https://arxiv.org/abs/1605.08695
+  sourceUrl: "https://arxiv.org/abs/1605.08695"
   rights: official-editorial
 sources:
   - title: TensorFlow — Google’s latest machine learning system, open sourced
-    url: https://research.google/blog/tensorflow-googles-latest-machine-learning-system-open-sourced-for-everyone/
+    url: "https://research.google/blog/tensorflow-googles-latest-machine-learning-system-open-sourced-for-everyone/"
     publisher: Google Research
     type: official
 status: verified

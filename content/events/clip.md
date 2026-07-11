@@ -53,11 +53,11 @@ visual:
   prompt: "Editorial illustration for CLIP, twin towers image and text pairing, purple gray, no logos, 16:9"
 sources:
   - title: CLIP — Connecting text and images
-    url: https://openai.com/index/clip/
+    url: "https://openai.com/index/clip/"
     publisher: OpenAI
     type: official
   - title: Learning Transferable Visual Models From Natural Language Supervision
-    url: https://arxiv.org/abs/2103.00020
+    url: "https://arxiv.org/abs/2103.00020"
     publisher: arXiv
     type: paper
 status: verified

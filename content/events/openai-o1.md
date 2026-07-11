@@ -42,15 +42,15 @@ visual:
   caption: OpenAI 于 2024 年 12 月发布的 o1 系统卡首页；它记录的是完整 o1 与 o1-mini 的后续安全评估，而非 9 月预览版的开放界面。
   captionEn: First page of the o1 System Card published in December 2024, documenting later safety evaluations of o1 and o1-mini rather than the September preview interface.
   credit: OpenAI
-  sourceUrl: https://arxiv.org/abs/2412.16720
+  sourceUrl: "https://arxiv.org/abs/2412.16720"
   rights: official-editorial
 sources:
   - title: Introducing OpenAI o1-preview
-    url: https://openai.com/index/introducing-openai-o1-preview/
+    url: "https://openai.com/index/introducing-openai-o1-preview/"
     publisher: OpenAI
     type: official
   - title: OpenAI o1 System Card
-    url: https://arxiv.org/abs/2412.16720
+    url: "https://arxiv.org/abs/2412.16720"
     publisher: OpenAI
     type: paper
 status: verified

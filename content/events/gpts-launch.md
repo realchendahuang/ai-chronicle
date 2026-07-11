@@ -46,11 +46,11 @@ visual:
   prompt: "Warm editorial product illustration of hands assembling modular assistant cards around a black cube core: folder tokens, education/business/shopping/code icons, tool trays, shelf of finished assistants; craft-table materials; no OpenAI logo, no brand text, 16:9"
 sources:
   - title: Introducing GPTs
-    url: https://openai.com/index/introducing-gpts/
+    url: "https://openai.com/index/introducing-gpts/"
     publisher: OpenAI
     type: official
   - title: Introducing the GPT Store
-    url: https://openai.com/index/introducing-the-gpt-store/
+    url: "https://openai.com/index/introducing-the-gpt-store/"
     publisher: OpenAI
     type: official
 status: verified

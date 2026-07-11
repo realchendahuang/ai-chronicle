@@ -32,7 +32,7 @@ visual:
   caption: Anthropic 为 Claude 5 系列发布文章制作的官方主视觉，以蝶蛾图谱组成数字 5。
   captionEn: Anthropic's official lead artwork for the Claude 5 family announcement, arranging illustrated butterflies and moths into a numeral five.
   credit: Anthropic
-  sourceUrl: https://www.anthropic.com/news/claude-fable-5-mythos-5
+  sourceUrl: "https://www.anthropic.com/news/claude-fable-5-mythos-5"
   rights: official-editorial
 background: Claude 4.x 在一年内快速迭代 Opus、Sonnet 和 Haiku，但复杂 Agent 工作仍需要更稳定的长期执行、更大的输出预算和更清晰的模型分层。
 whatHappened: Fable 5 于 6 月 9 日成为 Anthropic 广泛发布的最高能力档，Sonnet 5 于 6 月 30 日接替主力平衡档。两者都围绕 Agent 编程和专业工作优化。
@@ -52,11 +52,11 @@ relatedEvents:
   - gpt-5-6
 sources:
   - title: Claude Fable 5 and Claude Mythos 5
-    url: https://www.anthropic.com/news/claude-fable-5-mythos-5
+    url: "https://www.anthropic.com/news/claude-fable-5-mythos-5"
     publisher: Anthropic
     type: official
   - title: Introducing Claude Sonnet 5
-    url: https://www.anthropic.com/news/claude-sonnet-5
+    url: "https://www.anthropic.com/news/claude-sonnet-5"
     publisher: Anthropic
     type: official
 status: verified

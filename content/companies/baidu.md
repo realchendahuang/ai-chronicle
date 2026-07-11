@@ -15,7 +15,8 @@ keyTopics:
   - multimodal-ai
   - reasoning-models
   - speech-ai
-keyEvents: []
+keyEvents:
+  - ernie-4-5
 models:
   - ernie-1.0
   - ernie-bot

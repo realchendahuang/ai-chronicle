@@ -46,7 +46,7 @@ visual:
   prompt: "Top-down editorial illustration of a chat interface socketed into an industrial patch bay; colorful cables connect plugin cards for travel, shopping, charts, calculator, web, lock, database; paper-craft icons; no brand logos, no company names, 16:9"
 sources:
   - title: ChatGPT plugins
-    url: https://openai.com/index/chatgpt-plugins/
+    url: "https://openai.com/index/chatgpt-plugins/"
     publisher: OpenAI
     type: official
 status: verified

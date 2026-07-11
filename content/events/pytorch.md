@@ -49,11 +49,11 @@ visual:
   prompt: "Editorial illustration of PyTorch deep learning framework, tensor blocks and GPU glow on research desk, warm orange, no text no logos, 16:9"
 sources:
   - title: PyTorch — A year in
-    url: https://pytorch.org/blog/a-year-in/
+    url: "https://pytorch.org/blog/a-year-in/"
     publisher: PyTorch Blog
     type: official
   - title: pytorch/pytorch
-    url: https://github.com/pytorch/pytorch
+    url: "https://github.com/pytorch/pytorch"
     publisher: GitHub
     type: official
 status: verified

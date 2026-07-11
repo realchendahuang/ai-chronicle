@@ -40,11 +40,11 @@ visual:
   caption: 赫伯特·西蒙与艾伦·纽厄尔。Logic Theorist 把定理证明改写成可搜索的状态空间与启发式选择。
   captionEn: Herbert A. Simon and Allen Newell. Logic Theorist reframed theorem proving as searchable state space with heuristic choice.
   credit: Paolo Massa, public domain, via Wikimedia Commons
-  sourceUrl: https://commons.wikimedia.org/wiki/File:Herbert_A._Simon_and_Allen_Newell_Chess_Match.jpg
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:Herbert_A._Simon_and_Allen_Newell_Chess_Match.jpg"
   rights: public-domain
 sources:
   - title: The Logic Theory Machine
-    url: https://www.rand.org/pubs/papers/P868.html
+    url: "https://www.rand.org/pubs/papers/P868.html"
     publisher: RAND Corporation
     type: archive
 status: verified

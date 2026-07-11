@@ -43,15 +43,15 @@ visual:
   caption: Codex 论文首页，摘要介绍了从公开 GitHub 代码微调 GPT 并以 HumanEval 衡量函数生成能力的方法。
   captionEn: The first page of the Codex paper, whose abstract describes fine-tuning GPT on public GitHub code and evaluating function generation with HumanEval.
   credit: Mark Chen 等 / arXiv
-  sourceUrl: https://arxiv.org/abs/2107.03374
+  sourceUrl: "https://arxiv.org/abs/2107.03374"
   rights: official-editorial
 sources:
   - title: OpenAI Codex
-    url: https://openai.com/index/openai-codex/
+    url: "https://openai.com/index/openai-codex/"
     publisher: OpenAI
     type: official
   - title: Evaluating Large Language Models Trained on Code
-    url: https://arxiv.org/abs/2107.03374
+    url: "https://arxiv.org/abs/2107.03374"
     publisher: OpenAI
     type: paper
 status: verified

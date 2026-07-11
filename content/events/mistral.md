@@ -46,11 +46,11 @@ visual:
   caption: Mistral AI 为 Mistral 7B 发布文章制作的官方缩略图。
   captionEn: Mistral AI's official thumbnail for the Mistral 7B announcement.
   credit: Mistral AI
-  sourceUrl: https://mistral.ai/news/announcing-mistral-7b
+  sourceUrl: "https://mistral.ai/news/announcing-mistral-7b"
   rights: official-editorial
 sources:
   - title: Mistral 7B
-    url: https://mistral.ai/news/announcing-mistral-7b
+    url: "https://mistral.ai/news/announcing-mistral-7b"
     publisher: Mistral AI
     type: official
 status: verified

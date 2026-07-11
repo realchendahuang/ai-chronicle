@@ -49,11 +49,11 @@ visual:
   prompt: "Editorial illustration for Whisper speech recognition, microphone and transcript ribbons, silver blue, no logos, 16:9"
 sources:
   - title: Introducing Whisper
-    url: https://openai.com/index/whisper/
+    url: "https://openai.com/index/whisper/"
     publisher: OpenAI
     type: official
   - title: Robust Speech Recognition via Large-Scale Weak Supervision
-    url: https://arxiv.org/abs/2212.04356
+    url: "https://arxiv.org/abs/2212.04356"
     publisher: arXiv
     type: paper
 status: verified

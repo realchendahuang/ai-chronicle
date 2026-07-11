@@ -52,11 +52,11 @@ visual:
   prompt: "Editorial illustration for RAG, books into question funnel forming answer ribbons, library light, no text no logos, 16:9"
 sources:
   - title: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
-    url: https://arxiv.org/abs/2005.11401
+    url: "https://arxiv.org/abs/2005.11401"
     publisher: arXiv
     type: paper
   - title: Retrieval Augmented Generation — Facebook AI blog context
-    url: https://ai.meta.com/blog/retrieval-augmented-generation-streamlining-the-creation-of-intelligent-natural-language-processing-models/
+    url: "https://ai.meta.com/blog/retrieval-augmented-generation-streamlining-the-creation-of-intelligent-natural-language-processing-models/"
     publisher: Meta AI
     type: official
 status: verified

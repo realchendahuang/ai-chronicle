@@ -44,11 +44,11 @@ visual:
   caption: InstructGPT 论文首页，摘要中列出了监督微调、奖励模型与人类反馈强化学习三阶段训练。
   captionEn: The first page of the InstructGPT paper; its abstract outlines supervised fine-tuning, reward modeling, and reinforcement learning from human feedback.
   credit: Long Ouyang 等 / arXiv
-  sourceUrl: https://arxiv.org/abs/2203.02155
+  sourceUrl: "https://arxiv.org/abs/2203.02155"
   rights: official-editorial
 sources:
   - title: Training language models to follow instructions with human feedback
-    url: https://arxiv.org/abs/2203.02155
+    url: "https://arxiv.org/abs/2203.02155"
     publisher: arXiv
     type: paper
 status: verified

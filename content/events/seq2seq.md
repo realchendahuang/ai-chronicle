@@ -42,11 +42,11 @@ visual:
   caption: 论文图 1 将输入 ABC 反向送入 LSTM，再逐步输出 WXYZ；反转源句是缩短依赖距离的关键实验技巧。
   captionEn: Figure 1 feeds ABC to the LSTM in reverse before producing WXYZ; reversing the source was the experiment's key device for shortening dependencies.
   credit: Ilya Sutskever, Oriol Vinyals, Quoc V. Le
-  sourceUrl: https://arxiv.org/abs/1409.3215
+  sourceUrl: "https://arxiv.org/abs/1409.3215"
   rights: official-editorial
 sources:
   - title: Sequence to Sequence Learning with Neural Networks
-    url: https://arxiv.org/abs/1409.3215
+    url: "https://arxiv.org/abs/1409.3215"
     publisher: arXiv
     type: paper
 status: verified

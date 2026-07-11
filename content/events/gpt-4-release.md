@@ -50,15 +50,15 @@ visual:
   caption: GPT-4 技术报告首页。报告公布评测与局限，但没有披露模型规模、训练计算量、数据集构成或具体架构。
   captionEn: The first page of the GPT-4 Technical Report, which reported evaluations and limitations without disclosing model size, training compute, dataset composition, or architecture.
   credit: OpenAI
-  sourceUrl: https://arxiv.org/abs/2303.08774
+  sourceUrl: "https://arxiv.org/abs/2303.08774"
   rights: official-editorial
 sources:
   - title: GPT-4 Research
-    url: https://openai.com/index/gpt-4-research/
+    url: "https://openai.com/index/gpt-4-research/"
     publisher: OpenAI
     type: official
   - title: GPT-4 Technical Report
-    url: https://arxiv.org/abs/2303.08774
+    url: "https://arxiv.org/abs/2303.08774"
     publisher: OpenAI
     type: paper
 status: verified

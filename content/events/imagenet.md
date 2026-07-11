@@ -38,11 +38,11 @@ visual:
   caption: ImageNet 论文从“哺乳动物”与“交通工具”各取一条层级分支，展示类别树如何组织网络图像。
   captionEn: The ImageNet paper samples one hierarchy branch each from mammals and vehicles to show how web images were organized through the category tree.
   credit: Jia Deng et al., Princeton and Stanford
-  sourceUrl: https://image-net.org/static_files/papers/imagenet_cvpr09.pdf
+  sourceUrl: "https://image-net.org/static_files/papers/imagenet_cvpr09.pdf"
   rights: official-editorial
 sources:
   - title: ImageNet — A large-scale hierarchical image database
-    url: https://ieeexplore.ieee.org/document/5206848
+    url: "https://ieeexplore.ieee.org/document/5206848"
     publisher: IEEE
     type: paper
 status: verified

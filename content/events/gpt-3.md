@@ -57,11 +57,11 @@ visual:
   caption: GPT-3 论文首页，作者名单跨越 OpenAI 当时的大模型研究团队。
   captionEn: The first page of the GPT-3 paper, listing OpenAI's large language model research team.
   credit: Tom B. Brown 等 / arXiv
-  sourceUrl: https://arxiv.org/abs/2005.14165
+  sourceUrl: "https://arxiv.org/abs/2005.14165"
   rights: official-editorial
 sources:
   - title: Language Models are Few-Shot Learners
-    url: https://arxiv.org/abs/2005.14165
+    url: "https://arxiv.org/abs/2005.14165"
     publisher: arXiv
     type: paper
 status: verified

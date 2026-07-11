@@ -25,7 +25,7 @@ visual:
   caption: 艾伦·图灵，摄于 1951 年，即《计算机器与智能》发表后的次年。
   captionEn: Alan Turing in 1951, one year after the publication of “Computing Machinery and Intelligence.”
   credit: Elliott & Fry / National Portrait Gallery, public domain, via Wikimedia Commons
-  sourceUrl: https://commons.wikimedia.org/wiki/File:Alan_Turing_(1951).jpg
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:Alan_Turing_(1951).jpg"
   rights: public-domain
 whatHappened: 测试让一名提问者仅通过文字与人和机器交谈，再判断哪一方是机器。图灵同时讨论了学习机器、常见反对意见，并预估训练而非手写全部规则可能成为可行路线。
 whatHappenedEn: A judge would converse by text with a human and a machine, then decide which was which. Turing also discussed learning machines, common objections, and the possibility of training systems instead of writing every rule by hand.
@@ -44,11 +44,11 @@ beforeAfterEn:
 relatedEvents: [dartmouth-workshop, eliza, chatgpt-launch]
 sources:
   - title: Computing Machinery and Intelligence (Mind, via CSUDH reprint)
-    url: https://redirect.cs.umbc.edu/courses/471/papers/turing.pdf
+    url: "https://redirect.cs.umbc.edu/courses/471/papers/turing.pdf"
     publisher: Mind / reprint
     type: archive
   - title: Computing Machinery and Intelligence
-    url: https://academic.oup.com/mind/article/LIX/236/433/986238
+    url: "https://academic.oup.com/mind/article/LIX/236/433/986238"
     publisher: Mind
     type: paper
 status: verified

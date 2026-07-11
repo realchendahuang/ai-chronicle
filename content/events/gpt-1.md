@@ -42,11 +42,11 @@ visual:
   caption: OpenAI 2018 年生成式预训练论文的首页，后来常被称为 GPT-1 论文。
   captionEn: The first page of OpenAI's 2018 generative pretraining paper, later commonly called the GPT-1 paper.
   credit: Alec Radford、Karthik Narasimhan、Tim Salimans、Ilya Sutskever / OpenAI
-  sourceUrl: https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf
+  sourceUrl: "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf"
   rights: official-editorial
 sources:
   - title: Improving Language Understanding by Generative Pre-Training
-    url: https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf
+    url: "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf"
     publisher: OpenAI
     type: paper
 status: verified

@@ -41,11 +41,11 @@ visual:
   caption: 论文以逐层训练的生成模型处理手写数字，并用“解释消除”示例说明隐藏变量之间的依赖。
   captionEn: The paper trains a generative model layer by layer on handwritten digits and uses an explaining-away example to illustrate dependencies among hidden variables.
   credit: Geoffrey E. Hinton, Simon Osindero, Yee-Whye Teh
-  sourceUrl: https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf
+  sourceUrl: "https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf"
   rights: official-editorial
 sources:
   - title: A Fast Learning Algorithm for Deep Belief Nets
-    url: https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf
+    url: "https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf"
     publisher: Neural Computation
     type: paper
 status: verified

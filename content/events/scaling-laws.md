@@ -45,15 +45,15 @@ visual:
   caption: 论文首页概括了模型性能与参数、数据和计算量之间的幂律关系。
   captionEn: The paper's first page introduces power-law relationships between performance, parameters, data, and compute.
   credit: Jared Kaplan 等 / arXiv
-  sourceUrl: https://arxiv.org/abs/2001.08361
+  sourceUrl: "https://arxiv.org/abs/2001.08361"
   rights: official-editorial
 sources:
   - title: Scaling Laws for Neural Language Models
-    url: https://arxiv.org/abs/2001.08361
+    url: "https://arxiv.org/abs/2001.08361"
     publisher: arXiv
     type: paper
   - title: Training Compute-Optimal Large Language Models
-    url: https://arxiv.org/abs/2203.15556
+    url: "https://arxiv.org/abs/2203.15556"
     publisher: DeepMind
     type: paper
 status: verified

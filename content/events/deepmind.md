@@ -25,7 +25,7 @@ visual:
   caption: 伦敦国王十字的 Google DeepMind 总部。DeepMind 于 2010 年在伦敦创立，2014 年被 Google 收购。
   captionEn: Google DeepMind’s headquarters at King’s Cross, London. DeepMind was founded in the city in 2010 and acquired by Google in 2014.
   credit: Gciriani, CC BY-SA 4.0, via Wikimedia Commons
-  sourceUrl: https://commons.wikimedia.org/wiki/File:Google-Deep_Mind_headquarters_in_London,_6_Pancras_Square.jpg
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:Google-Deep_Mind_headquarters_in_London,_6_Pancras_Square.jpg"
   rights: cc
 whatHappened: DeepMind 组建跨神经科学、机器学习和工程的团队，先用 Atari 游戏验证从像素到动作的深度强化学习，之后推进 AlphaGo、AlphaZero 与 AlphaFold。
 whatHappenedEn: DeepMind assembled researchers from neuroscience, machine learning, and engineering, first demonstrating deep reinforcement learning from pixels in Atari games and later building AlphaGo, AlphaZero, and AlphaFold.
@@ -44,15 +44,15 @@ beforeAfterEn:
 relatedEvents: [alphago, alphazero, alphafold]
 sources:
   - title: About Google DeepMind
-    url: https://deepmind.google/about/
+    url: "https://deepmind.google/about/"
     publisher: Google DeepMind
     type: official
   - title: Google buys UK artificial intelligence start-up DeepMind
-    url: https://www.bbc.com/news/technology-25908379
+    url: "https://www.bbc.com/news/technology-25908379"
     publisher: BBC News
     type: archive
   - title: Human-level control through deep reinforcement learning
-    url: https://www.nature.com/articles/nature14236
+    url: "https://www.nature.com/articles/nature14236"
     publisher: Nature
     type: paper
 status: verified

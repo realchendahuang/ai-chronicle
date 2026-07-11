@@ -49,11 +49,11 @@ visual:
   prompt: "Editorial illustration of model hub community, model cards on open library shelf, soft pastel, no logos, 16:9"
 sources:
   - title: huggingface/transformers
-    url: https://github.com/huggingface/transformers
+    url: "https://github.com/huggingface/transformers"
     publisher: GitHub
     type: official
   - title: Transformers documentation
-    url: https://huggingface.co/docs/transformers
+    url: "https://huggingface.co/docs/transformers"
     publisher: Hugging Face
     type: official
 status: verified

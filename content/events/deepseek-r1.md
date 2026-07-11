@@ -34,7 +34,7 @@ visual:
   caption: DeepSeek-R1 论文对 PPO 与 GRPO 的流程对比；GRPO 不使用价值模型，而是从同组输出的奖励估计优势。
   captionEn: The DeepSeek-R1 paper compares PPO with GRPO, which omits a value model and estimates advantages from rewards within a group of outputs.
   credit: DeepSeek-AI
-  sourceUrl: https://arxiv.org/abs/2501.12948
+  sourceUrl: "https://arxiv.org/abs/2501.12948"
   rights: official-editorial
 whatHappened: DeepSeek-R1 在推理任务上展示了长链条思考能力，并同步开放模型权重与技术报告。项目还提供了多个蒸馏版本，让更小规模的模型能够继承部分推理能力。
 whyImportant: R1 把“前沿推理能力能否开放、能否低成本复现”从假设变成现实问题。它推动行业重新评估闭源模型的价格、开放模型的能力边界，以及强化学习在推理训练中的作用。
@@ -50,11 +50,11 @@ relatedEvents:
   - llama
 sources:
   - title: DeepSeek-R1 — Incentivizing Reasoning Capability in LLMs via Reinforcement Learning
-    url: https://arxiv.org/abs/2501.12948
+    url: "https://arxiv.org/abs/2501.12948"
     publisher: DeepSeek AI
     type: paper
   - title: DeepSeek-R1 repository
-    url: https://github.com/deepseek-ai/DeepSeek-R1
+    url: "https://github.com/deepseek-ai/DeepSeek-R1"
     publisher: DeepSeek AI
     type: official
 status: verified

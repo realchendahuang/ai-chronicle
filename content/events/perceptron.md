@@ -34,7 +34,7 @@ visual:
   caption: Frank Rosenblatt。1957 年，他提出了能够根据样本误差调整权重的感知机。
   captionEn: Frank Rosenblatt, who introduced the error-driven perceptron learning rule in 1957.
   credit: Cornell University faculty photograph, CC BY-SA 4.0, via Wikimedia Commons
-  sourceUrl: https://commons.wikimedia.org/wiki/File:Frank_Rosenblatt.jpg
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:Frank_Rosenblatt.jpg"
   rights: cc
 whatHappened: 输入经过可调权重求和，再由阈值函数给出类别。预测错误时，学习规则按样本方向修改权重；对线性可分数据，这个过程可以证明收敛。它无法表示 XOR 等非线性边界。
 whatHappenedEn: Inputs were multiplied by adjustable weights and passed through a threshold. On an error, the learning rule updated weights toward the example; convergence could be proved for linearly separable data. It could not represent nonlinear boundaries such as XOR.
@@ -56,15 +56,15 @@ relatedEvents:
   - alexnet
 sources:
   - title: The Perceptron — A Probabilistic Model for Information Storage and Organization in the Brain
-    url: https://psycnet.apa.org/record/1959-09865-001
+    url: "https://psycnet.apa.org/record/1959-09865-001"
     publisher: Psychological Review
     type: paper
   - title: Professor’s perceptron paved the way for AI — 60 years too soon
-    url: https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon
+    url: "https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon"
     publisher: Cornell Chronicle
     type: archive
   - title: Perceptron, Mark I
-    url: https://americanhistory.si.edu/collections/object/nmah_334414
+    url: "https://americanhistory.si.edu/collections/object/nmah_334414"
     publisher: Smithsonian National Museum of American History
     type: archive
 status: verified

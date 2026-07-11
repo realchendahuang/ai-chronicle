@@ -53,15 +53,15 @@ visual:
   prompt: "Editorial illustration for vLLM PagedAttention, OS-style page table linking scattered GPU memory tiles to a neat virtual KV cache shelf, multiple request tokens waiting in a serving queue, cool teal and slate palette, technical systems feel, no text no logos, 16:9"
 sources:
   - title: vLLM — Easy, Fast, and Cheap LLM Serving with PagedAttention
-    url: https://vllm.ai/blog/2023-06-20-vllm
+    url: "https://vllm.ai/blog/2023-06-20-vllm"
     publisher: vLLM
     type: official
   - title: Efficient Memory Management for Large Language Model Serving with PagedAttention
-    url: https://arxiv.org/abs/2309.06180
+    url: "https://arxiv.org/abs/2309.06180"
     publisher: arXiv
     type: paper
   - title: vllm-project/vllm
-    url: https://github.com/vllm-project/vllm
+    url: "https://github.com/vllm-project/vllm"
     publisher: GitHub
     type: official
 status: verified

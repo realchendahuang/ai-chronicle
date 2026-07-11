@@ -47,11 +47,11 @@ visual:
   caption: 2018 年 10 月公开的 BERT 论文首页。
   captionEn: The first page of the BERT paper released in October 2018.
   credit: Jacob Devlin、Ming-Wei Chang、Kenton Lee、Kristina Toutanova / arXiv
-  sourceUrl: https://arxiv.org/abs/1810.04805
+  sourceUrl: "https://arxiv.org/abs/1810.04805"
   rights: official-editorial
 sources:
   - title: BERT — Pre-training of Deep Bidirectional Transformers for Language Understanding
-    url: https://arxiv.org/abs/1810.04805
+    url: "https://arxiv.org/abs/1810.04805"
     publisher: arXiv
     type: paper
 status: verified

@@ -49,7 +49,7 @@ visual:
   prompt: "Minimal technical illustration of a brass-and-dark-metal routing machine: white sphere enters, splits into upper red fast track with clock gauge and lower green deliberate track with gears and tool icons, then exits; blueprint grid background; no logos, no readable product names, 16:9"
 sources:
   - title: Introducing GPT-5
-    url: https://openai.com/index/introducing-gpt-5/
+    url: "https://openai.com/index/introducing-gpt-5/"
     publisher: OpenAI
     type: official
 status: verified

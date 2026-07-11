@@ -45,15 +45,15 @@ visual:
   caption: Sepp Hochreiter。他与 Jürgen Schmidhuber 在 1997 年提出 LSTM，用门控记忆缓解循环网络的长程依赖困难。
   captionEn: Sepp Hochreiter. With Jürgen Schmidhuber in 1997, he introduced LSTM gated memory to ease long-range dependency problems in recurrent nets.
   credit: SeppHochreiter, CC BY-SA 4.0, via Wikimedia Commons
-  sourceUrl: https://commons.wikimedia.org/wiki/File:Sepp_Hochreiter_1.jpg
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:Sepp_Hochreiter_1.jpg"
   rights: cc
 sources:
   - title: Long Short-Term Memory
-    url: https://direct.mit.edu/neco/article/9/8/1735/6109/Long-Short-Term-Memory
+    url: "https://direct.mit.edu/neco/article/9/8/1735/6109/Long-Short-Term-Memory"
     publisher: Neural Computation
     type: paper
   - title: Long Short-Term Memory (open access PDF via Schmidhuber)
-    url: https://www.bioinf.jku.at/publications/older/2604.pdf
+    url: "https://www.bioinf.jku.at/publications/older/2604.pdf"
     publisher: JKU / authors
     type: paper
 status: verified

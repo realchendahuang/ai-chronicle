@@ -59,11 +59,11 @@ visual:
   caption: 论文图 1：左侧编码器与右侧解码器都堆叠注意力、前馈层、残差连接和归一化，而非只包含注意力。
   captionEn: Figure 1 shows encoder and decoder stacks combining attention with feed-forward layers, residual paths, and normalization—not attention alone.
   credit: Ashish Vaswani et al., Google
-  sourceUrl: https://arxiv.org/abs/1706.03762
+  sourceUrl: "https://arxiv.org/abs/1706.03762"
   rights: official-editorial
 sources:
   - title: Attention Is All You Need
-    url: https://arxiv.org/abs/1706.03762
+    url: "https://arxiv.org/abs/1706.03762"
     publisher: arXiv
     type: paper
 status: verified

@@ -43,11 +43,11 @@ visual:
   caption: 杰弗里·辛顿。1986 年前后，反向传播使多层网络的误差信号得以沿链式法则回传。
   captionEn: Geoffrey Hinton. Around 1986, backpropagation made it practical to send error signals back through multilayer nets by the chain rule.
   credit: InverseHypercube, CC BY-SA 3.0, via Wikimedia Commons
-  sourceUrl: https://commons.wikimedia.org/wiki/File:Geoffrey_Hinton_at_UBC.jpg
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:Geoffrey_Hinton_at_UBC.jpg"
   rights: cc
 sources:
   - title: Learning representations by back-propagating errors
-    url: https://www.nature.com/articles/323533a0
+    url: "https://www.nature.com/articles/323533a0"
     publisher: Nature
     type: paper
 status: verified

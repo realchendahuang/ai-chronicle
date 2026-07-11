@@ -24,7 +24,7 @@ visual:
   caption: ELIZA 的一次对话演示。画面来自后来的开源复现，用来呈现程序以提问和复述维持谈话的方式。
   captionEn: An ELIZA conversation in a later open-source reimplementation, showing how questions and reformulations sustained the exchange.
   credit: Public-domain screenshot, via Wikimedia Commons; implementation by Norbert Landsteiner
-  sourceUrl: https://commons.wikimedia.org/wiki/File:ELIZA_conversation.png
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:ELIZA_conversation.png"
   rights: public-domain
 whatHappened: 最著名的 DOCTOR 脚本模仿罗杰斯式心理治疗师，经常把用户的话改写成问题。程序规则很浅，部分用户却愿意向它倾诉，并认为它理解了自己。
 whatHappenedEn: Its best-known DOCTOR script imitated a Rogerian therapist, often turning a user’s words back into questions. The rules were shallow, yet some users confided in it and attributed understanding to the program.
@@ -45,7 +45,7 @@ beforeAfterEn:
 relatedEvents: [turing-test, chatgpt-launch]
 sources:
   - title: ELIZA — A Computer Program for the Study of Natural Language Communication
-    url: https://dl.acm.org/doi/10.1145/365153.365168
+    url: "https://dl.acm.org/doi/10.1145/365153.365168"
     publisher: Communications of the ACM
     type: paper
 status: verified

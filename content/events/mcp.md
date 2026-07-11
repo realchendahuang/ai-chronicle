@@ -31,7 +31,7 @@ visual:
   caption: Anthropic 为 Model Context Protocol 发布文章制作的官方连接主题插图。
   captionEn: Anthropic's official connection-themed illustration for the Model Context Protocol announcement.
   credit: Anthropic
-  sourceUrl: https://www.anthropic.com/news/model-context-protocol
+  sourceUrl: "https://www.anthropic.com/news/model-context-protocol"
   rights: official-editorial
 background: 函数调用解决了模型如何输出工具参数，却没有规定编辑器、桌面助手和数据源怎样发现、连接和授权彼此。每个宿主仍维护自己的插件格式。
 backgroundEn: Function calling defined how models emitted tool arguments but not how editors, desktop assistants, and data sources discovered, connected, or authorized each other. Every host still maintained its own plugin format.
@@ -49,11 +49,11 @@ relatedEvents:
   - agent-runtime
 sources:
   - title: Model Context Protocol specification
-    url: https://modelcontextprotocol.io/
+    url: "https://modelcontextprotocol.io/"
     publisher: MCP
     type: official
   - title: Introducing the Model Context Protocol
-    url: https://www.anthropic.com/news/model-context-protocol
+    url: "https://www.anthropic.com/news/model-context-protocol"
     publisher: Anthropic
     type: official
 status: verified

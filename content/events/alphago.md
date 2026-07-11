@@ -35,7 +35,7 @@ visual:
   caption: 2016 年人机大战第四局棋谱。李世石在第 78 手下出著名的“神之一手”，赢得 AlphaGo 在五局赛中的唯一一败。
   captionEn: Game four of the 2016 match. Lee Sedol’s celebrated move 78 helped deliver AlphaGo’s only loss in the five-game series.
   credit: Wesalius, CC BY-SA 4.0, via Wikimedia Commons
-  sourceUrl: https://commons.wikimedia.org/wiki/File:Lee_Sedol_(B)_vs_AlphaGo_(W)_-_Game_4.jpg
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:Lee_Sedol_(B)_vs_AlphaGo_(W)_-_Game_4.jpg"
   rights: cc
 whatHappened: 策略网络缩小候选落子范围，价值网络估计局面胜率，搜索在两者引导下分配计算。第二局第 37 手因与职业棋手经验相悖而出名；第四局李世石第 78 手则暴露了系统也会在罕见局面中失误。
 whatHappenedEn: A policy network narrowed candidate moves, a value network estimated winning chances, and search allocated computation using both. Move 37 in game two became famous for defying professional intuition, while Lee’s move 78 in game four exposed failures in unusual positions.
@@ -54,15 +54,15 @@ relatedEvents:
   - openai-five
 sources:
   - title: Mastering the game of Go with deep neural networks and tree search
-    url: https://www.nature.com/articles/nature16961
+    url: "https://www.nature.com/articles/nature16961"
     publisher: Nature
     type: paper
   - title: AlphaGo
-    url: https://deepmind.google/research/alphago/
+    url: "https://deepmind.google/research/alphago/"
     publisher: Google DeepMind
     type: official
   - title: "AlphaGo’s ultimate challenge: a five-game match against the legendary Lee Sedol"
-    url: https://blog.google/innovation-and-ai/products/alphagos-ultimate-challenge/
+    url: "https://blog.google/innovation-and-ai/products/alphagos-ultimate-challenge/"
     publisher: Google
     type: official
 status: verified

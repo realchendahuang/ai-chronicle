@@ -23,7 +23,7 @@ visual:
   caption: 1974 年 12 月，约书亚·莱德伯格在斯坦福医学实验计算机 SUMEX 的 LINC 电传终端前。SUMEX 为 DENDRAL、MYCIN 等生物医学 AI 项目提供共享计算设施。
   captionEn: Joshua Lederberg at the LINC teletype for Stanford's SUMEX computer in December 1974. SUMEX provided shared computing for biomedical AI projects including DENDRAL and MYCIN.
   credit: Stanford University School of Medicine / U.S. National Library of Medicine
-  sourceUrl: https://profiles.nlm.nih.gov/spotlight/bb/catalog/nlm:nlmuid-101584906X19142-img
+  sourceUrl: "https://profiles.nlm.nih.gov/spotlight/bb/catalog/nlm:nlmuid-101584906X19142-img"
   rights: official-editorial
 whatHappened: DENDRAL 将化学家的规则与计算机搜索结合，先生成候选分子，再用实验数据排除不符合的结构。系统不是学习得到知识，而是由专家与知识工程师共同整理规则。
 whatHappenedEn: DENDRAL combined chemists’ rules with computer search, generating candidate molecules and rejecting structures inconsistent with experimental data. Its knowledge was engineered with experts rather than learned from data.
@@ -44,7 +44,7 @@ beforeAfterEn:
 relatedEvents: [logic-theorist, ai-winter-1987]
 sources:
   - title: Artificial Intelligence and the Heuristic DENDRAL Program
-    url: https://profiles.nlm.nih.gov/spotlight/bb/feature/ai
+    url: "https://profiles.nlm.nih.gov/spotlight/bb/feature/ai"
     publisher: National Library of Medicine
     type: archive
 status: verified

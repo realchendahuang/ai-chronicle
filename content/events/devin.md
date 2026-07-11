@@ -22,7 +22,7 @@ visual:
   caption: Cognition 在 Devin 官方发布材料中介绍其联合创始人兼 CEO Scott Wu；画面来自发布视频，不代表独立性能验证。
   captionEn: Cognition introduces co-founder and CEO Scott Wu in its official Devin launch material; the frame is from the launch video, not an independent performance validation.
   credit: Cognition
-  sourceUrl: https://cognition.ai/blog/introducing-devin
+  sourceUrl: "https://cognition.ai/blog/introducing-devin"
   rights: official-editorial
 background: Copilot 与 Cursor 已改善代码生成和编辑，但大部分工作仍由开发者逐步指挥。SWE-bench 则提供了衡量端到端修复能力的新指标。
 backgroundEn: Copilot and Cursor had improved code generation and editing, but developers still directed most steps. SWE-bench introduced a measure of end-to-end repository repair.
@@ -45,7 +45,7 @@ beforeAfterEn:
 relatedEvents: [swe-bench, cursor, claude-code, codex-agent]
 sources:
   - title: Introducing Devin
-    url: https://cognition.ai/blog/introducing-devin
+    url: "https://cognition.ai/blog/introducing-devin"
     publisher: Cognition
     type: official
 status: controversial

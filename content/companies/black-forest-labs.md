@@ -14,7 +14,8 @@ keyTopics:
   - generative-media
   - open-source-models
   - multimodal-ai
-keyEvents: []
+keyEvents:
+  - flux-1
 models:
   - flux-1
   - flux-1.1

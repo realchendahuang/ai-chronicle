@@ -33,7 +33,7 @@ visual:
   caption: Anthropic 为 Claude 3.7 Sonnet 与 Claude Code 联合发布文章制作的官方主视觉。
   captionEn: Anthropic's official lead artwork for the joint Claude 3.7 Sonnet and Claude Code announcement.
   credit: Anthropic
-  sourceUrl: https://www.anthropic.com/news/claude-3-7-sonnet
+  sourceUrl: "https://www.anthropic.com/news/claude-3-7-sonnet"
   rights: official-editorial
 background: Copilot 和 Cursor 把模型放进编辑器，Devin 把任务放进独立工作区。许多工程师仍把终端、Git 和测试命令当作真实开发流程的中心。
 backgroundEn: Copilot and Cursor placed models inside editors, while Devin put tasks in an independent workspace. Many engineers still treated the terminal, Git, and test commands as the center of real development.
@@ -55,7 +55,7 @@ relatedEvents:
   - mcp
 sources:
   - title: Claude 3.7 Sonnet and Claude Code
-    url: https://www.anthropic.com/news/claude-3-7-sonnet
+    url: "https://www.anthropic.com/news/claude-3-7-sonnet"
     publisher: Anthropic
     type: official
 status: verified

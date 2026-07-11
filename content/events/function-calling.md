@@ -48,7 +48,7 @@ visual:
   prompt: "Split editorial illustration: left side free-floating speech bubbles and fragments; center dark schema gate with geometric slots; right side validated cards leading to tool drawers (calendar, weather, files, calculator); paper-craft and soft 3D mix; no logos, no readable API brand text, 16:9"
 sources:
   - title: Function calling and other API updates
-    url: https://openai.com/index/function-calling-and-other-api-updates/
+    url: "https://openai.com/index/function-calling-and-other-api-updates/"
     publisher: OpenAI
     type: official
 status: verified

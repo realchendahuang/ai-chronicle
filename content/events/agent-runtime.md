@@ -46,7 +46,7 @@ visual:
   prompt: "Editorial 3D illustration of an agent runtime control workbench on a dark surface: stacked task documents and status panels feed into a central transparent gear mechanism; colored cubes move along rails; modules for multi-agent handoff, shield guardrails, refresh loops, and tracing charts; bottom tool strip with folders, search, wrench, logs, charts; no logos, no readable brand text, no neon brain, clean technical product-editorial style, 16:9"
 sources:
   - title: New tools for building agents
-    url: https://openai.com/index/new-tools-for-building-agents/
+    url: "https://openai.com/index/new-tools-for-building-agents/"
     publisher: OpenAI
     type: official
 status: verified

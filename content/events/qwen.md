@@ -46,15 +46,15 @@ visual:
   caption: Qwen 团队在首版权重发布后提交的技术报告首页；论文系统记录了 Qwen 与 Qwen-Chat 模型家族。
   captionEn: First page of the Qwen Technical Report submitted after the initial weight release, documenting the Qwen and Qwen-Chat model family.
   credit: Qwen Team, Alibaba Group
-  sourceUrl: https://arxiv.org/abs/2309.16609
+  sourceUrl: "https://arxiv.org/abs/2309.16609"
   rights: official-editorial
 sources:
   - title: Qwen-7B release
-    url: https://github.com/QwenLM/Qwen-7B
+    url: "https://github.com/QwenLM/Qwen-7B"
     publisher: Alibaba Cloud
     type: official
   - title: Qwen Technical Report
-    url: https://arxiv.org/abs/2309.16609
+    url: "https://arxiv.org/abs/2309.16609"
     publisher: Qwen Team, Alibaba Group
     type: paper
 status: verified

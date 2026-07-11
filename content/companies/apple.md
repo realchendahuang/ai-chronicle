@@ -14,7 +14,8 @@ keyTopics:
   - consumer-ai
   - multimodal-ai
   - model-efficiency
-keyEvents: []
+keyEvents:
+  - apple-intelligence
 models:
   - apple-foundation-models
   - apple-intelligence

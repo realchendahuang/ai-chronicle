@@ -45,11 +45,11 @@ visual:
   caption: Google DeepMind 在 AlphaFold 解决蛋白质结构预测报道中使用的官方主视觉。
   captionEn: Google DeepMind's official lead image for its report on AlphaFold and protein-structure prediction.
   credit: Google DeepMind
-  sourceUrl: https://deepmind.google/discover/blog/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology/
+  sourceUrl: "https://deepmind.google/discover/blog/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology/"
   rights: official-editorial
 sources:
   - title: AlphaFold — a solution to a 50-year-old grand challenge in biology
-    url: https://deepmind.google/discover/blog/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology/
+    url: "https://deepmind.google/discover/blog/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology/"
     publisher: Google DeepMind
     type: official
 status: verified

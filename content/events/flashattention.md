@@ -53,11 +53,11 @@ visual:
   prompt: "Editorial illustration for FlashAttention history, abstract GPU memory hierarchy: small glowing SRAM tiles vs large dim HBM plane, light beams of QKV tiles fuse into exact attention stream without approximation fog, cool blues and amber accents, technical diagram feel, no text no logos, 16:9"
 sources:
   - title: 'FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness'
-    url: https://arxiv.org/abs/2205.14135
+    url: "https://arxiv.org/abs/2205.14135"
     publisher: arXiv
     type: paper
   - title: Dao-AILab/flash-attention
-    url: https://github.com/Dao-AILab/flash-attention
+    url: "https://github.com/Dao-AILab/flash-attention"
     publisher: GitHub
     type: official
 status: verified

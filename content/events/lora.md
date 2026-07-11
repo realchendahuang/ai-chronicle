@@ -46,11 +46,11 @@ visual:
   prompt: "Editorial illustration for LoRA adapter card on neural lattice, cool blues, no text no logos, 16:9"
 sources:
   - title: 'LoRA: Low-Rank Adaptation of Large Language Models'
-    url: https://arxiv.org/abs/2106.09685
+    url: "https://arxiv.org/abs/2106.09685"
     publisher: arXiv
     type: paper
   - title: microsoft/LoRA
-    url: https://github.com/microsoft/LoRA
+    url: "https://github.com/microsoft/LoRA"
     publisher: Microsoft
     type: official
 status: verified

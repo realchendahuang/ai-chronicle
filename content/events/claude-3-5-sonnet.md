@@ -31,7 +31,7 @@ visual:
   caption: Anthropic 为 Claude 3.5 Sonnet 发布文章制作的官方主视觉。
   captionEn: Anthropic's official lead artwork for the Claude 3.5 Sonnet announcement.
   credit: Anthropic
-  sourceUrl: https://www.anthropic.com/news/claude-3-5-sonnet
+  sourceUrl: "https://www.anthropic.com/news/claude-3-5-sonnet"
   rights: official-editorial
 background: 大模型产品早期常把最高能力集中在最昂贵的旗舰档，但真实生产工作更需要速度、价格和智能的平衡。
 whatHappened: Claude 3.5 Sonnet 在代码生成、视觉推理和复杂指令执行上显著提升，同时推出 Artifacts，让模型输出可以在独立工作区中查看和继续编辑。
@@ -51,7 +51,7 @@ relatedEvents:
   - claude-5-family
 sources:
   - title: Claude 3.5 Sonnet
-    url: https://www.anthropic.com/news/claude-3-5-sonnet
+    url: "https://www.anthropic.com/news/claude-3-5-sonnet"
     publisher: Anthropic
     type: official
 status: verified

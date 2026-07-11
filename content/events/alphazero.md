@@ -43,11 +43,11 @@ visual:
   caption: 论文图 1 记录 AlphaZero 训练 70 万步时在三种棋类中的 Elo 变化；三个任务分别训练，并不共享棋艺参数。
   captionEn: Figure 1 traces AlphaZero's Elo over 700,000 training steps in three games; each game was trained separately rather than sharing learned play.
   credit: David Silver et al., DeepMind
-  sourceUrl: https://arxiv.org/abs/1712.01815
+  sourceUrl: "https://arxiv.org/abs/1712.01815"
   rights: official-editorial
 sources:
   - title: Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm
-    url: https://arxiv.org/abs/1712.01815
+    url: "https://arxiv.org/abs/1712.01815"
     publisher: arXiv
     type: paper
 status: verified

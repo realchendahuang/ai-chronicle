@@ -23,7 +23,7 @@ visual:
   caption: MIT CADR Lisp 机器的内部布线。专用 Lisp 机器曾支撑 1980 年代的 AI 商业市场，随后在通用工作站的价格与性能压力下失去优势。
   captionEn: Internal wiring of an MIT CADR Lisp machine. Specialized Lisp machines supported the 1980s AI market before losing their advantage to cheaper general-purpose workstations.
   credit: Daderot, CC0, via Wikimedia Commons
-  sourceUrl: https://commons.wikimedia.org/wiki/File:CADR_-_The_Lisp_Machine,_late_1970s,_view_3_-_MIT_Museum_-_DSC03754.JPG
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:CADR_-_The_Lisp_Machine,_late_1970s,_view_3_-_MIT_Museum_-_DSC03754.JPG"
   rights: public-domain
 whatHappened: 通用工作站性能上升、价格下降，专用 Lisp 机器失去优势；项目还受到知识获取瓶颈、规则冲突和环境变化影响。需求、投资与公司数量随之下降。
 whatHappenedEn: General-purpose workstations became faster and cheaper, removing the advantage of specialized Lisp machines. Projects also suffered from knowledge-acquisition bottlenecks, rule conflicts, and changing environments. Demand, investment, and vendor numbers fell.
@@ -42,15 +42,15 @@ beforeAfterEn:
 relatedEvents: [expert-systems, deep-learning-rise]
 sources:
   - title: A Short History of AI
-    url: https://ai100.stanford.edu/2016-report/appendix-i-short-history-ai
+    url: "https://ai100.stanford.edu/2016-report/appendix-i-short-history-ai"
     publisher: Stanford University AI100
     type: report
   - title: Solving the Riddle of AI
-    url: https://www.computerhistory.org/revolution/artificial-intelligence-robotics/13/290
+    url: "https://www.computerhistory.org/revolution/artificial-intelligence-robotics/13/290"
     publisher: Computer History Museum
     type: archive
   - title: CHM Releases New Recordings and Personal Stories with AI Expert Systems Pioneers
-    url: https://computerhistory.org/blog/chm-releases-new-recordings-and-personal-stories-with-ai-expert-systems-pioneers/
+    url: "https://computerhistory.org/blog/chm-releases-new-recordings-and-personal-stories-with-ai-expert-systems-pioneers/"
     publisher: Computer History Museum
     type: archive
 status: verified

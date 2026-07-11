@@ -47,7 +47,7 @@ visual:
   prompt: "Minimal dark-background editorial diagram of a central control module with knobs and colored pins, cables to calculator, magnifying glass, database stack, keypad, code terminal, and camera modules, circular arrows suggesting a tool loop; soft stone materials; no logos, no Anthropic marks, 16:9"
 sources:
   - title: Tool use is now generally available
-    url: https://www.anthropic.com/news/tool-use-ga
+    url: "https://www.anthropic.com/news/tool-use-ga"
     publisher: Anthropic
     type: official
 status: verified

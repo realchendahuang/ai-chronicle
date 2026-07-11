@@ -45,11 +45,11 @@ visual:
   caption: DDPM 论文首页；这项工作让扩散模型成为高质量图像生成的实用途径。
   captionEn: The first page of the DDPM paper, which made diffusion a practical route to high-quality image generation.
   credit: Jonathan Ho、Ajay Jain、Pieter Abbeel / arXiv
-  sourceUrl: https://arxiv.org/abs/2006.11239
+  sourceUrl: "https://arxiv.org/abs/2006.11239"
   rights: official-editorial
 sources:
   - title: Denoising Diffusion Probabilistic Models
-    url: https://arxiv.org/abs/2006.11239
+    url: "https://arxiv.org/abs/2006.11239"
     publisher: arXiv
     type: paper
 status: verified

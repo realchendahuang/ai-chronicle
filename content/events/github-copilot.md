@@ -51,11 +51,11 @@ visual:
   caption: GitHub 为 Copilot 公开技术预览制作的发布主视觉。
   captionEn: GitHub's launch artwork for the Copilot technical preview.
   credit: GitHub
-  sourceUrl: https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/
+  sourceUrl: "https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/"
   rights: official-editorial
 sources:
   - title: Introducing GitHub Copilot — your AI pair programmer
-    url: https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/
+    url: "https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/"
     publisher: GitHub
     type: official
 status: verified

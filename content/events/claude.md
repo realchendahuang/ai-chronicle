@@ -42,11 +42,11 @@ visual:
   caption: Anthropic 为 2023 年 Claude 发布文章制作的主视觉。
   captionEn: Anthropic's lead artwork for its 2023 Claude launch article.
   credit: Anthropic
-  sourceUrl: https://www.anthropic.com/news/introducing-claude
+  sourceUrl: "https://www.anthropic.com/news/introducing-claude"
   rights: official-editorial
 sources:
   - title: Introducing Claude
-    url: https://www.anthropic.com/news/introducing-claude
+    url: "https://www.anthropic.com/news/introducing-claude"
     publisher: Anthropic
     type: official
 status: verified

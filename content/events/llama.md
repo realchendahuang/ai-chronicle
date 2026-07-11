@@ -53,11 +53,11 @@ visual:
   caption: LLaMA 论文首页，作者在摘要中强调用更多公开数据训练较小模型。
   captionEn: The first page of the LLaMA paper, whose abstract emphasizes training smaller models on more public data.
   credit: Hugo Touvron 等 / arXiv
-  sourceUrl: https://arxiv.org/abs/2302.13971
+  sourceUrl: "https://arxiv.org/abs/2302.13971"
   rights: official-editorial
 sources:
   - title: LLaMA — Open and Efficient Foundation Language Models
-    url: https://arxiv.org/abs/2302.13971
+    url: "https://arxiv.org/abs/2302.13971"
     publisher: Meta AI
     type: paper
 status: verified

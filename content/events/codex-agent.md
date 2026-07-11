@@ -49,7 +49,7 @@ visual:
   prompt: "Clean futuristic overhead view of five glass cloud coding pods connected to a central console; each pod has monitors with abstract code and green checks; operator at bottom desk reviewing patch evidence; dark industrial product style; no logos, no brand text, 16:9"
 sources:
   - title: Introducing Codex
-    url: https://openai.com/index/introducing-codex/
+    url: "https://openai.com/index/introducing-codex/"
     publisher: OpenAI
     type: official
 status: verified

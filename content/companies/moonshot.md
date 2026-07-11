@@ -15,7 +15,8 @@ keyTopics:
   - open-source-models
   - ai-agent
   - reasoning-models
-keyEvents: []
+keyEvents:
+  - kimi-k2
 models:
   - kimi
   - kimi-k1.5

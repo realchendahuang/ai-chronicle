@@ -35,7 +35,7 @@ visual:
   caption: 达特茅斯学院校园。1956 年的夏季研究项目在这里把“人工智能”确立为共同的研究名称。
   captionEn: Dartmouth College, where the 1956 summer research project established “artificial intelligence” as a shared name for a field.
   credit: Kenneth C. Zirkel, CC BY 4.0, via Wikimedia Commons
-  sourceUrl: https://commons.wikimedia.org/wiki/File:Dartmouth_Hall_at_Dartmouth_College.jpg
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:Dartmouth_Hall_at_Dartmouth_College.jpg"
   rights: cc
 whatHappened: McCarthy、Minsky、Rochester 与 Shannon 在 1955 年提案中预计，十名研究者用一个夏天即可推进机器学习和智能模拟。实际参与者分批到访，并非所有人连续开会两个月，项目也没有立刻产生统一理论。
 whatHappenedEn: McCarthy, Minsky, Rochester, and Shannon proposed in 1955 that ten researchers working for one summer could advance machine learning and simulations of intelligence. Participants visited at different times rather than attending one continuous two-month meeting, and no unified theory emerged.
@@ -55,7 +55,7 @@ relatedEvents:
   - ai-winter-1974
 sources:
   - title: A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence
-    url: http://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html
+    url: "http://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html"
     publisher: Stanford University archive
     type: archive
 status: verified

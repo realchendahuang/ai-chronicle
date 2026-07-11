@@ -49,7 +49,7 @@ visual:
   prompt: "Editorial still life of a sci-fi desktop instrument fusing voice and vision: microphone horn on left with orange waveform, camera lens on right projecting a landscape, central glowing ring mixing streams, two people conversing on either side; cream and brass materials; no logos, no brand text, 16:9"
 sources:
   - title: Hello GPT-4o
-    url: https://openai.com/index/hello-gpt-4o/
+    url: "https://openai.com/index/hello-gpt-4o/"
     publisher: OpenAI
     type: official
 status: verified

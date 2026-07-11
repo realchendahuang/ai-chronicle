@@ -48,11 +48,11 @@ visual:
   caption: Stability AI 公开 Stable Diffusion 权重时使用的发布主视觉。
   captionEn: The launch artwork used when Stability AI publicly released the Stable Diffusion weights.
   credit: Stability AI
-  sourceUrl: https://stability.ai/news/stable-diffusion-public-release
+  sourceUrl: "https://stability.ai/news/stable-diffusion-public-release"
   rights: official-editorial
 sources:
   - title: Stable Diffusion Public Release
-    url: https://stability.ai/news/stable-diffusion-public-release
+    url: "https://stability.ai/news/stable-diffusion-public-release"
     publisher: Stability AI
     type: official
 status: verified

@@ -17,7 +17,8 @@ keyTopics:
   - video-generation
   - image-generation
   - generative-media
-keyEvents: []
+keyEvents:
+  - hunyuan-video
 models:
   - hunyuan
   - hunyuan-turbo

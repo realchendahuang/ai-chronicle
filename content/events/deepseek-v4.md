@@ -35,7 +35,7 @@ visual:
   caption: DeepSeek V4 Preview 官方发布页使用的 DeepSeek 社交分享图。
   captionEn: The official DeepSeek social card used by the DeepSeek V4 Preview announcement page.
   credit: DeepSeek
-  sourceUrl: https://api-docs.deepseek.com/news/news260424
+  sourceUrl: "https://api-docs.deepseek.com/news/news260424"
   rights: official-editorial
 background: R1 让开放推理模型成为全球焦点，但长期 Agent 工作还需要更大上下文、更稳定的工具使用和更低的推理成本。
 whatHappened: V4-Pro 采用 1.6T 总参数、49B 激活参数，面向高难度推理与 Agent 编程；V4-Flash 用更小的激活规模提供更快、更经济的选择。官方服务默认提供 1M 上下文和思考/非思考双模式。
@@ -52,7 +52,7 @@ relatedEvents:
   - llama-4
 sources:
   - title: DeepSeek V4 Preview Release
-    url: https://api-docs.deepseek.com/news/news260424
+    url: "https://api-docs.deepseek.com/news/news260424"
     publisher: DeepSeek
     type: official
 status: verified

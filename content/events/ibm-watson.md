@@ -25,7 +25,7 @@ visual:
   caption: IBM 研究中心复原的《危险边缘》比赛台，中间屏幕代表 Watson。系统在 2011 年的电视赛中击败两位冠军选手。
   captionEn: A recreated Jeopardy! set at IBM Research, with Watson represented by the center display. The system defeated two champions in the 2011 televised match.
   credit: Atomic Taco, CC BY-SA 2.0, via Wikimedia Commons
-  sourceUrl: https://commons.wikimedia.org/wiki/File:IBM_Watson_w_Jeopardy.jpg
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:IBM_Watson_w_Jeopardy.jpg"
   rights: cc
 whatHappened: Watson 的 DeepQA 系统并行生成候选答案，调用多种搜索和分析组件，再用机器学习综合证据。比赛系统离线运行，没有接入互联网。
 whatHappenedEn: Watson’s DeepQA system generated candidates in parallel, ran many search and analysis components, and used machine learning to combine evidence. The competition system ran offline without internet access.
@@ -46,11 +46,11 @@ beforeAfterEn:
 relatedEvents: [deep-blue, bert, chatgpt-launch]
 sources:
   - title: IBM Watson — The Jeopardy Challenge
-    url: https://www.ibm.com/history/watson-jeopardy
+    url: "https://www.ibm.com/history/watson-jeopardy"
     publisher: IBM
     type: official
   - title: 'Building Watson: An Overview of the DeepQA Project'
-    url: https://research.ibm.com/publications/building-watson-an-overview-of-the-deepqa-project
+    url: "https://research.ibm.com/publications/building-watson-an-overview-of-the-deepqa-project"
     publisher: IBM Research
     type: paper
 status: verified

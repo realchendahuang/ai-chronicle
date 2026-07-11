@@ -63,7 +63,7 @@ visual:
   prompt: "Editorial collage: centered blank chat UI with empty bubbles and input bar, many diverse hands reaching toward it; surrounding torn-paper scenes of classroom studying, coding laptop, cooking, notebooks; paper texture, muted colors; no logos, no brand names, no readable product text, 16:9"
 sources:
   - title: Introducing ChatGPT
-    url: https://openai.com/index/chatgpt/
+    url: "https://openai.com/index/chatgpt/"
     publisher: OpenAI
     type: official
 status: verified

@@ -14,7 +14,8 @@ keyTopics:
   - video-generation
   - generative-media
   - multimodal-ai
-keyEvents: []
+keyEvents:
+  - kling-1-0
 models:
   - kling
   - kling-1.5

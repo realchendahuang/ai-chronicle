@@ -49,11 +49,11 @@ visual:
   prompt: "Editorial illustration for Chinchilla scaling, balance scale model size vs data, sage green, no logos, 16:9"
 sources:
   - title: Training Compute-Optimal Large Language Models
-    url: https://arxiv.org/abs/2203.15556
+    url: "https://arxiv.org/abs/2203.15556"
     publisher: DeepMind / arXiv
     type: paper
   - title: Training Compute-Optimal Large Language Models (NeurIPS 2022)
-    url: https://proceedings.neurips.cc/paper_files/paper/2022/hash/c1e2faff6f588870935f114ebe04a3e5-Abstract-Conference.html
+    url: "https://proceedings.neurips.cc/paper_files/paper/2022/hash/c1e2faff6f588870935f114ebe04a3e5-Abstract-Conference.html"
     publisher: NeurIPS
     type: paper
 status: verified

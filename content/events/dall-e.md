@@ -50,11 +50,11 @@ visual:
   prompt: "Editorial illustration for DALL-E, sketchbook blooming surreal collage, soft colors, no logos, 16:9"
 sources:
   - title: DALL·E — Creating images from text
-    url: https://openai.com/index/dall-e/
+    url: "https://openai.com/index/dall-e/"
     publisher: OpenAI
     type: official
   - title: Zero-Shot Text-to-Image Generation
-    url: https://arxiv.org/abs/2102.12092
+    url: "https://arxiv.org/abs/2102.12092"
     publisher: arXiv
     type: paper
 status: verified

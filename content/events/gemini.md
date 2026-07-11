@@ -47,11 +47,11 @@ visual:
   caption: Google 在 Gemini 1.0 发布文章中展示的官方主视觉。
   captionEn: Google's official lead image for the Gemini 1.0 launch article.
   credit: Google
-  sourceUrl: https://blog.google/technology/ai/google-gemini-ai/
+  sourceUrl: "https://blog.google/technology/ai/google-gemini-ai/"
   rights: official-editorial
 sources:
   - title: Introducing Gemini — our largest and most capable AI model
-    url: https://blog.google/technology/ai/google-gemini-ai/
+    url: "https://blog.google/technology/ai/google-gemini-ai/"
     publisher: Google
     type: official
 status: verified

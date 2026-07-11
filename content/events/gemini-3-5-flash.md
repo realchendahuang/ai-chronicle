@@ -31,7 +31,7 @@ visual:
   caption: Google Gemini API 更新日志的官方发布卡片；Gemini 3.5 Flash 的上线记录发布于该日志。
   captionEn: Google's official Gemini API release-notes card; the availability of Gemini 3.5 Flash was recorded in that changelog.
   credit: Google
-  sourceUrl: https://ai.google.dev/gemini-api/docs/changelog
+  sourceUrl: "https://ai.google.dev/gemini-api/docs/changelog"
   rights: official-editorial
 background: Flash 系列最初主要强调速度与成本，但 Agent 和代码任务要求模型在长时间执行中保持推理、工具调用和状态一致性。
 whatHappened: Gemini 3.5 Flash 面向持续前沿表现优化，重点覆盖 Agent 与代码工作。Google 同期继续推进托管 Agent 和计算机操作能力，把模型与执行环境更紧密地结合。
@@ -48,7 +48,7 @@ relatedEvents:
   - deepseek-v4
 sources:
   - title: Gemini API changelog — May 19, 2026
-    url: https://ai.google.dev/gemini-api/docs/changelog
+    url: "https://ai.google.dev/gemini-api/docs/changelog"
     publisher: Google
     type: official
 status: verified

@@ -46,11 +46,11 @@ visual:
   caption: 原始论文的算法 1：先更新判别器，再更新生成器；两者的同步困难后来成为 GAN 训练研究的核心问题之一。
   captionEn: Algorithm 1 in the original paper updates the discriminator before the generator; keeping the two learners in balance became a central GAN training problem.
   credit: Ian Goodfellow et al.
-  sourceUrl: https://arxiv.org/abs/1406.2661
+  sourceUrl: "https://arxiv.org/abs/1406.2661"
   rights: official-editorial
 sources:
   - title: Generative Adversarial Nets
-    url: https://arxiv.org/abs/1406.2661
+    url: "https://arxiv.org/abs/1406.2661"
     publisher: arXiv
     type: paper
 status: verified

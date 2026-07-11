@@ -25,7 +25,7 @@ visual:
   caption: AlphaFold 3 论文图一概览了蛋白质—核酸与蛋白质—配体预测示例、部分基准结果，以及以扩散模块为核心的模型架构。
   captionEn: Figure 1 of the AlphaFold 3 paper summarizes protein–nucleic-acid and protein–ligand examples, selected benchmarks, and the diffusion-based model architecture.
   credit: Abramson et al. / Nature
-  sourceUrl: https://www.nature.com/articles/s41586-024-07487-w/figures/1
+  sourceUrl: "https://www.nature.com/articles/s41586-024-07487-w/figures/1"
   rights: official-editorial
 background: AlphaFold 2 大幅提高单个蛋白质结构预测，但药物发现和细胞机制更关心蛋白质如何与 DNA、RNA、小分子和抗体相互作用。
 backgroundEn: AlphaFold 2 greatly improved individual protein-structure prediction, but drug discovery and cell biology depend on interactions among proteins, DNA, RNA, small molecules, and antibodies.
@@ -48,7 +48,7 @@ beforeAfterEn:
 relatedEvents: [alphafold]
 sources:
   - title: Accurate structure prediction of biomolecular interactions with AlphaFold 3
-    url: https://www.nature.com/articles/s41586-024-07487-w
+    url: "https://www.nature.com/articles/s41586-024-07487-w"
     publisher: Nature
     type: paper
 status: verified

@@ -21,7 +21,7 @@ visual:
   caption: SWE-bench 论文主图：模型接收 issue 文本与代码库快照，生成补丁，再由仓库测试判断是否解决问题。
   captionEn: "The SWE-bench paper's lead figure: a model receives an issue and repository snapshot, generates a patch, and is evaluated with repository tests."
   credit: Jimenez et al.
-  sourceUrl: https://arxiv.org/abs/2310.06770
+  sourceUrl: "https://arxiv.org/abs/2310.06770"
   rights: official-editorial
 background: HumanEval 等基准主要测试从说明生成独立函数，无法覆盖真实开发中的代码库导航、依赖理解、跨文件修改和回归测试。
 backgroundEn: Benchmarks such as HumanEval focused on generating isolated functions and did not cover repository navigation, dependency reasoning, cross-file edits, or regression testing.
@@ -44,7 +44,7 @@ beforeAfterEn:
 relatedEvents: [github-copilot, devin, claude-code, codex-agent]
 sources:
   - title: SWE-bench — Can Language Models Resolve Real-World GitHub Issues?
-    url: https://arxiv.org/abs/2310.06770
+    url: "https://arxiv.org/abs/2310.06770"
     publisher: arXiv
     type: paper
 status: verified

@@ -27,7 +27,7 @@ visual:
   caption: 计算机历史博物馆展出的 Deep Blue 机柜。1997 年，这套 IBM 系统在六局重赛中击败卡斯帕罗夫。
   captionEn: A Deep Blue cabinet at the Computer History Museum. In 1997, IBM’s system defeated Garry Kasparov in a six-game rematch.
   credit: James the photographer, CC BY 2.0, via Wikimedia Commons
-  sourceUrl: https://commons.wikimedia.org/wiki/File:Deep_Blue.jpg
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:Deep_Blue.jpg"
   rights: cc
 whatHappened: 深蓝使用专用棋类芯片，每秒评估约 2 亿个局面，再结合搜索、开局库、残局库和由特级大师调校的评价函数选择走法。它是高度专用系统，不能把棋力迁移到其他任务。
 whatHappenedEn: Deep Blue used specialized chess chips to evaluate roughly 200 million positions per second, combining search with opening books, endgame databases, and an evaluation function tuned by grandmasters. It was highly specialized and could not transfer its skill to other tasks.
@@ -41,11 +41,11 @@ relatedEvents:
   - expert-systems
 sources:
   - title: Deep Blue
-    url: https://www.ibm.com/history/deep-blue
+    url: "https://www.ibm.com/history/deep-blue"
     publisher: IBM
     type: official
   - title: Deep Blue
-    url: https://doi.org/10.1016/S0004-3702(01)00129-1
+    url: "https://doi.org/10.1016/S0004-3702(01)00129-1"
     publisher: Artificial Intelligence
     type: paper
 status: verified

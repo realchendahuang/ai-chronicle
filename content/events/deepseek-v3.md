@@ -32,7 +32,7 @@ visual:
   caption: DeepSeek-V3 技术报告中的基础架构图，展示 Transformer 块、Multi-Head Latent Attention 与 DeepSeekMoE 的关系。
   captionEn: The basic architecture figure from the DeepSeek-V3 technical report, showing the Transformer block, Multi-Head Latent Attention, and DeepSeekMoE.
   credit: DeepSeek-AI
-  sourceUrl: https://arxiv.org/abs/2412.19437
+  sourceUrl: "https://arxiv.org/abs/2412.19437"
   rights: official-editorial
 whatHappened: DeepSeek-V3 采用 MoE 架构。技术报告披露，最终预训练阶段使用 278.8 万 H800 GPU 小时；按报告采用的 GPU 小时单价估算约为 557.6 万美元，但这并不等同于项目全部研发成本。
 whyImportant: 技术报告把训练资源、MoE 设计和稳定训练细节放进公开讨论，使前沿模型的成本不再只能靠外部猜测。报告中的预训练费用不包含全部研发、数据和基础设施成本，不能直接当作完整项目价格。
@@ -48,7 +48,7 @@ relatedEvents:
   - deepseek-r1
 sources:
   - title: DeepSeek-V3 Technical Report
-    url: https://arxiv.org/abs/2412.19437
+    url: "https://arxiv.org/abs/2412.19437"
     publisher: DeepSeek AI
     type: paper
 status: verified

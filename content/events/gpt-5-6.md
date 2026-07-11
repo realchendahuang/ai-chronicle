@@ -34,7 +34,7 @@ visual:
   caption: OpenAI 开发者文档“Model guidance”页面的官方分享卡片；GPT-5.6 的使用说明发布于该页面。
   captionEn: The official social card for OpenAI's Model guidance documentation, where usage guidance for GPT-5.6 was published.
   credit: OpenAI
-  sourceUrl: https://developers.openai.com/api/docs/guides/latest-model
+  sourceUrl: "https://developers.openai.com/api/docs/guides/latest-model"
   rights: official-editorial
 background: GPT-5.4 与 5.5 已把百万上下文、计算机操作、托管 Shell、Skills 和 MCP 纳入模型工作流，但复杂任务仍需要更高效的工具编排和跨轮推理复用。
 whatHappened: GPT-5.6 允许模型在托管运行时中编写 JavaScript 调用合资格工具，并提供多 Agent beta、显式提示缓存、持久推理、max 推理强度和 Pro 模式。三档模型分别面向能力、成本和吞吐。
@@ -52,11 +52,11 @@ relatedEvents:
   - gemini-3-5-flash
 sources:
   - title: Using GPT-5.6
-    url: https://developers.openai.com/api/docs/guides/latest-model
+    url: "https://developers.openai.com/api/docs/guides/latest-model"
     publisher: OpenAI
     type: official
   - title: OpenAI API changelog — July 2026
-    url: https://developers.openai.com/api/docs/changelog
+    url: "https://developers.openai.com/api/docs/changelog"
     publisher: OpenAI
     type: official
 status: verified

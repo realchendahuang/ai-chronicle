@@ -43,11 +43,11 @@ visual:
   caption: 2013 年 Word2Vec 论文首页；标题把重点放在“高效估计”，对应其为十亿词级训练削减计算开销的设计。
   captionEn: The 2013 Word2Vec title page emphasizes efficient estimation, matching the paper's effort to make billion-word training computationally practical.
   credit: Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean
-  sourceUrl: https://arxiv.org/abs/1301.3781
+  sourceUrl: "https://arxiv.org/abs/1301.3781"
   rights: official-editorial
 sources:
   - title: Efficient Estimation of Word Representations in Vector Space
-    url: https://arxiv.org/abs/1301.3781
+    url: "https://arxiv.org/abs/1301.3781"
     publisher: arXiv
     type: paper
 status: verified

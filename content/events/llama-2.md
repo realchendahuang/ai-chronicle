@@ -48,11 +48,11 @@ visual:
   prompt: "Editorial illustration for Llama 2 open weights, crate shared across developer desks, warm cooperative scene, no logos, 16:9"
 sources:
   - title: Meta and Microsoft Introduce the Next Generation of Llama
-    url: https://ai.meta.com/blog/llama-2/
+    url: "https://ai.meta.com/blog/llama-2/"
     publisher: Meta
     type: official
   - title: 'Llama 2: Open Foundation and Fine-Tuned Chat Models'
-    url: https://arxiv.org/abs/2307.09288
+    url: "https://arxiv.org/abs/2307.09288"
     publisher: arXiv
     type: paper
 status: verified

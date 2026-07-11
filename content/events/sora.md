@@ -51,7 +51,7 @@ visual:
   prompt: "Cinematic editorial collage of curved film strips showing continuous shots of a lone figure walking through rainy dusk city streets, bridges, markets, windows; surrounding storyboard sketches, camera geometry, spacetime patch diagrams on dark paper; painterly frames, no logos, no readable brand text, 16:9"
 sources:
   - title: Video generation models as world simulators
-    url: https://openai.com/index/video-generation-models-as-world-simulators/
+    url: "https://openai.com/index/video-generation-models-as-world-simulators/"
     publisher: OpenAI
     type: official
 status: verified

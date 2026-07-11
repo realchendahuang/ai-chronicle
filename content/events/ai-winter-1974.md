@@ -40,15 +40,15 @@ visual:
   prompt: "Muted archival painting of a 1970s computer laboratory being dismantled: beige CRTs, mainframe cabinets, punched cards, paper plotter, cardboard boxes stacked high, one researcher packing shelves under cool fluorescent light through tall windows; empty chairs, quiet industrial atmosphere; no logos, no readable text, restrained historical editorial style, 16:9"
 sources:
   - title: Artificial Intelligence — A General Survey
-    url: https://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/p001.htm
+    url: "https://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/p001.htm"
     publisher: UK Science Research Council
     type: report
   - title: 'Language and Machines: Computers in Translation and Linguistics'
-    url: https://nap.nationalacademies.org/catalog/9547/language-and-machines-computers-in-translation-and-linguistics
+    url: "https://nap.nationalacademies.org/catalog/9547/language-and-machines-computers-in-translation-and-linguistics"
     publisher: National Academy of Sciences
     type: report
   - title: Freddy the Robot Was the Fall Guy for British AI
-    url: https://spectrum.ieee.org/freddy-robot-british-ai-winter
+    url: "https://spectrum.ieee.org/freddy-robot-british-ai-winter"
     publisher: IEEE Spectrum
     type: archive
 status: verified

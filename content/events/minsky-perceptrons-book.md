@@ -39,11 +39,11 @@ visual:
   caption: 马文·明斯基。1969 年他与西摩·佩珀特合著的《Perceptrons》用几何语言划出单层线性模型的边界。
   captionEn: Marvin Minsky. The 1969 book Perceptrons, with Seymour Papert, mapped the geometric limits of single-layer linear models.
   credit: Steamtalks, CC BY-SA 2.0, via Wikimedia Commons
-  sourceUrl: https://commons.wikimedia.org/wiki/File:Marvin_Minsky.jpg
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:Marvin_Minsky.jpg"
   rights: cc
 sources:
   - title: Perceptrons — An Introduction to Computational Geometry
-    url: https://mitpress.mit.edu/9780262631112/perceptrons/
+    url: "https://mitpress.mit.edu/9780262631112/perceptrons/"
     publisher: MIT Press
     type: archive
 status: verified
