@@ -43,8 +43,10 @@ beforeAfter:
   before: 最高能力通常意味着最慢、最昂贵的旗舰模型。
   after: 中档模型开始成为生产 Agent 和开发者工具的主力。
 relatedEvents:
+  - claude
   - claude-code
   - mcp
+  - computer-use
   - claude-5-family
 sources:
   - title: Claude 3.5 Sonnet

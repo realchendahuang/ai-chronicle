@@ -39,6 +39,7 @@ relatedEvents:
   - llama-2
   - chatgpt-launch
   - gpt-4-release
+  - vllm
   - deepseek-v3
   - deepseek-r1
   - qwen

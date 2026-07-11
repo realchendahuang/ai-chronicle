@@ -32,7 +32,7 @@ beforeAfter:
 beforeAfterEn:
   before: ChatGPT and the GPT API dominated attention in the new generative-AI market.
   after: Claude became an independent model family differentiated by safety and long-context work.
-relatedEvents: [instructgpt, chatgpt-launch, claude-3-5-sonnet]
+relatedEvents: [instructgpt, chatgpt-launch, constitutional-ai, claude-3-5-sonnet]
 visual:
   src: /assets/events/claude.webp
   width: 2400

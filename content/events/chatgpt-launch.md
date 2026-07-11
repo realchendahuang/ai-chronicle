@@ -42,11 +42,14 @@ beforeAfter:
 relatedEvents:
   - whisper
   - gpt-3
+  - instructgpt
+  - constitutional-ai
   - gpt-4-release
   - openai-plugins
   - gpts-launch
   - assistants-api
   - function-calling
+  - vllm
 visual:
   src: /assets/events/chatgpt-launch.webp
   width: 1672

@@ -32,7 +32,7 @@ beforeAfter:
 beforeAfterEn:
   before: Applications assembled model calls, tool loops, and multi-agent collaboration themselves.
   after: Model platforms offered unified response APIs and dedicated agent development tools.
-relatedEvents: [assistants-api, function-calling, mcp, codex-agent]
+relatedEvents: [assistants-api, function-calling, mcp, codex-agent, computer-use]
 visual:
   src: /assets/events/agent-runtime.webp
   width: 1672

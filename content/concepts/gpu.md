@@ -11,6 +11,8 @@ relatedEvents:
   - alexnet
   - deep-learning-rise
   - pytorch
+  - flashattention
+  - vllm
 relatedConcepts:
   - deep-learning
   - neural-network

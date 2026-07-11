@@ -44,7 +44,7 @@ beforeAfter:
 beforeAfterEn:
   before: General GPU computing required adapting problems to graphics APIs.
   after: Parallel computing had a stable platform that evolved alongside deep-learning frameworks.
-relatedEvents: [deep-learning-rise, alexnet]
+relatedEvents: [deep-learning-rise, alexnet, flashattention]
 sources:
   - title: CUDA Toolkit Archive
     url: https://developer.nvidia.com/cuda-toolkit-archive

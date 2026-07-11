@@ -31,7 +31,7 @@ beforeAfter:
 beforeAfterEn:
   before: Claude mainly consumed text context and generated responses.
   after: Claude could select structured tools inside an application-controlled execution loop.
-relatedEvents: [function-calling, mcp, claude-code]
+relatedEvents: [function-calling, mcp, claude-code, computer-use]
 visual:
   src: /assets/events/tool-use.webp
   width: 1672

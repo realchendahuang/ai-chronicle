@@ -34,7 +34,7 @@ beforeAfter:
 beforeAfterEn:
   before: Large models mainly continued text according to patterns in pretraining data.
   after: Post-training deliberately shaped instruction following, refusals, and expressions of uncertainty.
-relatedEvents: [gpt-3, chatgpt-launch, claude]
+relatedEvents: [gpt-3, chatgpt-launch, claude, constitutional-ai]
 visual:
   src: /assets/events/instructgpt.webp
   width: 1400

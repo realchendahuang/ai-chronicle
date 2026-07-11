@@ -35,7 +35,7 @@ beforeAfter:
 beforeAfterEn:
   before: Each pretrained model often meant a separate, fragile reproduction repo.
   after: A shared library and model hub let checkpoints circulate like software dependencies.
-relatedEvents: [bert, gpt-2, pytorch]
+relatedEvents: [bert, gpt-2, pytorch, vllm]
 visual:
   src: /assets/events/huggingface-transformers.webp
   width: 1280

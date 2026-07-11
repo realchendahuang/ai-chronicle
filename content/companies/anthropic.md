@@ -15,7 +15,10 @@ keyTopics:
   - ai-coding
   - ai-safety
 keyEvents:
+  - constitutional-ai
+  - claude
   - claude-3-5-sonnet
+  - computer-use
   - claude-code
   - mcp
   - claude-5-family

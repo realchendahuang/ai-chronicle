@@ -31,7 +31,7 @@ beforeAfter:
 beforeAfterEn:
   before: Applications inferred tools and arguments from free-form model text.
   after: Models and software collaborated through an explicit structured-call contract.
-relatedEvents: [openai-plugins, assistants-api, mcp]
+relatedEvents: [openai-plugins, assistants-api, mcp, tool-use, computer-use]
 visual:
   src: /assets/events/function-calling.webp
   width: 1672

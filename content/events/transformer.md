@@ -45,6 +45,7 @@ relatedEvents:
   - bert
   - gpt-1
   - gpt-3
+  - flashattention
   - chatgpt-launch
   - gpt-4-release
 visual:

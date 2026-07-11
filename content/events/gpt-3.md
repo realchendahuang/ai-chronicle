@@ -43,6 +43,7 @@ relatedEvents:
   - clip
   - gpt-1
   - gpt-2
+  - flashattention
   - instructgpt
   - chatgpt-launch
   - gpt-4-release

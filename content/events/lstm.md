@@ -35,7 +35,7 @@ beforeAfter:
 beforeAfterEn:
   before: Standard RNNs were hard to train on long sequences, and long-range dependencies were often unstable to learn.
   after: Gated memory cells made longer temporal modeling a practical default option.
-relatedEvents: [backpropagation, seq2seq, transformer]
+relatedEvents: [backpropagation, seq2seq, transformer, flashattention]
 visual:
   src: /assets/events/lstm.webp
   width: 1280

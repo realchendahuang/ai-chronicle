@@ -12,6 +12,7 @@ relatedEvents:
   - transformer
   - bert
   - gpt-1
+  - flashattention
 relatedConcepts:
   - self-attention
   - transformer
