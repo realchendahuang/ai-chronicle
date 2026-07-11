@@ -284,6 +284,11 @@ const moonIcon = `
     <path d="M15.7 12.9A6.3 6.3 0 0 1 7.1 4.3 6.35 6.35 0 1 0 15.7 12.9Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
   </svg>`
 
+const githubIcon = `
+  <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor">
+    <path d="M10 1.6C5.36 1.6 1.6 5.42 1.6 10.14c0 3.78 2.4 6.98 5.73 8.11.42.08.57-.19.57-.41 0-.2-.01-.87-.01-1.58-2.33.52-2.82-.99-2.82-.99-.38-1-.93-1.27-.93-1.27-.76-.53.06-.52.06-.52.84.06 1.28.88 1.28.88.75 1.31 1.96.93 2.44.71.08-.55.29-.93.53-1.15-1.86-.22-3.82-.95-3.82-4.24 0-.94.33-1.7.86-2.3-.09-.22-.37-1.12.08-2.33 0 0 .7-.23 2.3.88a7.7 7.7 0 0 1 4.18 0c1.6-1.11 2.3-.88 2.3-.88.45 1.21.17 2.11.08 2.33.54.6.86 1.36.86 2.3 0 3.3-1.96 4.02-3.83 4.23.3.27.57.79.57 1.6 0 1.15-.01 2.08-.01 2.36 0 .23.15.5.57.41A8.55 8.55 0 0 0 18.4 10.14C18.4 5.42 14.64 1.6 10 1.6Z"/>
+  </svg>`
+
 function nav(active) {
   const items = [
     ['timeline', '/', '时间轴'],
@@ -291,11 +296,12 @@ function nav(active) {
     ['concepts', '/concepts/', '概念'],
     ['models', '/models/', '模型'],
     ['companies', '/companies/', '公司'],
-    ['main-site', `${siteOrigin}/`, '主站', true],
+    ['github', githubRepoUrl, 'GitHub', true, '在 GitHub 打开本项目仓库（新窗口）'],
+    ['main-site', `${siteOrigin}/`, '主站', true, '访问陈大黄主站（新窗口）'],
   ]
 
-  const renderNavLink = ([id, path, label, external]) => `
-    <a href="${external ? path : urlFor(path)}"${active === id ? ' aria-current="page"' : ''}${external ? ' class="external-nav-link" target="_blank" rel="noopener noreferrer" aria-label="访问陈大黄主站（新窗口）"' : ''}>
+  const renderNavLink = ([id, path, label, external, externalLabel]) => `
+    <a href="${external ? path : urlFor(path)}"${active === id ? ' aria-current="page"' : ''}${external ? ` class="external-nav-link" target="_blank" rel="noopener noreferrer" aria-label="${externalLabel || label}"` : ''}>
       <span>${label}</span>${external ? '<i aria-hidden="true">↗</i>' : ''}
     </a>`
 
@@ -310,6 +316,9 @@ function nav(active) {
           ${items.map(renderNavLink).join('')}
         </nav>
         <div class="header-actions">
+          <a class="utility-trigger github-trigger" href="${githubRepoUrl}" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开本项目仓库（新窗口）" title="GitHub">
+            ${githubIcon}
+          </a>
           <button class="utility-trigger language-trigger" type="button" data-language-toggle aria-label="Switch to English" title="中 / EN">
             <span data-language-label>EN</span>
           </button>
