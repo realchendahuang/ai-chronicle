@@ -1,20 +1,20 @@
 ---
 eventId: agent-runtime
-form: Archaeology of a developer stack
-narrativeCenter: Responses API and Agents SDK name tool loops, handoffs, guardrails, and tracing
-emotionalSource: The launch star is not a talking model but glue code no one liked to show
+form: A runtime cross-section
+narrativeCenter: The Responses API and Agents SDK bring tool loops, handoffs, guardrails, and tracing out of application glue
+emotionalSource: The code least suited to a demo finally receives a formal place
 avoid:
-  - Treating SDK primitives as proof agents already work reliably
-  - Collapsing Responses API and Agents SDK into one layer
-  - Letting multi-agent headcount hide tracing and permissions
+  - Treating SDK primitives as proof that agents are reliable
+  - Collapsing the Responses API and Agents SDK into one layer
+  - Hiding permissions and observability beneath multi-agent diagrams
 ---
 
-Before “agent” was a product name, it was often a lengthening loop in application code: send the problem to a model, parse the tool it wants, execute, stuff results back into context, ask again. Timeouts, retries, permissions, logs, and error handling sat beside the loop. Demos spotlighted the answer; what made demos repeatable mostly had no name. Engineers called it glue; launch stages rarely invited glue to the podium.
+An agent demo usually begins with a request and ends with an answer. A production system lives in between. The model asks for a search; the application performs it and returns the result. The model asks to read a file; the application checks permission. One step times out and the loop must recover. Work moves to another agent and the logs must explain which context crossed the boundary. The visible answer may be a few lines. The glue behind it can become the backend.
 
-On 11 March 2025, OpenAI launched the Responses API and open-sourced an Agents SDK. Responses unifies text and tool-call responses and ships built-in web search, file search, and computer use; the SDK turns Agent, Handoff, Guardrail, and Tracing into composable primitives. One is a platform response-and-tools interface; the other is an application-side orchestration library—paired, not the same layer. The launch also pointed migration paths from the Assistants API: conversation, runs, and tool loops had once been hosted under four objects; the platform now preferred vocabulary closer to one response, built-in tools, and app orchestration. Migration cost again reminded everyone that hosting depth swings with product strategy.
+On 11 March 2025, OpenAI released the Responses API and open-sourced the Agents SDK. The Responses API placed text and tool calls in a unified interface and offered built-in tools including web search, file search, and computer use. The Agents SDK operated on the application side, turning agents, handoffs, guardrails, and tracing into composable primitives. The two arrived together but served different jobs: one was a platform interface; the other was an orchestration library. The notable change was not simply that developers could draw more agents. Work previously dismissed as glue became a formal product surface. A handoff no longer had to mean stuffing a string into another prompt; it had a named abstraction. Tracing was presented as part of the stack rather than an emergency logging project after an incident. A guardrail could no longer be reduced to “please do nothing dangerous”; it had to decide what input or output was allowed to continue around a tool call.
 
-Built-in tools lower the cost of search and files and write permission and billing defaults into the platform path. Naming SDK primitives does not make systems reliable. What context a handoff carries, what a guardrail blocks, and how deep tracing records remain application choices. Multi-agent headcount easily hides single-point failure: one bad handoff or one unlogged tool call can collapse a “collaborative” demo in production.
+Names do not create reliability. A handoff that carries too little context produces amnesia; one that carries too much spreads secrets and noise. A narrow guardrail misses danger, while an over-broad one prevents useful work. Tracing can record calls but cannot decide who may inspect the trace, how long it should remain, or whether a failure belongs to the model, the tool, or the application. The busier a multi-agent diagram becomes, the easier it is to bury those decisions beneath arrows.
 
-What this day records is that glue code finally received official nouns. Nouns will change again; tool loops, handoffs, guardrails, and tracing will not vanish because the names do. Stack archaeology matters because what actually lets agent products run repeatedly is often what once seemed too unglamorous for a launch title.
+The release also set a migration direction away from the Assistants API. State previously organized around Assistants, Threads, and Runs had to be placed again across Responses and application orchestration. That migration made a larger point: how much state a platform chooses to host is not a permanent technical constant. It moves with product strategy. An abstraction delivers convenience and later creates work when its nouns and object boundaries change.
 
-From Assistants to Responses, nouns change; the work does not vanish. Apps still handle failure, permissions, and observability; the platform only offers another default assembly. An open-sourced Agents SDK lets orchestration logic enter repositories and code review rather than only click-config. Once glue has names, the next question is whether those names help assign responsibility in a production incident.
+The Responses API and Agents SDK therefore mark a shift in where engineering attention lands. Model ability still matters, but an agent product's continuity increasingly depends on recovery after tool failure, traceable handoffs, and permissions that can be narrowed. The launch brought glue code onto the stage. Its real test begins when an incident occurs and the runtime either leads an engineer to the broken step—or leaves another fluent answer with no accountable path behind it.

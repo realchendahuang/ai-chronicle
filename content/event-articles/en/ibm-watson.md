@@ -1,22 +1,22 @@
 ---
 eventId: ibm-watson
-form: Public contest record
-narrativeCenter: An offline DeepQA pipeline outscoring two champions across three Jeopardy! matches
-emotionalSource: Embarrassment when confidence shows on live TV—and the clarity of the final margin
+form: televised contest narrative
+narrativeCenter: how an offline question-answering system used three seconds to choose an answer and decide whether it was worth buzzing
+emotionalSource: a decisive final score sharing the screen with five question marks that exposed the boundary
 avoid:
-  - Reading a game win as solved open-domain QA
-  - Omitting offline operation and clue bounds
-  - Back-propagating later enterprise outcomes onto the match
+  - treating a game victory as solved open-domain question answering
+  - omitting offline operation and clue boundaries
+  - using later enterprise outcomes to rewrite the match
 ---
 
-*Jeopardy!* turns natural-language clues into timed answers with wagers. Knowledge is not enough; contestants must ring in, and poor confidence loses money. IBM chose the show because it made question answering a public exam with rules: one clue, one canonical response, a host’s judgment.
+When Watson took the *Jeopardy!* stage in February 2011, it faced Brad Rutter and Ken Jennings, two of the game’s greatest champions. The task was not merely to “know the answer.” Clues used puns, cultural references, and compressed wording. The system had to estimate its confidence within seconds, decide whether that confidence justified buzzing, and sometimes choose a wager. A bad answer was not a harmless search result. It subtracted money from the score.
 
-In the three matches aired 14–16 February 2011, the competition Watson did not query the live internet. It carried sources with it—encyclopedias, dictionaries, literary works, and more—and ran offline. DeepQA generated many candidate answers in parallel, ran them through hundreds of analyses—type match, co-occurrence, temporal and geographic constraints, passage support—and fused evidence with machine learning; after a clue arrived, answer and confidence emerged on the order of three seconds. Public hardware orders of magnitude: about ten racks, ninety servers, 2,880 processor cores (institutional historical materials). Inside the machine was a very fast argument: which evidence is harder, then a single decision to speak.
+Behind the stage stood a room-size machine: ten racks, 90 servers, and 2,880 processor cores. The competition system did not use the live internet. Encyclopedias, dictionaries, novels, plays, Project Gutenberg books, and other sources had been loaded in advance. After receiving a clue, DeepQA generated candidate answers in parallel and subjected them to hundreds of analyses—answer type, time, place, textual co-occurrence, and passage support among them. Confidence rose when independent lines of evidence converged. The full argument took about three seconds.
 
-Uncertainty did not stay hidden. On a Final Jeopardy clue in “U.S. Cities,” correct response Chicago, Watson offered “What is Toronto?????”—repeated question marks exposed low confidence while the geographic error remained obvious to a television audience. Final totals: Watson $77,147, Ken Jennings $24,000, Brad Rutter $21,600; prize money went to charity. The margin was clear. The capability boundary did not automatically enlarge with the trophy.
+The revealing feature of this design was that uncertainty remained visible. In a Final Jeopardy category called “U.S. Cities,” the correct response was Chicago. Watson answered, “What is Toronto?????” The five question marks signaled that the system itself had little confidence, but the wager still placed the failure before millions of viewers. A machine cannot feel television embarrassment; its engineers could no longer keep the boundary inside the laboratory. A geographic implication in ordinary language had slipped through the evidence pipeline.
 
-Clues were short, scoring fixed, corpora prepared in advance. When the Watson brand later entered healthcare and enterprise, those supports often did not hold. A public win shows a pipeline can work on a bounded task; it cannot alone show the same brand is deployable in open business settings. Retrieve candidates, make heterogeneous evidence compete, estimate whether confidence is high enough to speak—that pipeline instinct outlasts the television persona.
+Across the three matches, Watson finished with $77,147, ahead of Jennings at $24,000 and Rutter at $21,600. The margin established genuine championship-level performance under *Jeopardy!* rules. The same rules drew a fence around the result: clues were short, scoring was fixed, the corpus was prepared, and answers were usually supported by existing text. The contest was not a continuously changing web, still less a medical or enterprise setting with liability, explanation, and long-term follow-up.
 
-After the television win, the Watson brand was pulled toward healthcare and enterprise. A contest rules table is not a product-liability table. DeepQA’s parallel hypotheses and evidence fusion remain a family instinct for retrieval-augmented QA; converting a trophy directly into ward and call-center readiness exceeds what the match showed. Read Watson with the score margin and the Final Jeopardy question marks together.
+The Watson name later moved into healthcare and business products, which makes it tempting to rewrite the 2011 event through later successes and disappointments. The evidence should remain separate. The television system demonstrated a concrete pipeline: retrieve competing hypotheses, make heterogeneous evidence argue, and use confidence to decide whether to speak. That pattern still appears in retrieval-augmented question answering. A trophy, however, cannot be exchanged for a reliability contract in every other domain.
 
-Offline operation secured reproducible match conditions and also limited distance from open-web QA. Later retrieval-augmented generation would face freshness and non-reproducibility again. Competition Watson chose reproducibility over freshness; that choice belongs in the capability boundary, not only in victory news.
+The complete record of those three days requires both images at once: the decisive score and the row of question marks after Toronto. One shows the speed and strength of evidence fusion in a bounded task. The other shows a low-confidence error that the system recognized yet still voiced. A dependable question-answering machine must do more than find plausible answers. It must also know when not to press the buzzer.

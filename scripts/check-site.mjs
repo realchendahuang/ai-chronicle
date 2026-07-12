@@ -99,7 +99,9 @@ const htmlFiles = collectFiles(distDir).filter((file) => file.endsWith('.html'))
 for (const file of htmlFiles) {
   const html = readFileSync(file, 'utf8')
   if (/\/events\/[^/]+\/index\.html$/.test(file)) {
-    if (!html.includes('metadata-record')) failures.push(`Event page lacks historical record: ${file.replace(rootDir, '')}`)
+    if (!html.includes('event-record-lead')) failures.push(`Event page lacks historical record: ${file.replace(rootDir, '')}`)
+    if (!html.includes('event-facts')) failures.push(`Event page lacks compact event facts: ${file.replace(rootDir, '')}`)
+    if (!html.includes('event-archive')) failures.push(`Event page lacks expandable archive: ${file.replace(rootDir, '')}`)
   }
   const attributes = [...html.matchAll(/(?:href|src)="([^"]+)"/g)].map((match) => match[1])
 

@@ -23,6 +23,7 @@ const bannedHeadings = new Set([
 ])
 
 const emptyGrandWords = ['风暴', '火焰', '群星', '命运', '划时代', '颠覆', '改变世界', '新纪元']
+const editorialMetaPhrases = ['史位', '编年应', '正确姿势', '写进对照表', '专题密度', '占一格', '占一列']
 
 function bodyOf(markdown) {
   const parts = markdown.split(/^---\s*$/m)
@@ -63,12 +64,19 @@ for (const language of languages) {
     .map((name) => {
       const body = bodyOf(readFileSync(join(directory, name), 'utf8'))
       const text = plainText(body)
+      const first = text.slice(0, 180)
+      const last = text.slice(-180)
+      const paragraphs = body.split(/\n\s*\n/).map(plainText).filter(Boolean)
       return {
         id: basename(name, '.md'),
         body,
         text,
-        first: text.slice(0, 180),
-        last: text.slice(-180),
+        first,
+        last,
+        firstGrams: ngrams(first),
+        lastGrams: ngrams(last),
+        paragraphs,
+        paragraphGrams: paragraphs.map((paragraph) => ngrams(paragraph)),
       }
     })
 
@@ -91,11 +99,42 @@ for (const language of languages) {
     if (owners.length >= 4) warnings.push(`${language} repeats image or grand claim “${word}” in ${owners.join(', ')}`)
   }
 
+  for (const phrase of editorialMetaPhrases) {
+    const owners = articles.filter((article) => article.text.includes(phrase)).map((article) => article.id)
+    if (owners.length) warnings.push(`${language} uses editorial meta phrase “${phrase}” in ${owners.join(', ')}`)
+  }
+
+  if (language === 'zh') {
+    const shortArticles = articles.filter((article) => article.text.replace(/\s+/g, '').length < 500).map((article) => article.id)
+    if (shortArticles.length) warnings.push(`zh articles under 500 characters need manual review: ${shortArticles.join(', ')}`)
+
+    const thinShapes = articles
+      .filter((article) => article.paragraphs.length <= 4 && article.text.replace(/\s+/g, '').length < 700)
+      .map((article) => `${article.id}(${article.paragraphs.length}p)`)
+    if (thinShapes.length) warnings.push(`zh thin three/four-paragraph shapes: ${thinShapes.join(', ')}`)
+  }
+
+  for (const article of articles) {
+    const joinedLines = article.body.split('\n')
+      .some((line, index, lines) => index > 0 && line.trim() && lines[index - 1].trim()
+        && !/^[-*#>|]/.test(line.trim()) && !/^[-*#>|]/.test(lines[index - 1].trim()))
+    if (joinedLines) warnings.push(`${language}/${article.id} has adjacent prose lines that may render as one oversized paragraph`)
+
+    const internalPairs = []
+    for (let left = 0; left < article.paragraphs.length; left += 1) {
+      for (let right = left + 1; right < article.paragraphs.length; right += 1) {
+        const score = similarity(article.paragraphGrams[left], article.paragraphGrams[right])
+        if (score >= .38) internalPairs.push(`${left + 1}/${right + 1}=${score.toFixed(2)}`)
+      }
+    }
+    if (internalPairs.length) warnings.push(`${language}/${article.id} repeats paragraph-level material: ${internalPairs.slice(0, 4).join(', ')}`)
+  }
+
   const similarPairs = []
   for (let left = 0; left < articles.length; left += 1) {
     for (let right = left + 1; right < articles.length; right += 1) {
-      const firstScore = similarity(ngrams(articles[left].first), ngrams(articles[right].first))
-      const lastScore = similarity(ngrams(articles[left].last), ngrams(articles[right].last))
+      const firstScore = similarity(articles[left].firstGrams, articles[right].firstGrams)
+      const lastScore = similarity(articles[left].lastGrams, articles[right].lastGrams)
       if (firstScore >= .42 || lastScore >= .42) {
         similarPairs.push(`${articles[left].id}/${articles[right].id} first=${firstScore.toFixed(2)} last=${lastScore.toFixed(2)}`)
       }

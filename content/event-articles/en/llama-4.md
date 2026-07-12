@@ -1,20 +1,22 @@
 ---
 eventId: llama-4
-form: Stratified open-weight history
-narrativeCenter: Scout and Maverick push openness into longer context with MoE and native multimodality while a teacher stays backstage
-emotionalSource: Excitement at downloadable students—and stratified openness when the teacher remains inside
+form: family-backstage narrative
+narrativeCenter: when the community received Scout and Maverick, the much larger teacher remained backstage
+emotionalSource: downloadable students had left the building; Behemoth, which helped teach them, had not
 avoid:
-  - Treating ten million tokens as universal task competence
-  - Omitting that Behemoth did not ship as open weights beside them
-  - Reading vendor comparison tables as independent finals
+  - treating ten million tokens as universal task competence
+  - omitting that Behemoth did not ship beside the other models
+  - reading vendor comparisons as an independent final
 ---
 
-On 5 April 2025, Meta released open-weight Llama 4 Scout and Maverick. Both are mixture-of-experts models with native text-and-image input; Scout stresses ultra-long context, Maverick general capability. Per launch materials, Scout has about 109 billion total parameters and 16 experts, activating roughly 17 billion per token; Maverick scales to about 400 billion total and 128 experts while still activating about 17 billion. Not every parameter need compute every step: shared and routed experts split capacity from active FLOPs. “Large” on disk and “live” per step must be read apart.
+Meta released open weights for Llama 4 Scout and Maverick on 5 April 2025. The launch presented them as members of one “herd”: both used mixture-of-experts architectures, and both accepted text and images natively. The community could download those two models. It could not download the largest family member, Behemoth, which remained in preview or training while already supplying distillation signals behind the scenes.
 
-“Ten million tokens” is Scout’s loudest number and the one that needs slow reading. Meta states pretraining and post-training at 256K context, then length generalization and specialized data out to 10M, with launch posts showing long-code and needle-in-a-haystack style tests. That evidences long-range handling under official settings—not that every real 10M-token job will be fully understood. Fitting material in, retrieving a span, and sustaining judgment are three different difficulties. Needle tests and perplexity curves on the launch page are evidence, not certificates of universal task competence.
+Openness in Llama 4 was layered from the beginning. Scout had about 109 billion total parameters and sixteen experts, activating roughly 17 billion parameters per token. Maverick had about 400 billion total parameters and 128 experts, while activating about the same 17 billion. A router selected only part of the expert capacity for each step, so the size of the stored weights and the computation required to generate one token were no longer the same number. Developers gained access to greater capacity and inherited new complexity in expert parallelism, memory, and inference-framework support.
 
-Behemoth, the largest family member, remained in training or preview at launch—on the order of two trillion total parameters and about 288 billion active—without shipping as available weights beside Scout and Maverick, yet used to produce soft targets for distilling Maverick. The community receives students; part of what trained them stays inside the company: openness stratified again. Launch-page wins against GPT-4o, Gemini, DeepSeek, and others are Meta’s own evaluations and versions—useful for positioning, insufficient as a final for every deploy.
+Scout’s loudest specification was a ten-million-token context window. Meta described training and post-training at shorter lengths, followed by techniques and specialized data intended to extend the model, and showed needle-in-a-haystack and long-code tests. This supported a bounded claim: under the publisher’s settings, the model could operate over extremely long inputs. It did not collapse three separate questions into one. Material may fit in the window; a passage may be retrievable; coherent judgment over the entire task may still fail. Fitting the equivalent of many thousands of pages does not guarantee reliable understanding of their contradictions, chronology, and unstated assumptions.
 
-Llama 4 pushes open weights into multimodality, MoE, and ultra-long context, and forces the word *open* to be read in parts: weights downloadable, architecture studyable, students deployable; teacher, full data, and training process may still be offstage. The herd left the fence—but not every animal walked the same distance out.
+Maverick emphasized broader capability and used soft targets from Behemoth during distillation. Meta described Behemoth at roughly two trillion total parameters and 288 billion active, but did not release its usable weights alongside the students. The community therefore received not only two models but a new structure of openness: students available for deployment and fine-tuning, while the teacher, full training data, and production process remained inside the company. Open weights widened the surface for study without making the entire supply chain transparent.
 
-Scout’s long context and Maverick’s general capability move open-weight users from “parameter count” toward “active count, context, and modality.” Deployers must watch memory, disk, and routing implementations together. Behemoth withholding weights while teaching makes “open” present as a downloadable student layer. Stratification is not a flaw description; it is a structural fact of this generation’s release.
+The launch also compared the family with versions of GPT-4o, Gemini, DeepSeek, and other systems. Those were Meta’s selected models, prompts, and evaluation pipelines—useful for positioning, not an independent final across every setting. Deployment turned on less theatrical questions: whether ten million tokens justified the memory and latency, whether MoE routing ran efficiently in the chosen stack, whether image input met the actual task, and whether the license covered the intended use.
+
+Llama 4 was therefore more specific than “open models now have multimodality and MoE.” It showed how a frontier model family could be delivered in layers. The largest teacher transferred capability backstage; smaller students entered the community. Scout and Maverick did cross the fence. The empty place where Behemoth might have stood reminded users that downloading a model and seeing the full process that produced it remain different degrees of openness.

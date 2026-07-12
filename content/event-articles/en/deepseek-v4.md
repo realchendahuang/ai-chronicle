@@ -1,22 +1,22 @@
 ---
 eventId: deepseek-v4
-form: Preview release note
-narrativeCenter: Under a preview label, million-token context, dual modes, and agent-coding claims share one open-weight family
-emotionalSource: Specs point at longer agent work while materials still say preview
+form: migration-notice narrative
+narrativeCenter: how a release labeled preview also asked developers to begin moving away from old model names
+emotionalSource: the new family was still in preview while the retirement date for its predecessors was already in the documentation
 avoid:
-  - Writing preview as general availability
-  - Treating vendor agent-coding scores as third-party reproduction
-  - Ignoring product-line split and sparse activation
+  - writing preview as general availability
+  - treating vendor agent-coding scores as third-party reproduction
+  - ignoring the product split between Pro and Flash
 ---
 
-On 24 April 2026, DeepSeek released preview open-weight builds of V4 Pro and V4 Flash and updated its service notes. The label comes before the specs: *preview* is not ornament; it is the first state a reader must see. Writing preview as general availability forges a false completion record on the timeline.
+On 24 April 2026, DeepSeek announced V4 Preview in its API documentation and released open weights. The page emphasized *preview* while giving a concrete migration instruction: keep the existing `base_url`, but change the model name to `deepseek-v4-pro` or `deepseek-v4-flash`. The same notice said that `deepseek-chat` and `deepseek-reasoner` would be retired on 24 July. The new generation had not been called generally available; the countdown for the old entry points had already begun.
 
-Per launch materials, Pro targets hard reasoning and agent coding at about 1.6 trillion total parameters and 49 billion active; Flash trades a smaller active footprint for a faster, cheaper path. Official serving defaults to about a one-million-token context and offers thinking and non-thinking modes—on for explicit chain-style reasoning, off for lower latency. Thinking raises output tokens and cost; non-thinking sits closer to ordinary completion. Total parameters still govern load and disk; active parameters track closer to one inference’s compute—sparse design keeps the two bills apart, continuing the company’s efficiency narrative.
+Pro and Flash divided the family into two distinct tradeoffs. DeepSeek listed Pro at 1.6 trillion total parameters and 49 billion active, targeting harder reasoning and agentic coding. Flash had 284 billion total and 13 billion active, emphasizing faster responses and lower cost. Mixture-of-experts architecture separated stored capacity from the parameters used on each step. The product tiers were therefore not merely the same model at different speed settings. They carried different latency, cost, and capability boundaries.
 
-Agent coding and long context share one family story. Vendor benchmarks position a product; they do not replace independent reproduction. Stability, rate limits, and interface detail may still move in preview. Open weights allow download and trial deployment; licenses and service terms remain those of the repository and official site. Product-line split also warns readers: not every tier carries the same work; treating Flash as Pro, or a preview API as a production SLA, misreads the sheet.
+Official services made a one-million-token context window standard and offered both thinking and non-thinking modes. The combination addressed work longer than a single answer: an agent reading a repository, calling tools, retaining intermediate records, and continuing across later tasks. A longer window solves only whether information can remain present in the input. Correct tool use, obedience to earlier constraints, and recovery from an error many steps later still require evaluation on real workflows. A million-token container is not a quality guarantee for long-horizon work.
 
-V4 does not declare a finished agent pipeline. It places million-token context, mode switches, and sparse efficiency into downloadable preview checkpoints first. Capability claims, preview boundaries, and open weights should be read as three parallel lines—not one line covering the other two. The longer the spec sheet, the clearer that “stronger” is not enough: how long a context, which mode, how many active parameters, which license, and whether it is still preview.
+The launch page described V4-Pro as leading open models on agentic-coding benchmarks and said the family integrated with tools including Claude Code and OpenCode. These were publisher claims. Evaluation scripts, prompt templates, and integration versions determine how the numbers should be read. That boundary matters even more in preview, when rate limits, interface behavior, and recommended templates may change. Open weights let outsiders download and reproduce earlier; they also expose outsiders earlier to implementation details that have not yet settled.
 
-A preview’s honesty is writing unfinished into the label. Million-token context and thinking mode point at longer agent work; sparse activation points at cost; both may still move. Open weights let outsiders try early—and bear preview instability early. Read V4 with the two syllables of *preview* louder than any parameter number.
+The release’s most concrete tension appeared in operations rather than on a leaderboard. A development team could not ask only whether the new model was stronger. It had to choose when to change names, how to regression-test thinking mode, how to route work between Pro and Flash, and whether migration could finish before the old endpoints disappeared. *Preview* usually suggests that waiting is reasonable. A retirement notice gives waiting a deadline.
 
-Agent-coding claims in a preview note should be read as direction, not a report card. If outsiders reproduce official numbers on incomplete toolchains, the gap itself is information: preview APIs, prompt templates, and eval scripts may not yet be frozen. Open weights lower the cost of looking—and raise the cost of misreading: treat preview as production, and bills and stability will teach together.
+DeepSeek-V4 did not announce that long-running agents had been solved. It placed million-token context, two modes, and two sparse model tiers into a downloadable and callable release that was still changing, then used the retirement date of older models to pull real users toward it. Understanding the event requires the migration line beside the parameter table. Frontier-model iteration had accelerated until “preview” and “prepare for production migration” could be true at the same time.

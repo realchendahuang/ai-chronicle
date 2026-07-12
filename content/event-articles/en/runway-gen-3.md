@@ -1,17 +1,20 @@
 ---
 eventId: runway-gen-3
-form: toolchain version note
-narrativeCenter: Video-model progress only counts when it lands on a timeline track
-emotionalSource: An editor’s irritation and hope while regenerating one segment on the timeline
+form: Production notes from a single advertising shot
+narrativeCenter: Gen-3 Alpha’s gains mattered only after entering the loop of generation, selection, revision, and editing
+emotionalSource: A timeline finally contains a draft whose pacing can be discussed, not merely a demonstration to watch
 avoid:
-  - claiming Gen-3 solved all artifacts
-  - comparing parameters directly to Sora research demos
+  - Claiming Gen-3 solved every artifact or identity drift
+  - Comparing an in-product workflow directly with Sora research demonstrations by parameter claims
+  - Describing control as exact reproducibility on every generation
 ---
 
-Runway users rarely open with parameter counts. They ask whether four seconds can stay stable, whether a motion brush listens, whether regenerate will destroy the good frames from the last take. In June 2024, when Gen-3 Alpha arrived as an in-product update, the pitch was motion fidelity and control—closer to “drafts you can use” than Gen-2’s “demos you can watch.”
+An advertising shot may begin with one sentence: a running shoe lands in a puddle, the camera tracks at ground level, and water sweeps backward through the frame. Gen-2 could turn that sentence into a video. A production team immediately faced the next questions. Did the shoe retain its shape? Did the camera actually travel forward? Could the best two seconds be placed on a timeline? Gen-3 Alpha, announced on June 17, 2024, competed on those specific points of friction.
 
-Sora raised everyone’s eyes. Tool companies cannot live on paper abstracts; they live in the model dropdown of a subscription account. Gen-3’s stake is continuing to embed generation in the timeline: not another chat window, but a replaceable clip on a track. Ad and previz teams care about that repeatable labor.
+Runway emphasized higher-fidelity motion, improved temporal consistency, and better response to text and image conditioning. Generation did not become deterministic. The same prompt could still produce a different action each time, and fast motion, hands, or visible text remained common failure points. Professional users cared less about a universal claim of control than about practical rates: were there fewer unusable outputs, could a subject remain intact for several more seconds, and did the requested camera idea appear often enough to be worth another generation?
 
-It still fails. Fingers, text, and hard cuts remain crime scenes. But failure inside a workflow costs differently than failure outside a waitlist demo—the former can iterate; the latter can only be shared.
+Gen-3 also occupied a different position from a laboratory model. It entered Runway’s existing creator product, where a generated asset still had to be selected, trimmed, extended, and combined with footage or other generated shots. When failure occurred inside that workflow, the user could change a reference image, simplify the action, revise the prompt, and return the strongest result to the project. The model did not replace an editing system. It became a machine at the front of the edit, continually supplying candidate shots.
 
-A video-generation history that only records labs will miss companies like Runway that write models as menu items. When the menu reaches Gen-3, professional default expectations tick up another notch.
+Sora had changed public expectations a few months earlier with carefully selected demonstrations. Runway’s answer was not to wait for an equally spectacular research reveal, but to place a next-generation model under the pressure of subscription work. Advertising, music-video, and film-previz teams did not need every generation to be broadcast-ready. If a clip could establish whether a composition worked, or expose an unattractive camera move before a shoot, it had already entered the production value chain.
+
+The Gen-3 Alpha step cannot therefore be judged only by its most beautiful finished clips. It was an improvement in the quality of a shot draft: still bounded, still demanding many retries, but increasingly capable of starting a conversation about pace, camera position, and narrative before the team spent all its time repairing why the image had broken apart. Video generation moved from demonstration toward tool through exactly this kind of unglamorous progress—the kind that remained on an editor’s timeline.

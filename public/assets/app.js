@@ -160,17 +160,34 @@
 
     try {
       const index = await loadSearchIndex()
+      const typeOrder = ['事件', '概念', '公司', '模型', '主题', '产业链']
       const matches = index
-        .filter((item) => `${item.title} ${item.description} ${item.type} ${translations?.[item.title] || ''} ${translations?.[item.description] || ''} ${translations?.[item.type] || ''}`.toLowerCase().includes(normalized))
-        .slice(0, 10)
+        .map((item) => {
+          const title = `${item.title} ${translations?.[item.title] || ''}`.toLowerCase()
+          const detail = `${item.description} ${item.keywords || ''} ${item.type} ${translations?.[item.description] || ''} ${translations?.[item.type] || ''}`.toLowerCase()
+          let score = 0
+          if (title === normalized) score = 100
+          else if (title.startsWith(normalized)) score = 70
+          else if (title.includes(normalized)) score = 50
+          else if (detail.includes(normalized)) score = 20
+          return { ...item, score }
+        })
+        .filter((item) => item.score > 0)
+        .sort((left, right) => right.score - left.score || left.title.localeCompare(right.title, 'zh-CN'))
 
-      searchResults.innerHTML = matches.length
-        ? matches.map((item) => `
-          <a class="search-result" href="${escapeText(item.url)}">
-            <span>${escapeText(item.type)}</span>
-            <div><b>${escapeText(item.title)}</b><small>${escapeText(item.description)}</small></div>
-            <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M4 10h11M11 5.5 15.5 10 11 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>`).join('')
+      const grouped = typeOrder
+        .map((type) => [type, matches.filter((item) => item.type === type).slice(0, 3)])
+        .filter(([, items]) => items.length)
+
+      searchResults.innerHTML = grouped.length
+        ? grouped.map(([type, items]) => `<section class="search-result-group">
+          <h2>${escapeText(type)}</h2>
+          ${items.map((item) => `
+            <a class="search-result" href="${escapeText(item.url)}">
+              <div><b>${escapeText(item.title)}</b><small>${escapeText(item.description)}</small></div>
+              <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M4 10h11M11 5.5 15.5 10 11 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>`).join('')}
+        </section>`).join('')
         : '<div class="search-empty">没有找到对应内容，试试更短的关键词。</div>'
       if (root.dataset.lang === 'en' && translations) translateTree(searchResults, translations, 'en')
     } catch {
@@ -219,7 +236,43 @@
   const emptyState = document.querySelector('[data-empty-state]')
   const levelButtons = [...document.querySelectorAll('[data-level]')]
   const resetButtons = [...document.querySelectorAll('[data-reset-filters]')]
+  const orderToggle = document.querySelector('[data-timeline-order-toggle]')
+  const startFromBeginning = document.querySelector('[data-start-from-beginning]')
   let activeLevel = 'all'
+
+  const setTimelineOrder = (order) => {
+    if (!timelineRoot || !timelineStream) return
+    const ascending = order === 'asc'
+    timelineRoot.dataset.timelineOrder = ascending ? 'asc' : 'desc'
+    const groups = [...timelineGroups].sort((left, right) => {
+      const difference = Number(left.dataset.year) - Number(right.dataset.year)
+      return ascending ? difference : -difference
+    })
+    groups.forEach((group) => {
+      const rows = [...group.querySelectorAll('[data-event-card]')].sort((left, right) => {
+        const difference = String(left.dataset.date).localeCompare(String(right.dataset.date))
+        return ascending ? difference : -difference
+      })
+      const container = group.querySelector('.timeline-year-events')
+      rows.forEach((row) => container?.append(row))
+      timelineStream.append(group)
+    })
+    if (orderToggle) {
+      const zh = ascending ? '正序 · 旧→新' : '倒序 · 新→旧'
+      const en = ascending ? 'Oldest first' : 'Newest first'
+      orderToggle.innerHTML = `<span data-localized data-zh="${zh}" data-en="${en}">${root.dataset.lang === 'en' ? en : zh}</span>`
+      orderToggle.setAttribute('aria-label', root.dataset.lang === 'en' ? en : zh)
+    }
+    scheduleTimelineProgress()
+  }
+
+  orderToggle?.addEventListener('click', () => {
+    setTimelineOrder(timelineRoot?.dataset.timelineOrder === 'asc' ? 'desc' : 'asc')
+  })
+  startFromBeginning?.addEventListener('click', () => {
+    setTimelineOrder('asc')
+    timelineStream?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  })
 
   const syncTimelineProgress = () => {
     if (!timelineRoot || !timelineStream) return
@@ -228,7 +281,7 @@
     const verticalProgress = Math.max(0, Math.min(1, (anchor - streamRect.top) / Math.max(streamRect.height, 1)))
     timelineRoot.style.setProperty('--timeline-progress', String(verticalProgress))
 
-    const visibleGroups = timelineGroups.filter((group) => !group.hidden)
+    const visibleGroups = [...timelineStream.querySelectorAll('[data-year-group]')].filter((group) => !group.hidden)
     let currentGroup = visibleGroups[0]
     visibleGroups.forEach((group) => {
       if (group.getBoundingClientRect().top <= anchor) currentGroup = group
@@ -309,6 +362,7 @@
     window.addEventListener('scroll', scheduleTimelineProgress, { passive: true })
     window.addEventListener('resize', scheduleTimelineProgress)
     syncTimeline()
+    setTimelineOrder(timelineRoot.dataset.timelineOrder || 'desc')
     scheduleTimelineProgress()
   }
 

@@ -1,22 +1,20 @@
 ---
 eventId: claude-3-5-sonnet
-form: Workhorse-tier product history
-narrativeCenter: How mid-priced Sonnet used code, vision, and Artifacts to show the default need not be the largest model
-emotionalSource: Practical lift when the price tag holds and the capability story moves up
+form: A change in the default model
+narrativeCenter: How a mid-tier model with unchanged pricing altered both developer routing decisions and the Claude interface
+emotionalSource: The moment teams realized that the most useful everyday model did not have to sit at the top of the price list
 avoid:
-  - Treating vendor benchmarks as universal flagship defeat
-  - Omitting Artifacts’ preview status
-  - Replacing concrete pricing and product form with “value” slogans
+  - Treating vendor benchmarks as universal defeat of every flagship
+  - Omitting the preview status of Artifacts
+  - Substituting “value” for concrete pricing, speed, and product form
 ---
 
-On 20 June 2024, Anthropic released Claude 3.5 Sonnet. API pricing sat in plain view: $3 per million input tokens and $15 per million output tokens—the same tier as Claude 3 Sonnet. Not locking peak capability only to the most expensive name was the decision easiest to touch. The price tag held while the capability story moved up; practical excitement comes from that gap.
+In the summer of 2024, a team choosing a default Claude model faced a familiar compromise. The most capable tier could be too expensive or slow to call on every request; the cheaper tier might not be dependable enough for a large code change or a long document. On June 20, Anthropic placed Claude 3.5 Sonnet in the middle of that price ladder while giving it the job description of a flagship.
 
-Launch materials stressed gains in code generation, visual reasoning, and complex instructions, with comparison tables against prior generations and outside models. Those tables are evaluations under vendor settings; rankings move when datasets and prompts change. A change closer to daily use may be Artifacts preview on Claude.ai: model-produced code, documents, or components can appear in a separate workspace for continued viewing and editing, not only inside chat bubbles. Preview means function and stability are still under watch; the workspace changes how people live with model output—side-by-side edits instead of copy-paste loops.
+The numbers made the repositioning tangible. Claude 3.5 Sonnet cost $3 per million input tokens and $15 per million output tokens, unchanged from Claude 3 Sonnet, and offered a 200,000-token context window. Anthropic also said it ran at twice the speed of Claude 3 Opus. Its coding, visual-reasoning, and instruction-following results came from vendor-run evaluations and could not guarantee the same ordering on every private workload. But price and latency were not decorative benchmark columns for developers operating a real service; they determined which model could remain switched on all day.
 
-“Workhorse model” thereafter more often meant the balanced tier, not the largest. Developers and early agent workflows need predictable latency, a price that fits a bill, and intelligence enough to finish the job. 3.5 Sonnet bound those three under one product name and forced other vendors to redraw layers: flagships for ceilings, mid-tiers for the default key. A steady price and a raised story do not automatically mean victory on every task. What moved was where people click by default—many first seriously considered that the dearest button need not be pressed every time.
+Artifacts translated the same shift into a product interface. When a Claude.ai user requested a website, a code snippet, or a document, the output could open in a dedicated pane beside the conversation instead of disappearing into the vertical transcript. The feature was still a preview, with the instability and incomplete edges that label implied. Even so, it proposed a different relationship with model output: the generated object was something to inspect and revise, not merely an answer to copy out of a bubble.
 
-Once the default key changes tier, ecosystems follow: tutorials, scaffolds, and sample repos begin to write Sonnet as “try this first.” That is the second half of the product history, and it starts the same day as pricing and positioning.
+The two parts of the launch reinforced each other. A faster, predictably priced Sonnet could be called repeatedly by developer tools; Artifacts made the generate–inspect–revise loop visible to non-API users. Flagship models had traditionally demonstrated the ceiling. Claude 3.5 Sonnet competed for the place clicked most often. In production, that default position can matter more than a benchmark crown: tutorials are written around it, starter code preselects it, and budgets are built from its token price.
 
-Once a price anchor holds, teams recompute default routing: which requests must go to the flagship, which can stay on Sonnet. Artifacts turn chat outputs into artifacts that can keep being edited, hinting that assistant output should enter workflows rather than stop in bubbles. Summer 2024’s Sonnet did not prove mid-tier forever strongest; it proved mid-tier can become default—until the next round of pricing and evaluation rewrites default again.
-
-Capability rising at the same price forces competitors to explain where they are dearer and where faster. Sonnet need not win every table—only enough default clicks. Once defaults network, flagships become buttons for special occasions.
+Claude 3.5 Sonnet did not establish that a mid-tier model would always outperform a flagship. It established a more durable product idea: model families could be divided by workload rather than arranged as a simple intelligence ladder. After this release, “which model should we use?” increasingly became a routing question. A narrow set of requests could justify the most expensive tier; a much larger stream of everyday work could stay with the model that was capable enough, fast enough, and affordable enough to become routine.

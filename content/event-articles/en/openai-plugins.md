@@ -1,22 +1,24 @@
 ---
 eventId: openai-plugins
-form: Product archaeology
-narrativeCenter: A short-lived plugin directory that exposed early how chat assistants would meet the outside world
-emotionalSource: Excitement from first search, calculation, and booking tools mixed with permission and prompt-injection noise
+form: Archaeology of a short-lived product
+narrativeCenter: A plugin catalog let ChatGPT select external services in one interface and pushed authorization and external-content risk in front of users
+emotionalSource: Surprise as chat reaches live information, computation, and transactions, followed by unease when it crosses boundaries
 avoid:
-  - Writing the catalog as a triumphant ecosystem
-  - Equating a short life with historical worthlessness
-  - Substituting partner lists for narrative
+  - Writing a limited test as a mature mass ecosystem
+  - Dismissing exposed problems because the catalog retired
+  - Replacing narrative with a partner list
 ---
 
-Looking back at ChatGPT plugins, the retired directory still holds an overly tidy image of the internet: line up sites and services, let the model choose. The lights are bright; the scenery is incomplete.
+In early 2023, ChatGPT resembled a closed conversation room. It could plan a trip without knowing today's fare, explain a formula while making a simple arithmetic mistake, and recommend a service without taking the next step. The conversation was fluid, but the world outside remained beyond the training cutoff and the clipboard.
 
-On 23 March 2023, OpenAI opened plugin testing to waitlisted users. ChatGPT then still felt like a closed conversation room: it could explain a travel plan without knowing live fares; write calculation steps while stumbling on arithmetic; recommend a restaurant without completing a booking. Browsing brought fresh web information; a code interpreter took over calculation; third parties such as Expedia and Wolfram placed capabilities in the same chat. Users enabled plugins; the model selected and assembled calls. Access was limited alpha and test seats, not a universal default switch. Waitlists also biased early experience toward developers, press, and power users.
+On 23 March, OpenAI opened ChatGPT plugin testing to users from a waitlist. A browsing plugin brought live web information, Code Interpreter handled calculation and execution, and third-party services such as Expedia and Wolfram connected their capabilities to the conversation. A user enabled plugins first; the model then selected a tool and assembled a call. The chat box appeared able not only to answer but to reach into an external system.
 
-Integration was simple for the moment: a domain-hosted manifest said who the plugin was; an OpenAPI description said what it could do. Interface documents written for humans now had to be readable by a model. Discovery, authorization, and invocation packed into one conversation stream—strong product intuition, concentrated governance problems. Once the model read external pages and accessed services on a user’s behalf, malicious instructions and mistaken actions entered the dialogue together. Convenience and risk were the same act: handing judgment to the model.
+Developers described a plugin's identity with a manifest hosted on its domain and described the interface with an OpenAPI specification. Documentation previously intended mainly for people acquired another reader: the model had to understand available operations and their arguments. Service self-description, tool discovery, and model selection were compressed into one product path. That idea outlived the catalog itself.
 
-The plugin directory did not become the general standard. Function calling, GPT Actions, and later agent interfaces dismantled it into more basic capabilities; the store form receded while browsing and code execution continued as other product features. The questions that remained were concrete: how tools are selected, how parameters are validated, when users authorize, whether external responses can be trusted. The catalog was short-lived. The seam problems were not. Archaeology here is not about declaring plugins “should have become the standard.” It is about admitting that a withdrawn experiment can still set the next stage’s problems on the table early.
+The problems entered through the same path. When a model read an external page, text on the page could contain adversarial instructions. When a plugin queried or acted on a service for a user, authorization scope and confirmation timing became critical.
 
-After the bazaar dispersed, tool calling did not return to a closed conversation room. It changed form: function calling, Actions, built-in browsing and code execution, later protocol-layer attempts. The plugin catalog was a rehearsal—bright lights, no settled standard, lines already handed to the next performance. Short-lived products often earn history by exposing seam problems on a public surface early.
+A convenient call passed through model judgment, third-party output, and user permission. Ambiguity at any point could produce an unintended action. Plugins connected capability to the conversation and connected the hostility of the open internet at the same time.
 
-Manifests and OpenAPI made service self-description a model-readable contract—an idea that keeps returning. The plugin catalog receded; the contract idea stayed. Product archaeology looks for such parts, more durable than shelves.
+Early access moved through a waitlist and limited testing rather than an immediate universal rollout. The plugin catalog also did not become the general standard. Function calling, GPT Actions, built-in browsing, and code execution decomposed it into more basic capabilities as the directory form receded. The disappearance of the shelf did not remove the seams. How a tool is described, who approves its use, and whether external output can be trusted continued into later agent products and protocols.
+
+ChatGPT plugins were a brief experiment in opening the door. The hinge and label later changed, and the same catalog no longer defined the entrance. But after that opening, conversational assistants could no longer pretend that only clean data waited outside. Once a system can reach through the doorway, it also has to learn when to stop its hand.

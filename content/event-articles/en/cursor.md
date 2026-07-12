@@ -1,25 +1,24 @@
 ---
 eventId: cursor
-form: Editor product history
-narrativeCenter: Under a familiar VS Code skin, chat, repo indexing, and generative edits become primary interaction
-emotionalSource: Ease when copy-paste between browser and editor stops—and residual friction when context is still chosen wrong
+form: An editor migration scene
+narrativeCenter: Inside a familiar VS Code shell, Cursor turns chat, repository indexing, and generative editing into continuous actions on one work surface
+emotionalSource: Ease when copy-paste disappears, followed by sudden loss of control when context is wrong
 avoid:
   - Treating fundraising as capability proof
-  - Claiming handwritten code is already replaced
-  - Collapsing later Composer / Agent with the Series A date
+  - Claiming handwritten code had been replaced
+  - Compressing later Composer and Agent features into the funding date
 ---
 
-GitHub Copilot had already proven inline completion valuable, yet developers still switched among editor, browser chat, and copy-paste. Understanding a full codebase needed extra indexing and context selection—work that used to live in human fingers. The cursor sat in a file; the answer was generated in another tab and pasted back.
+Writing code with early browser chat involved the fatigue of carrying context. A developer copied a function out of the editor, switched tabs to explain the background, and pasted an answer back. If the model needed another file, the explanation began again. The problem was not only that a model might write poorly. It was not present where the work happened.
 
-On 22 August 2024, Anysphere announced a $60 million Series A. The news was capital; product facts lived in earlier and later versions: Cursor had put model chat, repository indexing, and generative editing directly into a VS Code-based environment. The extension ecosystem stayed familiar; primary interaction began to mean asking with file and symbol references, semantic retrieval, and multi-site edits. Fundraising showed the market would bet on the route—not that a model suddenly “wrote all the code” that day.
+Cursor shortened that distance. Built on the familiar base of VS Code, it preserved much of the extension ecosystem and editing muscle memory while placing model chat, repository indexing, and generative edits inside the editor. Files and symbols could become direct parts of a question. Semantic retrieval could search for related code. A proposed change no longer had to travel through a browser and clipboard first.
 
-Later Composer and Agent modes widened scope to multi-file work and the terminal; that timeline should not be crushed back onto 22 August alone. The core of the launch story is a shift in editor identity: AI coding moved from a side-panel add-on toward part of the default way of working. Context gathering, edit experience, and workflow speed joined “whose model is stronger” as competition axes.
+On 22 August 2024, Anysphere announced a $60 million Series A. The date records the market pricing a route, not the instant a particular Cursor capability appeared. By then the product had expressed a new editor identity clearly: AI was no longer only a completion that occasionally appeared inside a traditional tool. It participated in selecting context, explaining code, and changing multiple locations. Later Composer and Agent modes widened the scope toward multi-file work and terminal actions, but those belonged to the product's subsequent evolution.
 
-Cursor did not cancel review and tests. It changed the default path—generation and edits happen on the same screen where the repository is open, and errors are seen there too. The ease is real; wrong context and mistaken file edits are real. Product history should keep both. Fundraising headlines expire; the extra primary interaction layer inside the editor lasts longer.
+The familiar shell lowered migration cost and moved competition into finer details. Did the index keep up with repository changes? Which files had the model seen? Could a broad edit be previewed and undone?
 
-Treating the fundraise day as the product’s birthday is imprecise, yet it anchors a writable moment: by then Cursor had shown the “AI-native editor” route clearly enough for capital to price it. Developers still care about concrete friction—whether indexes track repo change, whether generative edits are undoable, how Agent mode recovers from mistaken edits. Ease and loss of control are one step apart. Editor products are rarely won by model slogans; they are won by whether that friction is taken seriously.
+These questions attracted less attention than benchmark scores but determined whether a developer trusted the next change. The more active the model became, the more important it was to keep undo, diffs, and tests within reach.
 
-VS Code compatibility lowered migration cost and forced competition onto model context and edit experience rather than inventing a wholly foreign IDE. New primary interaction under a familiar skin is Cursor’s core rhetoric: you are still in your editor, but the way of working has changed.
-Contrast with Claude Code clarifies the editor route’s border: Cursor wins on migration cost and handy context gathering; terminal agents win near real failures of scripts and tests. Devin makes waiting and sandboxes a third rhythm. In 2024–2025 markets priced all three; AI coding stopped being a single feature point.
+Cursor's ease was real. An answer appeared beside the code, an edit landed in the repository, and context did not need to be narrated repeatedly. The remaining friction was just as real. An index could be stale, a relevant file could be omitted, and a coherent-looking multi-file change could spread one mistake further. The AI-native editor did not remove review. It enlarged review from “should I paste this snippet?” to “why did the model inspect this context, and why does it want to alter all these places?”
 
-If an agent-coding topic only writes fundraising, it misses daily undo and review. Cursor’s seat should stay pinned to primary-interaction migration: when chat and multi-file edit become default paths, model strength still matters, but whether the index keeps up and bad edits reverse decides who stays.
+Funding headlines are quickly replaced by larger numbers. Cursor's more durable change was making an old distance feel increasingly intolerable: the code was here while the model lived in another window. Once generation, retrieval, and editing occupied the same work surface, copy-paste stopped being the default movement—and the center of the editor moved with it.

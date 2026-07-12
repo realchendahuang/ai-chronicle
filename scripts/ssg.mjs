@@ -374,8 +374,6 @@ function nav(active) {
     ['concepts', '/concepts/', '概念'],
     ['models', '/models/', '模型'],
     ['companies', '/companies/', '公司'],
-    ['github', githubRepoUrl, 'GitHub', true, '在 GitHub 打开本项目仓库（新窗口）'],
-    ['main-site', `${siteOrigin}/`, '主站', true, '访问陈大黄主站（新窗口）'],
   ]
 
   const renderNavLink = ([id, path, label, external, externalLabel]) => `
@@ -463,7 +461,7 @@ function footer() {
     </footer>`
 }
 
-function pageShell({ title, description, path, active, body, bodyClass = '' }) {
+function pageShell({ title, description, path, active, body, bodyClass = '', ogType = 'website', ogImage = '' }) {
   const fullTitle = title === 'AI 行业编年史'
     ? 'AI Chronicle｜AI 行业编年史'
     : `${title}｜AI Chronicle`
@@ -479,8 +477,9 @@ function pageShell({ title, description, path, active, body, bodyClass = '' }) {
   <link rel="canonical" href="${canonicalFor(path)}">
   <meta property="og:title" content="${escapeHtml(fullTitle)}">
   <meta property="og:description" content="${escapeHtml(description)}">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="${escapeHtml(ogType)}">
   <meta property="og:url" content="${canonicalFor(path)}">
+  ${ogImage ? `<meta property="og:image" content="${canonicalFor(ogImage)}">` : ''}
   <link rel="icon" href="${assetUrl('/assets/favicon.svg')}" type="image/svg+xml">
   <script>(function(){try{var t=localStorage.getItem('ai-chronicle-theme');var l=localStorage.getItem('ai-chronicle-lang');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;else document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';if(l==='en'){document.documentElement.dataset.lang='en';document.documentElement.lang='en'}}catch(e){}})()</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -529,6 +528,7 @@ function eventRow(event) {
   return `
     <article class="event-row" id="event-${escapeHtml(event.slug)}" data-event-card
       data-event-id="${escapeHtml(event.slug)}"
+      data-date="${escapeHtml(event.date)}"
       data-level="${escapeHtml(event.importance)}"
       data-topics="${escapeHtml(event.topics.map(canonicalTopic).join(' '))}"
       data-search="${escapeHtml([event.title, event.summary, ...event.concepts, ...event.topics].join(' ').toLowerCase())}">
@@ -579,7 +579,7 @@ function timelineExperience() {
       <header class="timeline-masthead">
         <div class="timeline-title">
           <h1>AI 行业编年史</h1>
-          <p><span>${endYear}—${startYear}</span><small class="timeline-order-hint">${bilingual('倒序 · 新→旧', 'Newest first')}</small></p>
+          <p><span>${endYear}—${startYear}</span><button class="timeline-order-hint" type="button" data-timeline-order-toggle>${bilingual('倒序 · 新→旧', 'Newest first')}</button></p>
         </div>
         <div class="timeline-overview" role="img" aria-label="${startYear} 到 ${endYear}，事件按真实年份比例排列的时间总览；下方列表为倒序阅读">
           <div class="overview-rail">
@@ -599,6 +599,11 @@ function timelineExperience() {
       </header>
 
       <div class="timeline-explorer">
+        <nav class="timeline-entry-points" aria-label="推荐阅读入口">
+          <button type="button" data-start-from-beginning><b>${bilingual('第一次来', 'New here')}</b><span>${bilingual('从 1950 年开始，顺着因果往后读', 'Start in 1950 and follow the causes forward')}</span></button>
+          <a href="${urlFor('/topics/large-language-models/')}"><b>${bilingual('理解大模型', 'Understand LLMs')}</b><span>${bilingual('从注意力、预训练走到聊天产品', 'From attention and pretraining to chat products')}</span></a>
+          <a href="${urlFor('/topics/ai-coding/')}"><b>${bilingual('理解 AI Coding', 'Understand AI coding')}</b><span>${bilingual('从代码生成走到软件工程 Agent', 'From code generation to software-engineering agents')}</span></a>
+        </nav>
         <div class="timeline-toolbar" aria-label="时间轴筛选">
           <div class="timeline-count"><span data-result-count>${events.length} 个事件</span><i aria-hidden="true"></i></div>
           <label class="timeline-search" for="timeline-search">
@@ -686,6 +691,8 @@ function renderEventPages() {
     const people = event.people.map((person) => escapeHtml(humanName(person))).join('<span aria-hidden="true">·</span>')
     const models = event.models.map(escapeHtml).join('<span aria-hidden="true">·</span>')
     const products = event.products.map(escapeHtml).join('<span aria-hidden="true">·</span>')
+    const conceptLinks = event.concepts.map(conceptLink).join('')
+    const paperSources = event.sources.filter((source) => source.type === 'paper')
 
     const body = `
       <article class="event-article">
@@ -695,23 +702,16 @@ function renderEventPages() {
             <div class="event-title-copy">
               <h1>${bilingual(event.title, englishText(event.title, event.titleEn))}</h1>
               ${event.subtitle ? `<p class="event-subtitle">${bilingual(event.subtitle, englishText(event.subtitle, event.subtitleEn))}</p>` : ''}
+              <p class="event-record-lead">${bilingual(event.summary, event.summaryEn)}</p>
             </div>
           </div>
         </header>
 
-        <section class="event-metadata">
-          <h2 class="sr-only">${bilingual('事件元数据', 'Event metadata')}</h2>
-          <dl>
-            ${metadataItem('时间', 'Date', bilingual(formatDate(event.date, event.datePrecision), formatDateEn(event.date, event.datePrecision), 'time'))}
-            ${metadataItem('级别', 'Significance', `${bilingual(importanceLabels[event.importance], importanceLabelsEn[event.importance])}<small>${escapeHtml(event.importance)}</small>`)}
-            ${metadataItem('组织', 'Organizations', companyLinks || '—', 'metadata-links')}
-            ${metadataItem('人物', 'People', people || '—')}
-            ${metadataItem('主题', 'Topics', topicLinks || '—', 'metadata-links')}
-            ${metadataItem('模型', 'Models', models || '—')}
-            ${metadataItem('产品', 'Products', products || '—')}
-            ${metadataItem('状态', 'Status', `<i class="status-dot ${isVerified ? 'verified' : 'draft'}"></i>${bilingual(effectiveStatus, effectiveStatusEn)}<small>${hasSources ? event.sources.length : 0} ${bilingual('条来源', hasSources === 1 ? 'source' : 'sources')}</small>`)}
-            ${metadataItem('史实', 'Historical record', bilingual(event.summary, event.summaryEn), 'metadata-record')}
-          </dl>
+        <section class="event-facts" aria-label="事件概览">
+          <span><small>${bilingual('时间', 'Date')}</small><b>${bilingual(formatDate(event.date, event.datePrecision), formatDateEn(event.date, event.datePrecision))}</b></span>
+          <span><small>${bilingual('级别', 'Significance')}</small><b>${escapeHtml(event.importance)} · ${bilingual(importanceLabels[event.importance], importanceLabelsEn[event.importance])}</b></span>
+          <span><small>${bilingual('组织', 'Organizations')}</small><b class="event-facts-companies">${companyLinks || '—'}</b></span>
+          <span><small>${bilingual('状态', 'Status')}</small><b><i class="status-dot ${isVerified ? 'verified' : 'draft'}"></i>${bilingual(effectiveStatus, effectiveStatusEn)} · ${hasSources ? event.sources.length : 0}</b></span>
         </section>
 
         <div class="event-reading">
@@ -722,6 +722,22 @@ function renderEventPages() {
           <section class="event-narrative" data-native-article data-article-language="en" lang="en">
             ${articleEn?.content || ''}
           </section>
+
+          ${(conceptLinks || paperSources.length) ? `<aside class="event-reading-map">
+            <div><small>${bilingual('继续理解', 'Keep exploring')}</small><h2>${bilingual('这篇文章连接到哪里', 'Where this story connects')}</h2></div>
+            ${conceptLinks ? `<section><h3>${bilingual('核心概念', 'Core concepts')}</h3><div class="event-concept-links">${conceptLinks}</div></section>` : ''}
+            ${paperSources.length ? `<section><h3>${bilingual('论文与技术源头', 'Papers and technical sources')}</h3><div class="event-paper-links">${paperSources.map((source) => `<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer"><span>${escapeHtml(source.title)}</span>${arrowIcon}</a>`).join('')}</div></section>` : ''}
+          </aside>` : ''}
+
+          <details class="event-archive">
+            <summary><span>${bilingual('展开完整事件档案', 'Open the full event record')}</span><small>${bilingual('人物、主题、模型与产品', 'People, topics, models, and products')}</small></summary>
+            <dl>
+              ${metadataItem('人物', 'People', people || '—')}
+              ${metadataItem('主题', 'Topics', topicLinks || '—', 'metadata-links')}
+              ${metadataItem('模型', 'Models', models || '—')}
+              ${metadataItem('产品', 'Products', products || '—')}
+            </dl>
+          </details>
 
           <section class="source-section">
             <div class="section-heading inline-heading"><span class="section-number">${bilingual('来源', 'Sources')}</span><h2>${bilingual('原始资料', 'References')}</h2></div>
@@ -735,7 +751,7 @@ function renderEventPages() {
           </section>
         </div>
 
-        ${relatedEvents.length ? `<section class="related-events"><div class="section-heading split-heading"><div><span class="section-number">${bilingual('关联', 'Related')}</span><h2>${bilingual('沿时间继续读', 'Continue through time')}</h2></div></div><div>${relatedEvents.map((related) => `<a href="${urlFor(`/events/${related.slug}/`)}"><time>${related.date.slice(0, 4)}</time><h3>${bilingual(related.title, englishText(related.title, related.titleEn))}</h3>${arrowIcon}</a>`).join('')}</div></section>` : ''}
+        ${relatedEvents.length ? `<section class="related-events"><div class="section-heading split-heading"><div><span class="section-number">${bilingual('关联', 'Related')}</span><h2>${bilingual('沿这条路线继续读', 'Continue along this path')}</h2></div></div><div>${relatedEvents.map((related) => `<a href="${urlFor(`/events/${related.slug}/`)}"><time>${related.date.slice(0, 4)}</time><div><h3>${bilingual(related.title, englishText(related.title, related.titleEn))}</h3><p>${bilingual(related.summary, englishText(related.summary, related.summaryEn))}</p></div>${arrowIcon}</a>`).join('')}</div></section>` : ''}
 
         <nav class="event-pagination" aria-label="时间轴前后事件">
           ${previousEvent ? `<a class="previous" href="${urlFor(`/events/${previousEvent.slug}/`)}"><span>${bilingual('更新的节点', 'Newer')}</span><b>${bilingual(previousEvent.title, englishText(previousEvent.title, previousEvent.titleEn))}</b></a>` : '<span></span>'}
@@ -750,6 +766,8 @@ function renderEventPages() {
       active: 'timeline',
       body,
       bodyClass: 'event-page',
+      ogType: 'article',
+      ogImage: event.visual?.src,
     })
   })
 }
@@ -991,6 +1009,17 @@ function renderTopicPages() {
   })
 
   topicIndex.forEach((topic) => {
+    const chronologicalTopicEvents = [...topic.events].sort((a, b) => a.date.localeCompare(b.date))
+    const guideCandidates = chronologicalTopicEvents.length
+      ? [chronologicalTopicEvents[0], chronologicalTopicEvents[Math.floor((chronologicalTopicEvents.length - 1) / 2)], chronologicalTopicEvents.at(-1)]
+      : []
+    const guideEvents = [...new Map(guideCandidates.filter(Boolean).map((event) => [event.id, event])).values()]
+    const topicLead = chronologicalTopicEvents.length > 1
+      ? bilingual(
+        `从「${chronologicalTopicEvents[0].title}」到「${chronologicalTopicEvents.at(-1).title}」，先抓住起点、路线转向与当前边界，再展开完整事件线。`,
+        `From “${englishText(chronologicalTopicEvents[0].title, chronologicalTopicEvents[0].titleEn)}” to “${englishText(chronologicalTopicEvents.at(-1).title, chronologicalTopicEvents.at(-1).titleEn)},” start with the origin, the turn, and the current boundary before opening the full archive.`,
+      )
+      : bilingual('这条路线仍在建立，先从已经核验的节点进入。', 'This route is still being built; begin with the verified nodes already available.')
     const companyBlock = topic.companies.length
       ? `<section class="company-models"><div><span class="section-number">机构</span><h2>相关机构</h2></div><div>${topic.companies.map((company) => `<a href="${urlFor(`/companies/${company.slug}/`)}"><span>${escapeHtml(company.name)}</span><small>${escapeHtml(company.positioning)}</small>${arrowIcon}</a>`).join('')}</div></section>`
       : ''
@@ -1001,11 +1030,11 @@ function renderTopicPages() {
       <section class="topic-hero">
         <div class="breadcrumbs"><a href="${urlFor('/topics/')}">主题路线</a><span>/</span><span>${topic.events.length} 个事件 · ${topic.modelFamilies.length} 条谱系</span></div>
         <h1>${escapeHtml(topic.label)}</h1>
-        <p>${bilingual(
-          '事件时间轴是主线；机构与模型谱系帮助把同一议题上的产品代际也读进去。',
-          'The event timeline is the spine; companies and model lineages fill in product generations on the same theme.',
-        )}</p>
+        <p>${topicLead}</p>
       </section>
+      ${guideEvents.length ? `<nav class="topic-guide" aria-label="${escapeHtml(topic.label)}必读节点">
+        ${guideEvents.map((event, index) => `<a href="${urlFor(`/events/${event.slug}/`)}"><small>${bilingual(['起点', '转向', '当前'][Math.min(index, 2)], ['Origin', 'Turn', 'Now'][Math.min(index, 2)])}</small><time>${event.date.slice(0, 4)}</time><h2>${bilingual(event.title, englishText(event.title, event.titleEn))}</h2><p>${bilingual(event.summary, englishText(event.summary, event.summaryEn))}</p>${arrowIcon}</a>`).join('')}
+      </nav>` : ''}
       <section class="topic-timeline${topic.events.length ? '' : ' is-empty'}">
         ${topic.events.length ? topic.events.map((event, index) => `
           <a href="${urlFor(`/events/${event.slug}/`)}">
@@ -1171,12 +1200,12 @@ function renderAbout() {
 
 function writeSupportFiles() {
   const searchIndex = [
-    ...events.map((event) => ({ type: '事件', title: event.title, description: event.summary, url: urlFor(`/events/${event.slug}/`) })),
-    ...concepts.map((concept) => ({ type: '概念', title: concept.title, description: concept.oneLiner, url: urlFor(`/concepts/${concept.slug}/`) })),
-    ...companies.map((company) => ({ type: '公司', title: company.name, description: company.positioning, url: urlFor(`/companies/${company.slug}/`) })),
-    ...modelFamilies.map((family) => ({ type: '模型', title: family.title, description: family.description, url: urlFor(`/models/${family.slug}/`) })),
-    ...topicIndex.map((topic) => ({ type: '主题', title: topic.label, description: `${topic.events.length} 个关键节点`, url: urlFor(`/topics/${topic.id}/`) })),
-    ...valueChainLayersSorted.map((layer) => ({ type: '产业链', title: layer.title, description: layer.oneLiner, url: urlFor(`/stack/${layer.slug}/`) })),
+    ...events.map((event) => ({ type: '事件', title: event.title, description: event.summary, keywords: [event.date, ...event.companies, ...event.models, ...event.products, ...event.concepts, ...event.people, ...event.topics].join(' '), url: urlFor(`/events/${event.slug}/`) })),
+    ...concepts.map((concept) => ({ type: '概念', title: concept.title, description: concept.oneLiner, keywords: `${concept.fullName || ''} ${concept.relatedConcepts.join(' ')}`, url: urlFor(`/concepts/${concept.slug}/`) })),
+    ...companies.map((company) => ({ type: '公司', title: company.name, description: company.positioning, keywords: `${company.region} ${company.models.join(' ')} ${company.products.join(' ')}`, url: urlFor(`/companies/${company.slug}/`) })),
+    ...modelFamilies.map((family) => ({ type: '模型', title: family.title, description: family.description, keywords: `${family.company} ${family.latestModel} ${family.releases.map((release) => release.name).join(' ')}`, url: urlFor(`/models/${family.slug}/`) })),
+    ...topicIndex.map((topic) => ({ type: '主题', title: topic.label, description: `${topic.events.length} 个关键节点`, keywords: topic.id, url: urlFor(`/topics/${topic.id}/`) })),
+    ...valueChainLayersSorted.map((layer) => ({ type: '产业链', title: layer.title, description: layer.oneLiner, keywords: `${layer.segment} ${layer.companies.join(' ')}`, url: urlFor(`/stack/${layer.slug}/`) })),
     { type: '产业链', title: 'AI 产业链', description: '从半导体到应用的上下游结构', url: urlFor('/stack/') },
   ]
 

@@ -1,24 +1,20 @@
 ---
 eventId: mcp
-form: Protocol release note
-narrativeCenter: Host / Client / Server writing tool discovery and invocation as a reusable client–server interface
-emotionalSource: Relief when integrations need not be rewritten per host—and sobriety that trust and permission stay at the boundary
+form: An interface-boundary note
+narrativeCenter: MCP separates host, connection, and capability provider so that one integration can potentially be reused across applications
+emotionalSource: Relief at avoiding another private plugin rewrite, tempered by the need for clearer trust as connection gets easier
 avoid:
-  - Declaring the release an accomplished industry standard
-  - Claiming MCP automatically solves prompt injection and malicious servers
-  - Collapsing it with function calling into one layer
+  - Treating release day as completed industry unification
+  - Claiming the protocol automatically solves prompt injection or malicious servers
+  - Collapsing it into model-level function calling
 ---
 
-Function calling solved how a model emits tool arguments. It did not specify how editors, desktop assistants, and data sources discover, connect, and authorize one another. Each host still kept its own plugin format. Build an integration once, switch hosts, and often build again.
+By 2024, models could already request functions with structured arguments. The tiring work lived outside the function. The same database might need one plugin for a desktop assistant, another for an editor, and a third for a new agent framework. The underlying tool had not changed, but discovery, connection, and permission interfaces were rebuilt around every host.
 
-On 25 November 2024, Anthropic released the Model Context Protocol (MCP). It uses JSON-RPC and distinguishes Host, Client, and Server: a Server may declare tools, read-only resources, and prompt templates; a Client handles connection and capability negotiation; the Host keeps user permissions and control of model interaction. In principle one integration can be reused by many compatible apps; tool ecosystems need not be rewritten around a single model vendor. Prefabricated servers and early adopters or collaborators listed at launch are participants and plans, not proof the protocol had become an industry standard.
+On 25 November, Anthropic released the Model Context Protocol. MCP used JSON-RPC to establish a client-server interface and divided the roles. A Server exposed tools, read-only resources, or prompt templates. A Client managed a connection and negotiated capabilities. A Host retained control over model interaction and user permission. The division pursued a practical goal: a capability provider should not have to invent a new plugin format for every AI application. This was not the same thing as a model making one tool call. A `tool_use` block or function call describes how the model says, inside a conversation, “I want this tool with these arguments.” MCP addresses how a host discovers a tool, connects to it, and exchanges capability information. One resembles a grammatical request; the other standardizes the socket and line carrying it. Grammar without connection cannot reach the tool. Connection without a model-call format still leaves the application translating intent.
 
-A protocol is not a safety certificate. Malicious servers, over-broad grants, and prompt injection remain on the host–user boundary. A standard lives by independent implementations, host compatibility, and whether the spec survives extension without fracturing—none of which a publisher can unilaterally declare. MCP also does not sit on the same layer as a `tool_use` content block inside one conversation: one governs connection and discovery; the other how a model emits structured calls in a session. Collapse the two into one word, and debugging loses its owner.
+The protocol did not standardize trust along with transport. A Server could declare a capability without deserving trust. A Host could connect without granting write access by default. Malicious servers, excessive authorization, and prompt injection still required permission prompts, isolation, audit, and stop mechanisms at the host boundary. MCP made integration easier and could make an attack surface grow faster, which is why host control was not an implementation footnote but a security boundary.
 
-Reading the protocol in late autumn 2024 means seeing an effort to lift integration problems from product dialect into an interface sketch—not a finish line. Sketches matter because later arguments at least have a diagram to point at and revise: trust models, permission prompts, and server lists can share one coordinate system.
+Prefabricated servers and early participants at release showed willingness to experiment, not that the standard had already won. Protocol standing emerges from independent implementations, compatibility, and long-term evolution. Whether new capabilities break old clients, and whether different hosts present permissions consistently and intelligibly, matters more to ecosystem cohesion than a launch list.
 
-A protocol text can specify message shape; it cannot specify goodwill. Hosts still decide which servers to trust by default, how to show permissions, and how to stop after prompt injection. Early-adopter lists prove willingness to try, not that the ecosystem has locked onto this standard. Writing MCP as “already unifying the tool world” mistakes a launch-day sketch for a finished plan.
-
-That the Host keeps permission control is the easiest sentence in the protocol to ignore. Without it, a Server list becomes an attack-surface list. MCP’s restraint is claiming to solve connection, not trust. Trust still needs hosts to supply product and policy.
-
-JSON-RPC and capability negotiation let implementations split by language and process without shared memory. That is the minimum work a protocol layer should do. After the minimum, ecosystems can compete on server quality and host experience rather than private plugin formats.
+MCP's value did not depend on claiming to solve everything. It first drew a common interface around repetitive wiring so tool providers and hosts could argue over the same diagram. Once the plug becomes standard, what sits behind the wall—and who controls the switch—has to become more visible, not less.

@@ -159,7 +159,7 @@ Dates must be exact; sources must open. Essays may still carry warmth—hesitati
 | **Companies** | How organizations shape routes and products |
 | **Model lineages** | Generations of GPT, Claude, Gemini, Llama, DeepSeek, and more |
 
-Current scale (still growing): **86** events · **172** bilingual essays · **86** event visuals · **67** concepts · Chinese / English · light / dark · desktop / mobile.
+Current scale (still growing): **112** events · **224** bilingual essays · **112** event visuals · **73** concepts · **41** organizations · **38** model lineages · **39** topic routes · **10** value-chain layers · Chinese / English · light / dark · desktop / mobile.
 
 ### Editorial lines we do not cross
 

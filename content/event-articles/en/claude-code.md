@@ -1,27 +1,22 @@
 ---
 eventId: claude-code
-form: Terminal-agent product history
-narrativeCenter: A research-preview CLI that chains reading a repo, editing files, running commands, and permission prompts into reviewable action sequences
-emotionalSource: Familiarity when the feedback loop returns to the terminal—and restraint in pausing before higher-risk actions
+form: A terminal collaboration scene
+narrativeCenter: Claude Code joins repository reading, file edits, command execution, and permission prompts into an observable local feedback loop
+emotionalSource: Excitement as a model touches the real environment, followed by the pause of an authorization request
 avoid:
-  - Writing a fully autonomous engineer
+  - Writing it as a fully autonomous software engineer
   - Omitting CLAUDE.md and the permission model
-  - Collapsing with completion-only editor plugins
+  - Collapsing it into a completion-only editor plugin
 ---
 
-Many engineers still treat the terminal, Git, and test commands as the center of real development. Copilot and Cursor put models in editors; Devin put tasks in separate workspaces. Where the prompt blinks is where state, patches, and failure logs truly meet. On 24 February 2025, Anthropic released a research preview of Claude Code alongside Claude 3.7 Sonnet—a command-line tool that reads repositories, edits files, and runs commands in a local process, requesting permission before higher-risk actions.
+The terminal is honest because failure has nowhere to hide. A command returns a nonzero status. A test fills the screen with a stack trace. Git lists the files that remain uncommitted. Many engineers write inside an editor and return here to find out whether the software actually works.
 
-Capability depends on permissions, context, tests, and human supervision—not on being “naturally autonomous.” `CLAUDE.md` can hold project-level instructions; GitHub and MCP tools can connect external resources. The product unit widens from “suggest a snippet” to “a reviewable sequence of actions”: inspect state, edit, execute, read errors, retry. People stay in the loop; the default surface of the loop becomes the terminal. The pause before each higher-risk action is product philosophy, not ornament.
+On 24 February 2025, Anthropic released a research preview of Claude Code alongside Claude 3.7 Sonnet. It did not merely add another chat panel beside an editor. Running as a local process, it could read a repository, edit files, execute commands, and continue from their output. A model entered the full feedback loop as a product: inspect state, change something, run tests, read the failure, and try again.
 
-The research-preview label requires reading stability and coverage small. What it demonstrates is a collaboration tempo: the model touches a full feedback loop; humans keep veto and authorization. Compared with parallel cloud task queues, the terminal stresses synchronous context; compared with pure completion, it stresses executable consequence.
+That path also made risk concrete. The neighborhood around a terminal can contain uncommitted work, environment variables, deployment commands, and credentials. Claude Code requested permission before higher-risk actions. The prompt was not interface politeness; it marked a trust boundary. The model might propose the next step, while actual execution still depended on what the user granted. The closer a model moves to a real environment, the less vague permission can be.
 
-Claude Code does not cancel code review. It partly extends what is reviewed from patch text to commands and permission prompts themselves. People already at home in a shell can, beside a familiar prompt, first seriously consider putting an agent on the same path—and remember that every step on the path should still be rejectable.
+A repository could also keep project instructions in `CLAUDE.md`, placing build commands, conventions, and warnings near version control. GitHub and MCP connections extended the reachable environment further. Context began to look less like a disposable prompt and more like a project asset. Yet an instruction file could not replace tests, and additional tools could not supply judgment automatically. Incorrect project guidance would be followed faithfully; broad permissions could turn one mistaken inference into a real operation.
 
-A terminal agent’s risk model differs from the cloud’s: it sits closer to a developer’s local privileges, and mistaken actions hit more directly. Permission prompts are therefore not courtesy but product boundary. In research preview, repo scale, languages, and failure recovery remain under watch. What is shown is not that engineers are replaceable, but that the feedback loop can be reached by a model—while humans still hold veto power.
+“Research preview” bounded the claim. The release demonstrated a collaboration rhythm, not a guarantee that every repository could be handed over. A person and model shared the same shell feedback. Human work shifted partly from typing each command to reviewing a plan, authorizing actions, and accepting results. Code review expanded as well: the final diff mattered, but so did which commands ran and why the agent chose its next step after a failure.
 
-A local process means logs, secrets, and uncommitted edits share one trust domain. If a product only stresses “can edit the repo” without permission granularity, demos look good and incidents look bad. Shipping capability and restraint together in research preview is the product attitude this event should record.
-
-Against editor plugins, a terminal agent sits closer to scripts and Makefiles: composable, pipeable, imaginable in CI. Research preview is not a CI-ready claim, but the direction points toward “model actions scriptable.” Once scriptable, permission models must be scriptable too, or automation amplifies mistakes.
-By 2025–2026 Claude Code formed a triangle with editor agents and cloud Devin-class products: the terminal stresses local feedback and permission pauses; the editor stresses indexing and multi-file work; the cloud sandbox stresses task outsourcing. The triangle does not cancel itself; it splits agent coding into trust domains. The real selection question is where secrets, uncommitted diffs, and CI imagination live.
-
-Placing Claude Code, Cursor, and Devin in one topic is not a search for a champion but a view of migrating product units: completion → editor primary interaction → terminal action sequences → sandboxed tasks. Each jump leaves unresolved acceptance problems. Topic density comes from contrast, not single slogans.
+The defining image of Claude Code is not an uninterrupted stream of generated code. It is the process stopping before execution and waiting for permission. That pause admits the terminal's double nature: it is software engineering's most complete feedback surface and also the place where an error can most quickly become a consequence.

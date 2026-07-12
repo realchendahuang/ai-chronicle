@@ -1,25 +1,20 @@
 ---
 eventId: swe-bench
-form: Birth of a benchmark
-narrativeCenter: Real GitHub issues split “can write a function” from “can fix a repository” into two measurable things
-emotionalSource: Sobriety when first model scores were low—and the product-narrative turn once a shared target appeared
+form: From issue to patch
+narrativeCenter: SWE-bench uses real repositories and tests to separate function generation from software repair
+emotionalSource: Sobriety when attractive code fails a real test, and relief when the field gains a shared question
 avoid:
-  - Treating the benchmark as solved software engineering
-  - Omitting task construction and test verification
-  - Inflating the 2023 scene with later agent scores
+  - Treating the benchmark as having solved software engineering
+  - Omitting repository snapshots, issue text, and test verification
+  - Using later agent scores to inflate the 2023 scene
 ---
 
-Benchmarks such as HumanEval mostly ask whether a model can emit a standalone function from a description. Real development often asks something else: inside an existing repository, read an issue, edit the right files, and keep the original tests green. One is a fill-in-the-blank exam; the other is repairing pipes on someone else’s site without breaking what already carries water.
+Benchmarks such as HumanEval gave a model a description and asked for a standalone function. Problems inside real repositories were rarely that clean. An issue described the symptom visible to a user, relevant logic might be distributed across several files, and a repair could not break existing behavior. Producing a plausible passage of code and locating a defect in an unfamiliar project were different abilities.
 
-Around 10 October 2023, a Princeton team released SWE-bench: 2,294 resolved issues from real Python repositories turned into executable software-engineering tasks. Each task supplies a repository snapshot and issue text; the model must produce a patch verified by the project’s own tests. The score is not whether the code looks plausible; it is whether tests pass. Construction details—snapshot boundaries, test commands, how failures count—decide whether the ruler is honest.
+In October 2023, a Princeton team released SWE-bench, turning 2,294 GitHub issues that maintainers had resolved in real Python repositories into executable tasks. The researchers preserved the repository snapshot from when a problem existed and paired it with the issue description. A model then had to produce a patch. Scoring did not reward a fluent explanation; the patch returned to the project and ran against tests to determine whether it actually repaired the issue. Task construction determined what the ruler measured. A model had to locate relevant files in a larger codebase, understand existing interfaces, change code across locations, and avoid regressions. Tests provided a clearer endpoint than subjective reading, but only for behavior the project could automatically verify. A patch passing tests was not guaranteed to be elegant, while a sound approach could still lose its score to environment or harness failure.
 
-First model scores were low. Low scores were not humiliation—they were the ruler starting to work: pretty completion is not software engineering. The evaluation still has bounds—mostly Python, particular repos, automatable issues—and does not represent every language or org process. A shared target nevertheless appeared. Product claims began to face harder questions: can you fix real issues, pass tests, and handle long context—not only emit handsome fragments?
+Initial model results were low, exposing the distance between function generation and software engineering. Putting a repository into a long context did not automatically locate the critical code, and producing one patch rarely handled feedback from failed tests. Coding agents that followed therefore built loops around search, editing, execution, and retry. The benchmark did not create those abilities; it let teams inspect them on the same tasks.
 
-Later verified subsets and agent leaderboards are aftermath. Autumn 2023 nails the reframing: software-engineering ability rewritten from “can write code” into “can submit a verifiable fix in a real repository.” Rulers dull, skew, and get gamed; before this one, the industry lacked even a shared sentence for the rewrite. Without a shared sentence, demo videos can stand in for evidence; with one, there is at least a place to object, redesign, and run again.
+SWE-bench also had a bounded field of view: primarily Python, selected open-source repositories, and historical issues that could become automated evaluation. Its 2,294 examples were not all of software engineering. Leaderboards could be affected by task leakage, harness differences, and subset selection. Later variants such as Verified tried to improve task reliability, demonstrating that the ruler itself required maintenance.
 
-After the benchmark launched, leaderboards and papers began speaking in the same tasks. Agent systems were named more often than single completions, because repo-level repair needs search, edit, and test loops. SWE-bench did not solve software engineering; it made “how many real issues solved” checkable. What is checkable can also be gamed, subsetted, and over-read—those side effects are ordinary aging of a ruler.
-
-The figure 2,294 also reminds us that an eval set is a sample, not all of software engineering. Preference for Python and automatable issues shapes how agents are optimized. Rulers change behavior; behavior then demands ruler updates. Benchmarks and systems advance by pulling on each other.
-SWE-bench only fully means something when read with Devin, Claude Code, Codex CLI, and Cursor: it measures the chance of greening tests in real repos, not chat fluency. Agent-coding topic density comes from different failure modes under one ruler—sandbox tasks, terminal permissions, editor indexes.
-
-Benchmarks age, tasks leak, harnesses change. The chronicle should still keep the moment this ruler was forged in 2023—after which every autonomous-engineer claim faces a public mark that can be questioned.
+What changed was the evidence a product claim had to face. When a model said it could “code,” the follow-up no longer had to be only how elegantly it solved an isolated algorithm. Could it take a real issue and turn the project's tests from red to green? That green light did not prove the engineering work was complete, but it was harder to imitate than code that had never been run.
