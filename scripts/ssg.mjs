@@ -578,7 +578,7 @@ function timelineExperience() {
     <section class="timeline-stage" data-timeline-root data-start-year="${startYear}" data-end-year="${endYear}" data-timeline-order="desc">
       <header class="timeline-masthead">
         <div class="timeline-title">
-          <h1>AI 编年史</h1>
+          <h1>AI 行业编年史</h1>
           <p><span>${endYear}—${startYear}</span><small class="timeline-order-hint">${bilingual('倒序 · 新→旧', 'Newest first')}</small></p>
         </div>
         <div class="timeline-overview" role="img" aria-label="${startYear} 到 ${endYear}，事件按真实年份比例排列的时间总览；下方列表为倒序阅读">
