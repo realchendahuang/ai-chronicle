@@ -129,6 +129,44 @@
     menuToggle.setAttribute('aria-expanded', String(open))
   })
 
+  const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+  const motionHeaders = document.querySelectorAll([
+    '.timeline-masthead', '.page-intro', '.event-header', '.definition-article > header',
+    '.company-article > header', '.topic-hero', '.about-page-content > header', '.model-family-header',
+  ].join(','))
+  const revealTargets = document.querySelectorAll([
+    '.timeline-entry-points', '.timeline-toolbar', '.timeline-year', '.index-toolbar',
+    '.concept-index', '.company-index', '.topic-directory', '.model-family-index',
+    '.value-chain-stack', '.value-chain-note', '.event-facts', '.event-reading-map',
+    '.source-section', '.related-events', '.company-models', '.company-route',
+    '.value-chain-links', '.value-chain-roles', '.prose-section', '.misunderstanding-section',
+    '.topic-timeline',
+  ].join(','))
+
+  const revealImmediately = () => {
+    motionHeaders.forEach((element) => { element.dataset.motion = 'mask-reveal' })
+    revealTargets.forEach((element) => {
+      element.dataset.motion = 'scroll-reveal'
+      element.dataset.motionVisible = 'true'
+    })
+  }
+
+  if (motionQuery.matches || !('IntersectionObserver' in window)) {
+    revealImmediately()
+  } else {
+    motionHeaders.forEach((element) => { element.dataset.motion = 'mask-reveal' })
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return
+        entry.target.dataset.motion = 'scroll-reveal'
+        entry.target.dataset.motionVisible = 'true'
+        observer.unobserve(entry.target)
+      })
+    }, { rootMargin: '0px 0px -10%', threshold: 0.08 })
+    revealTargets.forEach((element) => revealObserver.observe(element))
+  }
+  requestAnimationFrame(() => { root.dataset.motionReady = 'true' })
+
   const dialog = document.querySelector('[data-search-dialog]')
   const searchInput = document.querySelector('[data-global-search]')
   const searchResults = document.querySelector('[data-search-results]')

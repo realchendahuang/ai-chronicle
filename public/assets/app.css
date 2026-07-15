@@ -680,12 +680,21 @@ a.tag:hover, .aside-tags a:hover { border-color: var(--blue); color: var(--blue)
 .search-result:hover { background: var(--yellow); }
 .search-empty { padding: 60px 22px; color: var(--muted); text-align: center; font-size: 13px; }
 
-@keyframes rise-in {
-  from { opacity: 0; transform: translateY(18px); }
+@keyframes motion-mask-reveal {
+  from { clip-path: inset(0 100% 0 0); opacity: .35; }
+  to { clip-path: inset(0 0 0 0); opacity: 1; }
+}
+@keyframes motion-scroll-reveal {
+  from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.hero-copy, .hero-chronology, .page-intro > *, .event-header > * { animation: rise-in 620ms ease both; }
-.hero-chronology, .page-intro > *:last-child { animation-delay: 100ms; }
+html[data-motion-ready='true'] [data-motion='mask-reveal'] {
+  animation: motion-mask-reveal 820ms cubic-bezier(.19, 1, .22, 1) both;
+}
+html[data-motion-ready='true'] [data-motion='scroll-reveal'] { opacity: 0; transform: translateY(24px); }
+html[data-motion-ready='true'] [data-motion='scroll-reveal'][data-motion-visible='true'] {
+  animation: motion-scroll-reveal 760ms cubic-bezier(.22, 1, .36, 1) both;
+}
 
 @media (max-width: 1020px) {
   .desktop-nav { display: none; }
@@ -831,6 +840,7 @@ a.tag:hover, .aside-tags a:hover { border-color: var(--blue); color: var(--blue)
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  html[data-motion-ready='true'] [data-motion='scroll-reveal'] { opacity: 1; transform: none; }
 }
 
 /* Unified theme system */
