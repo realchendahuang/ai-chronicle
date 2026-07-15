@@ -268,6 +268,14 @@
   const timelineStream = document.querySelector('[data-timeline-stream]')
   const timelineGroups = [...document.querySelectorAll('[data-year-group]')]
   const overviewEvents = [...document.querySelectorAll('[data-overview-event]')]
+  const timelineOverview = document.querySelector('.timeline-overview')
+  const timelinePreview = document.querySelector('[data-timeline-preview]')
+  const timelinePreviewClose = document.querySelector('[data-timeline-preview-close]')
+  const timelinePreviewDate = document.querySelector('[data-timeline-preview-date]')
+  const timelinePreviewLevel = document.querySelector('[data-timeline-preview-level]')
+  const timelinePreviewTitle = document.querySelector('[data-timeline-preview-title]')
+  const timelinePreviewSummary = document.querySelector('[data-timeline-preview-summary]')
+  const timelinePreviewLink = document.querySelector('[data-timeline-preview-link]')
   const timelineSearch = document.querySelector('[data-timeline-search]')
   const topicFilter = document.querySelector('[data-topic-filter]')
   const resultCount = document.querySelector('[data-result-count]')
@@ -277,6 +285,49 @@
   const orderToggle = document.querySelector('[data-timeline-order-toggle]')
   const startFromBeginning = document.querySelector('[data-start-from-beginning]')
   let activeLevel = 'all'
+  let activeOverviewEvent = null
+
+  const closeTimelinePreview = () => {
+    if (!timelinePreview) return
+    timelinePreview.hidden = true
+    activeOverviewEvent?.setAttribute('aria-expanded', 'false')
+    activeOverviewEvent = null
+  }
+
+  const openTimelinePreview = (event) => {
+    const dot = event.currentTarget
+    if (!timelinePreview || !timelineOverview || !(dot instanceof HTMLElement)) return
+    const english = root.dataset.lang === 'en'
+    const value = (name) => dot.dataset[english ? `${name}En` : name] || dot.dataset[name] || ''
+    timelinePreviewDate.textContent = value('previewDate')
+    timelinePreviewLevel.textContent = `${dot.dataset.previewLevel || ''} · ${value('previewLevelLabel')}`
+    timelinePreviewTitle.textContent = value('previewTitle')
+    timelinePreviewSummary.textContent = value('previewSummary')
+    timelinePreviewLink?.setAttribute('href', dot.dataset.previewHref || '#')
+
+    const overviewRect = timelineOverview.getBoundingClientRect()
+    const dotRect = dot.getBoundingClientRect()
+    const position = Math.max(16, Math.min(overviewRect.width - 16, dotRect.left - overviewRect.left + dotRect.width / 2))
+    timelinePreview.style.setProperty('--preview-position', `${position}px`)
+    activeOverviewEvent?.setAttribute('aria-expanded', 'false')
+    activeOverviewEvent = dot
+    dot.setAttribute('aria-expanded', 'true')
+    timelinePreview.hidden = false
+  }
+
+  overviewEvents.forEach((dot) => dot.addEventListener('click', openTimelinePreview))
+  timelinePreviewClose?.addEventListener('click', closeTimelinePreview)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !timelinePreview?.hidden) {
+      const trigger = activeOverviewEvent
+      closeTimelinePreview()
+      trigger?.focus()
+    }
+  })
+  document.addEventListener('click', (event) => {
+    if (!timelinePreview || timelinePreview.hidden || !timelineOverview?.contains(event.target)) return
+    if (event.target instanceof Node && !timelinePreview.contains(event.target) && !overviewEvents.some((dot) => dot.contains(event.target))) closeTimelinePreview()
+  })
 
   const setTimelineOrder = (order) => {
     if (!timelineRoot || !timelineStream) return
@@ -367,6 +418,7 @@
       const card = timelineCards.find((item) => item.dataset.eventId === dot.dataset.overviewEvent)
       dot.hidden = !card || card.hidden
     })
+    if (activeOverviewEvent?.hidden) closeTimelinePreview()
 
     const hasFilters = Boolean(query) || topic !== 'all' || activeLevel !== 'all'
     resetButtons.forEach((button) => { button.hidden = !hasFilters })
