@@ -10,7 +10,7 @@
     "check": "pnpm build",
     "check:editorial": "node scripts/check-editorial.mjs",
     "serve": "python3 -m http.server 43117 --directory dist/client",
-    "deploy": "pnpm build && wrangler pages deploy dist/client --project-name ai-chronicle --branch main"
+    "deploy": "pnpm build && wrangler pages deploy dist/client --project-name=ai-chronicle --branch=main"
   },
   "devDependencies": {
     "velite": "^0.2.4",
