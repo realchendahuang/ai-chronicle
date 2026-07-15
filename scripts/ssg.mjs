@@ -573,9 +573,25 @@ function timelineExperience() {
     if (endTime === startTime) return 0
     return Math.max(0, Math.min(100, ((Date.parse(date) - startTime) / (endTime - startTime)) * 100))
   }
-  // Recent events are often only days apart. A small, deterministic vertical offset
-  // keeps their hit targets separate without changing their chronological x-position.
-  const overviewLanes = new Map(sortedEvents.map((event, index) => [event.id, (index % 7) - 3]))
+  const overviewMarker = (event) => {
+    const classes = `overview-event overview-event-${event.importance.toLowerCase()}`
+    const position = overviewPosition(event.date).toFixed(3)
+    if (event.importance !== 'S') return `<span class="${classes}" style="--position:${position}%" aria-hidden="true"></span>`
+    return `<button class="${classes}" type="button" style="--position:${position}%"
+      data-overview-event="${escapeHtml(event.slug)}"
+      data-preview-date="${escapeHtml(formatDate(event.date, event.datePrecision))}"
+      data-preview-date-en="${escapeHtml(formatDateEn(event.date, event.datePrecision))}"
+      data-preview-title="${escapeHtml(event.title)}"
+      data-preview-title-en="${escapeHtml(englishText(event.title, event.titleEn))}"
+      data-preview-summary="${escapeHtml(event.summary)}"
+      data-preview-summary-en="${escapeHtml(englishText(event.summary, event.summaryEn))}"
+      data-preview-level="${escapeHtml(event.importance)}"
+      data-preview-level-label="${escapeHtml(importanceLabels[event.importance])}"
+      data-preview-level-label-en="${escapeHtml(importanceLabelsEn[event.importance])}"
+      data-preview-href="${escapeHtml(urlFor(`/events/${event.slug}/`))}"
+      aria-label="${escapeHtml(`${formatDate(event.date, event.datePrecision)} · ${event.title}`)}"
+      aria-haspopup="true" aria-expanded="false" aria-controls="timeline-preview"></button>`
+  }
 
   return `
     <section class="timeline-stage" data-timeline-root data-start-year="${startYear}" data-end-year="${endYear}" data-timeline-order="desc">
@@ -592,22 +608,7 @@ function timelineExperience() {
               const position = ((year - startYear) / (endYear - startYear)) * 100
               return `<span class="overview-tick" style="--position:${position.toFixed(3)}%"><i></i><b>${year}</b></span>`
             }).join('')}
-            ${sortedEvents.map((event) => `
-              <button class="overview-event overview-event-${event.importance.toLowerCase()}" type="button"
-                style="--position:${overviewPosition(event.date).toFixed(3)}%;--lane:${overviewLanes.get(event.id)}"
-                data-overview-event="${escapeHtml(event.slug)}"
-                data-preview-date="${escapeHtml(formatDate(event.date, event.datePrecision))}"
-                data-preview-date-en="${escapeHtml(formatDateEn(event.date, event.datePrecision))}"
-                data-preview-title="${escapeHtml(event.title)}"
-                data-preview-title-en="${escapeHtml(englishText(event.title, event.titleEn))}"
-                data-preview-summary="${escapeHtml(event.summary)}"
-                data-preview-summary-en="${escapeHtml(englishText(event.summary, event.summaryEn))}"
-                data-preview-level="${escapeHtml(event.importance)}"
-                data-preview-level-label="${escapeHtml(importanceLabels[event.importance])}"
-                data-preview-level-label-en="${escapeHtml(importanceLabelsEn[event.importance])}"
-                data-preview-href="${escapeHtml(urlFor(`/events/${event.slug}/`))}"
-                aria-label="${escapeHtml(`${formatDate(event.date, event.datePrecision)} · ${event.title}`)}"
-                aria-haspopup="true" aria-expanded="false" aria-controls="timeline-preview"></button>`).join('')}
+            ${sortedEvents.map(overviewMarker).join('')}
           </div>
           <aside class="timeline-preview" id="timeline-preview" data-timeline-preview hidden aria-live="polite">
             <button class="timeline-preview-close" type="button" data-timeline-preview-close aria-label="关闭预览">×</button>
