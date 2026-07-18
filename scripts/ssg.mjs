@@ -845,6 +845,85 @@ const glossarySearchText = (item) => [
   item.aliases || '',
 ].join(' ').toLowerCase()
 
+const glossaryCategoryThemes = {
+  '模型与能力': { key: 'model', a: '#4d78ff', b: '#5ed8ff', c: '#7c8cff' },
+  '训练与对齐': { key: 'train', a: '#49b58a', b: '#5ed8ff', c: '#8fd9b4' },
+  '推理与部署': { key: 'serve', a: '#8b6cff', b: '#4d78ff', c: '#b39dff' },
+  '提示与交互': { key: 'prompt', a: '#d5b84b', b: '#f0ce62', c: '#e8c86a' },
+  '评测与安全': { key: 'safe', a: '#f06458', b: '#ff8f7a', c: '#f3a094' },
+  'Agent 与协议': { key: 'agent', a: '#2bb8a8', b: '#56d6ff', c: '#6ed9c8' },
+}
+
+const glossaryHash = (value = '') => {
+  let hash = 0
+  for (const char of String(value)) hash = ((hash << 5) - hash + char.charCodeAt(0)) | 0
+  return Math.abs(hash)
+}
+
+/** 每张术语卡顶部的抽象封面图：按词条确定性生成，不依赖外部图片 */
+const glossaryCoverArt = (item) => {
+  const theme = glossaryCategoryThemes[item.category] || glossaryCategoryThemes['模型与能力']
+  const seed = glossaryHash(item.term)
+  const pattern = seed % 8
+  const label = escapeHtml((item.term.match(/[A-Za-z0-9+/]+/) || [item.term])[0].slice(0, 8))
+  const mono = escapeHtml(item.term.replace(/[^A-Za-z0-9]/g, '').slice(0, 3).toUpperCase() || item.term.slice(0, 2))
+
+  const shapes = [
+    `<circle cx="36" cy="40" r="28" fill="none" stroke="${theme.b}" stroke-width="1.2" opacity=".55"/>
+     <circle cx="36" cy="40" r="16" fill="none" stroke="${theme.c}" stroke-width="1.2" opacity=".7"/>
+     <circle cx="36" cy="40" r="5" fill="${theme.a}"/>
+     <circle cx="92" cy="28" r="18" fill="${theme.a}" opacity=".18"/>
+     <path d="M18 88 C40 62, 70 96, 110 70" fill="none" stroke="${theme.b}" stroke-width="1.4" opacity=".45"/>`,
+    `<path d="M0 20 H120 M0 40 H120 M0 60 H120 M0 80 H120" stroke="${theme.b}" stroke-width="1" opacity=".28"/>
+     <path d="M24 0 V100 M48 0 V100 M72 0 V100 M96 0 V100" stroke="${theme.c}" stroke-width="1" opacity=".22"/>
+     <rect x="52" y="28" width="36" height="36" rx="4" fill="${theme.a}" opacity=".22"/>
+     <rect x="20" y="48" width="22" height="22" rx="3" fill="none" stroke="${theme.b}" stroke-width="1.3"/>`,
+    `<path d="M10 70 Q30 20 50 70 T90 70 T130 70" fill="none" stroke="${theme.b}" stroke-width="1.6" opacity=".55"/>
+     <path d="M0 82 Q28 42 56 82 T112 82" fill="none" stroke="${theme.a}" stroke-width="1.4" opacity=".4"/>
+     <circle cx="86" cy="34" r="14" fill="${theme.c}" opacity=".25"/>
+     <circle cx="30" cy="36" r="7" fill="${theme.a}" opacity=".55"/>`,
+    `<polygon points="60,16 96,84 24,84" fill="none" stroke="${theme.b}" stroke-width="1.3" opacity=".55"/>
+     <polygon points="60,34 80,74 40,74" fill="${theme.a}" opacity=".2"/>
+     <circle cx="96" cy="28" r="10" fill="none" stroke="${theme.c}" stroke-width="1.2"/>
+     <path d="M14 24 H40 M14 32 H34" stroke="${theme.b}" stroke-width="1.2" opacity=".5"/>`,
+    `<circle cx="28" cy="30" r="3" fill="${theme.b}" opacity=".7"/><circle cx="48" cy="30" r="3" fill="${theme.b}" opacity=".45"/>
+     <circle cx="68" cy="30" r="3" fill="${theme.b}" opacity=".7"/><circle cx="88" cy="30" r="3" fill="${theme.b}" opacity=".45"/>
+     <circle cx="38" cy="48" r="3" fill="${theme.c}" opacity=".55"/><circle cx="58" cy="48" r="3" fill="${theme.a}" opacity=".8"/>
+     <circle cx="78" cy="48" r="3" fill="${theme.c}" opacity=".55"/><circle cx="98" cy="48" r="3" fill="${theme.b}" opacity=".4"/>
+     <circle cx="28" cy="66" r="3" fill="${theme.b}" opacity=".5"/><circle cx="48" cy="66" r="3" fill="${theme.c}" opacity=".6"/>
+     <circle cx="68" cy="66" r="3" fill="${theme.b}" opacity=".5"/><circle cx="88" cy="66" r="3" fill="${theme.a}" opacity=".35"/>
+     <path d="M20 84 H100" stroke="${theme.a}" stroke-width="1.2" opacity=".35"/>`,
+    `<path d="M18 22 L42 50 L18 78" fill="none" stroke="${theme.b}" stroke-width="1.5" opacity=".55"/>
+     <path d="M42 22 L66 50 L42 78" fill="none" stroke="${theme.c}" stroke-width="1.5" opacity=".4"/>
+     <path d="M66 22 L90 50 L66 78" fill="none" stroke="${theme.a}" stroke-width="1.5" opacity=".55"/>
+     <circle cx="96" cy="50" r="12" fill="${theme.a}" opacity=".18"/>`,
+    `<rect x="16" y="20" width="52" height="52" rx="8" fill="none" stroke="${theme.b}" stroke-width="1.3" opacity=".55"/>
+     <rect x="34" y="36" width="52" height="52" rx="8" fill="${theme.a}" opacity=".16"/>
+     <path d="M70 24 L104 24 L104 58" fill="none" stroke="${theme.c}" stroke-width="1.3" opacity=".55"/>
+     <circle cx="28" cy="78" r="6" fill="${theme.b}" opacity=".45"/>`,
+    `<path d="M20 50 A28 28 0 0 1 76 50" fill="none" stroke="${theme.b}" stroke-width="1.4" opacity=".55"/>
+     <path d="M32 50 A16 16 0 0 1 64 50" fill="none" stroke="${theme.c}" stroke-width="1.3" opacity=".55"/>
+     <circle cx="48" cy="50" r="4" fill="${theme.a}"/>
+     <circle cx="92" cy="32" r="16" fill="none" stroke="${theme.a}" stroke-width="1.2" opacity=".35"/>
+     <path d="M18 78 H102" stroke="${theme.b}" stroke-width="1" opacity=".3" stroke-dasharray="3 4"/>`,
+  ][pattern]
+
+  return `<div class="glossary-tile-visual" data-theme="${theme.key}" aria-hidden="true" style="--g-a:${theme.a};--g-b:${theme.b};--g-c:${theme.c}">
+    <svg class="glossary-tile-art" viewBox="0 0 120 100" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <defs>
+        <linearGradient id="g-${escapeHtml(String(seed))}" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="${theme.a}" stop-opacity=".35"/>
+          <stop offset="100%" stop-color="${theme.b}" stop-opacity=".08"/>
+        </linearGradient>
+      </defs>
+      <rect width="120" height="100" fill="url(#g-${escapeHtml(String(seed))})"/>
+      ${shapes}
+    </svg>
+    <span class="glossary-tile-badge">${mono}</span>
+    <span class="glossary-tile-watermark">${label}</span>
+  </div>`
+}
+
 const topicLabels = {
   'ai-foundations': 'AI 基础',
   'ai-winter': 'AI 寒冬',
@@ -1642,48 +1721,39 @@ function renderConceptPages() {
 }
 
 function renderGlossary() {
-  const featured = glossaryTerms.find((item) => item.featured) || glossaryTerms[0]
-  const listTerms = glossaryTerms.filter((item) => item !== featured)
   const categoryCounts = Object.fromEntries(
     glossaryCategories.map((category) => [category, glossaryTerms.filter((item) => item.category === category).length]),
   )
-  let runningIndex = 0
 
-  const renderTermCard = (item, index) => {
+  const renderTermTile = (item) => {
     const search = glossarySearchText(item)
-    const meta = [item.full, item.zh].filter(Boolean).join(' · ')
-    return `<article class="glossary-card" data-glossary-item data-category="${escapeHtml(item.category)}" data-search="${escapeHtml(search)}" id="term-${escapeHtml(item.term.toLowerCase().replace(/[^a-z0-9]+/g, '-'))}">
-      <span class="glossary-card-index">${String(index).padStart(2, '0')}</span>
-      <div class="glossary-card-head">
+    const slug = item.term.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    const theme = glossaryCategoryThemes[item.category] || glossaryCategoryThemes['模型与能力']
+    return `<article class="glossary-tile" data-glossary-item data-category="${escapeHtml(item.category)}" data-theme="${theme.key}" data-search="${escapeHtml(search)}" id="term-${escapeHtml(slug)}" style="--g-a:${theme.a};--g-b:${theme.b}">
+      ${glossaryCoverArt(item)}
+      <div class="glossary-tile-body">
+        <span class="glossary-tile-cat">${escapeHtml(item.category)}</span>
         <h2>${escapeHtml(item.term)}</h2>
-        <small>${escapeHtml(meta)}</small>
+        <p class="glossary-tile-meta"><span>${escapeHtml(item.zh)}</span><small>${escapeHtml(item.full)}</small></p>
+        <p class="glossary-tile-blurb">${escapeHtml(item.blurb)}</p>
+        ${item.note ? `<p class="glossary-tile-note"><span>注意</span>${escapeHtml(item.note)}</p>` : ''}
       </div>
-      <p class="glossary-card-blurb">${escapeHtml(item.blurb)}</p>${item.note ? `
-      <p class="glossary-card-note"><span>注意</span>${escapeHtml(item.note)}</p>` : ''}
-      <b class="glossary-card-cat">${escapeHtml(item.category)}</b>
     </article>`
   }
 
   const groups = glossaryCategories.map((category) => {
-    const items = listTerms.filter((item) => item.category === category)
+    const items = glossaryTerms.filter((item) => item.category === category)
     if (!items.length) return ''
-    const cards = items.map((item) => {
-      runningIndex += 1
-      return renderTermCard(item, runningIndex)
-    }).join('')
     return `<section class="glossary-group" data-glossary-group data-category="${escapeHtml(category)}">
       <header class="glossary-group-head">
         <h3>${escapeHtml(category)}</h3>
         <span data-glossary-group-count>${items.length}</span>
       </header>
-      <div class="glossary-list" aria-label="${escapeHtml(category)}">
-        ${cards}
+      <div class="glossary-grid" aria-label="${escapeHtml(category)}">
+        ${items.map(renderTermTile).join('')}
       </div>
     </section>`
   }).join('')
-
-  const featuredSearch = glossarySearchText(featured)
-  const featuredMeta = [featured.full, featured.zh].filter(Boolean).join(' · ')
 
   const body = `
     <section class="glossary-intro page-intro">
@@ -1692,35 +1762,23 @@ function renderGlossary() {
         <h1>AI 术语专栏</h1>
       </div>
       <div class="glossary-intro-copy">
-        <p>把行业黑话说成人话：它指什么、在什么场景成立、又最容易被怎样误读。</p>
+        <p>一张卡讲清一个词：它是什么、你会在哪碰到它、又最容易被怎样误读。</p>
         <ul class="glossary-intro-points">
-          <li>按链路分类：模型 → 训练 → 推理 → 提示 → 安全 → Agent</li>
-          <li>解释偏日常使用，不堆论文定义</li>
-          <li>能标出的坑会单独写在「注意」里</li>
+          <li>按链路分卡：模型 → 训练 → 推理 → 提示 → 安全 → Agent</li>
+          <li>封面区分类别，释义压到日常能读懂的长度</li>
+          <li>有坑的词会单独标「注意」</li>
         </ul>
       </div>
     </section>
     <section class="glossary-shell" data-glossary-root>
       <div class="glossary-toolbar">
         <label class="inline-search" for="glossary-search">${searchIcon}<span class="sr-only">搜索术语</span><input id="glossary-search" type="search" placeholder="搜索缩写、英文、中文或别名" data-glossary-search autocomplete="off"></label>
-        <p class="glossary-toolbar-meta"><span data-glossary-count>${glossaryTerms.length}</span> 个术语 · 持续更新</p>
+        <p class="glossary-toolbar-meta"><span data-glossary-count>${glossaryTerms.length}</span> 张卡片 · 持续更新</p>
       </div>
       <nav class="glossary-categories" aria-label="按类别筛选">
         <button type="button" data-glossary-category="all" aria-pressed="true">全部 <em>${glossaryTerms.length}</em></button>
         ${glossaryCategories.map((category) => `<button type="button" data-glossary-category="${escapeHtml(category)}" aria-pressed="false">${escapeHtml(category)} <em>${categoryCounts[category]}</em></button>`).join('')}
       </nav>
-      <article class="glossary-featured" data-glossary-item data-category="${escapeHtml(featured.category)}" data-search="${escapeHtml(featuredSearch)}">
-        <div class="glossary-featured-label">
-          <span>先看这个</span>
-          <b>${escapeHtml(featured.category)}</b>
-        </div>
-        <div class="glossary-featured-title">
-          <h2>${escapeHtml(featured.term)}</h2>
-          <small>${escapeHtml(featuredMeta)}</small>
-        </div>
-        <p class="glossary-featured-blurb">${escapeHtml(featured.blurb)}</p>
-        ${featured.note ? `<p class="glossary-featured-note"><span>注意</span>${escapeHtml(featured.note)}</p>` : ''}
-      </article>
       <div class="glossary-groups">
         ${groups}
       </div>
@@ -1729,7 +1787,7 @@ function renderGlossary() {
 
   writePage('glossary', {
     title: 'AI 术语专栏',
-    description: 'AI 行业高频术语速查：从 LLM、Transformer、RLHF、RAG 到 MCP、Agent，用通俗解释讲清它指什么、何时成立、怎样被误读。',
+    description: 'AI 行业高频术语卡片：从 LLM、Transformer、RLHF、RAG 到 MCP、Agent，一张卡讲清一个词。',
     path: '/glossary/',
     active: 'glossary',
     body,
