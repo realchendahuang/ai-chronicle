@@ -478,4 +478,32 @@
     })
   })
   indexSearch?.addEventListener('input', syncIndex)
+
+  const glossaryItems = [...document.querySelectorAll('[data-glossary-item]')]
+  const glossarySearch = document.querySelector('[data-glossary-search]')
+  const glossaryButtons = [...document.querySelectorAll('[data-glossary-category]')]
+  const glossaryCount = document.querySelector('[data-glossary-count]')
+  const glossaryEmpty = document.querySelector('[data-glossary-empty]')
+  let activeGlossaryCategory = 'all'
+
+  const syncGlossary = () => {
+    const query = glossarySearch?.value.trim().toLowerCase() || ''
+    let count = 0
+    glossaryItems.forEach((item) => {
+      const categoryMatches = activeGlossaryCategory === 'all' || item.dataset.category === activeGlossaryCategory
+      const searchMatches = !query || item.dataset.search?.includes(query)
+      const visible = categoryMatches && searchMatches
+      item.hidden = !visible
+      if (visible) count += 1
+    })
+    if (glossaryCount) glossaryCount.textContent = String(count)
+    if (glossaryEmpty) glossaryEmpty.hidden = count > 0
+  }
+
+  glossaryButtons.forEach((button) => button.addEventListener('click', () => {
+    activeGlossaryCategory = button.dataset.glossaryCategory || 'all'
+    glossaryButtons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)))
+    syncGlossary()
+  }))
+  glossarySearch?.addEventListener('input', syncGlossary)
 })()

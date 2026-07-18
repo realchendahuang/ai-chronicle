@@ -73,6 +73,39 @@ const segmentLabelsEn = {
   downstream: 'Downstream',
 }
 
+const glossaryTerms = [
+  ['SOTA', 'State of the Art', '模型与能力', '在明确任务、数据集和评测设置下，当前已知的最好结果；它不是永久头衔，也不等于“全面领先”。'],
+  ['LLM', 'Large Language Model', '模型与能力', '以海量文本训练、能理解和生成语言的大型模型，也是今天多数对话式 AI 的基础。'],
+  ['SLM', 'Small Language Model', '模型与能力', '更小、更省算力的语言模型，常用于端侧、私有化部署或明确边界的任务。'],
+  ['MoE', 'Mixture of Experts', '模型与能力', '把模型拆成多组专家网络，每次只激活其中一部分，以较低计算量扩展总参数。'],
+  ['Multimodal', 'Multimodal Model', '模型与能力', '能同时理解或生成文本、图像、语音、视频等多种信息形态的模型。'],
+  ['Embedding', 'Vector Representation', '模型与能力', '把文本、图片等内容编码成向量，让“语义相近”可以被计算和检索。'],
+  ['Pre-training', 'Pre-training', '训练与对齐', '先从大规模通用数据中学习语言和世界知识的底座训练阶段。'],
+  ['Fine-tuning', 'Fine-tuning', '训练与对齐', '在底座模型上继续训练，使其更适合某个领域、任务或表达方式。'],
+  ['SFT', 'Supervised Fine-Tuning', '训练与对齐', '用人工编写或筛选的示例问答训练模型，是把底座模型变成可用助手的常见一步。'],
+  ['RLHF', 'Reinforcement Learning from Human Feedback', '训练与对齐', '把人的偏好转成反馈信号，用强化学习让模型输出更符合人类期待。'],
+  ['DPO', 'Direct Preference Optimization', '训练与对齐', '直接利用偏好对比来优化模型的一类方法，常被视为 RLHF 的更简化替代路径。'],
+  ['Distillation', 'Knowledge Distillation', '训练与对齐', '让小模型学习大模型的输出或行为，用更低成本获得接近的能力。'],
+  ['Token', 'Token', '推理与部署', '模型处理文字时切分出的基本单位；它影响上下文长度、速度和计费。'],
+  ['Context Window', 'Context Window', '推理与部署', '模型一次推理时能同时看到的最大信息范围，通常以 Token 数量衡量。'],
+  ['Inference', 'Inference', '推理与部署', '模型不再更新参数、只根据输入生成或预测结果的运行阶段。'],
+  ['KV Cache', 'Key-Value Cache', '推理与部署', '保存已处理上下文的中间结果，避免模型在连续生成时反复计算。'],
+  ['Quantization', 'Quantization', '推理与部署', '用更低精度表示模型权重或计算，换取更少显存、更快推理与更低成本。'],
+  ['vLLM', 'Virtual Large Language Model', '推理与部署', '面向大模型推理的服务引擎，核心目标是提高并发吞吐和显存利用率。'],
+  ['Benchmark', 'Benchmark', '评测与安全', '一套统一的任务、数据与指标，用来比较模型在某一类能力上的表现。'],
+  ['Evals', 'Evaluations', '评测与安全', '对模型或 AI 系统做系统性评估的过程；不只是排行榜，也用于上线前找风险。'],
+  ['Hallucination', 'Hallucination', '评测与安全', '模型生成看似可信、但没有依据或与事实不符的内容。'],
+  ['Red Teaming', 'Red Teaming', '评测与安全', '主动从攻击者或极端使用者角度测试系统，寻找越权、误用和安全漏洞。'],
+  ['Guardrails', 'Guardrails', '评测与安全', '围绕模型输入、输出、工具调用和权限设置的一组约束与保护机制。'],
+  ['RAG', 'Retrieval-Augmented Generation', 'Agent 与协议', '先从外部知识库检索相关信息，再把它交给模型生成回答，以增强事实性和可追溯性。'],
+  ['Agent', 'AI Agent', 'Agent 与协议', '能感知状态、拆解目标、调用工具并根据结果继续行动的 AI 系统。'],
+  ['Tool Calling', 'Tool / Function Calling', 'Agent 与协议', '让模型以结构化参数请求调用搜索、数据库、代码执行等外部能力。'],
+  ['MCP', 'Model Context Protocol', 'Agent 与协议', '连接 AI 应用与外部工具、数据源的开放协议，重点是统一上下文和工具接入方式。'],
+  ['A2A', 'Agent-to-Agent', 'Agent 与协议', '让不同 Agent 以标准方式发现能力、协作与交接任务的协议方向。'],
+]
+
+const glossaryCategories = ['模型与能力', '训练与对齐', '推理与部署', '评测与安全', 'Agent 与协议']
+
 const topicLabels = {
   'ai-foundations': 'AI 基础',
   'ai-winter': 'AI 寒冬',
@@ -371,6 +404,7 @@ function nav(active) {
     ['timeline', '/', '时间轴'],
     ['topics', '/topics/', '主题'],
     ['stack', '/stack/', '产业链'],
+    ['glossary', '/glossary/', '术语'],
     ['concepts', '/concepts/', '概念'],
     ['models', '/models/', '模型'],
     ['companies', '/companies/', '公司'],
@@ -448,6 +482,7 @@ function footer() {
           <a href="${urlFor('/')}">时间轴</a>
           <a href="${urlFor('/topics/')}">主题</a>
           <a href="${urlFor('/concepts/')}">概念</a>
+          <a href="${urlFor('/glossary/')}">术语专栏</a>
           <a href="${urlFor('/models/')}">模型谱系</a>
           <a href="${urlFor('/about/')}">关于与编辑原则</a>
           <a class="external-footer-link" href="${githubRepoUrl}" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 打开本项目仓库（新窗口）"><span>GitHub</span><i aria-hidden="true">↗</i></a>
@@ -867,6 +902,48 @@ function renderConceptPages() {
   })
 }
 
+function renderGlossary() {
+  const featured = glossaryTerms[0]
+  const body = `
+    <section class="glossary-intro page-intro">
+      <div><span class="page-index">AI LANGUAGE</span><h1>AI 术语专栏</h1></div>
+      <p>把行业黑话放回它真正的语境：它指什么、在哪里成立、又最容易被怎样误读。</p>
+    </section>
+    <section class="glossary-shell" data-glossary-root>
+      <div class="glossary-toolbar">
+        <label class="inline-search" for="glossary-search">${searchIcon}<span class="sr-only">搜索术语</span><input id="glossary-search" type="search" placeholder="搜索缩写、英文或中文" data-glossary-search autocomplete="off"></label>
+        <p><span data-glossary-count>${glossaryTerms.length}</span> 个术语 · 持续更新</p>
+      </div>
+      <nav class="glossary-categories" aria-label="按类别筛选">
+        <button type="button" data-glossary-category="all" aria-pressed="true">全部</button>
+        ${glossaryCategories.map((category) => `<button type="button" data-glossary-category="${escapeHtml(category)}" aria-pressed="false">${escapeHtml(category)}</button>`).join('')}
+      </nav>
+      <article class="glossary-featured" data-glossary-item data-category="${escapeHtml(featured[2])}" data-search="${escapeHtml(featured.join(' ').toLowerCase())}">
+        <div><span>本期术语</span><h2>${featured[0]}</h2><b>${featured[1]}</b></div>
+        <p>${featured[3]}</p>
+        <small>注意：SOTA 只在具体的任务、数据集、指标和成本约束下才有意义。离开这些前提，它更像一句营销口号。</small>
+      </article>
+      <section class="glossary-list" aria-label="AI 术语列表">
+        ${glossaryTerms.slice(1).map((term, index) => `<article data-glossary-item data-category="${escapeHtml(term[2])}" data-search="${escapeHtml(term.join(' ').toLowerCase())}">
+          <span>${String(index + 1).padStart(2, '0')}</span>
+          <div><h2>${escapeHtml(term[0])}</h2><small>${escapeHtml(term[1])}</small></div>
+          <p>${escapeHtml(term[3])}</p>
+          <b>${escapeHtml(term[2])}</b>
+        </article>`).join('')}
+      </section>
+      <p class="glossary-empty" data-glossary-empty hidden>没有找到对应术语。试试英文缩写、完整英文或更短的关键词。</p>
+    </section>`
+
+  writePage('glossary', {
+    title: 'AI 术语专栏',
+    description: '解释 AI 行业高频术语与缩写：从 SOTA、LLM、RAG 到 MCP、Agent。',
+    path: '/glossary/',
+    active: 'glossary',
+    body,
+    bodyClass: 'glossary-page',
+  })
+}
+
 function renderModelFamilyPages() {
   const body = `
     <section class="page-intro model-intro">
@@ -1228,6 +1305,7 @@ function writeSupportFiles() {
     ...modelFamilies.map((family) => ({ type: '模型', title: family.title, description: family.description, keywords: `${family.company} ${family.latestModel} ${family.releases.map((release) => release.name).join(' ')}`, url: urlFor(`/models/${family.slug}/`) })),
     ...topicIndex.map((topic) => ({ type: '主题', title: topic.label, description: `${topic.events.length} 个关键节点`, keywords: topic.id, url: urlFor(`/topics/${topic.id}/`) })),
     ...valueChainLayersSorted.map((layer) => ({ type: '产业链', title: layer.title, description: layer.oneLiner, keywords: `${layer.segment} ${layer.companies.join(' ')}`, url: urlFor(`/stack/${layer.slug}/`) })),
+    ...glossaryTerms.map(([title, fullName, category, description]) => ({ type: '术语', title, description, keywords: `${fullName} ${category}`, url: urlFor('/glossary/') })),
     { type: '产业链', title: 'AI 产业链', description: '从半导体到应用的上下游结构', url: urlFor('/stack/') },
   ]
 
@@ -1240,7 +1318,7 @@ function writeSupportFiles() {
   )
 
   const routes = [
-    '/', '/timeline/', '/concepts/', '/models/', '/companies/', '/topics/', '/stack/', '/about/',
+    '/', '/timeline/', '/concepts/', '/glossary/', '/models/', '/companies/', '/topics/', '/stack/', '/about/',
     ...events.map((event) => `/events/${event.slug}/`),
     ...concepts.map((concept) => `/concepts/${concept.slug}/`),
     ...companies.map((company) => `/companies/${company.slug}/`),
@@ -1271,6 +1349,7 @@ renderHome()
 renderTimeline()
 renderEventPages()
 renderConceptPages()
+renderGlossary()
 renderModelFamilyPages()
 renderCompanyPages()
 renderTopicPages()
