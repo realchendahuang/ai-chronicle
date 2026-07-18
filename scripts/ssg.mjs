@@ -73,38 +73,777 @@ const segmentLabelsEn = {
   downstream: 'Downstream',
 }
 
+/**
+ * 术语专栏数据
+ * term / full / zh / category / blurb 必填；note 为常见误读提示；aliases 仅用于搜索
+ */
 const glossaryTerms = [
-  ['SOTA', 'State of the Art', '模型与能力', '在明确任务、数据集和评测设置下，当前已知的最好结果；它不是永久头衔，也不等于“全面领先”。'],
-  ['LLM', 'Large Language Model', '模型与能力', '以海量文本训练、能理解和生成语言的大型模型，也是今天多数对话式 AI 的基础。'],
-  ['SLM', 'Small Language Model', '模型与能力', '更小、更省算力的语言模型，常用于端侧、私有化部署或明确边界的任务。'],
-  ['MoE', 'Mixture of Experts', '模型与能力', '把模型拆成多组专家网络，每次只激活其中一部分，以较低计算量扩展总参数。'],
-  ['Multimodal', 'Multimodal Model', '模型与能力', '能同时理解或生成文本、图像、语音、视频等多种信息形态的模型。'],
-  ['Embedding', 'Vector Representation', '模型与能力', '把文本、图片等内容编码成向量，让“语义相近”可以被计算和检索。'],
-  ['Pre-training', 'Pre-training', '训练与对齐', '先从大规模通用数据中学习语言和世界知识的底座训练阶段。'],
-  ['Fine-tuning', 'Fine-tuning', '训练与对齐', '在底座模型上继续训练，使其更适合某个领域、任务或表达方式。'],
-  ['SFT', 'Supervised Fine-Tuning', '训练与对齐', '用人工编写或筛选的示例问答训练模型，是把底座模型变成可用助手的常见一步。'],
-  ['RLHF', 'Reinforcement Learning from Human Feedback', '训练与对齐', '把人的偏好转成反馈信号，用强化学习让模型输出更符合人类期待。'],
-  ['DPO', 'Direct Preference Optimization', '训练与对齐', '直接利用偏好对比来优化模型的一类方法，常被视为 RLHF 的更简化替代路径。'],
-  ['Distillation', 'Knowledge Distillation', '训练与对齐', '让小模型学习大模型的输出或行为，用更低成本获得接近的能力。'],
-  ['Token', 'Token', '推理与部署', '模型处理文字时切分出的基本单位；它影响上下文长度、速度和计费。'],
-  ['Context Window', 'Context Window', '推理与部署', '模型一次推理时能同时看到的最大信息范围，通常以 Token 数量衡量。'],
-  ['Inference', 'Inference', '推理与部署', '模型不再更新参数、只根据输入生成或预测结果的运行阶段。'],
-  ['KV Cache', 'Key-Value Cache', '推理与部署', '保存已处理上下文的中间结果，避免模型在连续生成时反复计算。'],
-  ['Quantization', 'Quantization', '推理与部署', '用更低精度表示模型权重或计算，换取更少显存、更快推理与更低成本。'],
-  ['vLLM', 'Virtual Large Language Model', '推理与部署', '面向大模型推理的服务引擎，核心目标是提高并发吞吐和显存利用率。'],
-  ['Benchmark', 'Benchmark', '评测与安全', '一套统一的任务、数据与指标，用来比较模型在某一类能力上的表现。'],
-  ['Evals', 'Evaluations', '评测与安全', '对模型或 AI 系统做系统性评估的过程；不只是排行榜，也用于上线前找风险。'],
-  ['Hallucination', 'Hallucination', '评测与安全', '模型生成看似可信、但没有依据或与事实不符的内容。'],
-  ['Red Teaming', 'Red Teaming', '评测与安全', '主动从攻击者或极端使用者角度测试系统，寻找越权、误用和安全漏洞。'],
-  ['Guardrails', 'Guardrails', '评测与安全', '围绕模型输入、输出、工具调用和权限设置的一组约束与保护机制。'],
-  ['RAG', 'Retrieval-Augmented Generation', 'Agent 与协议', '先从外部知识库检索相关信息，再把它交给模型生成回答，以增强事实性和可追溯性。'],
-  ['Agent', 'AI Agent', 'Agent 与协议', '能感知状态、拆解目标、调用工具并根据结果继续行动的 AI 系统。'],
-  ['Tool Calling', 'Tool / Function Calling', 'Agent 与协议', '让模型以结构化参数请求调用搜索、数据库、代码执行等外部能力。'],
-  ['MCP', 'Model Context Protocol', 'Agent 与协议', '连接 AI 应用与外部工具、数据源的开放协议，重点是统一上下文和工具接入方式。'],
-  ['A2A', 'Agent-to-Agent', 'Agent 与协议', '让不同 Agent 以标准方式发现能力、协作与交接任务的协议方向。'],
+  // —— 模型与能力 ——
+  {
+    term: 'SOTA',
+    full: 'State of the Art',
+    zh: '当前最优',
+    category: '模型与能力',
+    featured: true,
+    blurb: '在某一明确任务、数据集和评测设定下，目前公开记录里最好的那一档成绩。它描述的是“在这场考试里第一名”，不是“处处都最强”。',
+    note: '离开任务、指标和成本约束谈 SOTA，多半是营销话术。换一套数据或换一个延迟预算，排名经常整个翻盘。',
+    aliases: '业界最优 最先进 榜一',
+  },
+  {
+    term: 'LLM',
+    full: 'Large Language Model',
+    zh: '大语言模型',
+    category: '模型与能力',
+    blurb: '用海量文本训练出来、能读懂并写出自然语言的大型模型。你今天用的聊天助手、写代码助手，底座多半就是它。',
+    aliases: '大模型 语言模型',
+  },
+  {
+    term: 'SLM',
+    full: 'Small Language Model',
+    zh: '小语言模型',
+    category: '模型与能力',
+    blurb: '参数更少、更省算力的语言模型。常见于手机端、公司内网私有部署，或边界很清楚的单一任务。',
+    aliases: '小模型 端侧模型',
+  },
+  {
+    term: 'Foundation Model',
+    full: 'Foundation Model',
+    zh: '基础模型',
+    category: '模型与能力',
+    blurb: '先在广泛数据上练出通用能力的底座模型。下游产品很少从零训练，多半是在这个底座上继续改、继续接。',
+    aliases: '底座模型 基座模型 foundation',
+  },
+  {
+    term: 'Transformer',
+    full: 'Transformer Architecture',
+    zh: 'Transformer 架构',
+    category: '模型与能力',
+    blurb: '2017 年提出的神经网络骨架，靠注意力机制处理序列。今天绝大多数大语言模型，骨子里都是它的变体。',
+    aliases: 'transformer 注意力架构',
+  },
+  {
+    term: 'Attention',
+    full: 'Attention Mechanism',
+    zh: '注意力机制',
+    category: '模型与能力',
+    blurb: '让模型在处理当前位置时，能“看向”输入里更相关的其他位置，而不是一视同仁扫一遍。Self-Attention 是其中最常见的形态。',
+    aliases: 'self-attention 自注意力',
+  },
+  {
+    term: 'MoE',
+    full: 'Mixture of Experts',
+    zh: '混合专家',
+    category: '模型与能力',
+    blurb: '把模型拆成许多“专家”子网络，每次只叫醒其中几位干活。总参数可以很大，单次计算却不必全开，是扩容常用的路子。',
+    aliases: '混合专家模型 mixture of experts',
+  },
+  {
+    term: 'Multimodal',
+    full: 'Multimodal Model',
+    zh: '多模态',
+    category: '模型与能力',
+    blurb: '不只吃文字，还能看图、听声、理解视频，有的还能反过来生成这些内容。一句话：多种“感官”共用一套脑子。',
+    aliases: '多模态模型 vision-language',
+  },
+  {
+    term: 'Reasoning Model',
+    full: 'Reasoning Model',
+    zh: '推理模型',
+    category: '模型与能力',
+    blurb: '专门为多步思考、数学、代码和复杂规划加强过的模型。回答前往往会先在内部“打草稿”，而不只是脱口而出。',
+    aliases: 'o1 o3 深度推理 thinking model',
+  },
+  {
+    term: 'Diffusion',
+    full: 'Diffusion Model',
+    zh: '扩散模型',
+    category: '模型与能力',
+    blurb: '生成图像、视频时常用的技术路线：先从噪声开始，一步步“洗”成清晰内容。Stable Diffusion、许多文生图工具都走这条路。',
+    aliases: '扩散 文生图 diffusion model',
+  },
+  {
+    term: 'Embedding',
+    full: 'Vector Embedding',
+    zh: '向量嵌入',
+    category: '模型与能力',
+    blurb: '把一段文字、一张图变成一串数字（向量）。语义接近的内容，在数字空间里距离也会更近，所以能拿来做搜索和推荐。',
+    aliases: '向量 向量表示 vector embedding',
+  },
+  {
+    term: 'Open Weight',
+    full: 'Open-Weight Model',
+    zh: '开放权重',
+    category: '模型与能力',
+    blurb: '模型权重可以下载、部署、再训练的发布形态。不等于完全开源：许可证、训练数据、代码是否公开，往往还得分开看。',
+    note: '“开源模型”口语里常被混用。严格说，开放权重只保证你能拿到参数，不保证训练配方也公开。',
+    aliases: '开源模型 开放权重 open source model',
+  },
+  {
+    term: 'Parameters',
+    full: 'Model Parameters',
+    zh: '参数量',
+    category: '模型与能力',
+    blurb: '模型里可学习的权重个数，常写成 7B、70B。它粗略反映容量上限，但不直接等于“更聪明”——架构、数据与训练同样关键。',
+    aliases: '参数 70b 7b 参数规模',
+  },
+  {
+    term: 'Autoregressive',
+    full: 'Autoregressive Generation',
+    zh: '自回归生成',
+    category: '模型与能力',
+    blurb: '一个词（Token）接一个词往外写：每次只预测下一步，再把刚写出的内容喂回自己。ChatGPT 式对话，底层多半是这种生成方式。',
+    aliases: '自回归 next-token prediction',
+  },
+  {
+    term: 'World Model',
+    full: 'World Model',
+    zh: '世界模型',
+    category: '模型与能力',
+    blurb: '试图在内部模拟“世界如何运转”的模型思路：不只背答案，还要预测行动会带来什么结果。在机器人、自动驾驶和部分 Agent 研究里常被提起。',
+    aliases: '世界模型 world models',
+  },
+  {
+    term: 'VLM',
+    full: 'Vision-Language Model',
+    zh: '视觉语言模型',
+    category: '模型与能力',
+    blurb: '能同时理解图像和文字的模型：看图说话、读截图答题、根据界面描述下一步操作。多模态里最常见、也最先产品化的一支。',
+    aliases: '视觉语言 多模态视觉 vision language',
+  },
+  {
+    term: 'TTS / ASR',
+    full: 'Text-to-Speech / Automatic Speech Recognition',
+    zh: '语音合成 / 语音识别',
+    category: '模型与能力',
+    blurb: 'TTS 把文字念成语音，ASR 把说话转成文字。语音助手、会议纪要、有声内容，都靠这一对“耳朵和嘴巴”。',
+    aliases: '语音合成 语音识别 speech to text text to speech whisper',
+  },
+  {
+    term: 'Tokenizer',
+    full: 'Tokenizer',
+    zh: '分词器',
+    category: '模型与能力',
+    blurb: '把自然语言切成模型能吃的 Token 的规则组件。同一段中文，不同分词器切法不同，直接关系到上下文够不够用、API 账单贵不贵。',
+    aliases: '分词 bpe sentencepiece 词表',
+  },
+  {
+    term: 'Latency-Quality Tradeoff',
+    full: 'Latency-Quality Tradeoff',
+    zh: '速度与质量权衡',
+    category: '模型与能力',
+    blurb: '更大更强的模型通常更慢更贵。产品选型不是只看榜一，而是在延迟、成本、准确率之间找能上线的那一档。',
+    aliases: '速度质量权衡 tradeoff 性能权衡',
+  },
+
+  // —— 训练与对齐 ——
+  {
+    term: 'Pre-training',
+    full: 'Pre-training',
+    zh: '预训练',
+    category: '训练与对齐',
+    blurb: '用海量通用数据先把模型“喂大”的阶段。目标是学会语言规律和广谱知识，产品味还没调，像一块生好的面团。',
+    aliases: '预训练 pretrain 底座训练',
+  },
+  {
+    term: 'Post-training',
+    full: 'Post-training',
+    zh: '后训练',
+    category: '训练与对齐',
+    blurb: '预训练之后的一揽子加工：指令微调、偏好对齐、工具使用训练等。用户真正感觉到的“好不好用”，很多是这一阶段做出来的。',
+    aliases: '后训练 post training alignment stage',
+  },
+  {
+    term: 'Fine-tuning',
+    full: 'Fine-tuning',
+    zh: '微调',
+    category: '训练与对齐',
+    blurb: '在现成底座上继续训练，让它更懂某个行业、某种口吻或某类任务。不必重训整座山，只需把方向拧准一点。',
+    aliases: '微调 finetune 精调',
+  },
+  {
+    term: 'SFT',
+    full: 'Supervised Fine-Tuning',
+    zh: '监督微调',
+    category: '训练与对齐',
+    blurb: '用人工写好或精选的问答对示范“该怎么答”。这是把只会续写的底座，变成愿意按指令办事的助手，最常见的一步。',
+    aliases: '监督微调 supervised fine-tuning 指令微调',
+  },
+  {
+    term: 'RLHF',
+    full: 'Reinforcement Learning from Human Feedback',
+    zh: '人类反馈强化学习',
+    category: '训练与对齐',
+    blurb: '让人给多个回答打分或排序，再把这些偏好变成训练信号，用强化学习推着模型往“更受欢迎”的方向走。ChatGPT 早期好用，它是关键一环。',
+    aliases: '人类反馈 强化学习对齐',
+  },
+  {
+    term: 'DPO',
+    full: 'Direct Preference Optimization',
+    zh: '直接偏好优化',
+    category: '训练与对齐',
+    blurb: '直接用“哪个回答更好”的对比数据来优化模型，省掉 RLHF 里单独训练奖励模型、再跑强化学习的那套重流程。很多团队拿它当更省事的对齐路径。',
+    aliases: '直接偏好优化 preference optimization',
+  },
+  {
+    term: 'Reward Model',
+    full: 'Reward Model',
+    zh: '奖励模型',
+    category: '训练与对齐',
+    blurb: '专门学“人更喜欢哪种回答”的打分模型。在经典 RLHF 流程里，它代替真人实时打分，给主模型提供优化方向。',
+    aliases: '奖励模型 rm reward',
+  },
+  {
+    term: 'Distillation',
+    full: 'Knowledge Distillation',
+    zh: '知识蒸馏',
+    category: '训练与对齐',
+    blurb: '让小模型模仿大模型的输出或思路，用更低成本换接近的能力。像请学霸带学渣刷题——学渣变强，学费却更便宜。',
+    aliases: '蒸馏 模型蒸馏 knowledge distillation',
+  },
+  {
+    term: 'LoRA',
+    full: 'Low-Rank Adaptation',
+    zh: '低秩适配',
+    category: '训练与对齐',
+    blurb: '微调时不改动全部参数，只训练很小一块“补丁”。显存和存储都更省，适合给同一个底座挂很多行业专用版本。',
+    aliases: 'lora peft 低秩微调',
+  },
+  {
+    term: 'Scaling Law',
+    full: 'Scaling Law',
+    zh: '缩放定律',
+    category: '训练与对齐',
+    blurb: '描述模型规模、数据量、算力与效果之间经验关系的规律。它解释了“为什么大家一直在堆更大模型”，也提醒你：堆到某一档之后，回报会变钝。',
+    aliases: '扩展律 缩放律 chinchilla',
+  },
+  {
+    term: 'Synthetic Data',
+    full: 'Synthetic Data',
+    zh: '合成数据',
+    category: '训练与对齐',
+    blurb: '由模型或程序生成、再经筛选后用于训练的数据。能补稀缺场景，也可能把错误和偏见放大——关键在过滤与校验，不在“能不能造”。',
+    aliases: '合成数据 生成数据',
+  },
+  {
+    term: 'Alignment',
+    full: 'AI Alignment',
+    zh: '对齐',
+    category: '训练与对齐',
+    blurb: '让模型行为更符合人类意图、价值观和安全边界的一整套目标与方法。它既是技术活（SFT、RLHF），也是产品与政策选择。',
+    aliases: '对齐 价值对齐 ai alignment',
+  },
+  {
+    term: 'PEFT',
+    full: 'Parameter-Efficient Fine-Tuning',
+    zh: '参数高效微调',
+    category: '训练与对齐',
+    blurb: '只训练模型里很小一部分参数（或外挂补丁）就能适配新任务的方法总称。LoRA 是其中最出名的代表，省显存、好分发。',
+    aliases: '参数高效微调 peft adapter',
+  },
+  {
+    term: 'GRPO',
+    full: 'Group Relative Policy Optimization',
+    zh: '组相对策略优化',
+    category: '训练与对齐',
+    blurb: '一种用组内相对打分来优化策略的强化学习算法，DeepSeek 等推理模型训练里常被提起。目标仍是：让更好的推理轨迹更常出现。',
+    aliases: 'grpo 强化学习 组相对',
+  },
+  {
+    term: 'PPO',
+    full: 'Proximal Policy Optimization',
+    zh: '近端策略优化',
+    category: '训练与对齐',
+    blurb: '经典的强化学习算法，早期 RLHF 流水线里很常见。它一步步小幅更新策略，避免模型“学飞了”突然崩掉。',
+    aliases: 'ppo 近端策略优化',
+  },
+  {
+    term: 'Catastrophic Forgetting',
+    full: 'Catastrophic Forgetting',
+    zh: '灾难性遗忘',
+    category: '训练与对齐',
+    blurb: '模型学新任务时，把旧能力忘得一干二净。微调领域数据时很常见，所以才有回放数据、约束更新、多任务混合等补救手段。',
+    aliases: '灾难性遗忘 forgetting 遗忘',
+  },
+  {
+    term: 'Curriculum Learning',
+    full: 'Curriculum Learning',
+    zh: '课程学习',
+    category: '训练与对齐',
+    blurb: '像给人排课一样，先易后难地安排训练样本或任务。用得好能稳住训练、加快收敛；用得差只是多了一层花活。',
+    aliases: '课程学习 curriculum',
+  },
+
+  // —— 推理与部署 ——
+  {
+    term: 'Token',
+    full: 'Token',
+    zh: '词元',
+    category: '推理与部署',
+    blurb: '模型读写文字时切出来的最小计费与计算单位，可能是一个词、半个词或几个字符。上下文长度、速度、API 账单，都围着它转。',
+    aliases: '词元 令牌 tokens',
+  },
+  {
+    term: 'Context Window',
+    full: 'Context Window',
+    zh: '上下文窗口',
+    category: '推理与部署',
+    blurb: '模型一次能同时“看见”的最大信息量，通常用 Token 数衡量。窗口越大，越能塞长文档，但成本和延迟也常跟着涨。',
+    aliases: '上下文 上下文长度 context length',
+  },
+  {
+    term: 'Inference',
+    full: 'Inference',
+    zh: '推理 / 推断',
+    category: '推理与部署',
+    blurb: '模型参数已经训好，只根据输入生成回答或预测的阶段。你日常点发送、等回复，用的就是推理，不是训练。',
+    note: '这里的“推理”指运行模型出结果，和 Reasoning Model 里那种“深度思考能力”不是同一件事。',
+    aliases: '推断 serving 推理服务',
+  },
+  {
+    term: 'KV Cache',
+    full: 'Key-Value Cache',
+    zh: '键值缓存',
+    category: '推理与部署',
+    blurb: '把已经算过的上下文中间结果存起来，生成下一个词时不必从头重算。对话越长、越依赖它省时间，也越吃显存。',
+    aliases: 'kv cache 键值缓存',
+  },
+  {
+    term: 'Quantization',
+    full: 'Quantization',
+    zh: '量化',
+    category: '推理与部署',
+    blurb: '用更低精度（如 8 位、4 位）表示权重或计算，换更少显存、更快速度和更低成本。常会牺牲一点点精度，但很多场景里完全划算。',
+    aliases: '量化 int8 int4 gptq awq',
+  },
+  {
+    term: 'vLLM',
+    full: 'vLLM',
+    zh: '高效推理引擎',
+    category: '推理与部署',
+    blurb: '面向大模型在线服务的开源推理引擎，以高吞吐和显存利用见长。名字本身不是缩写，业内常把它当作“把模型真正跑起来”的默认选项之一。',
+    note: '不要把 vLLM 展开成 Virtual Large Language Model——那是常见误传。',
+    aliases: 'vllm 推理引擎 pagedattention',
+  },
+  {
+    term: 'Latency',
+    full: 'Latency / TTFT',
+    zh: '延迟',
+    category: '推理与部署',
+    blurb: '从发出请求到看到结果要等多久。对话场景里常拆成 TTFT（首字延迟）和整段生成时间；体感卡不卡，往往先看首字。',
+    aliases: '延迟 ttft 首字延迟 time to first token',
+  },
+  {
+    term: 'Throughput',
+    full: 'Throughput',
+    zh: '吞吐量',
+    category: '推理与部署',
+    blurb: '系统单位时间内能处理多少请求或生成多少 Token。个人觉得“快”，和服务端能同时扛住多少人，是两本账。',
+    aliases: '吞吐 tps qps tokens per second',
+  },
+  {
+    term: 'Speculative Decoding',
+    full: 'Speculative Decoding',
+    zh: '推测解码',
+    category: '推理与部署',
+    blurb: '先让小模型快速草拟几个后续 Token，再由大模型一次性验收。猜对了就省时间，猜错了再改正——用并行换延迟。',
+    aliases: '推测解码 投机采样 speculative decoding',
+  },
+  {
+    term: 'Streaming',
+    full: 'Streaming Output',
+    zh: '流式输出',
+    category: '推理与部署',
+    blurb: '模型边生成边把内容推到界面，而不是等整段写完再一次性弹出。体感更跟手，也是多数聊天产品的默认交互。',
+    aliases: '流式 sse 打字机效果',
+  },
+  {
+    term: 'Continuous Batching',
+    full: 'Continuous Batching',
+    zh: '连续批处理',
+    category: '推理与部署',
+    blurb: '推理服务里动态拼车：谁先生成完就先下车，新请求马上补位，显卡尽量不空转。高并发场景下，它是吞吐的关键杠杆。',
+    aliases: 'continuous batching 动态批处理 批处理',
+  },
+  {
+    term: 'Serving',
+    full: 'Model Serving',
+    zh: '模型服务化',
+    category: '推理与部署',
+    blurb: '把训好的模型挂成可调用服务：鉴权、限流、批处理、监控、扩缩容全包。研究里的 checkpoint，离产品可用的 API 还隔着这一层。',
+    aliases: '模型服务 serving 推理服务 deployment',
+  },
+  {
+    term: 'Edge AI',
+    full: 'Edge AI / On-device Inference',
+    zh: '端侧 AI',
+    category: '推理与部署',
+    blurb: '模型直接跑在手机、电脑、车机等本地设备上，少依赖云端。省网络延迟、更利于隐私，但受制于芯片和电池。',
+    aliases: '端侧 端侧推理 on-device 本地部署',
+  },
+  {
+    term: 'Prefill / Decode',
+    full: 'Prefill and Decode',
+    zh: '预填充 / 解码',
+    category: '推理与部署',
+    blurb: '生成可拆成两段：Prefill 先吞完整段输入，Decode 再一个个往外吐 Token。优化服务时，这两段的瓶颈往往不一样。',
+    aliases: 'prefill decode 预填充 解码阶段',
+  },
+  {
+    term: 'Tensor Parallelism',
+    full: 'Tensor / Pipeline Parallelism',
+    zh: '张量 / 流水线并行',
+    category: '推理与部署',
+    blurb: '单卡塞不下大模型时，把计算拆到多卡：张量并行切一层内部的矩阵，流水线并行把不同层分给不同卡。训练和推理都会用到。',
+    aliases: '张量并行 流水线并行 tp pp 模型并行',
+  },
+  {
+    term: 'Observability',
+    full: 'LLM Observability',
+    zh: '可观测性',
+    category: '推理与部署',
+    blurb: '把提示、检索结果、工具调用、延迟、费用和失败原因记下来，方便排查“它为什么这样答”。没有观测，线上 AI 只能靠玄学修。',
+    aliases: '可观测性 tracing 链路追踪 llm ops',
+  },
+
+  // —— 提示与交互 ——
+  {
+    term: 'Prompt',
+    full: 'Prompt',
+    zh: '提示词',
+    category: '提示与交互',
+    blurb: '你交给模型的输入：问题、指令、背景材料、示例都可以算。同一模型，提示写得好不好，输出差距经常大得离谱。',
+    aliases: '提示词 提示 提示工程 prompt engineering',
+  },
+  {
+    term: 'System Prompt',
+    full: 'System Prompt',
+    zh: '系统提示',
+    category: '提示与交互',
+    blurb: '开发者预设的“人设与规矩”，通常用户看不见或不好改：你是谁、能做什么、不能越哪些线。产品性格很大程度写在这里。',
+    aliases: '系统提示 系统消息 system message',
+  },
+  {
+    term: 'Temperature',
+    full: 'Sampling Temperature',
+    zh: '温度',
+    category: '提示与交互',
+    blurb: '控制生成随机性的旋钮。偏低更稳、更像在考试；偏高更跳、更像在头脑风暴。不是越高越聪明，只是越敢乱发挥。',
+    aliases: '温度 采样温度 top_p sampling',
+  },
+  {
+    term: 'Chain of Thought',
+    full: 'Chain of Thought',
+    zh: '思维链',
+    category: '提示与交互',
+    blurb: '让模型把推理步骤显式写出来（或在内部展开），而不是直接甩结论。复杂算术、逻辑题上，这一招常常明显提分。',
+    aliases: '思维链 cot chain-of-thought 一步步思考',
+  },
+  {
+    term: 'Few-shot',
+    full: 'Few-shot Learning',
+    zh: '少样本',
+    category: '提示与交互',
+    blurb: '在提示里塞几个示例，让模型照葫芦画瓢。不用改参数，当场教它格式和风格；例子为 0 时就叫 Zero-shot。',
+    aliases: 'few shot zero-shot 少样本 零样本 in-context',
+  },
+  {
+    term: 'In-Context Learning',
+    full: 'In-Context Learning',
+    zh: '上下文学习',
+    category: '提示与交互',
+    blurb: '不更新权重，只靠当前对话窗口里的说明和例子临时学会新任务。大模型让人惊讶的地方之一，就是它很会“现学现用”。',
+    aliases: 'icl 上下文学习 in context learning',
+  },
+  {
+    term: 'Grounding',
+    full: 'Grounding',
+    zh: '落地 / 依据锚定',
+    category: '提示与交互',
+    blurb: '把回答拴在可核对的材料上：文档、检索结果、工具返回值，而不是凭模型记忆自由发挥。减少一本正经胡说八道的常用手段。',
+    aliases: 'grounding 依据  grounded 锚定',
+  },
+  {
+    term: 'Context Engineering',
+    full: 'Context Engineering',
+    zh: '上下文工程',
+    category: '提示与交互',
+    blurb: '不只写一句漂亮提示，而是设计模型此刻能看到的全部信息：系统规则、检索片段、工具结果、对话摘要、格式约束。窗口有限，塞什么、丢什么都是产品决策。',
+    aliases: '上下文工程 context engineering 提示工程进阶',
+  },
+  {
+    term: 'Structured Output',
+    full: 'Structured Output',
+    zh: '结构化输出',
+    category: '提示与交互',
+    blurb: '要求模型按 JSON、表格或既定 schema 吐结果，方便程序直接解析。做工作流、填表单、接 API 时，比“写一段散文”可靠得多。',
+    aliases: '结构化输出 json mode schema output',
+  },
+  {
+    term: 'Top-p',
+    full: 'Nucleus Sampling (Top-p)',
+    zh: '核采样',
+    category: '提示与交互',
+    blurb: '生成时只在概率累计达到 p 的那一小撮候选词里抽样。和 Temperature 常一起调：一个管“多野”，一个管“从多宽的词表里挑”。',
+    aliases: 'top-p top p nucleus sampling 核采样',
+  },
+  {
+    term: 'Stop Sequence',
+    full: 'Stop Sequence',
+    zh: '停止序列',
+    category: '提示与交互',
+    blurb: '告诉模型：一生成到这些字符就收工。用来截断废话、模仿对话轮次，或防止它把示例格式继续往下编。',
+    aliases: '停止序列 stop tokens stop string',
+  },
+  {
+    term: 'Prompt Caching',
+    full: 'Prompt Caching',
+    zh: '提示缓存',
+    category: '提示与交互',
+    blurb: '把反复出现的长前缀（系统提示、大文档）缓存下来，下次少算一遍。长上下文应用里，这是控成本和降延迟的实用杠杆。',
+    aliases: '提示缓存 prompt cache 前缀缓存',
+  },
+
+  // —— 评测与安全 ——
+  {
+    term: 'Benchmark',
+    full: 'Benchmark',
+    zh: '基准测试',
+    category: '评测与安全',
+    blurb: '固定的题目、数据和打分规则，用来横向比较模型在某类能力上的表现。它像公开考试，方便排名，也容易被针对性刷分。',
+    aliases: '基准 榜单 mmlu gpqa',
+  },
+  {
+    term: 'Evals',
+    full: 'Evaluations',
+    zh: '评测',
+    category: '评测与安全',
+    blurb: '系统化检验模型或 AI 产品好不好用、安不安全的过程。可以是公开榜单，也可以是上线前的内部考卷和回归测试。',
+    aliases: '评测 evaluation eval',
+  },
+  {
+    term: 'Hallucination',
+    full: 'Hallucination',
+    zh: '幻觉',
+    category: '评测与安全',
+    blurb: '模型编得像真的、其实没依据或与事实不符。语气越自信，越容易骗过你——这不是“故意撒谎”，是生成机制本身就会补全缺口。',
+    aliases: '幻觉 胡编 一本正经胡说八道',
+  },
+  {
+    term: 'Jailbreak',
+    full: 'Jailbreak',
+    zh: '越狱',
+    category: '评测与安全',
+    blurb: '用特殊提示绕过模型的安全限制，诱导它输出本不该给的内容。安全团队会主动研究它，产品侧也要持续修补。',
+    aliases: '越狱 jail break 突破限制',
+  },
+  {
+    term: 'Prompt Injection',
+    full: 'Prompt Injection',
+    zh: '提示注入',
+    category: '评测与安全',
+    blurb: '把恶意指令藏进网页、文档或工具返回里，企图覆盖开发者设定的系统规则。Agent 越能读外部内容，这项风险越现实。',
+    aliases: '提示注入 注入攻击 indirect prompt injection',
+  },
+  {
+    term: 'Red Teaming',
+    full: 'Red Teaming',
+    zh: '红队测试',
+    category: '评测与安全',
+    blurb: '故意扮演攻击者或刁钻用户，去抠系统的越权、误用和安全漏洞。上线前找疼点，比上线后公关便宜得多。',
+    aliases: '红队 攻防测试 red team',
+  },
+  {
+    term: 'Guardrails',
+    full: 'Guardrails',
+    zh: '护栏',
+    category: '评测与安全',
+    blurb: '套在模型外围的约束：输入过滤、输出审核、工具权限、速率与范围限制。模型本身不一定听话，护栏负责兜底。',
+    aliases: '护栏 安全护栏 内容审核',
+  },
+  {
+    term: 'Contamination',
+    full: 'Data Contamination',
+    zh: '数据污染',
+    category: '评测与安全',
+    blurb: '评测题或答案在训练阶段就泄露进数据，导致分数虚高。榜好看，不代表模型真会做没见过的题。',
+    aliases: '数据污染 题目泄露 benchmark contamination',
+  },
+  {
+    term: 'Eval Harness',
+    full: 'Evaluation Harness',
+    zh: '评测框架',
+    category: '评测与安全',
+    blurb: '把题目加载、模型调用、打分、汇总跑成一条流水线的工具集。团队要持续对比版本，离不开可重复的 harness，而不是手工贴结果。',
+    aliases: '评测框架 lm-eval harness evaluation suite',
+  },
+  {
+    term: 'Human Eval',
+    full: 'Human Evaluation',
+    zh: '人工评测',
+    category: '评测与安全',
+    blurb: '让真人按量表给回答打分或两两比较。自动指标够不着的地方——语气、有用性、是否越界——最终还得人说了算。',
+    aliases: '人工评测 人评 human evaluation side-by-side',
+  },
+  {
+    term: 'Refusal',
+    full: 'Model Refusal',
+    zh: '拒答',
+    category: '评测与安全',
+    blurb: '模型识别到敏感或越权请求后选择不回答或只给安全替代。拒答过多会像复读机，过少又危险，边界本身就是产品策略。',
+    aliases: '拒答 拒绝回答 safety refusal',
+  },
+  {
+    term: 'PII',
+    full: 'Personally Identifiable Information',
+    zh: '个人身份信息',
+    category: '评测与安全',
+    blurb: '能定位到具体个人的信息：姓名、手机、证件号、住址等。训练、日志和回答里一旦乱泄，法律和信任成本都很高。',
+    aliases: '个人隐私 pii 敏感信息 隐私',
+  },
+  {
+    term: 'Model Spec',
+    full: 'Model Spec / Behavior Spec',
+    zh: '模型行为规范',
+    category: '评测与安全',
+    blurb: '把“模型该怎么做人”写成可执行的规范：何时帮助、何时拒绝、如何处理冲突指令。对齐不再只靠感觉，而有一份可对照的说明书。',
+    aliases: 'model spec 行为规范 constitution 宪法 ai',
+  },
+
+  // —— Agent 与协议 ——
+  {
+    term: 'RAG',
+    full: 'Retrieval-Augmented Generation',
+    zh: '检索增强生成',
+    category: 'Agent 与协议',
+    blurb: '先去知识库里把相关材料找出来，再让模型据此回答。适合公司文档、政策条文这类“必须有出处”的场景。',
+    aliases: '检索增强 rag 知识库问答',
+  },
+  {
+    term: 'Agent',
+    full: 'AI Agent',
+    zh: '智能体',
+    category: 'Agent 与协议',
+    blurb: '不只聊天，还能拆目标、调工具、看结果、再决定下一步的系统。从“回答问题”变成“替你把事推进一段”。',
+    note: '叫 Agent 不等于真能自主打工。没有可靠工具、记忆和权限设计，它只是套了循环的聊天机器人。',
+    aliases: '智能体 ai agent 代理',
+  },
+  {
+    term: 'Tool Calling',
+    full: 'Tool / Function Calling',
+    zh: '工具调用',
+    category: 'Agent 与协议',
+    blurb: '让模型按约定格式发起外部调用：搜网页、查数据库、跑代码、改日历。模型负责“想调什么”，真正执行通常在你的后端。',
+    aliases: 'function calling 函数调用 工具使用 tool use',
+  },
+  {
+    term: 'MCP',
+    full: 'Model Context Protocol',
+    zh: '模型上下文协议',
+    category: 'Agent 与协议',
+    blurb: '一套让 AI 应用连接外部工具和数据源的开放协议，目标是少写一次性集成、多复用标准接口。像给 Agent 世界准备的 USB。',
+    aliases: 'model context protocol mcp 协议',
+  },
+  {
+    term: 'A2A',
+    full: 'Agent-to-Agent',
+    zh: '智能体互联',
+    category: 'Agent 与协议',
+    blurb: '让不同 Agent 彼此发现能力、交接任务、协同完成工作的协议方向。重点从“人和一个助手对话”，扩展到“助手之间怎么协作”。',
+    aliases: 'agent to agent 多智能体协议',
+  },
+  {
+    term: 'Computer Use',
+    full: 'Computer Use',
+    zh: '计算机操控',
+    category: 'Agent 与协议',
+    blurb: '让模型看屏幕、点鼠标、敲键盘，像人一样操作电脑完成任务。门槛高、风险也大，是 Agent 能力的前沿形态之一。',
+    aliases: 'computer use 操控电脑 cua 桌面代理',
+  },
+  {
+    term: 'Multi-agent',
+    full: 'Multi-agent System',
+    zh: '多智能体',
+    category: 'Agent 与协议',
+    blurb: '多个 Agent 分工协作：有的负责规划，有的负责写代码，有的负责检查。做对了是流水线，做砸了是互相甩锅的群聊。',
+    aliases: '多智能体 multi agent 多代理',
+  },
+  {
+    term: 'Memory',
+    full: 'Agent Memory',
+    zh: '记忆',
+    category: 'Agent 与协议',
+    blurb: '让系统在多轮任务里记住用户偏好、项目事实和历史决策。可以是对话摘要，也可以是外部数据库；没有记忆，Agent 每次都像失忆上岗。',
+    aliases: '记忆 long-term memory 长期记忆',
+  },
+  {
+    term: 'Orchestration',
+    full: 'Orchestration',
+    zh: '编排',
+    category: 'Agent 与协议',
+    blurb: '把提示、模型、工具、检索和人工审批串成可运行流程的那一层。单点模型很强，真正能上线的产品往往赢在编排。',
+    aliases: '编排 workflow 工作流 orchestration',
+  },
+  {
+    term: 'ReAct',
+    full: 'Reason + Act',
+    zh: '推理—行动循环',
+    category: 'Agent 与协议',
+    blurb: '一种经典 Agent 写法：先想一步（Reason），再调用工具（Act），看观察结果，再想下一步。很多“会动手”的助手骨架都长这样。',
+    aliases: 'react reason act 推理行动',
+  },
+  {
+    term: 'Human-in-the-loop',
+    full: 'Human-in-the-Loop',
+    zh: '人在回路',
+    category: 'Agent 与协议',
+    blurb: '关键步骤必须人点头：发邮件前确认、改生产库前审批、高风险操作停一停。全自动很酷，可回滚的半自动往往更适合上线。',
+    aliases: '人在回路 hitl 人工审批 human in the loop',
+  },
+  {
+    term: 'Chunking',
+    full: 'Document Chunking',
+    zh: '文档分块',
+    category: 'Agent 与协议',
+    blurb: '做 RAG 前，先把长文档切成合适大小的片段再向量化。切太碎丢语境，切太长检索不准——分块策略常常比换嵌入模型更管用。',
+    aliases: '分块 chunk 切片 rag chunking',
+  },
+  {
+    term: 'Rerank',
+    full: 'Reranking',
+    zh: '重排序',
+    category: 'Agent 与协议',
+    blurb: '检索先粗召回一批候选，再用更精的模型重新打分排序。两段式常见于搜索和 RAG：便宜模型撒网，贵一点的模型精挑。',
+    aliases: '重排 reranker 重排序',
+  },
+  {
+    term: 'Hybrid Search',
+    full: 'Hybrid Search',
+    zh: '混合检索',
+    category: 'Agent 与协议',
+    blurb: '关键词检索和向量语义检索一起用，再融合排序。专有名词、编号、口语换说法混在一起时，单靠一种检索经常漏。',
+    aliases: '混合检索 bm25 向量检索 hybrid',
+  },
+  {
+    term: 'Skills',
+    full: 'Agent Skills',
+    zh: '技能',
+    category: 'Agent 与协议',
+    blurb: '把某类可复用能力打包成技能：何时触发、用哪些工具、遵守什么流程。比让模型每次从零即兴发挥，更稳、也好维护。',
+    aliases: 'agent skills 技能 能力包',
+  },
 ]
 
-const glossaryCategories = ['模型与能力', '训练与对齐', '推理与部署', '评测与安全', 'Agent 与协议']
+const glossaryCategories = ['模型与能力', '训练与对齐', '推理与部署', '提示与交互', '评测与安全', 'Agent 与协议']
+
+const glossarySearchText = (item) => [
+  item.term,
+  item.full,
+  item.zh,
+  item.category,
+  item.blurb,
+  item.note || '',
+  item.aliases || '',
+].join(' ').toLowerCase()
 
 const topicLabels = {
   'ai-foundations': 'AI 基础',
@@ -903,40 +1642,94 @@ function renderConceptPages() {
 }
 
 function renderGlossary() {
-  const featured = glossaryTerms[0]
+  const featured = glossaryTerms.find((item) => item.featured) || glossaryTerms[0]
+  const listTerms = glossaryTerms.filter((item) => item !== featured)
+  const categoryCounts = Object.fromEntries(
+    glossaryCategories.map((category) => [category, glossaryTerms.filter((item) => item.category === category).length]),
+  )
+  let runningIndex = 0
+
+  const renderTermCard = (item, index) => {
+    const search = glossarySearchText(item)
+    const meta = [item.full, item.zh].filter(Boolean).join(' · ')
+    return `<article class="glossary-card" data-glossary-item data-category="${escapeHtml(item.category)}" data-search="${escapeHtml(search)}" id="term-${escapeHtml(item.term.toLowerCase().replace(/[^a-z0-9]+/g, '-'))}">
+      <span class="glossary-card-index">${String(index).padStart(2, '0')}</span>
+      <div class="glossary-card-head">
+        <h2>${escapeHtml(item.term)}</h2>
+        <small>${escapeHtml(meta)}</small>
+      </div>
+      <p class="glossary-card-blurb">${escapeHtml(item.blurb)}</p>${item.note ? `
+      <p class="glossary-card-note"><span>注意</span>${escapeHtml(item.note)}</p>` : ''}
+      <b class="glossary-card-cat">${escapeHtml(item.category)}</b>
+    </article>`
+  }
+
+  const groups = glossaryCategories.map((category) => {
+    const items = listTerms.filter((item) => item.category === category)
+    if (!items.length) return ''
+    const cards = items.map((item) => {
+      runningIndex += 1
+      return renderTermCard(item, runningIndex)
+    }).join('')
+    return `<section class="glossary-group" data-glossary-group data-category="${escapeHtml(category)}">
+      <header class="glossary-group-head">
+        <h3>${escapeHtml(category)}</h3>
+        <span data-glossary-group-count>${items.length}</span>
+      </header>
+      <div class="glossary-list" aria-label="${escapeHtml(category)}">
+        ${cards}
+      </div>
+    </section>`
+  }).join('')
+
+  const featuredSearch = glossarySearchText(featured)
+  const featuredMeta = [featured.full, featured.zh].filter(Boolean).join(' · ')
+
   const body = `
     <section class="glossary-intro page-intro">
-      <div><span class="page-index">AI LANGUAGE</span><h1>AI 术语专栏</h1></div>
-      <p>把行业黑话放回它真正的语境：它指什么、在哪里成立、又最容易被怎样误读。</p>
+      <div>
+        <span class="page-index">AI LANGUAGE</span>
+        <h1>AI 术语专栏</h1>
+      </div>
+      <div class="glossary-intro-copy">
+        <p>把行业黑话说成人话：它指什么、在什么场景成立、又最容易被怎样误读。</p>
+        <ul class="glossary-intro-points">
+          <li>按链路分类：模型 → 训练 → 推理 → 提示 → 安全 → Agent</li>
+          <li>解释偏日常使用，不堆论文定义</li>
+          <li>能标出的坑会单独写在「注意」里</li>
+        </ul>
+      </div>
     </section>
     <section class="glossary-shell" data-glossary-root>
       <div class="glossary-toolbar">
-        <label class="inline-search" for="glossary-search">${searchIcon}<span class="sr-only">搜索术语</span><input id="glossary-search" type="search" placeholder="搜索缩写、英文或中文" data-glossary-search autocomplete="off"></label>
-        <p><span data-glossary-count>${glossaryTerms.length}</span> 个术语 · 持续更新</p>
+        <label class="inline-search" for="glossary-search">${searchIcon}<span class="sr-only">搜索术语</span><input id="glossary-search" type="search" placeholder="搜索缩写、英文、中文或别名" data-glossary-search autocomplete="off"></label>
+        <p class="glossary-toolbar-meta"><span data-glossary-count>${glossaryTerms.length}</span> 个术语 · 持续更新</p>
       </div>
       <nav class="glossary-categories" aria-label="按类别筛选">
-        <button type="button" data-glossary-category="all" aria-pressed="true">全部</button>
-        ${glossaryCategories.map((category) => `<button type="button" data-glossary-category="${escapeHtml(category)}" aria-pressed="false">${escapeHtml(category)}</button>`).join('')}
+        <button type="button" data-glossary-category="all" aria-pressed="true">全部 <em>${glossaryTerms.length}</em></button>
+        ${glossaryCategories.map((category) => `<button type="button" data-glossary-category="${escapeHtml(category)}" aria-pressed="false">${escapeHtml(category)} <em>${categoryCounts[category]}</em></button>`).join('')}
       </nav>
-      <article class="glossary-featured" data-glossary-item data-category="${escapeHtml(featured[2])}" data-search="${escapeHtml(featured.join(' ').toLowerCase())}">
-        <div><span>本期术语</span><h2>${featured[0]}</h2><b>${featured[1]}</b></div>
-        <p>${featured[3]}</p>
-        <small>注意：SOTA 只在具体的任务、数据集、指标和成本约束下才有意义。离开这些前提，它更像一句营销口号。</small>
+      <article class="glossary-featured" data-glossary-item data-category="${escapeHtml(featured.category)}" data-search="${escapeHtml(featuredSearch)}">
+        <div class="glossary-featured-label">
+          <span>先看这个</span>
+          <b>${escapeHtml(featured.category)}</b>
+        </div>
+        <div class="glossary-featured-title">
+          <h2>${escapeHtml(featured.term)}</h2>
+          <small>${escapeHtml(featuredMeta)}</small>
+        </div>
+        <p class="glossary-featured-blurb">${escapeHtml(featured.blurb)}</p>
+        ${featured.note ? `<p class="glossary-featured-note"><span>注意</span>${escapeHtml(featured.note)}</p>` : ''}
       </article>
-      <section class="glossary-list" aria-label="AI 术语列表">
-        ${glossaryTerms.slice(1).map((term, index) => `<article data-glossary-item data-category="${escapeHtml(term[2])}" data-search="${escapeHtml(term.join(' ').toLowerCase())}">
-          <span>${String(index + 1).padStart(2, '0')}</span>
-          <div><h2>${escapeHtml(term[0])}</h2><small>${escapeHtml(term[1])}</small></div>
-          <p>${escapeHtml(term[3])}</p>
-          <b>${escapeHtml(term[2])}</b>
-        </article>`).join('')}
-      </section>
-      <p class="glossary-empty" data-glossary-empty hidden>没有找到对应术语。试试英文缩写、完整英文或更短的关键词。</p>
+      <div class="glossary-groups">
+        ${groups}
+      </div>
+      <p class="glossary-empty" data-glossary-empty hidden>没有找到对应术语。试试英文缩写、完整英文、中文名，或更短的关键词。</p>
     </section>`
 
   writePage('glossary', {
     title: 'AI 术语专栏',
-    description: '解释 AI 行业高频术语与缩写：从 SOTA、LLM、RAG 到 MCP、Agent。',
+    description: 'AI 行业高频术语速查：从 LLM、Transformer、RLHF、RAG 到 MCP、Agent，用通俗解释讲清它指什么、何时成立、怎样被误读。',
     path: '/glossary/',
     active: 'glossary',
     body,
@@ -1305,7 +2098,13 @@ function writeSupportFiles() {
     ...modelFamilies.map((family) => ({ type: '模型', title: family.title, description: family.description, keywords: `${family.company} ${family.latestModel} ${family.releases.map((release) => release.name).join(' ')}`, url: urlFor(`/models/${family.slug}/`) })),
     ...topicIndex.map((topic) => ({ type: '主题', title: topic.label, description: `${topic.events.length} 个关键节点`, keywords: topic.id, url: urlFor(`/topics/${topic.id}/`) })),
     ...valueChainLayersSorted.map((layer) => ({ type: '产业链', title: layer.title, description: layer.oneLiner, keywords: `${layer.segment} ${layer.companies.join(' ')}`, url: urlFor(`/stack/${layer.slug}/`) })),
-    ...glossaryTerms.map(([title, fullName, category, description]) => ({ type: '术语', title, description, keywords: `${fullName} ${category}`, url: urlFor('/glossary/') })),
+    ...glossaryTerms.map((item) => ({
+      type: '术语',
+      title: item.term,
+      description: item.blurb,
+      keywords: [item.full, item.zh, item.category, item.aliases, item.note].filter(Boolean).join(' '),
+      url: urlFor('/glossary/'),
+    })),
     { type: '产业链', title: 'AI 产业链', description: '从半导体到应用的上下游结构', url: urlFor('/stack/') },
   ]
 

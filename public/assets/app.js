@@ -479,7 +479,9 @@
   })
   indexSearch?.addEventListener('input', syncIndex)
 
+  const glossaryRoot = document.querySelector('[data-glossary-root]')
   const glossaryItems = [...document.querySelectorAll('[data-glossary-item]')]
+  const glossaryGroups = [...document.querySelectorAll('[data-glossary-group]')]
   const glossarySearch = document.querySelector('[data-glossary-search]')
   const glossaryButtons = [...document.querySelectorAll('[data-glossary-category]')]
   const glossaryCount = document.querySelector('[data-glossary-count]')
@@ -487,8 +489,10 @@
   let activeGlossaryCategory = 'all'
 
   const syncGlossary = () => {
+    if (!glossaryRoot) return
     const query = glossarySearch?.value.trim().toLowerCase() || ''
     let count = 0
+
     glossaryItems.forEach((item) => {
       const categoryMatches = activeGlossaryCategory === 'all' || item.dataset.category === activeGlossaryCategory
       const searchMatches = !query || item.dataset.search?.includes(query)
@@ -496,6 +500,14 @@
       item.hidden = !visible
       if (visible) count += 1
     })
+
+    glossaryGroups.forEach((group) => {
+      const visibleCards = [...group.querySelectorAll('[data-glossary-item]')].filter((item) => !item.hidden)
+      group.hidden = visibleCards.length === 0
+      const counter = group.querySelector('[data-glossary-group-count]')
+      if (counter) counter.textContent = String(visibleCards.length)
+    })
+
     if (glossaryCount) glossaryCount.textContent = String(count)
     if (glossaryEmpty) glossaryEmpty.hidden = count > 0
   }
