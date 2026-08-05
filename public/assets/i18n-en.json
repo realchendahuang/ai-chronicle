@@ -274,7 +274,6 @@
   "改变了开发者的工作方式，代码生成成为日常工具。": "Changing the way developers work, code generation becomes an everyday tool.",
   "改变了开发者与 AI 的协作方式，从对话式编程走向 Agent 式编程。": "It has changed the way developers collaborate with AI, from conversational programming to agent-based programming.",
   "改变一切的那篇论文——Attention Is All You Need": "The paper that changed everything - Attention Is All You Need",
-  "概念": "Concepts",
   "概念不是孤立定义。它们在不同历史节点出现、成熟，再变成今天产品和技术的基础。": "Concepts are not defined in isolation. They emerged at different historical points, matured, and then became the basis of today's products and technologies.",
   "概念词典": "Concept lexicon",
   "概念词典｜AI Chronicle": "Concept Dictionary｜AI Chronicle",
@@ -292,7 +291,6 @@
   "工具调用": "Tool call",
   "工具调用｜AI Chronicle": "Tool call｜AI Chronicle",
   "工具调用是 Agent 从“会说”走向“会做”的关键桥梁。": "Tool invocation is the key bridge for Agent to move from \"speaking\" to \"knowing doing\".",
-  "公司": "Companies",
   "公司页不只介绍“它是谁”，而是追踪它选择了哪条技术路线，又在哪些节点改变了行业。": "The company page not only introduces \"who it is\", but also tracks which technical route it has chosen and at what points it has changed the industry.",
   "关闭搜索": "Close search",
   "关键事件": "Key events",
@@ -390,7 +388,6 @@
   "面向长期运行 Agent 的下一代高智能模型，也是 Anthropic 当前广泛发布的最高能力档。": "The next-generation highly intelligent model for long-term running agents is also the highest capability level currently widely released by Anthropic.",
   "面向长时间运行的 Agent 和软件工程任务优化，Claude Code 也随模型能力一同成为核心产品入口。": "For optimization of long-running Agent and software engineering tasks, Claude Code has also become a core product entry along with model capabilities.",
   "描述模型性能如何随参数、数据和计算量增加而变化的经验规律。": "Empirical rules that describe how model performance changes as parameters, data, and calculations increase.",
-  "模型": "Models",
   "模型参数可以被下载、部署和进一步研究，但并不自动等于完整开源。": "Model parameters can be downloaded, deployed and further studied, but do not automatically equal full open source.",
   "模型答错以后，反向传播会追踪每层参数对错误贡献了多少，再告诉优化算法该往哪个方向调整。": "After the model answers an error, backpropagation will track how much each layer parameter contributed to the error, and then tell the optimization algorithm which direction to adjust.",
   "模型代际评价从单轮智能进一步转向长期执行可靠性。": "Model intergenerational evaluation further shifts from single-round intelligence to long-term execution reliability.",
@@ -648,7 +645,6 @@
   "访问陈大黄主站（新窗口）": "Visit chendahuang.com (opens in a new tab)",
   "主流开放权重模型仍以稠密文本模型为主。": "The mainstream open-weight model is still dominated by dense text models.",
   "主时间轴只保留改变方向的节点。这里展开每个厂商的完整代际、发布时间与能力变化。": "The main timeline keeps only direction-changing events. Here, each vendor lineage expands into every major generation, release date, and capability shift.",
-  "主题": "Topics",
   "主题路线": "Topic paths",
   "主题路线｜AI Chronicle": "Theme Route｜AI Chronicle",
   "注意力机制": "attention mechanism",
@@ -1506,5 +1502,9 @@
   "表示学习 · 1": "Representation Learning · 1",
   "1 个节点 · 2006—2006": "1 node · 2006—2006",
   "中国 AI · 1": "AI in China · 1",
-  "1 个节点 · 2023—2023": "1 node · 2023—2023"
+  "1 个节点 · 2023—2023": "1 node · 2023—2023",
+  "GitHub · 在 GitHub 打开本项目仓库（新窗口）": "GitHub · Open this project on GitHub (new tab)",
+  "主站 · 访问陈大黄主站（新窗口）": "Main site · Visit chendahuang.com (opens in a new tab)",
+  "github.com/realchendahuang/ai-chronicle · 在 GitHub 打开本项目仓库（新窗口）": "github.com/realchendahuang/ai-chronicle · Open this project on GitHub (new tab)",
+  "搜索 ⌘ K：打开全站搜索": "Search ⌘ K: open site search"
 }

@@ -61,7 +61,7 @@ visual:
   prompt: "Editorial 16:9 museum poster, camera aperture expanding into concentric dawn rings, crimson and steel gray, no logos no text"
 sources:
   - title: "SenseNova 5.0"
-    url: "https://www.sensetime.com/en/news-detail/51167731?categoryId=1072"
+    url: "https://web.archive.org/web/20250122195546/https://www.sensetime.com/en/news-detail/51167731"
     publisher: "SenseTime"
     type: official
 status: verified

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@10.28.1",
   "scripts": {
     "dev": "pnpm build && python3 -m http.server 43117 --directory dist/client",
     "build": "velite && node scripts/check-editorial.mjs && node scripts/ssg.mjs && node scripts/check-site.mjs",

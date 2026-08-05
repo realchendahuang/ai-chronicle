@@ -97,6 +97,9 @@
     document.querySelectorAll('[data-localized-alt]').forEach((image) => {
       image.alt = normalized === 'en' ? image.dataset.altEn : image.dataset.altZh
     })
+    document.querySelectorAll('[data-aria-zh][data-aria-en]').forEach((element) => {
+      element.setAttribute('aria-label', normalized === 'en' ? element.dataset.ariaEn : element.dataset.ariaZh)
+    })
     document.title = normalized === 'en' && dictionary[originalTitle]
       ? dictionary[originalTitle]
       : originalTitle
@@ -316,6 +319,25 @@
   }
 
   overviewEvents.forEach((dot) => dot.addEventListener('click', openTimelinePreview))
+
+  const enforceOverviewSpacing = () => {
+    if (!overviewEvents.length || !timelineOverview) return
+    const railWidth = timelineOverview.getBoundingClientRect().width
+    if (!railWidth) return
+    const markers = overviewEvents
+      .map((dot) => ({ dot, pos: parseFloat(dot.style.getPropertyValue('--position')) }))
+      .filter((marker) => Number.isFinite(marker.pos))
+      .sort((left, right) => left.pos - right.pos)
+    const minGapPx = 26
+    for (let i = markers.length - 2; i >= 0; i--) {
+      const gap = ((markers[i + 1].pos - markers[i].pos) / 100) * railWidth
+      if (gap < minGapPx) markers[i].pos = markers[i + 1].pos - (minGapPx / railWidth) * 100
+    }
+    markers.forEach((marker) => {
+      marker.dot.style.setProperty('--position', `${Math.max(0, marker.pos).toFixed(3)}%`)
+    })
+  }
+  enforceOverviewSpacing()
   timelinePreviewClose?.addEventListener('click', closeTimelinePreview)
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && !timelinePreview?.hidden) {
@@ -450,7 +472,10 @@
 
   if (timelineRoot) {
     window.addEventListener('scroll', scheduleTimelineProgress, { passive: true })
-    window.addEventListener('resize', scheduleTimelineProgress)
+    window.addEventListener('resize', () => {
+      scheduleTimelineProgress()
+      enforceOverviewSpacing()
+    })
     syncTimeline()
     setTimelineOrder(timelineRoot.dataset.timelineOrder || 'desc')
     scheduleTimelineProgress()
