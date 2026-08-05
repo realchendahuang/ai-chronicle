@@ -74,7 +74,7 @@ pnpm dev
 
 ```bash
 pnpm build    # Velite 内容校验 → 编辑检查 → 静态生成 → 站内链接检查
-pnpm deploy   # 构建并部署到 Cloudflare Pages（项目名 ai-chronicle）
+pnpm run deploy   # 构建并部署到 Cloudflare Pages（项目名 ai-chronicle；注意用 run，避免与 pnpm 内建 deploy 命令冲突）
 ```
 
 ### 目录导读
@@ -175,7 +175,7 @@ pnpm dev
 # → http://localhost:43117/ai-chronicle/
 
 pnpm build
-pnpm deploy
+pnpm run deploy
 ```
 
 ### Contribute
