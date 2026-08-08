@@ -3,11 +3,11 @@ id: moonshot-kimi
 title: Kimi 模型谱系
 titleEn: Kimi model lineage
 company: moonshot
-description: 月之暗面以超长上下文对话切入，经 K1.5 推理与 K2 开放万亿 MoE，把编码、视觉与 Agent Swarm 做成连续主线。
-descriptionEn: Moonshot entered with ultra-long-context chat, then K1.5 reasoning and open trillion-scale K2 MoE, making coding, vision, and agent swarms a continuous mainline.
-latestModel: Kimi K2.6
-latestModelEn: Kimi K2.6
-updatedAt: '2026-07-11'
+description: 月之暗面以超长上下文对话切入，经 K1.5 推理与 K2 开放万亿 MoE，把编码、视觉与 Agent Swarm 做成连续主线，K3 以 2.8T 稀疏架构刷新开源规模上限。
+descriptionEn: Moonshot entered with ultra-long-context chat, then K1.5 reasoning and open trillion-scale K2 MoE, making coding, vision, and agent swarms a continuous mainline—K3 then pushed open scale to a 2.8T sparse architecture.
+latestModel: Kimi K3
+latestModelEn: Kimi K3
+updatedAt: '2026-08-08'
 releases:
   - name: Kimi（初代长上下文）
     date: '2023-10-01'
@@ -71,6 +71,13 @@ releases:
     status: current
     summary: 面向编码工作流的专用迭代，强化仓库级与 Agent 编程场景。
     summaryEn: Coding-workflow iteration strengthening repo-scale and agentic programming.
+    source: https://www.moonshot.ai/
+  - name: Kimi K3
+    date: '2026-07-16'
+    datePrecision: day
+    status: current
+    summary: 2.8T 总参 / 约 1040 亿激活的开放 MoE，原生视觉与 1M 上下文；7 月 27 日开源后成为当时全球参数最大的开源模型，首个登顶 WebDev Arena 的开源模型。
+    summaryEn: Open MoE with 2.8T total / ~104B active parameters, native vision and 1M context; open-weighted on July 27, then the world's largest open model and the first open model atop WebDev Arena.
     source: https://www.moonshot.ai/
 slug: moonshot-kimi
 ---

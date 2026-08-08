@@ -5,9 +5,9 @@ titleEn: OpenAI model lineage
 company: openai
 description: 从生成式预训练到统一推理、多模态、工具与 Agent，OpenAI 以 GPT 主线串联图像、语音、视频与推理专用系列，持续重划通用模型的产品边界。
 descriptionEn: From generative pretraining to unified reasoning, multimodality, tools, and agents, OpenAI’s GPT mainline—together with image, speech, video, and reasoning series—keeps redrawing the product boundary of general-purpose models.
-latestModel: GPT-5.6（Sol / Terra / Luna）
-latestModelEn: GPT-5.6 (Sol / Terra / Luna)
-updatedAt: '2026-07-11'
+latestModel: GPT-5.6（Sol / Terra / Luna）· GPT-Live
+latestModelEn: GPT-5.6 (Sol / Terra / Luna) · GPT-Live
+updatedAt: '2026-08-08'
 releases:
   - name: GPT-1
     date: '2018-06-11'
@@ -191,5 +191,12 @@ releases:
     summary: 以 Sol、Terra、Luna 三档覆盖能力、成本与吞吐，并加入程序化工具调用、多 Agent、显式缓存和持久推理。
     summaryEn: Sol, Terra, and Luna tiers for capability, cost, and throughput, plus programmatic tool calling, multi-agent orchestration, explicit caching, and persisted reasoning.
     source: https://developers.openai.com/api/docs/guides/latest-model
+  - name: GPT-Live（全双工语音）
+    date: '2026-07-08'
+    datePrecision: day
+    status: current
+    summary: 全双工语音模型家族，可同时听与说；GPT-Live-1 与 mini 分别成为付费与免费用户的 ChatGPT 语音默认模型。
+    summaryEn: Full-duplex voice family that listens and speaks at once; GPT-Live-1 and mini become the default ChatGPT voice models for paid and free users.
+    source: https://openai.com/index/introducing-gpt-live/
 slug: openai-gpt
 ---

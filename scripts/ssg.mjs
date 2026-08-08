@@ -1454,6 +1454,7 @@ function timelineExperience() {
           <h1>AI 行业编年史</h1>
           <p><span>${endYear}—${startYear}</span><button class="timeline-order-hint" type="button" data-timeline-order-toggle>${bilingual('倒序 · 新→旧', 'Newest first')}</button></p>
         </div>
+        <p class="timeline-intro">${bilingual(`一条可以慢慢翻的时间轴：${events.length} 个关键事件，从「机器能否思考」的思想实验，到聊天框进入亿万人日常。`, `A timeline you can turn slowly: ${events.length} direction-changing events, from the thought experiment of whether machines can think to the day a chat box entered everyday life.`)}</p>
         <div class="timeline-overview" aria-label="${startYear} 到 ${endYear}，事件按真实年份比例排列的时间总览；点击节点可预览事件">
           <div class="overview-rail">
             <span class="overview-base" aria-hidden="true"></span>
@@ -1515,7 +1516,7 @@ function timelineExperience() {
             </section>`).join('')}
         </div>
 
-        <div class="empty-state" data-empty-state hidden><h2>没有对应事件</h2><button type="button" data-reset-filters>清除筛选</button></div>
+        <div class="empty-state" data-empty-state hidden><h2>${bilingual('没有匹配的事件', 'No matching events')}</h2><p>${bilingual('试试更短的关键词，或调整级别与主题筛选。', 'Try a shorter keyword, or adjust the level and topic filters.')}</p><button type="button" data-reset-filters>${bilingual('清除筛选', 'Clear filters')}</button></div>
       </div>
     </section>`
 }
@@ -1587,7 +1588,7 @@ function renderEventPages() {
           <span><small>${bilingual('时间', 'Date')}</small><b>${bilingual(formatDate(event.date, event.datePrecision), formatDateEn(event.date, event.datePrecision))}</b></span>
           <span><small>${bilingual('级别', 'Significance')}</small><b>${escapeHtml(event.importance)} · ${bilingual(importanceLabels[event.importance], importanceLabelsEn[event.importance])}</b></span>
           <span><small>${bilingual('组织', 'Organizations')}</small><b class="event-facts-companies">${companyLinks || '—'}</b></span>
-          <span><small>${bilingual('状态', 'Status')}</small><b><i class="status-dot ${isVerified ? 'verified' : 'draft'}"></i>${bilingual(effectiveStatus, effectiveStatusEn)} · ${hasSources ? event.sources.length : 0}</b></span>
+          <span><small>${bilingual('状态', 'Status')}</small><b><i class="status-dot ${isVerified ? 'verified' : 'draft'}"></i>${bilingual(`${effectiveStatus} · ${hasSources ? event.sources.length : 0} 个来源`, `${effectiveStatusEn} · ${hasSources ? event.sources.length : 0} ${hasSources && event.sources.length === 1 ? 'source' : 'sources'}`)}</b></span>
         </section>
 
         <div class="event-reading">

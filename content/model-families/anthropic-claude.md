@@ -5,9 +5,9 @@ titleEn: Claude model lineage
 company: anthropic
 description: Claude 从安全导向的对话模型，逐步发展为强调长上下文、可靠工具使用与持续 Agent 工作的模型家族。
 descriptionEn: Claude evolved from a safety-focused conversational model into a family built around long context, reliable tool use, and sustained agentic work.
-latestModel: Claude Fable 5 / Sonnet 5 / Opus 4.8
-latestModelEn: Claude Fable 5 / Sonnet 5 / Opus 4.8
-updatedAt: '2026-07-11'
+latestModel: Claude Fable 5 / Opus 5 / Sonnet 5
+latestModelEn: Claude Fable 5 / Opus 5 / Sonnet 5
+updatedAt: '2026-08-08'
 releases:
   - name: Claude Instant
     date: '2023-03-14'
@@ -149,5 +149,12 @@ releases:
     summary: 以速度和智能的综合平衡为核心，强化编码、日常专业工作与 Agent 能力。
     summaryEn: Centers on the best combination of speed and intelligence, with stronger coding, professional work, and agentic capability.
     source: https://www.anthropic.com/news/claude-sonnet-5
+  - name: Claude Opus 5
+    date: '2026-07-24'
+    datePrecision: day
+    status: current
+    summary: 接近 Fable 5 前沿能力、定价与 Opus 4.8 持平，成为 Claude Max 默认模型；附带对话中途工具切换与安全拦截自动回退。
+    summaryEn: Near-Fable-5 capability at Opus 4.8 pricing, default in Claude Max; ships mid-conversation tool switching and safety-fallback routing.
+    source: https://www.anthropic.com/news/claude-opus-5
 slug: anthropic-claude
 ---

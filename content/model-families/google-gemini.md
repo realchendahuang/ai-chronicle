@@ -5,9 +5,9 @@ titleEn: Gemini model lineage
 company: google
 description: Gemini 以原生多模态和超长上下文为主线，逐步向推理、代码、实时交互与托管 Agent 扩展。
 descriptionEn: Gemini has developed around native multimodality and long context, expanding into reasoning, coding, real-time interaction, and managed agents.
-latestModel: Gemini 3.5 Flash
-latestModelEn: Gemini 3.5 Flash
-updatedAt: '2026-07-10'
+latestModel: Gemini 3.6 Flash
+latestModelEn: Gemini 3.6 Flash
+updatedAt: '2026-08-08'
 releases:
   - name: PaLM / PaLM 2
     date: '2023-05-10'
@@ -86,5 +86,12 @@ releases:
     summary: Google 当前面向持续高强度 Agent 与代码任务的最智能 Flash 模型，并成为 gemini-flash-latest 的默认指向。
     summaryEn: Google's most intelligent Flash model for sustained frontier agentic and coding work, now behind the gemini-flash-latest alias.
     source: https://ai.google.dev/gemini-api/docs/changelog
+  - name: Gemini 3.6 Flash
+    date: '2026-07-21'
+    datePrecision: day
+    status: current
+    summary: 工作马级 Flash 更新，输出价下调、1M 上下文，与 Flash-Lite、Flash Cyber 同日发布；旗舰 3.5 Pro 继续缺席。
+    summaryEn: Workhorse Flash refresh with lower output pricing and 1M context, launched alongside Flash-Lite and Flash Cyber while the 3.5 Pro flagship stays away.
+    source: https://deepmind.google/models/model-cards/gemini-3-6-flash/
 slug: google-gemini
 ---
