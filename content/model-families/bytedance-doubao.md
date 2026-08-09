@@ -5,9 +5,9 @@ titleEn: Doubao / Seed model lineage
 company: bytedance
 description: 字节跳动以豆包大模型与 Seed 研究品牌覆盖通用对话、推理、代码、语音与视频生成，并以火山引擎 API 与亿级 C 端产品形成双轮交付。
 descriptionEn: ByteDance’s Doubao models and Seed research brand cover general chat, reasoning, code, speech, and video generation, delivered both via Volcano Engine APIs and billion-scale consumer products.
-latestModel: Seedance 2.5 / Seed2.1
-latestModelEn: Seedance 2.5 / Seed2.1
-updatedAt: '2026-07-11'
+latestModel: SeedRealtime · Seedance 2.5 / Seed2.1
+latestModelEn: SeedRealtime · Seedance 2.5 / Seed2.1
+updatedAt: '2026-08-05'
 releases:
   - name: 豆包大模型（首发）
     date: '2024-05-15'
@@ -79,5 +79,12 @@ releases:
     summary: 主打约 30 秒连续生成，减少分段拼接，时长成为公开竞争轴。
     summaryEn: Targets ~30s continuous generation with less stitching; duration becomes a public competition axis.
     source: https://seed.bytedance.com/en/seedance
+  - name: SeedRealtime（音视频全双工）
+    date: '2026-08-05'
+    datePrecision: day
+    status: current
+    summary: 原生音视频全双工大模型，统一端到端架构融合音频、视频与文本，豆包 App 全量上线视频通话；相比级联模型节奏问题减少约 50%。
+    summaryEn: Natively full-duplex audio-video model with a unified end-to-end architecture fusing audio, video, and text; Doubao shipped video calls app-wide, with roughly 50% fewer pacing problems versus cascaded models.
+    source: https://seed.bytedance.com/zh/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction
 slug: bytedance-doubao
 ---

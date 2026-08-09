@@ -191,6 +191,13 @@ releases:
     summary: 以 Sol、Terra、Luna 三档覆盖能力、成本与吞吐，并加入程序化工具调用、多 Agent、显式缓存和持久推理。
     summaryEn: Sol, Terra, and Luna tiers for capability, cost, and throughput, plus programmatic tool calling, multi-agent orchestration, explicit caching, and persisted reasoning.
     source: https://developers.openai.com/api/docs/guides/latest-model
+  - name: GPT-5.6 Luna 免费开放
+    date: '2026-08-07'
+    datePrecision: day
+    status: current
+    summary: 免费与 Go 用户默认模型切换为 Luna，无限次文本聊天并新增 Think 按钮；Plus/Pro 的 Sol 同步升级，事实错误率较 GPT-5.5 Instant 降约 68%。
+    summaryEn: Free and Go users default to Luna with unlimited text chat and a new Think button; Sol for Plus/Pro upgraded with roughly 68% fewer factual errors than GPT-5.5 Instant.
+    source: https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/
   - name: GPT-Live（全双工语音）
     date: '2026-07-08'
     datePrecision: day

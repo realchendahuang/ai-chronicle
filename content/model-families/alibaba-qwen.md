@@ -5,9 +5,9 @@ titleEn: Qwen model lineage
 company: alibaba
 description: 通义千问从中文对话与开放权重起步，扩展为覆盖文本、视觉、音频、代码、推理与 Agent 的完整家族，并在云 API 与开源社区并行演进。
 descriptionEn: Qwen grew from Chinese chat and open weights into a full family spanning text, vision, audio, code, reasoning, and agents, evolving in parallel on cloud APIs and the open community.
-latestModel: Qwen3.7 Max / Plus
-latestModelEn: Qwen3.7 Max / Plus
-updatedAt: '2026-07-11'
+latestModel: Qwen3.8-Max / Qwen3.8
+latestModelEn: Qwen3.8-Max / Qwen3.8
+updatedAt: '2026-08-03'
 releases:
   - name: 通义千问（Tongyi Qianwen）公测
     date: '2023-04-11'
@@ -173,9 +173,16 @@ releases:
   - name: Qwen3.7 Max / Plus
     date: '2026-05-18'
     datePrecision: day
+    status: legacy
+    summary: 云上旗舰与增强档，延续 Max/Plus 分层，强调编码、Agent 与多模态生产力。
+    summaryEn: Cloud flagship and Plus tiers, continuing Max/Plus stratification for coding, agents, and multimodal productivity.
+    source: https://qwen.ai/
+  - name: Qwen3.8 / Qwen3.8-Max
+    date: '2026-08-03'
+    datePrecision: day
     status: current
-    summary: 当前云上旗舰与增强档，延续 Max/Plus 分层，强调编码、Agent 与多模态生产力。
-    summaryEn: Current cloud flagship and Plus tiers, continuing Max/Plus stratification for coding, agents, and multimodal productivity.
+    summary: 2.4T 总参、约 950B 激活的稀疏 MoE 旗舰，原生多模态视觉与 1M 上下文，CodeArena 全球第四；官方宣布下周开源 Max 权重与 Qwen3.8-27B，并同步推出 Agent 产品「千问办公」。
+    summaryEn: Sparse MoE flagship with 2.4T total and ~950B active parameters, native multimodal vision and 1M context, fourth globally on CodeArena; Max weights and Qwen3.8-27B promised open the following week, with the Qianwen Office agent product launched alongside.
     source: https://qwen.ai/
 slug: alibaba-qwen
 ---

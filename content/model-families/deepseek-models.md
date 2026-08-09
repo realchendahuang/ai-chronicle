@@ -5,9 +5,9 @@ titleEn: DeepSeek model lineage
 company: deepseek
 description: 从代码模型与稠密 LLM 起步，经 MoE、MLA、稀疏注意力到开放推理与超长上下文，DeepSeek 把训练/推理效率写成持续主线。
 descriptionEn: From code models and dense LLMs through MoE, MLA, sparse attention, open reasoning, and ultra-long context, DeepSeek made training and inference efficiency a continuous mainline.
-latestModel: DeepSeek-V4 Pro / Flash
-latestModelEn: DeepSeek-V4 Pro / Flash
-updatedAt: '2026-07-11'
+latestModel: DeepSeek-V4-Flash（正式版）· V4-Pro 预览
+latestModelEn: DeepSeek-V4-Flash (GA) · V4-Pro preview
+updatedAt: '2026-08-06'
 releases:
   - name: DeepSeek Coder
     date: '2023-11-02'
@@ -138,9 +138,16 @@ releases:
   - name: DeepSeek-V4 Pro / Flash
     date: '2026-04-24'
     datePrecision: day
-    status: preview
+    status: legacy
     summary: 开放 1M 上下文预览：Pro（约 1.6T 总参）主打高难度推理与 Agent 编程，Flash（约 284B）以更小激活提供接近能力与更高效率。
     summaryEn: 'Open 1M-context preview: Pro (~1.6T total) for hard reasoning and agentic coding; Flash (~284B) approaches that capability with higher efficiency.'
     source: https://api-docs.deepseek.com/news/news260424
+  - name: DeepSeek-V4-Flash 正式版（V4-Flash-0731）
+    date: '2026-07-31'
+    datePrecision: day
+    status: current
+    summary: Flash 预览转正：思考/非思考双模式、1M 上下文、Agent 能力增强与推测解码；8 月 6 日公告整体上调 API 定价，低价策略进入转折期。
+    summaryEn: Flash preview goes GA with thinking/non-thinking modes, 1M context, stronger agent capability, and speculative decoding; a broad API price increase announced August 6 marked a turn in the low-price strategy.
+    source: https://api-docs.deepseek.com/
 slug: deepseek-models
 ---

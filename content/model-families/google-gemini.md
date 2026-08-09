@@ -93,5 +93,12 @@ releases:
     summary: 工作马级 Flash 更新，输出价下调、1M 上下文，与 Flash-Lite、Flash Cyber 同日发布；旗舰 3.5 Pro 继续缺席。
     summaryEn: Workhorse Flash refresh with lower output pricing and 1M context, launched alongside Flash-Lite and Flash Cyber while the 3.5 Pro flagship stays away.
     source: https://deepmind.google/models/model-cards/gemini-3-6-flash/
+  - name: Gemini Robotics 2
+    date: '2026-08-04'
+    datePrecision: day
+    status: current
+    summary: VLA 模型 + ER 2 具身推理 + On-Device 2 端侧模型，在 Apptronik Apollo 2 人形机器人上演示，并发布 ASIMOV-Agentic 安全基准。
+    summaryEn: VLA model plus ER 2 embodied reasoning and On-Device 2 edge models, demonstrated on the Apptronik Apollo 2 humanoid, with the ASIMOV-Agentic safety benchmark.
+    source: https://deepmind.google/models/gemini-robotics/
 slug: google-gemini
 ---
