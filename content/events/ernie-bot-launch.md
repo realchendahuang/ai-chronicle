@@ -44,6 +44,17 @@ relatedEvents:
   - qwen
   - ernie-4-5
   - deepseek-v3
+visual:
+  src: /assets/events/ernie-bot-launch.webp
+  width: 1672
+  height: 941
+  alt: 发光代码纹样的红灯笼插画
+  altEn: Illustration of a red lantern glowing with code patterns
+  caption: 文心一言是百度对标 ChatGPT 的首个国产大模型产品，开启中国大模型竞赛。
+  captionEn: ERNIE Bot was Baidu's first homegrown answer to ChatGPT, opening China's model race.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 文心一言是百度对标 ChatGPT 的首个国产大模型产品，开启中国大模型竞赛。
 sources:
   - title: 文心一言发布会
     url: "https://yiyan.baidu.com/"

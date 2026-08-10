@@ -44,6 +44,17 @@ relatedEvents:
   - llama-3
   - llama-4
   - alpaca
+visual:
+  src: /assets/events/llama-3-1.webp
+  width: 1672
+  height: 941
+  alt: 羊驼剪影立于巨大开源门前的插画
+  altEn: Illustration of a llama silhouette before a giant open-source door
+  caption: Llama 3.1 的 405B 开源旗舰让开源模型第一次逼近闭源前沿。
+  captionEn: Llama 3.1's open 405B flagship brought open models close to the closed frontier for the first time.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Llama 3.1 的 405B 开源旗舰让开源模型第一次逼近闭源前沿。
 sources:
   - title: Introducing Llama 3.1
     url: "https://ai.meta.com/blog/meta-llama-3-1/"

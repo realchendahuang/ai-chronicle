@@ -46,6 +46,17 @@ relatedEvents:
   - claude-code
   - claude-3-7
   - gpt-5
+visual:
+  src: /assets/events/claude-sonnet-4-5.webp
+  width: 1672
+  height: 941
+  alt: 光束穿过玻璃棱镜的插画
+  altEn: Illustration of a light beam passing through glass prisms
+  caption: Sonnet 4.5 以高性价比成为当时最受开发者欢迎的代码模型之一。
+  captionEn: Sonnet 4.5 became one of the most popular coding models among developers for its value.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Sonnet 4.5 以高性价比成为当时最受开发者欢迎的代码模型之一。
 sources:
   - title: Anthropic Claude Sonnet 4.5
     url: "https://www.anthropic.com/"

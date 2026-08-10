@@ -44,6 +44,17 @@ relatedEvents:
   - llama-4
   - deepseek-v3
   - qwen
+visual:
+  src: /assets/events/llama-3.webp
+  width: 1672
+  height: 941
+  alt: 开源羊驼与电路图案融合的插画
+  altEn: Illustration of the open-source llama merged with circuit patterns
+  caption: Meta 在 2024 年开源 Llama 3，把旗舰级开源模型的规模与性能推向新高度。
+  captionEn: In 2024 Meta open-sourced Llama 3, pushing the scale and performance of flagship open models to a new level.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Meta 在 2024 年开源 Llama 3，把旗舰级开源模型的规模与性能推向新高度。
 sources:
   - title: Introducing Meta Llama 3
     url: "https://ai.meta.com/blog/meta-llama-3/"

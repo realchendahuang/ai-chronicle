@@ -49,6 +49,17 @@ relatedEvents:
   - microsoft-invests-openai
   - chatgpt-launch
   - gpt-4-release
+visual:
+  src: /assets/events/openai-board-crisis.webp
+  width: 1672
+  height: 941
+  alt: 聚光灯下棋子冻结的棋盘插画
+  altEn: Illustration of a chess board mid-game with pieces frozen under a spotlight
+  caption: 2023 年 11 月 OpenAI 董事会风波，Sam Altman 被解雇又复职，震动整个行业。
+  captionEn: In November 2023 the OpenAI board crisis saw Sam Altman fired and reinstated, shaking the industry.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 2023 年 11 月 OpenAI 董事会风波，Sam Altman 被解雇又复职，震动整个行业。
 sources:
   - title: OpenAI announces leadership transition
     url: "https://openai.com/index/openai-announces-leadership-transition/"

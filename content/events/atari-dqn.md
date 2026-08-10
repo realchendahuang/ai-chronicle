@@ -49,6 +49,17 @@ relatedEvents:
   - td-gammon
   - openai-five
   - alphazero
+visual:
+  src: /assets/events/atari-dqn.webp
+  width: 1672
+  height: 941
+  alt: 复古像素游戏被神经网络学习的插画
+  altEn: Illustration of a retro 8-bit game screen overlaid with a neural network
+  caption: DeepMind 的 DQN 让网络直接从像素学会打雅达利游戏，点燃了深度强化学习。
+  captionEn: DeepMind's DQN learned to play Atari from pixels, igniting deep reinforcement learning.
+  credit: AI Chronicle
+  rights: generated
+  prompt: DeepMind 的 DQN 让网络直接从像素学会打雅达利游戏，点燃了深度强化学习。
 sources:
   - title: Playing Atari with Deep Reinforcement Learning
     url: "https://arxiv.org/abs/1312.5602"

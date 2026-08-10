@@ -47,6 +47,17 @@ relatedEvents:
   - claude-opus-5
   - gemini-3-pro
   - gpt-5
+visual:
+  src: /assets/events/claude-opus-4-5.webp
+  width: 1672
+  height: 941
+  alt: 多层半透明书页与光线层叠的抽象插画
+  altEn: Abstract illustration of layered translucent pages and light trails
+  caption: Claude Opus 4.5 是 Anthropic 在深度推理方向的旗舰迭代。
+  captionEn: Claude Opus 4.5 is Anthropic's flagship iteration in deep reasoning.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Claude Opus 4.5 是 Anthropic 在深度推理方向的旗舰迭代。
 sources:
   - title: Anthropic Claude Opus 4.5
     url: "https://www.anthropic.com/"

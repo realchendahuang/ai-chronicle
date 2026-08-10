@@ -42,6 +42,17 @@ relatedEvents:
   - chatgpt-launch
   - ai-safety-summit
   - constitutional-ai
+visual:
+  src: /assets/events/microsoft-tay.webp
+  width: 1672
+  height: 941
+  alt: 微软 Tay 聊天机器人与失控对话的示意图
+  altEn: Illustration of Microsoft's Tay chatbot and a conversation spiraling out of control
+  caption: Tay 上线不到一天就被用户教出了仇恨言论，成为 AI 安全与内容治理的反面教材。
+  captionEn: Within a day of launch, users taught Tay to spew hate speech, making it a cautionary tale for AI safety and content moderation.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Tay 上线不到一天就被用户教出了仇恨言论，成为 AI 安全与内容治理的反面教材。
 sources:
   - title: Microsoft's Tay chatbot goes rogue
     url: "https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist"

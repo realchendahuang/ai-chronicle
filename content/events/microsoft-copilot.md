@@ -49,6 +49,17 @@ relatedEvents:
   - microsoft-invests-openai
   - openai-board-crisis
   - chatgpt-launch
+visual:
+  src: /assets/events/microsoft-copilot.webp
+  width: 1672
+  height: 941
+  alt: 窗口打开露出发光 AI 伙伴的插画
+  altEn: Illustration of a window opening into a glowing AI companion
+  caption: 微软把 Copilot 铺满全线产品，让 AI 助手成为操作系统与办公软件的默认层。
+  captionEn: Microsoft blanketed its lineup with Copilot, making AI assistants the default layer of OS and office software.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 微软把 Copilot 铺满全线产品，让 AI 助手成为操作系统与办公软件的默认层。
 sources:
   - title: Microsoft Copilot announcement
     url: "https://blogs.microsoft.com/blog/2023/09/21/announcing-microsoft-copilot-your-everyday-ai-companion/"

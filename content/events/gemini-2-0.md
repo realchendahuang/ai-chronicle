@@ -43,6 +43,17 @@ relatedEvents:
   - gemini-2-5
   - computer-use
   - agent-runtime
+visual:
+  src: /assets/events/gemini-2-0.webp
+  width: 1672
+  height: 941
+  alt: 数字景观中相遇的双子之光的插画
+  altEn: Illustration of twin lights meeting in a digital landscape
+  caption: Gemini 2.0 是谷歌「Agent 优先」时代的首个旗舰系列。
+  captionEn: Gemini 2.0 was Google's first flagship family of the agent-first era.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Gemini 2.0 是谷歌「Agent 优先」时代的首个旗舰系列。
 sources:
   - title: Introducing Gemini 2.0
     url: "https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/"

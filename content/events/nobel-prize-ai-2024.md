@@ -46,6 +46,17 @@ relatedEvents:
   - backpropagation
   - lenet
   - deep-learning-rise
+visual:
+  src: /assets/events/nobel-prize-ai-2024.webp
+  width: 1664
+  height: 936
+  alt: 诺贝尔奖章与神经网络融合的插画
+  altEn: Illustration of a Nobel medal merged with neural network nodes
+  caption: Hinton 与 Hopfield 因神经网络的基础贡献获得 2024 年诺贝尔物理学奖，AI 第一次站上最高科学领奖台。
+  captionEn: Hinton and Hopfield won the 2024 Nobel Prize in Physics for foundational neural-network work—AI's first time on the highest scientific stage.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Hinton 与 Hopfield 因神经网络的基础贡献获得 2024 年诺贝尔物理学奖，AI 第一次站上最高科学领奖台。
 sources:
   - title: The Nobel Prize in Physics 2024
     url: "https://www.nobelprize.org/prizes/physics/2024/press-release/"

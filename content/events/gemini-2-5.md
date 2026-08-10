@@ -46,6 +46,17 @@ relatedEvents:
   - gemini
   - gemini-3-5-flash
   - gpt-5
+visual:
+  src: /assets/events/gemini-2-5.webp
+  width: 1672
+  height: 941
+  alt: 双子晶体折射光束成光谱的插画
+  altEn: Illustration of twin crystals refracting a beam of light into a spectrum
+  caption: Gemini 2.5 用思考模型让谷歌重新回到推理竞赛的第一梯队。
+  captionEn: Gemini 2.5's thinking model brought Google back to the front of the reasoning race.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Gemini 2.5 用思考模型让谷歌重新回到推理竞赛的第一梯队。
 sources:
   - title: Gemini 2.5
     url: "https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/"

@@ -44,6 +44,17 @@ relatedEvents:
   - clip
   - gpt-4o
   - stable-diffusion
+visual:
+  src: /assets/events/sam-segment-anything.webp
+  width: 1672
+  height: 941
+  alt: 照片被分割成彩色蒙层的插画
+  altEn: Illustration of a photo segmented into colorful overlapping masks
+  caption: Meta 的 SAM 让「分割一切」成为可能，奠定视觉基础模型的新范式。
+  captionEn: Meta's SAM made segmenting anything possible, setting a new paradigm for vision foundation models.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Meta 的 SAM 让「分割一切」成为可能，奠定视觉基础模型的新范式。
 sources:
   - title: Segment Anything
     url: "https://arxiv.org/abs/2304.02643"

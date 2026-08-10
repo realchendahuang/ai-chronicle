@@ -42,6 +42,17 @@ relatedEvents:
   - openai-o1
   - scaling-laws
   - gpt-4-release
+visual:
+  src: /assets/events/gpt-4-5.webp
+  width: 1672
+  height: 941
+  alt: 掌上悬浮的全息大脑插画
+  altEn: Illustration of a holographic brain floating above an open palm
+  caption: GPT-4.5 是 OpenAI 在推理模型浪潮前最后一款「直觉型」大模型。
+  captionEn: GPT-4.5 was OpenAI's last intuition-first large model before the reasoning wave.
+  credit: AI Chronicle
+  rights: generated
+  prompt: GPT-4.5 是 OpenAI 在推理模型浪潮前最后一款「直觉型」大模型。
 sources:
   - title: Introducing GPT-4.5
     url: "https://openai.com/index/introducing-gpt-4-5/"

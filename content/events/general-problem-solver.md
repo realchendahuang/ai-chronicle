@@ -42,6 +42,17 @@ relatedEvents:
   - logic-theorist
   - expert-systems
   - deep-blue
+visual:
+  src: /assets/events/general-problem-solver.webp
+  width: 1672
+  height: 941
+  alt: 算法解迷宫流程图的复古插画
+  altEn: Illustration of a flowchart maze being solved by an algorithm, retro computing
+  caption: 纽厄尔与西蒙的 GPS 用手段-目的分析，让程序第一次能「面向目标推理」。
+  captionEn: Newell and Simon's GPS used means-ends analysis, letting programs reason toward goals for the first time.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 纽厄尔与西蒙的 GPS 用手段-目的分析，让程序第一次能「面向目标推理」。
 sources:
   - title: Report on a general problem-solving program
     url: "https://www.rand.org/pubs/papers/P1584.html"

@@ -46,6 +46,17 @@ relatedEvents:
   - tool-use
   - function-calling
   - agent-runtime
+visual:
+  src: /assets/events/o3-o4-mini.webp
+  width: 1672
+  height: 941
+  alt: 嵌套推理环构成的紧凑立方体插画
+  altEn: Illustration of a compact cube of nested reasoning rings
+  caption: o3 与 o4-mini 把强化学习推理进一步推向工具使用与自主搜索。
+  captionEn: o3 and o4-mini pushed RL-based reasoning further toward tool use and autonomous search.
+  credit: AI Chronicle
+  rights: generated
+  prompt: o3 与 o4-mini 把强化学习推理进一步推向工具使用与自主搜索。
 sources:
   - title: Introducing OpenAI o3 and o4-mini
     url: "https://openai.com/index/introducing-o3-and-o4-mini/"

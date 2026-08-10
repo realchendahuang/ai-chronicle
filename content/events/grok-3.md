@@ -45,6 +45,17 @@ relatedEvents:
   - gpt-5
   - claude-4
   - google-ai-reorg
+visual:
+  src: /assets/events/grok-3.webp
+  width: 1672
+  height: 941
+  alt: 几何外星机器头与宇宙背景的插画
+  altEn: Illustration of a geometric alien robot head against a cosmic background
+  caption: xAI 在 2025 年发布 Grok 3，以大规模推理能力进入旗舰模型的第一梯队。
+  captionEn: xAI released Grok 3 in 2025, entering the front tier of flagship models with large-scale reasoning.
+  credit: AI Chronicle
+  rights: generated
+  prompt: xAI 在 2025 年发布 Grok 3，以大规模推理能力进入旗舰模型的第一梯队。
 sources:
   - title: Grok 3
     url: "https://x.ai/news/grok-3"

@@ -44,6 +44,17 @@ relatedEvents:
   - agent-runtime
   - computer-use
   - codex-agent
+visual:
+  src: /assets/events/manus-launch.webp
+  width: 1672
+  height: 941
+  alt: 机器手与人类手交握的插画
+  altEn: Illustration of a robotic hand reaching to shake a human hand
+  caption: Manus 在 2025 年发布，把「通用 AI Agent 自动完成任务」推向大众视野。
+  captionEn: Manus launched in 2025, bringing autonomous general-purpose AI agents into the public eye.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Manus 在 2025 年发布，把「通用 AI Agent 自动完成任务」推向大众视野。
 sources:
   - title: Manus
     url: "https://manus.im/"

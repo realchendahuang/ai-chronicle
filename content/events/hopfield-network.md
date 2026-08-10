@@ -42,6 +42,17 @@ relatedEvents:
   - backpropagation
   - deep-learning-rise
   - minsky-perceptrons-book
+visual:
+  src: /assets/events/hopfield-network.webp
+  width: 1672
+  height: 941
+  alt: 节点能量网形成动态图案的插画
+  altEn: Illustration of energy-connected nodes forming a dynamic pattern
+  caption: Hopfield 网络把统计物理引入神经网络，为其后的复兴埋下伏笔。
+  captionEn: The Hopfield network brought statistical physics into neural networks, setting the stage for their revival.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Hopfield 网络把统计物理引入神经网络，为其后的复兴埋下伏笔。
 sources:
   - title: Neural networks and physical systems with emergent collective computational abilities
     url: "https://www.pnas.org/doi/10.1073/pnas.79.8.2554"

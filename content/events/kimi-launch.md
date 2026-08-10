@@ -45,6 +45,17 @@ relatedEvents:
   - kimi-k3
   - chatgpt-launch
   - qwen
+visual:
+  src: /assets/events/kimi-launch.webp
+  width: 1672
+  height: 941
+  alt: 新月初升与数据流地平线的插画
+  altEn: Illustration of a rising crescent moon over a horizon of data streams
+  caption: 月之暗面在 2023 年发布 Kimi 助手，以长上下文切入大模型市场。
+  captionEn: Moonshot AI launched Kimi in 2023, entering the model market through long context.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 月之暗面在 2023 年发布 Kimi 助手，以长上下文切入大模型市场。
 sources:
   - title: Kimi 智能助手
     url: "https://www.moonshot.cn/kimi"

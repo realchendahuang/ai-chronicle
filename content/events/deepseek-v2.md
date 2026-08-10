@@ -46,6 +46,17 @@ relatedEvents:
   - deepseek-r1
   - mixtral
   - deepseek-v4
+visual:
+  src: /assets/events/deepseek-v2.webp
+  width: 1672
+  height: 941
+  alt: 蓝色鲸鱼游弋在数据电路海洋中的插画
+  altEn: Illustration of a blue whale swimming through a sea of data circuits
+  caption: DeepSeek-V2 用 MLA 与 MoE 架构引爆了 2024 年的模型价格战。
+  captionEn: DeepSeek-V2 ignited the 2024 model price war with its MLA and MoE architecture.
+  credit: AI Chronicle
+  rights: generated
+  prompt: DeepSeek-V2 用 MLA 与 MoE 架构引爆了 2024 年的模型价格战。
 sources:
   - title: "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model"
     url: "https://arxiv.org/abs/2405.04434"

@@ -45,6 +45,17 @@ relatedEvents:
   - openai-founded
   - gpt-3
   - chatgpt-launch
+visual:
+  src: /assets/events/microsoft-invests-openai.webp
+  width: 1672
+  height: 941
+  alt: 两栋建筑被发光管道连接的插画
+  altEn: Illustration of two corporate buildings connected by a glowing pipeline
+  caption: 微软对 OpenAI 的 10 亿美元投资，把两家公司的命运绑在了一起。
+  captionEn: Microsoft's billion-dollar investment in OpenAI tied the two companies' fates together.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 微软对 OpenAI 的 10 亿美元投资，把两家公司的命运绑在了一起。
 sources:
   - title: Microsoft invests in and partners with OpenAI
     url: "https://blogs.microsoft.com/blog/2019/07/22/microsoft-invests-in-and-partners-with-openai-to-accelerate-ai-breakthroughs/"

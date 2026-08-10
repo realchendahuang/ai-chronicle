@@ -45,6 +45,17 @@ relatedEvents:
   - alexnet
   - imagenet
   - deep-learning-rise
+visual:
+  src: /assets/events/lenet.webp
+  width: 1672
+  height: 940
+  alt: 手写数字被多层卷积网络识别的示意图
+  altEn: Illustration of a handwritten digit recognized by layered convolutional networks
+  caption: LeCun 在 1989 年用 LeNet 让卷积神经网络第一次在真实任务中展现威力。
+  captionEn: In 1989 LeCun's LeNet showed convolutional networks working on a real task for the first time.
+  credit: AI Chronicle
+  rights: generated
+  prompt: LeCun 在 1989 年用 LeNet 让卷积神经网络第一次在真实任务中展现威力。
 sources:
   - title: Gradient-Based Learning Applied to Document Recognition
     url: "https://ieeexplore.ieee.org/document/726791"

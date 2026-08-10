@@ -48,6 +48,17 @@ relatedEvents:
   - gpt-5
   - gpt-5-6
   - claude-4
+visual:
+  src: /assets/events/gemini-3-pro.webp
+  width: 1672
+  height: 941
+  alt: 暗夜天文台中高耸的三段光碑插画
+  altEn: Illustration of a towering three-part obelisk of light in a dark observatory
+  caption: Gemini 3 Pro 用扩展推理与多模态能力，重夺推理旗舰的领先位置。
+  captionEn: Gemini 3 Pro reclaimed the reasoning lead with extended thinking and multimodal ability.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Gemini 3 Pro 用扩展推理与多模态能力，重夺推理旗舰的领先位置。
 sources:
   - title: Google Gemini 3 announcement
     url: "https://blog.google/technology/ai/gemini-3/"

@@ -39,6 +39,17 @@ relatedEvents:
   - turing-test
   - mcculloch-pitts
   - logic-theorist
+visual:
+  src: /assets/events/turing-machine.webp
+  width: 1672
+  height: 941
+  alt: 抽象图灵机与纸带的复古插画
+  altEn: Illustration of an abstract Turing machine with a paper tape
+  caption: 图灵在 1936 年提出的图灵机，为「什么是可计算」划定了边界，也成为现代计算机的理论原型。
+  captionEn: Turing's 1936 machine defined what is computable and became the theoretical template of the modern computer.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 图灵在 1936 年提出的图灵机，为「什么是可计算」划定了边界，也成为现代计算机的理论原型。
 sources:
   - title: On Computable Numbers
     url: "https://en.wikipedia.org/wiki/Turing_machine"

@@ -46,6 +46,17 @@ relatedEvents:
   - eu-ai-act
   - openai-board-crisis
   - constitutional-ai
+visual:
+  src: /assets/events/ai-safety-summit.webp
+  width: 1672
+  height: 941
+  alt: 穹顶下各国代表围坐发光圆桌的插画
+  altEn: Illustration of world leaders around a glowing circular table under a dome
+  caption: 2023 年布莱切利 AI 安全峰会首次把 AI 治理提升为全球议程。
+  captionEn: The 2023 Bletchley AI Safety Summit put AI governance on the global agenda for the first time.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 2023 年布莱切利 AI 安全峰会首次把 AI 治理提升为全球议程。
 sources:
   - title: AI Safety Summit 2023
     url: "https://www.gov.uk/government/topical-events/ai-safety-summit-2023"

@@ -46,6 +46,17 @@ relatedEvents:
   - alexnet
   - scaling-laws
   - tensorflow-open-source
+visual:
+  src: /assets/events/google-brain.webp
+  width: 1672
+  height: 941
+  alt: 服务器机架构成的发光大脑插画
+  altEn: Illustration of a vast brain made of connected server racks
+  caption: Google Brain 用 16000 个 CPU 让网络学会识别猫，验证了「大算力+大数据」的深度学习路线。
+  captionEn: Google Brain used 16,000 CPUs to teach a network to recognize cats, validating the big-compute-plus-big-data path.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Google Brain 用 16000 个 CPU 让网络学会识别猫，验证了「大算力+大数据」的深度学习路线。
 sources:
   - title: Building High-Level Features Using Large Scale Unsupervised Learning
     url: "https://arxiv.org/abs/1112.6209"

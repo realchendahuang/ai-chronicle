@@ -47,6 +47,17 @@ relatedEvents:
   - alphago
   - alphafold
   - openai-five
+visual:
+  src: /assets/events/google-acquires-deepmind.webp
+  width: 1672
+  height: 941
+  alt: 两个天体合并的插画
+  altEn: Illustration of two orbiting bodies merging into one system
+  caption: 谷歌收购 DeepMind，把全球最强的人工智能研究团队收入囊中。
+  captionEn: Google acquired DeepMind, taking the world's strongest AI research team under its wing.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 谷歌收购 DeepMind，把全球最强的人工智能研究团队收入囊中。
 sources:
   - title: Google to acquire artificial intelligence company DeepMind
     url: "https://www.theguardian.com/technology/2014/jan/27/google-acquires-uk-artificial-intelligence-startup-deepmind"

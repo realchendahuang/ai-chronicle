@@ -46,6 +46,17 @@ relatedEvents:
   - stable-diffusion
   - midjourney-v6
   - diffusion-models
+visual:
+  src: /assets/events/dall-e-2.webp
+  width: 1672
+  height: 941
+  alt: 发光画笔绘制超现实景观的插画
+  altEn: Illustration of a glowing brush painting a surreal landscape
+  caption: DALL·E 2 把文本生成图像带进主流视野，让创意工作第一次大规模用上生成式 AI。
+  captionEn: DALL·E 2 brought text-to-image into the mainstream, putting generative AI into creative work at scale.
+  credit: AI Chronicle
+  rights: generated
+  prompt: DALL·E 2 把文本生成图像带进主流视野，让创意工作第一次大规模用上生成式 AI。
 sources:
   - title: DALL·E 2
     url: "https://openai.com/index/dall-e-2/"

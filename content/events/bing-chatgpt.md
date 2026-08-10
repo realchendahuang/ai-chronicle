@@ -46,6 +46,17 @@ relatedEvents:
   - microsoft-invests-openai
   - gpt-4-release
   - gemini
+visual:
+  src: /assets/events/bing-chatgpt.webp
+  width: 1672
+  height: 941
+  alt: 搜索框变成发光对话气泡的插画
+  altEn: Illustration of a search bar transforming into a glowing conversation bubble
+  caption: 必应接入 ChatGPT 让搜索引擎第一次以对话方式作答，微软从此站上 AI 前台。
+  captionEn: Bing's ChatGPT integration made search answer conversationally, putting Microsoft on the AI front stage.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 必应接入 ChatGPT 让搜索引擎第一次以对话方式作答，微软从此站上 AI 前台。
 sources:
   - title: Reinventing search with a new AI-powered Microsoft Bing
     url: "https://blogs.microsoft.com/blog/2023/02/07/reinventing-search-with-a-new-ai-powered-microsoft-bing-and-edge-your-copilot-for-the-web/"

@@ -45,6 +45,17 @@ relatedEvents:
   - tool-use
   - function-calling
   - agent-runtime
+visual:
+  src: /assets/events/autogpt.webp
+  width: 1672
+  height: 941
+  alt: AutoGPT 的自主任务链示意图
+  altEn: Illustration of AutoGPT's autonomous task chain
+  caption: AutoGPT 让大模型首次能以「自己拆任务、自己执行」的方式长时间自主运转，点燃了 Agent 热潮。
+  captionEn: AutoGPT let LLMs run autonomously by breaking down and executing their own tasks, igniting the agent boom.
+  credit: AI Chronicle
+  rights: generated
+  prompt: AutoGPT 让大模型首次能以「自己拆任务、自己执行」的方式长时间自主运转，点燃了 Agent 热潮。
 sources:
   - title: AutoGPT
     url: "https://github.com/Significant-Gravitas/AutoGPT"

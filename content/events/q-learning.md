@@ -42,6 +42,17 @@ relatedEvents:
   - td-gammon
   - alphago
   - alphazero
+visual:
+  src: /assets/events/q-learning.webp
+  width: 1672
+  height: 941
+  alt: 发光之手填写价值表格的插画
+  altEn: Illustration of a glowing hand filling a table of values
+  caption: Watkins 的 Q-learning 用一张 Q 表为现代强化学习奠定了无模型地基。
+  captionEn: Watkins' Q-learning laid the model-free foundation of modern RL with a simple Q-table.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Watkins 的 Q-learning 用一张 Q 表为现代强化学习奠定了无模型地基。
 sources:
   - title: Learning from Delayed Rewards (Watkins thesis)
     url: "https://www.cs.rhul.ac.uk/~chrisw/new_thesis.pdf"

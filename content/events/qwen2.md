@@ -44,6 +44,17 @@ relatedEvents:
   - qwen
   - qwen-3-8
   - llama-3
+visual:
+  src: /assets/events/qwen2.webp
+  width: 1672
+  height: 941
+  alt: 两层磐石叠在发光基座上的插画
+  altEn: Illustration of two stacked stones on a glowing plinth
+  caption: Qwen2 以五个尺寸一次性开源，是阿里通义系列走向全球的里程碑。
+  captionEn: Qwen2 open-sourced five sizes at once, a milestone in Alibaba's Qwen going global.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Qwen2 以五个尺寸一次性开源，是阿里通义系列走向全球的里程碑。
 sources:
   - title: Qwen2 开源发布
     url: "https://qwenlm.github.io/blog/qwen2/"

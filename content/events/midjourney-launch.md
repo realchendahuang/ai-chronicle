@@ -42,6 +42,17 @@ relatedEvents:
   - dall-e-2
   - stable-diffusion
   - midjourney-v6
+visual:
+  src: /assets/events/midjourney-launch.webp
+  width: 1672
+  height: 941
+  alt: 悬浮在梦幻景观中的调色盘插画
+  altEn: Illustration of an artist palette floating in a surreal dreamscape
+  caption: Midjourney 在 2022 年发布，用高质量图像生成引爆了大众对 AI 绘画的热情。
+  captionEn: Midjourney's 2022 launch ignited public passion for AI image generation with its quality.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Midjourney 在 2022 年发布，用高质量图像生成引爆了大众对 AI 绘画的热情。
 sources:
   - title: Midjourney
     url: "https://www.midjourney.com/"

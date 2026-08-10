@@ -41,6 +41,17 @@ relatedEvents:
   - perceptron
   - dartmouth-workshop
   - backpropagation
+visual:
+  src: /assets/events/mcculloch-pitts.webp
+  width: 1672
+  height: 941
+  alt: McCulloch–Pitts 人工神经元的示意：输入、加权与输出的逻辑结构
+  altEn: 'Schematic of the McCulloch–Pitts artificial neuron: inputs, weighting, and logical output'
+  caption: McCulloch 与 Pitts 用数学描述了「人工神经元」——把真实神经元的兴奋与抑制抽象成最简单的逻辑单元。
+  captionEn: McCulloch and Pitts described the artificial neuron mathematically, abstracting a real neuron's excitation and inhibition into the simplest logical unit.
+  credit: AI Chronicle
+  rights: generated
+  prompt: McCulloch 与 Pitts 用数学描述了「人工神经元」——把真实神经元的兴奋与抑制抽象成最简单的逻辑单元。
 sources:
   - title: A Logical Calculus of the Ideas Immanent in Nervous Activity
     url: "https://link.springer.com/article/10.1007/BF02478259"

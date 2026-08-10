@@ -42,6 +42,17 @@ relatedEvents:
   - gpt-4-release
   - claude-3-5-sonnet
   - claude-4
+visual:
+  src: /assets/events/claude-3.webp
+  width: 1672
+  height: 941
+  alt: 三座光之石碑投下不同影子的插画
+  altEn: Illustration of three layered monoliths of light, each casting a distinct shadow
+  caption: Claude 3 家族用 Opus/Sonnet/Haiku 三档定位，重新定义了大模型的产品分层。
+  captionEn: The Claude 3 family's Opus/Sonnet/Haiku tiers redefined how model families are positioned.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Claude 3 家族用 Opus/Sonnet/Haiku 三档定位，重新定义了大模型的产品分层。
 sources:
   - title: Introducing the next generation of Claude
     url: "https://www.anthropic.com/news/claude-3-family"

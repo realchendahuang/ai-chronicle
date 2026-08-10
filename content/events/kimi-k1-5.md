@@ -46,6 +46,17 @@ relatedEvents:
   - kimi-k2
   - deepseek-r1
   - openai-o1
+visual:
+  src: /assets/events/kimi-k1-5.webp
+  width: 1672
+  height: 941
+  alt: 新月与展开的发光卷轴插画
+  altEn: Illustration of a crescent moon above an unfolding glowing scroll
+  caption: Kimi K1.5 把长上下文与强化学习推理结合，定义了国产推理模型的新高度。
+  captionEn: Kimi K1.5 combined long context with RL-based reasoning, setting a new bar for Chinese reasoning models.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Kimi K1.5 把长上下文与强化学习推理结合，定义了国产推理模型的新高度。
 sources:
   - title: Kimi K1.5 technical report
     url: "https://arxiv.org/abs/2501.12599"

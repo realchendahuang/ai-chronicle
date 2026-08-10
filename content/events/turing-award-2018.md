@@ -44,6 +44,17 @@ relatedEvents:
   - lenet
   - deep-learning-rise
   - alexnet
+visual:
+  src: /assets/events/turing-award-2018.webp
+  width: 1672
+  height: 941
+  alt: 金色奖杯与神经网络纹样的插画
+  altEn: Illustration of a golden trophy with neural network patterns
+  caption: 2018 年图灵奖授予深度学习三巨头，AI 的现代复兴获得最高学术认可。
+  captionEn: The 2018 Turing Award honored the deep-learning triumvirate, recognizing AI's modern revival.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 2018 年图灵奖授予深度学习三巨头，AI 的现代复兴获得最高学术认可。
 sources:
   - title: Fathers of the Deep Learning Revolution Receive ACM A.M. Turing Award
     url: "https://awards.acm.org/about/2018-turing"

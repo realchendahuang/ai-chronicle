@@ -47,6 +47,17 @@ relatedEvents:
   - gpt-2
   - chatgpt-launch
   - gpt-4-release
+visual:
+  src: /assets/events/openai-founded.webp
+  width: 1672
+  height: 941
+  alt: 车库中发光的 AI 种子与创始人之桌插画
+  altEn: Illustration of a founders' table in a garage with a glowing AI seed
+  caption: 2015 年 OpenAI 以非营利实验室身份成立，誓言安全地推进通用人工智能。
+  captionEn: Founded in 2015 as a nonprofit lab, OpenAI vowed to advance AGI safely.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 2015 年 OpenAI 以非营利实验室身份成立，誓言安全地推进通用人工智能。
 sources:
   - title: Introducing OpenAI
     url: "https://openai.com/index/introducing-openai/"

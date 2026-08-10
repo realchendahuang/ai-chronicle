@@ -45,6 +45,17 @@ relatedEvents:
   - qwen-3-8
   - deepseek-r1
   - llama-3-1
+visual:
+  src: /assets/events/qwen3.webp
+  width: 1672
+  height: 941
+  alt: 三层磐石发出同心环的插画
+  altEn: Illustration of three stacked stones emitting concentric rings
+  caption: Qwen3 以 235B 开源旗舰与思考模式，让阿里重新站上开源模型第一梯队。
+  captionEn: Qwen3's open 235B flagship with thinking mode put Alibaba back at the front of open models.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Qwen3 以 235B 开源旗舰与思考模式，让阿里重新站上开源模型第一梯队。
 sources:
   - title: Qwen3 发布公告
     url: "https://qwenlm.github.io/blog/qwen3/"

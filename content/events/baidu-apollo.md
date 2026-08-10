@@ -42,6 +42,17 @@ relatedEvents:
   - darpa-grand-challenge
   - apple-intelligence
   - ernie-bot-launch
+visual:
+  src: /assets/events/baidu-apollo.webp
+  width: 1672
+  height: 941
+  alt: 发光线路道路上行驶的自动驾驶汽车插画
+  altEn: Illustration of a self-driving car on a road of glowing lines
+  caption: 百度 Apollo 把自动驾驶开放给全球开发者，成为中国自动驾驶产业的地基之一。
+  captionEn: Baidu Apollo opened autonomous driving to developers worldwide, becoming a foundation of China's industry.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 百度 Apollo 把自动驾驶开放给全球开发者，成为中国自动驾驶产业的地基之一。
 sources:
   - title: Baidu Announces Apollo Platform
     url: "https://apollo.auto/"

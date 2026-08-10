@@ -43,6 +43,17 @@ relatedEvents:
   - claude-code
   - openai-o1
   - claude-4
+visual:
+  src: /assets/events/claude-3-7.webp
+  width: 1672
+  height: 941
+  alt: 发光逻辑门连接两座悬崖的插画
+  altEn: Illustration of a bridge of glowing logic gates between two cliffs
+  caption: Claude 3.7 首创混合推理，让同一模型可以切换快答与深思。
+  captionEn: Claude 3.7 pioneered hybrid reasoning, letting one model switch between quick answers and deep thought.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Claude 3.7 首创混合推理，让同一模型可以切换快答与深思。
 sources:
   - title: Claude 3.7 Sonnet
     url: "https://www.anthropic.com/news/claude-3-7-sonnet"

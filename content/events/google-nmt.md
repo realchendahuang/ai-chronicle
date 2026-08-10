@@ -44,6 +44,17 @@ relatedEvents:
   - bahdanau-attention
   - transformer
   - word2vec
+visual:
+  src: /assets/events/google-nmt.webp
+  width: 1672
+  height: 941
+  alt: 两种语言气泡被发光翻译桥连接的插画
+  altEn: Illustration of two speech bubbles in different languages linked by a glowing bridge
+  caption: Google 神经机器翻译把翻译质量推到一个台阶，让 NMT 成为行业标准。
+  captionEn: Google NMT lifted translation quality a full step and made neural MT the industry standard.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Google 神经机器翻译把翻译质量推到一个台阶，让 NMT 成为行业标准。
 sources:
   - title: GNMT 博客
     url: "https://research.google/blog/neural-machine-translation-technique/"

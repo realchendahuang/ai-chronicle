@@ -42,6 +42,17 @@ relatedEvents:
   - mycin
   - expert-systems
   - ai-winter-1987
+visual:
+  src: /assets/events/xcon-r1.webp
+  width: 1672
+  height: 941
+  alt: 1980 年代大型机终端与流程图的插画
+  altEn: Illustration of a 1980s mainframe terminal with flowchart lines
+  caption: XCON 是第一个在商业上取得巨大成功的专家系统，为 DEC 每年省下巨额成本。
+  captionEn: XCON was the first commercially triumphant expert system, saving DEC millions annually.
+  credit: AI Chronicle
+  rights: generated
+  prompt: XCON 是第一个在商业上取得巨大成功的专家系统，为 DEC 每年省下巨额成本。
 sources:
   - title: "R1: A rule-based configurer of computer systems"
     url: "https://dl.acm.org/doi/10.1016/0004-3702(82)90021-2"

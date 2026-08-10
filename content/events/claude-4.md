@@ -45,6 +45,17 @@ relatedEvents:
   - claude-code
   - claude-5-family
   - agent-runtime
+visual:
+  src: /assets/events/claude-4.webp
+  width: 1672
+  height: 941
+  alt: 四座光之方尖碑层叠的插画
+  altEn: Illustration of four ascending monoliths of light
+  caption: Claude 4 把长任务自主执行推为产品主线，与代码和 Agent 生态深度绑定。
+  captionEn: Claude 4 made autonomous long-task execution the product mainline, tied to coding and agent ecosystems.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Claude 4 把长任务自主执行推为产品主线，与代码和 Agent 生态深度绑定。
 sources:
   - title: Introducing Claude 4
     url: "https://www.anthropic.com/news/claude-4"

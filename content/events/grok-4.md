@@ -44,6 +44,17 @@ relatedEvents:
   - gpt-5
   - claude-4
   - gemini-2-5
+visual:
+  src: /assets/events/grok-4.webp
+  width: 1672
+  height: 941
+  alt: 四棱面发光外星球体的插画
+  altEn: Illustration of an alien orb with four angular facets and a glowing core
+  caption: Grok 4 让 xAI 的推理能力追上第一梯队，成为 x 平台内嵌的旗舰。
+  captionEn: Grok 4 brought xAI's reasoning to the front tier as the flagship embedded in X.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Grok 4 让 xAI 的推理能力追上第一梯队，成为 x 平台内嵌的旗舰。
 sources:
   - title: xAI Grok 4
     url: "https://x.ai/"

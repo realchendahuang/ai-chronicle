@@ -44,6 +44,17 @@ relatedEvents:
   - llama
   - llama-3-1
   - deepseek-r1
+visual:
+  src: /assets/events/alpaca.webp
+  width: 1672
+  height: 941
+  alt: 小羊驼站在发光主机旁的插画
+  altEn: Illustration of a small alpaca beside a glowing mainframe
+  caption: 斯坦福用 600 美元复刻 GPT-3.5 的 Alpaca，让开源社区看到了低成本微调的可能。
+  captionEn: Stanford's 600-dollar Alpaca showed the open community what cheap fine-tuning could do.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 斯坦福用 600 美元复刻 GPT-3.5 的 Alpaca，让开源社区看到了低成本微调的可能。
 sources:
   - title: "Stanford Alpaca: An Instruction-following LLaMA model"
     url: "https://crfm.stanford.edu/2023/03/13/alpaca.html"

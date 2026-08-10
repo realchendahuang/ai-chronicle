@@ -43,6 +43,17 @@ relatedEvents:
   - gpt-5-6
   - gpt-4-5
   - gemini-3-pro
+visual:
+  src: /assets/events/gpt-5-1.webp
+  width: 1126
+  height: 633
+  alt: 极简火箭腾空而起的光速线条插画
+  altEn: Illustration of a sleek minimal rocket lifting off with speed lines
+  caption: GPT-5.1 在保持能力的同时大幅优化速度与成本，是 OpenAI 对性价比的回应。
+  captionEn: GPT-5.1 cut speed and cost while keeping capability—OpenAI's answer on value.
+  credit: AI Chronicle
+  rights: generated
+  prompt: GPT-5.1 在保持能力的同时大幅优化速度与成本，是 OpenAI 对性价比的回应。
 sources:
   - title: OpenAI GPT-5.1
     url: "https://openai.com/"
