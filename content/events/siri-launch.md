@@ -43,6 +43,17 @@ relatedEvents:
   - ibm-watson
   - whisper
   - apple-intelligence
+visual:
+  src: /assets/events/siri-launch.webp
+  width: 1672
+  height: 941
+  alt: 手机屏幕中发光的彩色球体插画
+  altEn: Illustration of a glowing colorful orb on a phone screen
+  caption: Siri 让语音助手第一次进入亿万人的口袋，是消费级 AI 的重要起点。
+  captionEn: Siri put voice assistants in a billion pockets, a key start of consumer AI.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Siri 让语音助手第一次进入亿万人的口袋，是消费级 AI 的重要起点。
 sources:
   - title: Apple Special Event, October 2011
     url: "https://www.apple.com/newsroom/2011/10/04Apple-Launches-iPhone-4S-iOS-5-iCloud/"

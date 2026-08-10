@@ -44,6 +44,17 @@ relatedEvents:
   - gemini-robotics-2
   - waymo-one
   - baidu-apollo
+visual:
+  src: /assets/events/roomba.webp
+  width: 1672
+  height: 941
+  alt: 扫地机器人清扫客厅的插画
+  altEn: Illustration of a round robot cleaning a living room floor
+  caption: Roomba 让家用机器人第一次大规模走进普通家庭，是消费级机器人的样板。
+  captionEn: Roomba took home robots into ordinary households at scale, the template of consumer robotics.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Roomba 让家用机器人第一次大规模走进普通家庭，是消费级机器人的样板。
 sources:
   - title: iRobot history
     url: "https://www.irobot.com/"

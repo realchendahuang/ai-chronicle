@@ -44,6 +44,17 @@ relatedEvents:
   - openai-founded
   - chatgpt-launch
   - gpt-4-release
+visual:
+  src: /assets/events/grok-launch.webp
+  width: 1672
+  height: 941
+  alt: 手机屏幕中浮现 AI 光球的插画
+  altEn: Illustration of an AI orb emerging from a phone screen
+  caption: Grok 是马斯克 xAI 的首个大模型，直接内嵌进 X 平台。
+  captionEn: Grok was Musk's xAI first model, embedded directly into X.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Grok 是马斯克 xAI 的首个大模型，直接内嵌进 X 平台。
 sources:
   - title: Announcing Grok
     url: "https://x.ai/blog/grok"

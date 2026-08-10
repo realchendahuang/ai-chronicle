@@ -42,6 +42,17 @@ relatedEvents:
   - perceptron
   - alexnet
   - deep-learning-rise
+visual:
+  src: /assets/events/svm.webp
+  width: 1672
+  height: 941
+  alt: 最大间隔分割两簇数据点的插画
+  altEn: Illustration of two point clusters split by a maximum-margin line
+  caption: 支持向量机在 1990 年代成为机器学习的主流算法，至今仍在边界场景使用。
+  captionEn: SVM became the mainstream ML algorithm of the 1990s and is still used in edge cases.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 支持向量机在 1990 年代成为机器学习的主流算法，至今仍在边界场景使用。
 sources:
   - title: Support-Vector Networks
     url: "https://link.springer.com/article/10.1007/BF00994018"

@@ -47,6 +47,17 @@ relatedEvents:
   - tesla-autopilot
   - baidu-apollo
   - darpa-grand-challenge
+visual:
+  src: /assets/events/mobileye-adas.webp
+  width: 1672
+  height: 941
+  alt: 车载摄像头与车道检测叠加的插画
+  altEn: Illustration of a car camera with lane-detection overlays
+  caption: Mobileye 用摄像头加 EyeQ 芯片，把辅助驾驶做进了上千万辆量产车。
+  captionEn: Mobileye put driver assistance into tens of millions of cars with cameras and the EyeQ chip.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Mobileye 用摄像头加 EyeQ 芯片，把辅助驾驶做进了上千万辆量产车。
 sources:
   - title: Mobileye about
     url: "https://www.mobileye.com/"

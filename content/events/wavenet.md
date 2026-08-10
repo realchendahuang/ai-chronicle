@@ -41,6 +41,17 @@ relatedEvents:
   - siri-launch
   - whisper
   - seed-realtime
+visual:
+  src: /assets/events/wavenet.webp
+  width: 1672
+  height: 941
+  alt: 神经网络层构成的音频波形插画
+  altEn: Illustration of an audio waveform built from neural layers
+  caption: WaveNet 让语音合成第一次接近真人质感，奠定了现代语音生成的地基。
+  captionEn: WaveNet made synthetic speech sound almost human, laying the ground for modern voice generation.
+  credit: AI Chronicle
+  rights: generated
+  prompt: WaveNet 让语音合成第一次接近真人质感，奠定了现代语音生成的地基。
 sources:
   - title: WaveNet paper
     url: "https://www.deepmind.com/blog/wavenet-a-generative-model-for-raw-audio"

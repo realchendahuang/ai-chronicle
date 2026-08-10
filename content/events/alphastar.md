@@ -42,6 +42,17 @@ relatedEvents:
   - alphazero
   - openai-five
   - deepmind
+visual:
+  src: /assets/events/alphastar.webp
+  width: 1672
+  height: 941
+  alt: AI 与人类对弈星际争霸的插画
+  altEn: Illustration of an AI agent facing a human across a StarCraft board
+  caption: AlphaStar 在 2019 年击败职业星际玩家，把强化学习带到实时策略游戏的顶点。
+  captionEn: AlphaStar beat pro StarCraft players in 2019, taking RL to the top of real-time strategy.
+  credit: AI Chronicle
+  rights: generated
+  prompt: AlphaStar 在 2019 年击败职业星际玩家，把强化学习带到实时策略游戏的顶点。
 sources:
   - title: AlphaStar blog
     url: "https://www.deepmind.com/blog/alphastar-mastering-the-real-time-strategy-game-starcraft-ii"

@@ -42,6 +42,17 @@ relatedEvents:
   - alpaca
   - llama
   - huggingface-transformers
+visual:
+  src: /assets/events/eleutherai-gpt-neo.webp
+  width: 1672
+  height: 941
+  alt: 社区众筹算力共建模型的插画
+  altEn: Illustration of a community pooling compute into a shared model
+  caption: EleutherAI 用众筹算力训练 GPT-Neo，证明开源社区能挑战大厂。
+  captionEn: EleutherAI trained GPT-Neo on crowdfunded compute, proving open communities could rival big labs.
+  credit: AI Chronicle
+  rights: generated
+  prompt: EleutherAI 用众筹算力训练 GPT-Neo，证明开源社区能挑战大厂。
 sources:
   - title: GPT-Neo 发布公告
     url: "https://www.eleuther.ai/"

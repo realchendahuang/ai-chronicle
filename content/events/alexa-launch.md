@@ -47,6 +47,17 @@ relatedEvents:
   - whisper
   - seed-realtime
   - iflytek-spark-launch
+visual:
+  src: /assets/events/alexa-launch.webp
+  width: 1672
+  height: 941
+  alt: 客厅中发光语音音箱的插画
+  altEn: Illustration of a glowing voice speaker in a cozy living room
+  caption: Echo 与 Alexa 让语音助手第一次住进家庭，开辟了智能音箱品类。
+  captionEn: Echo and Alexa brought voice assistants into homes, creating the smart speaker category.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Echo 与 Alexa 让语音助手第一次住进家庭，开辟了智能音箱品类。
 sources:
   - title: Amazon Echo press materials
     url: "https://www.amazon.com/"

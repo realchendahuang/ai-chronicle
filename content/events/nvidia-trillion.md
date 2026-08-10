@@ -42,6 +42,17 @@ relatedEvents:
   - cuda
   - google-tpu
   - deepseek-v2
+visual:
+  src: /assets/events/nvidia-trillion.webp
+  width: 1672
+  height: 941
+  alt: 市值破万亿的芯片曲线插画
+  altEn: Illustration of a chip silhouette soaring on a green financial curve
+  caption: 英伟达市值在 2023 年突破万亿美元，AI 算力成为资本市场最热资产。
+  captionEn: Nvidia's market value crossed a trillion dollars in 2023, making AI compute the hottest asset.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 英伟达市值在 2023 年突破万亿美元，AI 算力成为资本市场最热资产。
 sources:
   - title: NVIDIA 市值报道
     url: "https://www.reuters.com/technology/nvidia-hits-1-trillion-market-value-2023-05-30/"

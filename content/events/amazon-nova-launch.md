@@ -42,6 +42,17 @@ relatedEvents:
   - claude
   - gpt-4-release
   - qwen-api-launch
+visual:
+  src: /assets/events/amazon-nova-launch.webp
+  width: 1672
+  height: 941
+  alt: 微笑弧线融入新星爆发的插画
+  altEn: Illustration of a nova burst with a smile-arc motif
+  caption: 亚马逊发布 Nova 多模态系列，补齐了云巨头在大模型竞赛中的位置。
+  captionEn: Amazon's Nova multimodal line filled the cloud giant's place in the model race.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 亚马逊发布 Nova 多模态系列，补齐了云巨头在大模型竞赛中的位置。
 sources:
   - title: Amazon Nova
     url: "https://aws.amazon.com/ai/nova/"

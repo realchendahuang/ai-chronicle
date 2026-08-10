@@ -43,6 +43,17 @@ relatedEvents:
   - llama
   - baichuan-launch
   - glm-5-preview
+visual:
+  src: /assets/events/chatglm-launch.webp
+  width: 1672
+  height: 941
+  alt: 中英文字发光的开源之书插画
+  altEn: Illustration of an open book glowing with Chinese and English text
+  caption: ChatGLM 的开源让智谱成为中国最早一批开放大模型的厂商之一。
+  captionEn: ChatGLM's open source made Zhipu one of China's earliest open-model vendors.
+  credit: AI Chronicle
+  rights: generated
+  prompt: ChatGLM 的开源让智谱成为中国最早一批开放大模型的厂商之一。
 sources:
   - title: ChatGLM on GitHub
     url: "https://github.com/THUDM/ChatGLM-6B"

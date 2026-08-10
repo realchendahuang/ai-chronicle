@@ -42,6 +42,17 @@ relatedEvents:
   - kimi-launch
   - chatglm-launch
   - step-launch
+visual:
+  src: /assets/events/minimax-launch.webp
+  width: 1672
+  height: 941
+  alt: 几何人面与音频波融合的插画
+  altEn: Illustration of a geometric face fused with flowing audio waves
+  caption: MiniMax 在 2023 年发布 abab 系列并推出海螺 AI，是中国 AI 原生公司的一线力量。
+  captionEn: MiniMax released the abab line and Hailuo AI in 2023, a leading Chinese AI-native firm.
+  credit: AI Chronicle
+  rights: generated
+  prompt: MiniMax 在 2023 年发布 abab 系列并推出海螺 AI，是中国 AI 原生公司的一线力量。
 sources:
   - title: MiniMax
     url: "https://www.minimaxi.com/"

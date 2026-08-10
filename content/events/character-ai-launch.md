@@ -41,6 +41,17 @@ relatedEvents:
   - chatgpt-launch
   - eliza
   - kimi-launch
+visual:
+  src: /assets/events/character-ai-launch.webp
+  width: 1672
+  height: 941
+  alt: 聊天界面中两个 AI 人设对话的插画
+  altEn: Illustration of two AI personas conversing over a chat interface
+  caption: Character.AI 让人与 AI 角色建立情感连接，开创了陪伴式对话产品。
+  captionEn: Character.AI let people bond with AI characters, creating the companion-chat category.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Character.AI 让人与 AI 角色建立情感连接，开创了陪伴式对话产品。
 sources:
   - title: Character.AI
     url: "https://character.ai/"

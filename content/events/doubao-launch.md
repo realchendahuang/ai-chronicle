@@ -41,6 +41,17 @@ relatedEvents:
   - chatgpt-launch
   - seed-realtime
   - seedance-1-0
+visual:
+  src: /assets/events/doubao-launch.webp
+  width: 1672
+  height: 941
+  alt: 圆润豆子造型 AI 吉祥物的插画
+  altEn: Illustration of a round bean-shaped AI mascot
+  caption: 豆包是字节跳动面向 C 端的 AI 助手，迅速成为国内用户量最大的对话产品之一。
+  captionEn: Doubao, ByteDance's consumer AI assistant, quickly became one of China's largest chat products.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 豆包是字节跳动面向 C 端的 AI 助手，迅速成为国内用户量最大的对话产品之一。
 sources:
   - title: Doubao
     url: "https://www.doubao.com/"

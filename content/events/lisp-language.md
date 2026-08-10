@@ -41,6 +41,17 @@ relatedEvents:
   - logic-theorist
   - expert-systems
   - minsky-perceptrons-book
+visual:
+  src: /assets/events/lisp-language.webp
+  width: 1672
+  height: 941
+  alt: LISP 括号与函数树的复古插画
+  altEn: Retro illustration of LISP parentheses forming a function tree
+  caption: 麦卡锡 1958 年发明的 LISP，成为此后数十年 AI 研究的主要语言。
+  captionEn: McCarthy's 1958 LISP became the main language of AI research for decades.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 麦卡锡 1958 年发明的 LISP，成为此后数十年 AI 研究的主要语言。
 sources:
   - title: Recursive Functions of Symbolic Expressions and Their Computation by Machine
     url: "https://dl.acm.org/doi/10.1145/367177.367199"

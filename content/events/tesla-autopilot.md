@@ -48,6 +48,17 @@ relatedEvents:
   - baidu-apollo
   - darpa-grand-challenge
   - optimus-reveal
+visual:
+  src: /assets/events/tesla-autopilot.webp
+  width: 1672
+  height: 941
+  alt: 公路传感器覆盖的自动驾驶插画
+  altEn: Illustration of a car on a highway with sensor overlays
+  caption: 特斯拉 Autopilot 让辅助驾驶大规模上路，开创了「量产车+数据飞轮」的自动驾驶路线。
+  captionEn: Tesla Autopilot scaled driver assistance on public roads, pioneering the production-car data flywheel.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 特斯拉 Autopilot 让辅助驾驶大规模上路，开创了「量产车+数据飞轮」的自动驾驶路线。
 sources:
   - title: Tesla Autopilot announcement
     url: "https://www.tesla.com/"

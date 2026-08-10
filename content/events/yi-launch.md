@@ -41,6 +41,17 @@ relatedEvents:
   - kimi-launch
   - chatglm-launch
   - minimax-launch
+visual:
+  src: /assets/events/yi-launch.webp
+  width: 1672
+  height: 941
+  alt: 数据块构成的翠绿山峰插画
+  altEn: Illustration of a green mountain peak built of data blocks
+  caption: 零一万物开源 Yi-34B，成为当时最强开源双语模型之一。
+  captionEn: 01.AI's open Yi-34B was among the strongest open bilingual models of its time.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 零一万物开源 Yi-34B，成为当时最强开源双语模型之一。
 sources:
   - title: 零一万物
     url: "https://www.01.ai/"

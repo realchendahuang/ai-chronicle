@@ -42,6 +42,17 @@ relatedEvents:
   - rag-paper
   - mcp
   - claude
+visual:
+  src: /assets/events/cohere-command-r.webp
+  width: 1672
+  height: 941
+  alt: 指令与检索融合的插画
+  altEn: Illustration of a command merging with a retriever over documents
+  caption: Command R 主打企业级 RAG，代表 Cohere 面向商业场景的路线。
+  captionEn: Command R targeted enterprise RAG, exemplifying Cohere's commercial focus.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Command R 主打企业级 RAG，代表 Cohere 面向商业场景的路线。
 sources:
   - title: Cohere Command R
     url: "https://cohere.com/blog/command-r"

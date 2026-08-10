@@ -42,6 +42,17 @@ relatedEvents:
   - logic-theorist
   - alphago
   - deep-blue
+visual:
+  src: /assets/events/samuel-checkers.webp
+  width: 1672
+  height: 941
+  alt: 1950 年代电脑下跳棋的复古插画
+  altEn: Retro illustration of a 1950s computer playing checkers
+  caption: Samuel 的跳棋程序让机器第一次通过自我对弈学会下棋，「机器学习」由此得名。
+  captionEn: Samuel's checkers program taught a machine to learn by self-play, coining the term machine learning.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Samuel 的跳棋程序让机器第一次通过自我对弈学会下棋，「机器学习」由此得名。
 sources:
   - title: Some Studies in Machine Learning Using the Game of Checkers
     url: "https://www.computer.org/csdl/magazine/co/1959/03/01707143/13rRUxoKj3L"

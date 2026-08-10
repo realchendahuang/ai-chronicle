@@ -42,6 +42,17 @@ relatedEvents:
   - flux-1
   - dall-e-2
   - midjourney-launch
+visual:
+  src: /assets/events/stability-sd3.webp
+  width: 1672
+  height: 941
+  alt: 数字流体构成的字母 S 插画
+  altEn: Illustration of an S-shaped letter made of flowing digital paint
+  caption: Stable Diffusion 3 在 2024 年发布，用改进的架构继续推进开源图像生成。
+  captionEn: Stable Diffusion 3 shipped in 2024, advancing open image generation with a new architecture.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Stable Diffusion 3 在 2024 年发布，用改进的架构继续推进开源图像生成。
 sources:
   - title: Stable Diffusion 3
     url: "https://stability.ai/news/stable-diffusion-3"

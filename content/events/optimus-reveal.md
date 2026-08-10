@@ -40,6 +40,17 @@ relatedEvents:
   - gemini-robotics-2
   - gato
   - baidu-apollo
+visual:
+  src: /assets/events/optimus-reveal.webp
+  width: 1672
+  height: 941
+  alt: 聚光灯下的人形机器人剪影插画
+  altEn: Illustration of a humanoid robot silhouette on stage
+  caption: Optimus 首秀把「人形机器人」从概念推向产品，重燃具身智能热潮。
+  captionEn: Optimus' debut pushed humanoid robots from concept to product, reigniting embodied AI.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Optimus 首秀把「人形机器人」从概念推向产品，重燃具身智能热潮。
 sources:
   - title: Tesla AI Day 2022
     url: "https://www.tesla.com/AI"

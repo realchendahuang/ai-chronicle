@@ -40,6 +40,17 @@ relatedEvents:
   - darpa-grand-challenge
   - baidu-apollo
   - siri-launch
+visual:
+  src: /assets/events/waymo-one.webp
+  width: 1672
+  height: 941
+  alt: 夜间接送乘客的无人车插画
+  altEn: Illustration of an autonomous minivan picking up a passenger at night
+  caption: Waymo One 是全球首个商业化运营的无人出租车服务。
+  captionEn: Waymo One was the world's first commercial robotaxi service.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Waymo One 是全球首个商业化运营的无人出租车服务。
 sources:
   - title: Waymo One 上线公告
     url: "https://waymo.com/"

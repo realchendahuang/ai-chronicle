@@ -42,6 +42,17 @@ relatedEvents:
   - expert-systems
   - shrdlu
   - ibm-watson
+visual:
+  src: /assets/events/mycin.webp
+  width: 1672
+  height: 941
+  alt: 医生与规则树诊断的插画
+  altEn: Illustration of a doctor facing a glowing rule tree of diagnoses
+  caption: MYCIN 展示了专家系统在医疗领域的潜力，是知识工程的代表作。
+  captionEn: MYCIN showed expert systems' medical potential, a masterpiece of knowledge engineering.
+  credit: AI Chronicle
+  rights: generated
+  prompt: MYCIN 展示了专家系统在医疗领域的潜力，是知识工程的代表作。
 sources:
   - title: "Computer-Based Medical Consultations: MYCIN"
     url: "https://www.sciencedirect.com/book/9780444001823/computer-based-medical-consultations-my-cin"

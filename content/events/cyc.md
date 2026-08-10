@@ -42,6 +42,17 @@ relatedEvents:
   - ai-winter-1987
   - bert
   - word2vec
+visual:
+  src: /assets/events/cyc.webp
+  width: 1672
+  height: 941
+  alt: 常识知识库的知识图谱插画
+  altEn: Illustration of common-sense knowledge organized into a graph
+  caption: Cyc 用数十年人工编码常识，是知识工程路线的极致实验。
+  captionEn: Cyc spent decades hand-encoding common sense—the extreme experiment of the knowledge-engineering route.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Cyc 用数十年人工编码常识，是知识工程路线的极致实验。
 sources:
   - title: Cyc 项目
     url: "https://cyc.com/"

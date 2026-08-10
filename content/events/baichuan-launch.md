@@ -47,6 +47,17 @@ relatedEvents:
   - ernie-bot-launch
   - qwen
   - deepseek-v3
+visual:
+  src: /assets/events/baichuan-launch.webp
+  width: 1672
+  height: 941
+  alt: 山川间流动代码河的插画
+  altEn: Illustration of a river of code flowing between mountains
+  caption: 百川智能以开源 Baichuan 系列入场，成为中国大模型六小龙之一。
+  captionEn: Baichuan entered with the open Baichuan series, one of China's AI unicorns.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 百川智能以开源 Baichuan 系列入场，成为中国大模型六小龙之一。
 sources:
   - title: Baichuan 2
     url: "https://github.com/baichuan-inc/Baichuan2"

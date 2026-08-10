@@ -39,6 +39,17 @@ beforeAfterEn:
 relatedEvents:
   - deep-learning-rise
   - gemini-robotics-2
+visual:
+  src: /assets/events/darpa-grand-challenge.webp
+  width: 1672
+  height: 941
+  alt: 自动驾驶车驰骋沙漠的插画
+  altEn: Illustration of autonomous vehicles racing across a desert
+  caption: DARPA 挑战赛第一次让无人车在真实长距离赛道里竞争，催生了现代自动驾驶产业。
+  captionEn: The DARPA challenges raced unmanned vehicles over real long-distance courses, birthing modern autonomy.
+  credit: AI Chronicle
+  rights: generated
+  prompt: DARPA 挑战赛第一次让无人车在真实长距离赛道里竞争，催生了现代自动驾驶产业。
 sources:
   - title: DARPA Grand Challenge
     url: "https://www.darpa.mil/"

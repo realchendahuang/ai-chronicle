@@ -46,6 +46,17 @@ relatedEvents:
   - gato
   - gemini-robotics-2
   - sora-2
+visual:
+  src: /assets/events/world-labs-founded.webp
+  width: 1672
+  height: 941
+  alt: 相机图像构建发光 3D 世界的插画
+  altEn: Illustration of a camera image building a glowing 3D world
+  caption: 李飞飞创办 World Labs 押注空间智能，让 AI 理解并生成 3D 世界。
+  captionEn: Fei-Fei Li founded World Labs to bet on spatial intelligence—AI that understands and generates 3D worlds.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 李飞飞创办 World Labs 押注空间智能，让 AI 理解并生成 3D 世界。
 sources:
   - title: World Labs announcement
     url: "https://www.worldlabs.ai/"

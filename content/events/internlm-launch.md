@@ -42,6 +42,17 @@ relatedEvents:
   - chatglm-launch
   - qwen
   - llama
+visual:
+  src: /assets/events/internlm-launch.webp
+  width: 1672
+  height: 941
+  alt: 书本化为知识光束的插画
+  altEn: Illustration of books transforming into beams of knowledge
+  caption: 上海 AI 实验室开源的 InternLM，为中国科研开源大模型提供了公共底座。
+  captionEn: Shanghai AI Lab's open InternLM provided a public foundation for China's research models.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 上海 AI 实验室开源的 InternLM，为中国科研开源大模型提供了公共底座。
 sources:
   - title: InternLM
     url: "https://github.com/InternLM/InternLM"

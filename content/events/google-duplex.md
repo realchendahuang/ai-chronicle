@@ -47,6 +47,17 @@ relatedEvents:
   - alexa-launch
   - whisper
   - seed-realtime
+visual:
+  src: /assets/events/google-duplex.webp
+  width: 1672
+  height: 941
+  alt: AI 打电话订餐的插画
+  altEn: Illustration of an AI making a restaurant booking by phone
+  caption: Duplex 让 AI 用自然语气替人打电话办事，语音交互从应答跃迁到自主。
+  captionEn: Duplex let AI make natural-sounding calls, leaping voice interaction from answering to doing.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Duplex 让 AI 用自然语气替人打电话办事，语音交互从应答跃迁到自主。
 sources:
   - title: Google Duplex demo (I/O 2018)
     url: "https://blog.google/technology/ai/io-2018-what-just-happened-google-assistant/"

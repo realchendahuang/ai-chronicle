@@ -44,6 +44,17 @@ relatedEvents:
   - alphago
   - alphazero
   - openai-five
+visual:
+  src: /assets/events/td-gammon.webp
+  width: 1672
+  height: 941
+  alt: 发光自对弈网络的西洋双陆棋插画
+  altEn: Illustration of a backgammon board with a self-play neural network
+  caption: TD-Gammon 用时序差分自对弈练成一流棋手，是深度强化学习的直接先驱。
+  captionEn: TD-Gammon trained to expert level via TD self-play, the direct precursor of deep RL.
+  credit: AI Chronicle
+  rights: generated
+  prompt: TD-Gammon 用时序差分自对弈练成一流棋手，是深度强化学习的直接先驱。
 sources:
   - title: Temporal Difference Learning and TD-Gammon
     url: "https://dl.acm.org/doi/10.1145/203330.203343"

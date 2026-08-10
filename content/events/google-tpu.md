@@ -43,6 +43,17 @@ relatedEvents:
   - alphago
   - deep-learning-rise
   - scaling-laws
+visual:
+  src: /assets/events/google-tpu.webp
+  width: 1672
+  height: 941
+  alt: 张量核心发光的定制芯片插画
+  altEn: Illustration of a custom chip with glowing tensor cores
+  caption: TPU 是谷歌为深度学习量身定制的芯片，从此巨头开始自研 AI 算力。
+  captionEn: TPU was Google's custom deep-learning chip, starting the giants' in-house AI compute race.
+  credit: AI Chronicle
+  rights: generated
+  prompt: TPU 是谷歌为深度学习量身定制的芯片，从此巨头开始自研 AI 算力。
 sources:
   - title: Google TPU blog
     url: "https://cloud.google.com/blog/products/ai-machine-learning"

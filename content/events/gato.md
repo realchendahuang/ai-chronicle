@@ -45,6 +45,17 @@ relatedEvents:
   - transformer
   - seed-realtime
   - gpt-4o
+visual:
+  src: /assets/events/gato.webp
+  width: 1672
+  height: 941
+  alt: 单智能体适应多任务的插画
+  altEn: Illustration of one agent adapting to many tasks
+  caption: Gato 用单个网络尝试 600 多个任务，是「通才智能体」概念的代表作。
+  captionEn: Gato tried 600-plus tasks with a single network, a landmark of the generalist-agent idea.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Gato 用单个网络尝试 600 多个任务，是「通才智能体」概念的代表作。
 sources:
   - title: Gato 论文
     url: "https://arxiv.org/abs/2205.06175"

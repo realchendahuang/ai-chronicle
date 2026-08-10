@@ -42,6 +42,17 @@ relatedEvents:
   - seed-realtime
   - whisper
   - iflytek-spark-launch
+visual:
+  src: /assets/events/hunyuan-asr-3.webp
+  width: 1672
+  height: 941
+  alt: 语音波形转文字的高精度插画
+  altEn: Illustration of a speech wave transcribed into text
+  caption: 混元 Hy ASR 3.0 把中文语音识别词错率进一步压低，是国产语音持续追赶的注脚。
+  captionEn: Hunyuan Hy ASR 3.0 pushed Mandarin recognition error lower, a footnote to China's speech chase.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 混元 Hy ASR 3.0 把中文语音识别词错率进一步压低，是国产语音持续追赶的注脚。
 sources:
   - title: 腾讯混元 Hy ASR 3.0
     url: "https://hunyuan.tencent.com/"

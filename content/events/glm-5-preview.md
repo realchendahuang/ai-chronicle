@@ -44,6 +44,17 @@ relatedEvents:
   - deepseek-v4
   - kimi-k3
   - ernie-bot-launch
+visual:
+  src: /assets/events/glm-5-preview.webp
+  width: 1672
+  height: 941
+  alt: 编程 IDE 中发光预告窗口的插画
+  altEn: Illustration of a glowing teaser window in a programming IDE
+  caption: 智谱 GLM-5 预告把编程与 Agent 定为下一代旗舰的主战场。
+  captionEn: Zhipu's GLM-5 teaser made coding and agents the next flagship's battlefield.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 智谱 GLM-5 预告把编程与 Agent 定为下一代旗舰的主战场。
 sources:
   - title: Zhipu ZCode
     url: "https://zhipuai.cn/zcode"

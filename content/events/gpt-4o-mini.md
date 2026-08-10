@@ -44,6 +44,17 @@ relatedEvents:
   - gpt-4-release
   - gemma-launch
   - claude-sonnet-4-5
+visual:
+  src: /assets/events/gpt-4o-mini.webp
+  width: 1672
+  height: 941
+  alt: 大小芯片对比的插画
+  altEn: Illustration of a compact chip beside a large one
+  caption: GPT-4o mini 以极低价格提供接近旗舰的能力，把小模型经济推向主流。
+  captionEn: GPT-4o mini offered near-flagship ability at rock-bottom prices, mainstreaming small-model economics.
+  credit: AI Chronicle
+  rights: generated
+  prompt: GPT-4o mini 以极低价格提供接近旗舰的能力，把小模型经济推向主流。
 sources:
   - title: OpenAI GPT-4o mini
     url: "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/"

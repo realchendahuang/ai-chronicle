@@ -44,6 +44,17 @@ relatedEvents:
   - mistral
   - gemini
   - huggingface-transformers
+visual:
+  src: /assets/events/gemma-launch.webp
+  width: 1672
+  height: 941
+  alt: 双宝石立于发光基座的插画
+  altEn: Illustration of two gemstones on a glowing pedestal
+  caption: Gemma 是谷歌首次开源的大模型系列，让开发者第一次用上 Google 的开放权重。
+  captionEn: Gemma was Google's first open model family, giving developers their first taste of Google open weights.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Gemma 是谷歌首次开源的大模型系列，让开发者第一次用上 Google 的开放权重。
 sources:
   - title: Gemma 发布
     url: "https://blog.google/technology/developers/gemma-open-models/"

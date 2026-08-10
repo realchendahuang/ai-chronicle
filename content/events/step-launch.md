@@ -42,6 +42,17 @@ relatedEvents:
   - chatglm-launch
   - qwen-api-launch
   - kimi-launch
+visual:
+  src: /assets/events/step-launch.webp
+  width: 1126
+  height: 633
+  alt: 云数据间上升的光之阶梯插画
+  altEn: Illustration of a staircase of light ascending through clouds
+  caption: 阶跃星辰 Step-1 让这家新公司进入国产多模态第一梯队。
+  captionEn: Step-1 put StepFun into the first tier of Chinese multimodal models.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 阶跃星辰 Step-1 让这家新公司进入国产多模态第一梯队。
 sources:
   - title: StepFun
     url: "https://www.stepfun.com/"

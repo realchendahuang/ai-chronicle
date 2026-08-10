@@ -42,6 +42,17 @@ relatedEvents:
   - flashattention
   - transformer
   - deepseek-v3
+visual:
+  src: /assets/events/ai21-jamba.webp
+  width: 1672
+  height: 941
+  alt: 混合架构符号融为一股流的插画
+  altEn: Illustration of hybrid architecture symbols merging into one flow
+  caption: Jamba 把 Mamba 与 Transformer 结合，探索了高效长上下文的新架构。
+  captionEn: Jamba fused Mamba and Transformer, exploring efficient long-context architectures.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Jamba 把 Mamba 与 Transformer 结合，探索了高效长上下文的新架构。
 sources:
   - title: AI21 Jamba
     url: "https://www.ai21.com/blog/announcing-jamba"

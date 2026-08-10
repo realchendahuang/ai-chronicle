@@ -43,6 +43,17 @@ relatedEvents:
   - eliza
   - expert-systems
   - chatgpt-launch
+visual:
+  src: /assets/events/shrdlu.webp
+  width: 1672
+  height: 941
+  alt: 积木世界中机械臂的插画
+  altEn: Illustration of a robotic arm stacking blocks in a block world
+  caption: SHRDLU 展示了程序对受限世界的真正理解，是自然语言理解早期的巅峰之作。
+  captionEn: SHRDLU showed real understanding within a restricted world, a peak of early NLU.
+  credit: AI Chronicle
+  rights: generated
+  prompt: SHRDLU 展示了程序对受限世界的真正理解，是自然语言理解早期的巅峰之作。
 sources:
   - title: Procedures as a Representation for Data in a Computer Program for Understanding Natural Language
     url: "https://hdl.handle.net/1721.1/7095"

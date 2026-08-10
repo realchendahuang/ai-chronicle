@@ -45,6 +45,17 @@ relatedEvents:
   - resnet
   - imagenet
   - mobileye-adas
+visual:
+  src: /assets/events/yolo.webp
+  width: 1672
+  height: 941
+  alt: 实时目标检测框叠交通街景的插画
+  altEn: Illustration of real-time detection boxes over a street scene
+  caption: YOLO 把目标检测做到实时，让「看一眼就识别」进入摄像头与自动驾驶。
+  captionEn: YOLO made object detection real-time, putting instant recognition into cameras and autonomous driving.
+  credit: AI Chronicle
+  rights: generated
+  prompt: YOLO 把目标检测做到实时，让「看一眼就识别」进入摄像头与自动驾驶。
 sources:
   - title: You Only Look Once (YOLO)
     url: "https://arxiv.org/abs/1506.02640"

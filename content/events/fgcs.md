@@ -39,6 +39,17 @@ relatedEvents:
   - ai-winter-1987
   - expert-systems
   - deep-learning-rise
+visual:
+  src: /assets/events/fgcs.webp
+  width: 1672
+  height: 941
+  alt: 1980 年代日本超算项目海报风插画
+  altEn: Retro illustration of a 1980s Japanese supercomputer project
+  caption: 日本第五代计算机计划用国家力量押注逻辑编程，虽未达目标却深刻影响了 AI 产业格局。
+  captionEn: Japan's Fifth Generation project bet national power on logic programming; it missed its goals yet reshaped the AI industry.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 日本第五代计算机计划用国家力量押注逻辑编程，虽未达目标却深刻影响了 AI 产业格局。
 sources:
   - title: Fifth Generation Computer Systems
     url: "https://www.sciencedirect.com/science/article/pii/S0167739X19870008"

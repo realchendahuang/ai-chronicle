@@ -42,6 +42,17 @@ relatedEvents:
   - ernie-bot-launch
   - whisper
   - qwen
+visual:
+  src: /assets/events/iflytek-spark-launch.webp
+  width: 1672
+  height: 941
+  alt: 声波凝成星光的插画
+  altEn: Illustration of a speech waveform condensing into a rising star
+  caption: 讯飞星火是科大讯飞对标 ChatGPT 的国产大模型，语音与中文能力是其强项。
+  captionEn: iFlytek Spark was the company's answer to ChatGPT, strong in speech and Chinese.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 讯飞星火是科大讯飞对标 ChatGPT 的国产大模型，语音与中文能力是其强项。
 sources:
   - title: 讯飞星火认知大模型发布
     url: "https://www.iflytek.com/portal/xinghuo"

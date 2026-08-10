@@ -41,6 +41,17 @@ relatedEvents:
   - gan
   - stable-diffusion
   - eu-ai-act
+visual:
+  src: /assets/events/deepfake-alarm.webp
+  width: 1672
+  height: 941
+  alt: 真脸与假脸并排的警示插画
+  altEn: Illustration of a headline split between real and fake faces
+  caption: 换脸视频在 2018 年引爆警惕，深度伪造成为 AI 治理的头号议题。
+  captionEn: Deepfake videos sparked alarm in 2018, making synthetic media a top AI-governance issue.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 换脸视频在 2018 年引爆警惕，深度伪造成为 AI 治理的头号议题。
 sources:
   - title: Deepfake 事件梳理
     url: "https://en.wikipedia.org/wiki/Deepfake"

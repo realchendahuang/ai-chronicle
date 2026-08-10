@@ -42,6 +42,17 @@ relatedEvents:
   - ernie-bot-launch
   - pangu-5
   - glm-5-preview
+visual:
+  src: /assets/events/pangu-launch.webp
+  width: 1672
+  height: 941
+  alt: 盘古云涡旋的数字画
+  altEn: Illustration of a cosmic disk forming in digital cloud form
+  caption: 华为盘古大模型以行业大模型路线切入，强调落地到政企场景。
+  captionEn: Huawei's Pangu took an industry-model route, stressing real-world government and enterprise deployment.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 华为盘古大模型以行业大模型路线切入，强调落地到政企场景。
 sources:
   - title: Huawei Pangu
     url: "https://www.huaweicloud.com/product/pangu.html"

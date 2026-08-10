@@ -45,6 +45,17 @@ relatedEvents:
   - deepseek-v3-1
   - deepseek-v4
   - qwen3
+visual:
+  src: /assets/events/deepseek-v3-2.webp
+  width: 1672
+  height: 941
+  alt: 稀疏注意力波纹的蓝鲸插画
+  altEn: Illustration of a whale with shimmering sparse-attention waves
+  caption: DeepSeek V3.2 用稀疏注意力进一步压低长文本推理成本。
+  captionEn: DeepSeek V3.2 used sparse attention to further cut long-context inference cost.
+  credit: AI Chronicle
+  rights: generated
+  prompt: DeepSeek V3.2 用稀疏注意力进一步压低长文本推理成本。
 sources:
   - title: DeepSeek V3.2
     url: "https://api-docs.deepseek.com/"

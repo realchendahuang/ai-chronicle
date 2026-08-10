@@ -45,6 +45,17 @@ relatedEvents:
   - deepseek-r1
   - deepseek-v4
   - qwen3
+visual:
+  src: /assets/events/deepseek-v3-1.webp
+  width: 1672
+  height: 941
+  alt: 拖着长上下文尾迹的蓝鲸插画
+  altEn: Illustration of a blue whale trailing long context threads
+  caption: DeepSeek V3.1 进一步拉长上下文窗口，把长文本能力带到前沿。
+  captionEn: DeepSeek V3.1 stretched the context window further, bringing long-text ability to the frontier.
+  credit: AI Chronicle
+  rights: generated
+  prompt: DeepSeek V3.1 进一步拉长上下文窗口，把长文本能力带到前沿。
 sources:
   - title: DeepSeek V3.1 release
     url: "https://api-docs.deepseek.com/"

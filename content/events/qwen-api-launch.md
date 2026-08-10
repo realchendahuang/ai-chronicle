@@ -42,6 +42,17 @@ relatedEvents:
   - qwen-3-8
   - ernie-bot-launch
   - chatglm-launch
+visual:
+  src: /assets/events/qwen-api-launch.webp
+  width: 1672
+  height: 941
+  alt: 应用图标与发光云桥接的插画
+  altEn: Illustration of an app icon bridged to a glowing cloud
+  caption: 通义千问 2023 年开放测试，标志着阿里正式入局国产大模型竞赛。
+  captionEn: Qwen's 2023 public beta marked Alibaba's official entry into China's model race.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 通义千问 2023 年开放测试，标志着阿里正式入局国产大模型竞赛。
 sources:
   - title: 通义千问
     url: "https://tongyi.aliyun.com/"

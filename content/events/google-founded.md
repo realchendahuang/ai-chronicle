@@ -46,6 +46,17 @@ relatedEvents:
   - bert
   - google-brain
   - imagenet
+visual:
+  src: /assets/events/google-founded.webp
+  width: 1672
+  height: 941
+  alt: 1998 年复古搜索框插画
+  altEn: Retro illustration of a 1998 search box with page-rank glow
+  caption: Google 的 PageRank 用链接结构重塑排序，让搜索引擎第一次真正有用。
+  captionEn: PageRank reshaped ranking with link structure, making web search genuinely useful for the first time.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Google 的 PageRank 用链接结构重塑排序，让搜索引擎第一次真正有用。
 sources:
   - title: Google history
     url: "https://about.google/"

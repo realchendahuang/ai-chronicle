@@ -45,6 +45,17 @@ relatedEvents:
   - midjourney-launch
   - dall-e-2
   - eu-ai-act
+visual:
+  src: /assets/events/ai-copyright-lawsuit.webp
+  width: 1672
+  height: 941
+  alt: 法槌与 AI 图像对质的插画
+  altEn: Illustration of a gavel before an easel of AI-generated art
+  caption: 艺术家起诉 Stability 与 Midjourney，把 AI 版权问题第一次摆上法庭。
+  captionEn: Artists sued Stability and Midjourney, putting AI copyright before a court for the first time.
+  credit: AI Chronicle
+  rights: generated
+  prompt: 艺术家起诉 Stability 与 Midjourney，把 AI 版权问题第一次摆上法庭。
 sources:
   - title: 艺术家起诉报道
     url: "https://www.reuters.com/legal/artists-sue-ai-art-generators-stability-ai-midjourney-2023-01-23/"

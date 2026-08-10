@@ -41,6 +41,17 @@ relatedEvents:
   - chatgpt-launch
   - bing-chatgpt
   - rag-paper
+visual:
+  src: /assets/events/perplexity-launch.webp
+  width: 1280
+  height: 720
+  alt: 带引用答案的搜索界面插画
+  altEn: Illustration of a search engine answering with citations
+  caption: Perplexity 用「先答后引」的答案引擎模式，挑战传统搜索引擎。
+  captionEn: Perplexity's answer-then-cite engine challenged traditional web search.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Perplexity 用「先答后引」的答案引擎模式，挑战传统搜索引擎。
 sources:
   - title: Perplexity AI
     url: "https://www.perplexity.ai/"

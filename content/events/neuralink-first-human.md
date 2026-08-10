@@ -43,6 +43,17 @@ beforeAfterEn:
 relatedEvents:
   - optimus-reveal
   - chatgpt-launch
+visual:
+  src: /assets/events/neuralink-first-human.webp
+  width: 1672
+  height: 941
+  alt: 人脑与纤细植入线的插画
+  altEn: Illustration of a human brain with a delicate thread implant
+  caption: Neuralink 在 2024 年完成首例人体植入，把脑机接口从论文推向临床。
+  captionEn: Neuralink's first human implant in 2024 moved brain-computer interfaces from papers to clinics.
+  credit: AI Chronicle
+  rights: generated
+  prompt: Neuralink 在 2024 年完成首例人体植入，把脑机接口从论文推向临床。
 sources:
   - title: Neuralink first human implant announcement
     url: "https://neuralink.com/"
