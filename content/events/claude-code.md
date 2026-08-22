@@ -26,7 +26,7 @@ concepts:
 summary: Anthropic 随 Claude 3.7 Sonnet 发布 Claude Code 研究预览。这个命令行工具读取仓库、修改文件、运行命令，并在每次高风险操作前请求权限。
 summaryEn: Anthropic released a research preview of Claude Code alongside Claude 3.7 Sonnet. The command-line tool read repositories, edited files, ran commands, and requested permission before higher-risk actions.
 visual:
-  src: /assets/events/claude-code.png
+  src: /assets/events/claude-code.webp
   width: 1900
   height: 1000
   alt: 橙色背景上由手托住人头轮廓，头部内是节点图形

@@ -53,7 +53,7 @@ relatedEvents:
   - deepseek-v4
   - gpt-5-6
 visual:
-  src: /assets/events/kimi-k3.png
+  src: /assets/events/kimi-k3.webp
   width: 1280
   height: 720
   alt: 编辑插图：巨大月亮下展开的三层稀疏发光专家节点网格

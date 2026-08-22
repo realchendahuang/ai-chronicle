@@ -23,7 +23,7 @@ concepts:
 summary: Google 发布 Gemini 3.5 Flash 正式版，把持续高强度 Agent 与代码任务定位为 Flash 主力场景，并将其设为 gemini-flash-latest 的默认模型。
 summaryEn: Google made Gemini 3.5 Flash generally available on May 19, 2026 and moved the gemini-flash-latest alias to it. Google positioned the model for sustained agent and coding workloads; those capability descriptions were launch claims, not independent evaluations.
 visual:
-  src: /assets/events/gemini-3-5-flash.png
+  src: /assets/events/gemini-3-5-flash.webp
   width: 1200
   height: 630
   alt: 深色背景上的 Gemini API Release notes 官方卡片

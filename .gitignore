@@ -7,3 +7,6 @@ dist/
 .wrangler/
 tmp/
 .opencode/
+.ruff_cache/
+.tanstack/
+.zcode/

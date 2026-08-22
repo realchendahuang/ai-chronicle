@@ -50,7 +50,7 @@ relatedEvents:
   - gpt-5-6
   - claude-5-family
 visual:
-  src: /assets/events/gemini-3-6-flash.png
+  src: /assets/events/gemini-3-6-flash.webp
   width: 1280
   height: 720
   alt: 编辑插图：三条速度不同的发光流线在深色背景中并行延伸

@@ -24,7 +24,7 @@ concepts:
 summary: DeepSeek 发布 DeepSeek-V3，以开放权重和显著的训练效率引发行业关注，并让前沿模型的成本结构成为公开讨论的焦点。
 summaryEn: DeepSeek released the open-weight DeepSeek-V3, a mixture-of-experts model with 671 billion total parameters and 37 billion activated per token. Its technical report counted 2.788 million H800 GPU-hours for the final pretraining run, not the project's full research and development cost.
 visual:
-  src: /assets/events/deepseek-v3.png
+  src: /assets/events/deepseek-v3.webp
   width: 2530
   height: 2035
   alt: DeepSeek-V3 基础架构图，分解展示多头潜在注意力与混合专家模块

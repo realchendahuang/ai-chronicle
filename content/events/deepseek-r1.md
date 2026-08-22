@@ -26,7 +26,7 @@ concepts:
 summary: DeepSeek 发布开放推理模型 DeepSeek-R1，以强化学习驱动的推理能力和开放权重迅速引发全球关注。
 summaryEn: DeepSeek released the open-weight reasoning models DeepSeek-R1 and R1-Zero, along with six distilled variants. The paper attributed R1-Zero's emerging reasoning behavior to large-scale reinforcement learning, while the production R1 model added cold-start data and supervised stages.
 visual:
-  src: /assets/events/deepseek-r1.png
+  src: /assets/events/deepseek-r1.webp
   width: 2105
   height: 1488
   alt: DeepSeek-R1 论文中 PPO 与 GRPO 强化学习流程的对比图

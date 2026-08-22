@@ -50,7 +50,7 @@ relatedEvents:
   - gpt-5-6
   - claude-code
 visual:
-  src: /assets/events/claude-opus-5.png
+  src: /assets/events/claude-opus-5.webp
   width: 1280
   height: 720
   alt: 编辑插图：深色背景下层层叠叠的分层地形山脊，顶端一颗发光点

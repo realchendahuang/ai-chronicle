@@ -48,7 +48,7 @@ relatedEvents:
   - chatgpt-launch
   - gpt-5-6
 visual:
-  src: /assets/events/gpt-live.png
+  src: /assets/events/gpt-live.webp
   width: 1280
   height: 720
   alt: 编辑插图：深色背景中央一圈圈扩散的声波圆环，两侧是对话脉冲

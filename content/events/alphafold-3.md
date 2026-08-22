@@ -17,7 +17,7 @@ concepts: [protein-folding, diffusion]
 summary: Google DeepMind 与 Isomorphic Labs 发布 AlphaFold 3，用扩散式结构生成预测蛋白质与多类生物分子的联合结构。
 summaryEn: Google DeepMind and Isomorphic Labs introduced AlphaFold 3, using diffusion-based structure generation to predict complexes of proteins and other biomolecules.
 visual:
-  src: /assets/events/alphafold-3.png
+  src: /assets/events/alphafold-3.webp
   width: 685
   height: 530
   alt: AlphaFold 3 论文图一，展示预测结构、基准结果和模型架构

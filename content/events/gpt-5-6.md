@@ -26,7 +26,7 @@ concepts:
 summary: OpenAI 发布 GPT-5.6，以 Sol、Terra、Luna 三档覆盖旗舰能力、成本平衡与高吞吐，并加入程序化工具调用、多 Agent 编排、显式缓存和持久推理。
 summaryEn: OpenAI released the GPT-5.6 Sol, Terra, and Luna tiers on July 9, 2026. The API added programmatic tool calling, explicit prompt caching, and persistent reasoning, while multi-agent orchestration launched in beta rather than as a generally available capability.
 visual:
-  src: /assets/events/gpt-5-6.png
+  src: /assets/events/gpt-5-6.webp
   width: 1200
   height: 630
   alt: 粉橙渐变背景上的 OpenAI Developers Model guidance 卡片

@@ -44,7 +44,7 @@ beforeAfterEn:
 relatedEvents:
   - eu-ai-act
 visual:
-  src: /assets/events/eu-ai-act-enforcement.png
+  src: /assets/events/eu-ai-act-enforcement.webp
   width: 1280
   height: 720
   alt: 编辑插图：深色背景上一排等距的发光立柱，顶部各带一点微光

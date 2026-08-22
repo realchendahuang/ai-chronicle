@@ -16,7 +16,7 @@ concepts: [swe-bench, repository-context, coding-agent]
 summary: 普林斯顿团队发布 SWE-bench，把真实 Python 仓库中的 2,294 个已解决 Issue 转成可执行的软件工程评测任务。
 summaryEn: Princeton researchers introduced SWE-bench, turning 2,294 resolved issues from real Python repositories into executable software-engineering tasks.
 visual:
-  src: /assets/events/swe-bench.png
+  src: /assets/events/swe-bench.webp
   width: 8510
   height: 2000
   alt: SWE-bench 流程图，从真实 GitHub issue 和代码库到模型补丁与单元测试
