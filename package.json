@@ -17,11 +17,12 @@
     "check:editorial": "node scripts/check-editorial.mjs",
     "check:site": "node scripts/check-site.mjs",
     "serve": "python3 -m http.server 43117 --directory dist/client",
-    "deploy": "pnpm build:full && pnpm exec wrangler pages deploy dist/client --project-name=ai-chronicle --branch=main"
+    "deploy": "pnpm build:full && pnpm exec wrangler pages deploy dist/client --branch=main",
+    "deploy:worker": "pnpm exec wrangler deploy -c worker/wrangler.toml"
   },
   "devDependencies": {
     "sharp": "^0.35.3",
     "velite": "^0.2.4",
-    "wrangler": "4.107.1"
+    "wrangler": "4.125.0"
   }
 }

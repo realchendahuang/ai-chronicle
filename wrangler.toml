@@ -1,15 +1,5 @@
-name = "ai-chronicle-proxy"
-main = "worker/index.js"
+# Pages 项目配置（静态站点）
+# 由 `wrangler pages deploy dist/client` 读取；name 必须等于 Cloudflare Pages 项目名。
+name = "ai-chronicle"
+pages_build_output_dir = "dist/client"
 compatibility_date = "2026-07-10"
-
-[observability]
-enabled = true
-head_sampling_rate = 1
-
-[[routes]]
-pattern = "chendahuang.com/ai-chronicle"
-zone_name = "chendahuang.com"
-
-[[routes]]
-pattern = "chendahuang.com/ai-chronicle/*"
-zone_name = "chendahuang.com"

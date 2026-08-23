@@ -1,0 +1,18 @@
+# 代理 Worker 配置
+# 部署：pnpm run deploy:worker  （等价于 wrangler deploy -c worker/wrangler.toml）
+# main 路径相对本文件（worker/）解析。
+name = "ai-chronicle-proxy"
+main = "index.js"
+compatibility_date = "2026-07-10"
+
+[observability]
+enabled = true
+head_sampling_rate = 1
+
+[[routes]]
+pattern = "chendahuang.com/ai-chronicle"
+zone_name = "chendahuang.com"
+
+[[routes]]
+pattern = "chendahuang.com/ai-chronicle/*"
+zone_name = "chendahuang.com"
