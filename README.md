@@ -74,9 +74,12 @@ pnpm dev
 
 ```bash
 pnpm build    # Velite 内容校验 → 编辑检查 → 静态生成 → 站内链接检查
-pnpm run deploy   # 构建并部署到 Cloudflare Pages（项目名 ai-chronicle；注意用 run，避免与 pnpm 内建 deploy 命令冲突）
+pnpm run release   # 推荐：先确认工作区干净（已 commit）再构建部署到 Cloudflare Pages
+pnpm run deploy   # 跳过干净检查、直接构建部署（项目名 ai-chronicle；注意用 run，避免与 pnpm 内建 deploy 命令冲突）
 pnpm run deploy:worker   # 部署代理 Worker（chendahuang.com/ai-chronicle/* → Pages）
 ```
+
+> `release` 会强制「先 commit → 再 deploy」：有未提交改动时直接拦截并退出，避免把脏状态部署上线。
 
 ### 目录导读
 

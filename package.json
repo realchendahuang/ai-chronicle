@@ -18,7 +18,8 @@
     "check:site": "node scripts/check-site.mjs",
     "serve": "python3 -m http.server 43117 --directory dist/client",
     "deploy": "pnpm build:full && pnpm exec wrangler pages deploy dist/client --branch=main",
-    "deploy:worker": "pnpm exec wrangler deploy -c worker/wrangler.toml"
+    "deploy:worker": "pnpm exec wrangler deploy -c worker/wrangler.toml",
+    "release": "node scripts/release.mjs"
   },
   "devDependencies": {
     "sharp": "^0.35.3",
