@@ -28,6 +28,8 @@ models:
   - qwen3
   - qwen3.5
   - qwen3.7-max
+  - qwen3.8
+  - qwen3.8-flash
 products:
   - tongyi-qianwen
   - qwen-chat

@@ -5,9 +5,9 @@ titleEn: Gemini model lineage
 company: google
 description: Gemini 以原生多模态和超长上下文为主线，逐步向推理、代码、实时交互与托管 Agent 扩展。
 descriptionEn: Gemini has developed around native multimodality and long context, expanding into reasoning, coding, real-time interaction, and managed agents.
-latestModel: Gemini 3.6 Flash
-latestModelEn: Gemini 3.6 Flash
-updatedAt: '2026-08-08'
+latestModel: Gemini 3.7 Flash
+latestModelEn: Gemini 3.7 Flash
+updatedAt: '2026-08-13'
 releases:
   - name: PaLM / PaLM 2
     date: '2023-05-10'
@@ -89,10 +89,17 @@ releases:
   - name: Gemini 3.6 Flash
     date: '2026-07-21'
     datePrecision: day
-    status: current
+    status: legacy
     summary: 工作马级 Flash 更新，输出价下调、1M 上下文，与 Flash-Lite、Flash Cyber 同日发布；旗舰 3.5 Pro 继续缺席。
     summaryEn: Workhorse Flash refresh with lower output pricing and 1M context, launched alongside Flash-Lite and Flash Cyber while the 3.5 Pro flagship stays away.
     source: https://deepmind.google/models/model-cards/gemini-3-6-flash/
+  - name: Gemini 3.7 Flash
+    date: '2026-08-13'
+    datePrecision: day
+    status: current
+    summary: 距 3.6 Flash 仅三周：编程与智能体场景主力模型，DeepSWE 49.0%→65.3%、WebDev Arena Elo 1588；限时五折定价至年底，接入 Gemini Spark 与 Enterprise Agent Platform。
+    summaryEn: "Three weeks after 3.6 Flash: workhorse for coding and agents with DeepSWE 49.0%→65.3% and WebDev Arena Elo 1588; limited-time 50% pricing through year-end, launched on Gemini Spark and the Enterprise Agent Platform."
+    source: https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/
   - name: Gemini Robotics 2
     date: '2026-08-04'
     datePrecision: day

@@ -5,9 +5,9 @@ titleEn: xAI Grok model lineage
 company: xai
 description: xAI 以 Grok 接入 X 实时信息，从 Grok-1 开放 MoE 到 Grok-3/4 推理旗舰，强调工具、搜索与少审查人格。
 descriptionEn: xAI’s Grok line taps live X information, from open MoE Grok-1 to reasoning flagships Grok-3/4, stressing tools, search, and a less-censored persona.
-latestModel: Grok 4.5
-latestModelEn: Grok 4.5
-updatedAt: '2026-07-11'
+latestModel: Grok 4.6
+latestModelEn: Grok 4.6
+updatedAt: '2026-08-12'
 releases:
   - name: Grok-1
     date: '2023-11-03'
@@ -54,9 +54,16 @@ releases:
   - name: Grok 4.5
     date: '2026-07-08'
     datePrecision: day
-    status: current
-    summary: 当前对外新模型，覆盖推理、代码、语音、图像与视频的统一叙事。
-    summaryEn: Current public model narrative covering reasoning, code, voice, images, and video.
+    status: legacy
+    summary: 覆盖推理、代码、语音、图像与视频的统一叙事。
+    summaryEn: Unified narrative covering reasoning, code, voice, images, and video.
     source: https://x.ai/
+  - name: Grok 4.6
+    date: '2026-08-12'
+    datePrecision: day
+    status: current
+    summary: 约 1.5T 总参 MoE 旗舰，强化长程智能体任务与视觉工作，AA 综合指数与 GPT-5.6 Sol 持平，API 定价约为竞品一半；同步上线 Cursor 与 Grok Build。
+    summaryEn: ~1.5T MoE flagship for long-horizon agent tasks and vision work, matching GPT-5.6 Sol on the AA composite index at roughly half the API price; launched on Cursor and Grok Build.
+    source: https://x.ai/news/grok-4-6
 slug: xai-grok
 ---

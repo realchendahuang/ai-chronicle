@@ -5,9 +5,9 @@ titleEn: Zhipu GLM model lineage
 company: zhipu
 description: 智谱以 GLM 预训练架构与 ChatGLM 开源对话模型切入，逐步建成覆盖基座、多模态、Agent 与开源/API 并行的国产旗舰谱系。
 descriptionEn: Zhipu entered with the GLM pretraining architecture and open ChatGLM chat models, then built a domestic flagship lineage spanning foundation, multimodal, agents, and parallel open/API releases.
-latestModel: GLM-5.2
-latestModelEn: GLM-5.2
-updatedAt: '2026-07-11'
+latestModel: GLM-5.3 / GLM-5.3-Flash
+latestModelEn: GLM-5.3 / GLM-5.3-Flash
+updatedAt: '2026-08-28'
 releases:
   - name: GLM-10B
     date: '2021-01-01'
@@ -96,9 +96,23 @@ releases:
   - name: GLM-5.2
     date: '2026-06-01'
     datePrecision: month
+    status: legacy
+    summary: 新一代旗舰（含开源叙事），在综合评测榜单中进入全球前三讨论区间。
+    summaryEn: Flagship push (including open releases), discussed in the global top-tier band on composite leaderboards.
+    source: https://www.zhipuai.cn/
+  - name: GLM-5.3
+    date: '2026-08-14'
+    datePrecision: day
     status: current
-    summary: 智谱当前对外主推的新一代旗舰（含开源叙事），在综合评测榜单中进入全球前三讨论区间。
-    summaryEn: Zhipu’s current flagship push (including open releases), discussed in the global top-tier band on composite leaderboards.
+    summary: 基座与 5.2 相同，后训练 Scaling 提升智能上界，编程能力较前代提升约 50%，主打智能体编程与防御性网络安全；8 月 28 日开放 744B-A40B 权重，采用新的 GLM-5.3 License。
+    summaryEn: Same base as 5.2 with post-training scaling raising the intelligence ceiling, coding up ~50%, focused on agentic coding and defensive cybersecurity; 744B-A40B weights opened August 28 under the new GLM-5.3 License.
+    source: https://www.zhipuai.cn/zh/research/162
+  - name: GLM-5.3-Flash（Ox Alpha）
+    date: '2026-08-26'
+    datePrecision: day
+    status: current
+    summary: 320B-A18B，GLM-5 系列首个原生多模态模型，MIT 协议开源；此前以匿名身份 Ox Alpha 盲测登顶 OpenRouter，训练由约 10 万张国产芯片支撑。
+    summaryEn: 320B-A18B, the GLM-5 line's first native multimodal model, open under MIT; previously blind-tested anonymously as Ox Alpha to the top of OpenRouter, trained on a cluster of ~100,000 domestic chips.
     source: https://www.zhipuai.cn/
 slug: zhipu-glm
 ---

@@ -5,9 +5,9 @@ titleEn: Qwen model lineage
 company: alibaba
 description: 通义千问从中文对话与开放权重起步，扩展为覆盖文本、视觉、音频、代码、推理与 Agent 的完整家族，并在云 API 与开源社区并行演进。
 descriptionEn: Qwen grew from Chinese chat and open weights into a full family spanning text, vision, audio, code, reasoning, and agents, evolving in parallel on cloud APIs and the open community.
-latestModel: Qwen3.8-Max / Qwen3.8
-latestModelEn: Qwen3.8-Max / Qwen3.8
-updatedAt: '2026-08-03'
+latestModel: Qwen3.8-Flash / Qwen3.8-Max
+latestModelEn: Qwen3.8-Flash / Qwen3.8-Max
+updatedAt: '2026-08-26'
 releases:
   - name: 通义千问（Tongyi Qianwen）公测
     date: '2023-04-11'
@@ -180,9 +180,16 @@ releases:
   - name: Qwen3.8 / Qwen3.8-Max
     date: '2026-08-03'
     datePrecision: day
+    status: legacy
+    summary: 2.4T 总参、约 950B 激活的稀疏 MoE 旗舰，原生多模态视觉与 1M 上下文，CodeArena 全球第四；Max 权重与 Qwen3.8-27B 于 8 月 13 日开源，同步推出 Agent 产品「千问办公」。
+    summaryEn: Sparse MoE flagship with 2.4T total and ~950B active parameters, native multimodal vision and 1M context, fourth globally on CodeArena; Max weights and Qwen3.8-27B opened August 13, with the Qianwen Office agent product launched alongside.
+    source: https://qwen.ai/
+  - name: Qwen3.8-Flash（Next）
+    date: '2026-08-26'
+    datePrecision: day
     status: current
-    summary: 2.4T 总参、约 950B 激活的稀疏 MoE 旗舰，原生多模态视觉与 1M 上下文，CodeArena 全球第四；官方宣布下周开源 Max 权重与 Qwen3.8-27B，并同步推出 Agent 产品「千问办公」。
-    summaryEn: Sparse MoE flagship with 2.4T total and ~950B active parameters, native multimodal vision and 1M context, fourth globally on CodeArena; Max weights and Qwen3.8-27B promised open the following week, with the Qianwen Office agent product launched alongside.
+    summary: 125B 总参、单 token 激活 6B 的多模态 MoE，全新 Next 架构（QSA + Gated DeltaNet），训练成本较前代降约 90%，推理定价每百万输入 1 元、输出 3 元；被视为 Qwen4 雏形，首发上线「千问办公」。
+    summaryEn: Multimodal MoE with 125B total and 6B active per token on the new Next architecture (QSA + Gated DeltaNet), training cost ~90% below the previous generation, inference at ¥1/¥3 per million tokens; seen as the Qwen4 prototype, debuting on Qianwen Office.
     source: https://qwen.ai/
 slug: alibaba-qwen
 ---

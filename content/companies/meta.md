@@ -28,6 +28,7 @@ models:
   - llama-3.3
   - llama-4-scout
   - llama-4-maverick
+  - muse-glimmer
 products: []
 relatedCompanies:
   - microsoft

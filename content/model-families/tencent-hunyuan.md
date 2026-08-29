@@ -5,9 +5,9 @@ titleEn: Tencent Hunyuan / Hy model lineage
 company: tencent
 description: 腾讯混元从企业与云服务起步，扩展到 Turbo/T1 推理、视频与 3D 开源，并以 Hy3 重建旗舰语言线服务微信与元宝。
 descriptionEn: Tencent Hunyuan grew from enterprise and cloud into Turbo/T1 reasoning, open video and 3D, then rebuilt the language flagship as Hy3 for WeChat and Yuanbao.
-latestModel: Hy3
-latestModelEn: Hy3
-updatedAt: '2026-07-11'
+latestModel: Hy4 preview
+latestModelEn: Hy4 preview
+updatedAt: '2026-08-28'
 releases:
   - name: 混元大模型（企业/云）
     date: '2023-09-01'
@@ -75,9 +75,16 @@ releases:
   - name: Hy3
     date: '2026-07-06'
     datePrecision: day
-    status: current
-    summary: 正式版 Hy3，强调同尺寸领先与跨腾讯业务集成，是当前混元语言主线。
-    summaryEn: GA Hy3 stressing same-size leadership and Tencent product integration as the current language mainline.
+    status: legacy
+    summary: 正式版 Hy3，强调同尺寸领先与跨腾讯业务集成。
+    summaryEn: GA Hy3 stressing same-size leadership and Tencent product integration.
     source: https://www.tencent.com/en-us/articles/2202386.html
+  - name: Hy4 preview
+    date: '2026-08-28'
+    datePrecision: day
+    status: current
+    summary: 770B 总参、49B 激活 MoE，上下文突破 1M，Apache 2.0 开源；定位生产力场景，WorkBuddy/CodeBuddy、元宝、ima 同步首发，首次参与自身研发全链路。
+    summaryEn: 770B-total, 49B-active MoE with context past 1M, open under Apache 2.0; positioned for productivity, debuting on WorkBuddy/CodeBuddy, Yuanbao, and ima, participating in its own R&D pipeline for the first time.
+    source: https://github.com/Tencent-Hunyuan/Hy4-preview
 slug: tencent-hunyuan
 ---

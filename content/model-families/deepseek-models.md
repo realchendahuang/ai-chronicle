@@ -5,9 +5,9 @@ titleEn: DeepSeek model lineage
 company: deepseek
 description: 从代码模型与稠密 LLM 起步，经 MoE、MLA、稀疏注意力到开放推理与超长上下文，DeepSeek 把训练/推理效率写成持续主线。
 descriptionEn: From code models and dense LLMs through MoE, MLA, sparse attention, open reasoning, and ultra-long context, DeepSeek made training and inference efficiency a continuous mainline.
-latestModel: DeepSeek-V4-Flash（正式版）· V4-Pro 预览
-latestModelEn: DeepSeek-V4-Flash (GA) · V4-Pro preview
-updatedAt: '2026-08-06'
+latestModel: DeepSeek-V4-Pro（0813 正式版）· V4-Flash（正式版）
+latestModelEn: DeepSeek-V4-Pro (0813 GA) · V4-Flash (GA)
+updatedAt: '2026-08-13'
 releases:
   - name: DeepSeek Coder
     date: '2023-11-02'
@@ -145,9 +145,16 @@ releases:
   - name: DeepSeek-V4-Flash 正式版（V4-Flash-0731）
     date: '2026-07-31'
     datePrecision: day
-    status: current
+    status: legacy
     summary: Flash 预览转正：思考/非思考双模式、1M 上下文、Agent 能力增强与推测解码；8 月 6 日公告整体上调 API 定价，低价策略进入转折期。
     summaryEn: Flash preview goes GA with thinking/non-thinking modes, 1M context, stronger agent capability, and speculative decoding; a broad API price increase announced August 6 marked a turn in the low-price strategy.
+    source: https://api-docs.deepseek.com/
+  - name: DeepSeek-V4-Pro 正式版（V4-Pro-0813）
+    date: '2026-08-13'
+    datePrecision: day
+    status: current
+    summary: Pro 预览转正：1.6T 总参 MoE、1M 上下文、最大输出 38.4 万 token，首次原生支持图像推理；DeepSWE 12.8→62.7 超过 Opus 4.8，V4 系列全部 GA；同日开源 Agent 框架 DeepSeek Harness v0.1。
+    summaryEn: "Pro preview goes GA: 1.6T MoE, 1M context, 384K max output, first native image reasoning; DeepSWE 12.8→62.7 above Opus 4.8, completing the V4 line; the agent framework DeepSeek Harness v0.1 open-sourced the same day."
     source: https://api-docs.deepseek.com/
 slug: deepseek-models
 ---

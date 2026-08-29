@@ -22,6 +22,7 @@ models:
   - grok-3
   - grok-4
   - grok-4.5
+  - grok-4.6
 products:
   - grok
 relatedCompanies:

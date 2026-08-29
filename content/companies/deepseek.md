@@ -19,6 +19,7 @@ keyEvents:
   - deepseek-v3
   - deepseek-r1
   - deepseek-v4
+  - deepseek-v4-pro
 models:
   - deepseek-coder
   - deepseek-llm

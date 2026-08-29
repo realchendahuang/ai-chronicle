@@ -54,6 +54,7 @@ products:
   - chatgpt
   - codex
   - api
+  - jalapeno
 relatedCompanies:
   - microsoft
   - github

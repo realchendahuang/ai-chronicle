@@ -21,6 +21,8 @@ models:
   - glm-4
   - glm-4.5
   - glm-5.2
+  - glm-5.3
+  - glm-5.3-flash
 products:
   - zhipu-qingyan
   - bigmodel-api

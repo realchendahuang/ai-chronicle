@@ -25,6 +25,7 @@ models:
   - hunyuan-t1
   - hunyuan-video
   - hy3
+  - hy4
 products:
   - yuanbao
   - wechat
