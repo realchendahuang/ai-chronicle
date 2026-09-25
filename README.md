@@ -1,5 +1,13 @@
 # AI Chronicle｜AI 行业编年史
 
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/realchendahuang/ai-chronicle?style=social)](https://github.com/realchendahuang/ai-chronicle)
+[![GitHub forks](https://img.shields.io/github/forks/realchendahuang/ai-chronicle?style=social)](https://github.com/realchendahuang/ai-chronicle/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/realchendahuang/ai-chronicle)](https://github.com/realchendahuang/ai-chronicle/issues)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/realchendahuang/ai-chronicle/pulls)
+[![Follow @realchendahuang](https://img.shields.io/badge/Follow-%40realchendahuang-1DA1F2?logo=x&logoColor=white)](https://x.com/realchendahuang)
+
 [English →](#english)
 
 > 技术变化得太快，快到人会忘记：每一项「突然」到来的能力，背后都有漫长、笨拙、有时甚至寒冷的年代。
