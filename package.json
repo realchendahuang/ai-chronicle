@@ -17,11 +17,13 @@
     "check:editorial": "node scripts/check-editorial.mjs",
     "check:site": "node scripts/check-site.mjs",
     "serve": "python3 -m http.server 43117 --directory dist/client",
+    "cf": "cf",
     "deploy": "pnpm build:full && pnpm exec wrangler pages deploy dist/client --branch=main",
-    "deploy:worker": "pnpm exec wrangler deploy -c worker/wrangler.toml",
+    "deploy:worker": "cf deploy --config worker/cloudflare.config.ts",
     "release": "node scripts/release.mjs"
   },
   "devDependencies": {
+    "cf": "1.0.0-beta.14",
     "sharp": "^0.35.3",
     "velite": "^0.2.4",
     "wrangler": "4.125.0"
